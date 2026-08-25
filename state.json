@@ -1,0 +1,14 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://187.77.79.40.nip.io",
+      "localStorage": [
+        {
+          "name": "token",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkM2QzMzYxYy03Mzk5LTRlNzMtYjZhYy0xY2RlZDM2YTcwODQiLCJlbWFpbCI6ImtpcnRhbnRoYWtrYXIzMEBnbWFpbC5jb20iLCJmdWxsTmFtZSI6IktpcnRhbiBUaGFra2FyIiwic2NvcGUiOiJ3ZWIiLCJ2ZXIiOjAsInJvbGUiOm51bGwsInJvbGVzIjpbImJhY2tlciIsImNyZWF0b3IiXSwiaWF0IjoxNzg3NTc5OTAyLCJleHAiOjE3ODc1ODA4MDJ9.r2YJjcMtbyBajAe6wpTfk-URL9WHcRpTr03ukarg5bk"
+        }
+      ]
+    }
+  ]
+}
