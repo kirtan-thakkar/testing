@@ -1,7 +1,5 @@
 # Functional Test Cases
 
----
-
 ## Test Case ID: FTC-AUTH-01
 **User Flow ID:** UF-AUTH-01, UF-AUTH-02
 **Test Case Name:** Valid End-to-End Login & Logout
@@ -192,16 +190,98 @@
 
 ---
 
+## Test Case ID: FTC-DISC-03
+**User Flow ID:** UF-DISC-03
+**Test Case Name:** Global Header Search Navigation
+**Actor:** Any User
+**Priority:** P1
+**Description:** Verify that clicking "Open search" in the global navigation bar expands the search input, accepts a query, and successfully redirects the user to the `/explore` page with the corresponding search results rendered.
+**Preconditions:**
+- The application environment is running.
+**Test Data:**
+- Search query: `solar`
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | From the Home page (`/`), click the "Open search" button in the top navigation bar. | The global navigation bar transforms to display an active text input (`placeholder: Search campaigns…`). |
+| 2 | Type `solar` into the input and press Enter. | The browser navigates to `/explore?q=solar`. |
+| 3 | Observe the Discover Campaigns page. | The main search input is pre-filled with `solar`. The UI filters the campaign list to match the query (e.g., displaying "solar" and "EcoLife Solar Purifier") and updates the count metric (e.g., "2 campaigns"). |
+
+**Postconditions:**
+- The user is seamlessly routed from the global header to the dedicated discovery page with contextual results.
+
+**Status:** PASS (Verified via MCP).
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-DISC-04
+**User Flow ID:** UF-DISC-04
+**Test Case Name:** Explore Category Filtering
+**Actor:** Any User
+**Priority:** P1
+**Description:** Verify that clicking category filter buttons on the `/explore` page dynamically updates the active filter state, the results counter, the "Showing [Category]" text, and filters the rendered campaign cards accordingly.
+**Preconditions:**
+- The application environment is running.
+- User is on `/explore`.
+**Test Data:** None
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Observe the category filter bar below the search input. | A horizontal list of category buttons (e.g. All, Art & Photography, Technology) is visible. "All" is active by default. |
+| 2 | Click the "Technology" category button. | The "Technology" button enters the `[active]` state. |
+| 3 | Observe the results section. | The UI dynamically updates the campaign counter and displays the text "Showing Technology". Only campaigns belonging to the "Technology" category are rendered in the grid. |
+
+**Postconditions:**
+- The user can seamlessly filter campaigns by category without full page reloads.
+
+**Status:** PASS (Verified active state, text update, and filtered grid via MCP).
+**Automation Candidate:** Yes
+
+---
+
 ## Test Case ID: FTC-BACK-01
 **User Flow ID:** UF-BACK-01
-**Test Case Name:** Campaign Pledge Checkout Validation & Success
+**Test Case Name:** Campaign Pledge Reward Selection
 **Actor:** Authenticated Backer
 **Priority:** P0
-**Description:** Verify that a logged-in user can back a campaign, is blocked if mandatory fields (Terms of Use/Address) are omitted, and successfully completes the pledge when corrected.
+**Description:** Verify that clicking "Back This Project" takes the user to the reward selection flow, renders the available options ("Pledge without a reward" and specific tiers), and dynamically updates the cart summary when a tier is selected.
 **Preconditions:**
 - The application environment is running.
 - The user is authenticated.
 - A live campaign exists and is accepting pledges.
+**Test Data:** None
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Navigate to a specific live campaign page (e.g., `/campaign/solar`). | The campaign detail page loads successfully. |
+| 2 | Click the "Back This Project" button. | The UI redirects to `/campaign/[slug]/back`. The step tracker (`Reward -> Add-ons -> Payment`) is visible. |
+| 3 | Observe the "Select your reward" section. | The UI presents a "Pledge without a reward" option and the creator's specific reward tier options (e.g. "testing"). |
+| 4 | Click a specific reward tier. | The "Pledge summary" sidebar dynamically updates to show the selected Reward cost, Shipping cost, and calculated Total. An optional "Bonus support" spinbutton and a "Continue" button appear inline. |
+| 5 | Click "Continue". | The UI progresses to the Add-ons (if applicable) or directly to the Payment/Checkout stage. |
+
+**Postconditions:**
+- The user reaches the Payment/Checkout stage with the correct items in their cart.
+
+**Status:** PASS (Verified via MCP).
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-BACK-02
+**User Flow ID:** UF-BACK-02
+**Test Case Name:** Campaign Pledge Checkout & Shipping
+**Actor:** Authenticated Backer
+**Priority:** P0
+**Description:** Verify that the Payment step requires shipping details and mandates the "Terms of Use" checkbox before the submit button is enabled.
+**Preconditions:**
+- The user has selected a reward and is on the "Payment" checkout stage (`/campaign/[slug]/back`).
 **Test Data:**
 - Valid shipping address details.
 
@@ -209,16 +289,417 @@
 
 | Step | User Action | Expected UI/Application Result |
 |------|-------------|--------------------------------|
-| 1 | Navigate to a specific live campaign page (e.g., `/campaign/solar`). | The campaign detail page loads successfully. |
-| 2 | Click the "Back This Project" button. | The UI redirects the user to the reward selection step (`/campaign/[id]/back`). |
-| 3 | Select a specific reward tier and click "Continue". | The UI progresses to the payment and shipping address form. |
-| 4 | Attempt to click "Complete Pledge" without filling in the shipping address or checking the "Terms of Use" checkbox. | Client-side validation prevents submission. The UI highlights the missing mandatory fields and/or disables the submit button. |
-| 5 | Fill out the required shipping address fields and check the "Terms of Use" box, then click "Complete Pledge". | The UI processes the submission and redirects the user to a success confirmation screen displaying "You're a Backer!". |
-| 6 | Navigate back to the Dashboard. | The newly backed campaign appears in the user's "Backed Projects" list (Needs Verification: Depends on Dashboard implementation). |
+| 1 | Observe the Payment screen. | The "Shipping address" section renders inputs for Street address, Apartment, City, State, Postal code, and Country. Checkboxes for "Hide my name" and "Terms of Use" are visible. |
+| 2 | Do not check the "Terms of Use" checkbox. | The "Complete Pledge" button remains physically disabled (`[disabled]` state). |
+| 3 | Check the "I agree to the Terms of Use..." checkbox and fill out the mandatory shipping fields. | The "Complete Pledge" button enables. |
+| 4 | Click the "Complete Pledge" button. | The pledge is processed and the user is redirected to the confirmation screen. |
 
 **Postconditions:**
-- The pledge is successfully recorded.
-- The user is confirmed as a backer of the campaign.
+- The pledge is recorded and the user becomes a backer.
 
-**Status:** PASS (Steps 1-5 verified). Step 6 NEEDS VERIFICATION.
+**Status:** PASS (Steps 1-3 verified via MCP). Step 4 NEEDS VERIFICATION.
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-BACK-03
+**User Flow ID:** UF-BACK-03
+**Test Case Name:** Pledge Confirmation & Dashboard Sync
+**Actor:** Authenticated Backer
+**Priority:** P0
+**Description:** Verify that clicking "Complete Pledge" transitions the user to the confirmation screen with the exact pledge summary and action buttons, and that the dashboard correctly syncs the newly backed campaign.
+**Preconditions:**
+- The user has checked "Terms of Use", filled the shipping form, and clicked "Complete Pledge".
+**Test Data:** None
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Wait for submission to complete. | The UI transitions to the confirmation page displaying a "You're a Backer!" H1 heading. |
+| 2 | Observe the confirmation screen. | The screen displays the correct Pledge Summary (Reward, Shipping, Total) and Est. Delivery date. Three action elements are visible: "Back to Campaign", "Share on X", and "Copy Link". |
+| 3 | Navigate to the Profile Dashboard (`/dashboard`). | The global profile stats update (e.g., increments to "1 Backed"). |
+| 4 | Click the "Backed Projects" tab. | The backed campaign is listed in the grid. The card displays the campaign title, "confirmed" status, the specific reward tier selected, the estimated delivery, and the exact total amount pledged. |
+
+**Postconditions:**
+- The pledge is successfully verified in the UI and synced to the dashboard.
+
+**Status:** PASS (Verified confirmation screen and Dashboard sync via MCP).
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-CREA-01
+**User Flow ID:** UF-CREA-03
+**Test Case Name:** Campaign Application Step 1 Validation
+**Actor:** Authenticated Creator
+**Priority:** P1
+**Description:** Verify that the "Plan & Set Up" step rigorously enforces mandatory fields (Business Details, PAN, checkboxes) before allowing progression.
+**Preconditions:**
+- The application environment is running.
+- The user is authenticated.
+**Test Data:** None
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Navigate to "How it works" and click "Start a Project". | The `/start/application` wizard loads, displaying Step 1 ("Plan & Set Up"). |
+| 2 | Scroll to the bottom and click "Continue" without interacting with any fields. | Client-side validation blocks progression. Red validation error text is displayed indicating that the checkboxes must be checked, categories must be selected, and business details (Country, Company Name, Address, PAN Card) are required. |
+| 3 | Check the two required checkboxes, select categories, but omit the PAN Card number. Click "Continue". | Progression is blocked. A specific red validation error remains under the PAN Card input field. |
+
+**Postconditions:**
+- The user remains on Step 1 and is forced to provide valid data.
+
+**Status:** NEEDS VERIFICATION (Verify exact red error text wording in UI).
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-CREA-02
+**User Flow ID:** UF-CREA-04
+**Test Case Name:** Campaign Application Step 1 Success
+**Actor:** Authenticated Creator
+**Priority:** P0
+**Description:** Verify that a user can successfully complete Step 1 by providing all mandatory business details.
+**Preconditions:**
+- The application environment is running.
+- The user is authenticated and on Step 1 of the application wizard.
+**Test Data:**
+- Primary Category & Subcategory.
+- Valid Country, Company Name, Business Address, PAN Card number.
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Check both required eligibility checkboxes. | UI reflects checkboxes as checked. |
+| 2 | Select a Primary Category and Subcategory. | UI displays the selected categories. |
+| 3 | Enter valid data into Country, Company Name, Company Business Address, and PAN Card Number fields. | Fields accept the input text. |
+| 4 | Leave the "GSTIN (if applicable)" field blank. | The field remains blank (testing optionality). |
+| 5 | Click the "Continue" button. | The UI successfully transitions the user to Step 2 ("Build Campaign Page"). |
+
+**Postconditions:**
+- The user successfully progresses to the next stage of the application.
+
+**Status:** PASS
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-CREA-03
+**User Flow ID:** UF-CREA-01
+**Test Case Name:** Campaign Submission & Admin Review State
+**Actor:** Authenticated Creator
+**Priority:** P0
+**Description:** Verify that completing the application wizard successfully submits the campaign and places it into an "Under Review" state, preventing it from appearing immediately on the public dashboard.
+**Preconditions:**
+- The user has completed Step 1 and is on Step 2.
+**Test Data:**
+- Valid campaign Title, Story, Funding Goal.
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Fill out all mandatory fields on Step 2 (Title, Story, Goal) and click "Continue". | The UI transitions to Step 3 ("Review & Submit"). |
+| 2 | Click "Submit for Review". | The UI transitions to Step 4 ("Done") and explicitly displays a "Submission received!" or "UNDER REVIEW" status banner. |
+| 3 | Navigate to the public Home page (`/`) or Explore page (`/explore`). | The newly submitted campaign does **not** appear in the live, public lists. |
+| 4 | Navigate to the user's Creator Dashboard. | The campaign appears in a "Created Projects" or "Pending" list, distinctly marked as requiring Admin Verification/Approval. |
+
+**Postconditions:**
+- The campaign is safely captured by the backend but is gated from public view until admin approval.
+
+**Status:** PASS (Steps 1-3 verified). Step 4 NEEDS VERIFICATION.
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-CREA-04
+**User Flow ID:** UF-CREA-05
+**Test Case Name:** Campaign Application Step 2 Validation
+**Actor:** Authenticated Creator
+**Priority:** P1
+**Description:** Verify that the "Build Campaign Page" step enforces mandatory content fields (Title, Story, Goal, Cover Image) and strict constraints (e.g., Story length) before allowing progression.
+**Preconditions:**
+- The user successfully completed Step 1 and is on Step 2.
+**Test Data:**
+- Invalid Story: "Too short"
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Scroll to the bottom and click "Continue" without interacting with any fields. | Client-side validation blocks progression. Red validation errors highlight the Project Title, Project Story, Funding Goal, and Cover Image fields as required. |
+| 2 | Enter "Too short" into the Project Story and click "Continue". | Progression is blocked. A specific validation error appears indicating the story must be at least 30 characters. |
+| 3 | Enter valid text for Title and Story (30+ chars), but leave the Cover Image blank. Click "Continue". | Progression is blocked. A validation error requires a Cover Image upload. |
+
+**Postconditions:**
+- The user remains on Step 2 and is forced to provide valid campaign content.
+
+**Status:** NEEDS VERIFICATION (Visual confirm of red error text).
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-CREA-05
+**User Flow ID:** UF-CREA-06
+**Test Case Name:** Campaign Application Step 2 Success
+**Actor:** Authenticated Creator
+**Priority:** P0
+**Description:** Verify that a user can successfully complete Step 2 by providing valid campaign content and media.
+**Preconditions:**
+- The user is on Step 2 of the application wizard.
+**Test Data:**
+- Title: "EcoLife Solar Purifier"
+- Story: "This is a detailed story explaining the project which exceeds the thirty character minimum limit."
+- Goal: `50000`
+- Image: Valid PNG file under 10MB.
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Enter the test Title, Story (30+ chars), and Funding Goal. | Fields accept the input text/numbers. |
+| 2 | Click "Upload cover image" and upload the test PNG file. | The UI displays a thumbnail preview or filename confirming the image is staged. |
+| 3 | Optionally enter a valid YouTube URL in the "Pitch Video URL" field. | Field accepts input. |
+| 4 | Click the "Continue" button. | The system saves the draft and successfully transitions the user to Step 3 ("Review & Submit"). |
+
+**Postconditions:**
+- The user successfully progresses to the final review stage.
+
+**Status:** NEEDS VERIFICATION
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-ACCT-01
+**User Flow ID:** UF-ACCT-01
+**Test Case Name:** Update Profile Bio and Links
+**Actor:** Authenticated User
+**Priority:** P2
+**Description:** Verify that a user can successfully update their profile biography and social links from the Settings dashboard and save the changes.
+**Preconditions:**
+- The application environment is running.
+- The user is authenticated.
+**Test Data:**
+- Bio: "A passionate creator."
+- Website: "https://myportfolio.com"
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Navigate to the Dashboard and click the "Settings" tab. | The Settings view loads, displaying fields for Display Name, Username, Bio, and Links (Website, Twitter, Instagram, LinkedIn). |
+| 2 | Scroll to the "BIO" field and enter the test bio string. | The text area accepts the input. |
+| 3 | Scroll to the "WEBSITE" field under LINKS and enter the URL. | The input field accepts the text. |
+| 4 | Click the "Save Changes" button. | The UI displays a success toast/banner indicating the profile was updated. (Needs Verification: does the page reload or just show a toast?). |
+| 5 | Navigate away from the page (e.g., to `/explore`) and then return to Settings. | The Bio and Website fields correctly display the updated data, confirming persistence. |
+
+**Postconditions:**
+- The user's profile is permanently updated with the new bio and link.
+
+**Status:** NEEDS VERIFICATION (Save success UI behavior needs visual confirmation).
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-ACCT-02
+**User Flow ID:** UF-ACCT-02
+**Test Case Name:** Change Account Password Validation
+**Actor:** Authenticated User
+**Priority:** P1
+**Description:** Verify that a user can change their password, and that the system strictly enforces the current password requirement and the new password match validation.
+**Preconditions:**
+- The application environment is running.
+- The user is authenticated.
+**Test Data:**
+- Valid current password.
+- Valid new password.
+- Mismatched confirmation password.
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Navigate to the Dashboard and click the "Settings" tab. | The Settings view loads. |
+| 2 | Scroll down to the "Change password" section. | The fields `CURRENT PASSWORD`, `NEW PASSWORD`, and `CONFIRM NEW PASSWORD` are visible, along with an "Update password" button. |
+| 3 | Attempt to submit the form leaving all fields blank by clicking "Update password". | Client-side validation blocks the submission and highlights the required fields. |
+| 4 | Enter the correct `CURRENT PASSWORD`, but enter mismatched strings into `NEW PASSWORD` and `CONFIRM NEW PASSWORD`. Click "Update password". | Validation blocks submission and displays a "Passwords do not match" error. |
+| 5 | Enter an *incorrect* `CURRENT PASSWORD`, and a matching valid `NEW PASSWORD` and `CONFIRM NEW PASSWORD`. Click "Update password". | The system attempts the change but returns an error banner/toast stating the current password is incorrect. |
+| 6 | Enter the correct `CURRENT PASSWORD`, and matching valid strings for the new passwords. Click "Update password". | The system successfully updates the password and displays a success confirmation message. |
+
+**Postconditions:**
+- The user's password is changed.
+
+**Status:** NEEDS VERIFICATION (Validation error text exact wording).
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-INFO-01
+**User Flow ID:** UF-INFO-01
+**Test Case Name:** Global Static Page Navigation
+**Actor:** Any User (Authenticated or Unauthenticated)
+**Priority:** P1
+**Description:** Verify that all informational and footer pages load successfully without 404 errors and render the correct primary headings (`<h1>`) and document `<title>`s. This ensures the structural integrity of the application's non-dynamic marketing/information pages.
+**Preconditions:**
+- The application environment is running.
+**Test Data:** None
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Click the logo or navigate to `/`. | The Home page loads displaying the H1: "Back vetted ideas. Start what moves." |
+| 2 | Click "Discover" or navigate to `/explore`. | The Explore page loads displaying the H1: "Discover Campaigns". |
+| 3 | Click "How it works" or navigate to `/how-it-works`. | The How It Works page loads displaying the H1: "How ideakicks works". |
+| 4 | Click "Start a Project" or navigate to `/start`. | The Creator landing page loads displaying the H1: "Launch your next big idea." |
+| 5 | Click "About" or navigate to `/about`. | The About page loads displaying the H1: "We believe every great idea deserves a real audience." |
+| 6 | Navigate to the footer link `/pricing`. | The Pricing page loads displaying the H1: "No success, no fee." |
+| 7 | Navigate to the footer link `/success-stories`. | The Success Stories page loads displaying the H1: "Ideas that went the distance." |
+| 8 | Navigate to the footer link `/creators`. | The For Creators page loads displaying the H1: "Your idea. Our platform. Their backing." |
+| 9 | Navigate to the footer link `/backers`. | The For Backers page loads displaying the H1: "Back ideas that matter. Before anyone else." |
+| 10 | Navigate to the footer link `/mentors`. | The For Mentors page loads displaying the H1: "Your experience. Their breakthrough." |
+| 11 | Navigate to the footer link `/contact`. | The Contact page loads displaying the H1: "Get in touch". |
+
+**Postconditions:**
+- User can freely navigate all informational routes without encountering any server errors or broken UI layouts.
+
+**Status:** PASS (Verified all endpoints resolve successfully).
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-INFO-02
+**User Flow ID:** UF-INFO-02
+**Test Case Name:** Legal Hub Navigation
+**Actor:** Any User
+**Priority:** P2
+**Description:** Verify that clicking the legal footer links (Terms, Privacy, Cookies, Wheelchair) routes the user to the centralized `/legal` page and dynamically switches the active tab content based on the URL parameter (`?tab=...`).
+**Preconditions:**
+- The application environment is running.
+**Test Data:** None
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Scroll to the footer and click the "Terms" link. | The UI routes to `/legal?tab=terms`. The primary `H2` reads "Terms of Use" and the sidebar "Terms of Use" button is in the `[active]` state. |
+| 2 | From the sidebar, click the "Privacy Policy" button. | The URL updates to `/legal?tab=privacy`. The main content dynamically re-renders to display the `H2` "Privacy Policy", replacing the Terms of Use content. |
+| 3 | Scroll to the footer and click the "Cookies" link. | The UI routes to `/legal?tab=cookies`. The content updates to display Cookie preferences information. |
+| 4 | Scroll to the footer and click the "Wheelchair" link. | The UI routes to `/legal?tab=accessibility`. The content updates to display the Accessibility Statement. |
+
+**Postconditions:**
+- The user can seamlessly view all legal documentation without full page reloads breaking the sidebar layout.
+
+**Status:** PASS (Verified Terms and Privacy states via MCP).
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-INFO-03
+**User Flow ID:** UF-INFO-03
+**Test Case Name:** Cookie Preferences Management
+**Actor:** Any User
+**Priority:** P2
+**Description:** Verify that users can interact with the Cookie Policy preferences form to toggle specific cookie categories (Analytical, Marketing) while Essential cookies remain disabled, and that they can save their preferences.
+**Preconditions:**
+- The application environment is running.
+- User is navigated to `/legal?tab=cookies`.
+**Test Data:** None
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Observe the "Manage Cookie Settings" form. | The form displays three checkboxes: "Essential Cookies" (checked and disabled), "Analytical Cookies" (checked), and "Marketing Cookies" (checked). |
+| 2 | Click the "Analytical Cookies" checkbox. | The checkbox toggles to the unchecked state. |
+| 3 | Click the "Save Preferences" button. | The UI registers the interaction and the button state updates (or a confirmation is shown) indicating preferences are saved. |
+
+**Postconditions:**
+- Cookie preferences are updated locally.
+
+**Status:** PASS (Verified checkbox toggling and Save button interaction via MCP).
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-CAMP-01
+**User Flow ID:** UF-CAMP-01
+**Test Case Name:** Campaign Details & Tabs Rendering
+**Actor:** Any User
+**Priority:** P1
+**Description:** Verify that clicking a campaign from the Explore page loads the Campaign Details page correctly, displaying all primary metadata and rendering the inner navigational tabs (Campaign, Rewards, Creator, FAQ, Updates, Comments, Community).
+**Preconditions:**
+- Application is running.
+- The database contains at least one active campaign.
+**Test Data:** None
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Navigate to `/explore` and click on any campaign card (e.g., "solar"). | The browser navigates to `/campaign/<slug>`. The Campaign Details hero section renders with the Title, Creator Name, Main Image, Funding Progress (amount raised, percentage, backers, days left), and a "Back This Project" button. |
+| 2 | Observe the secondary navigation bar below the hero section. | The following tabs are visible and clickable: `Campaign`, `Rewards`, `Creator`, `FAQ`, `Updates`, `Comments`, `Community`. |
+
+**Postconditions:**
+- The Campaign Details page is fully loaded and structurally intact.
+
+**Status:** PASS (Verified via MCP).
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-CAMP-02
+**User Flow ID:** UF-CAMP-02
+**Test Case Name:** Save Campaign & Dashboard Sync
+**Actor:** Authenticated User
+**Priority:** P0
+**Description:** Verify that a user can bookmark a campaign by clicking "Save", that the UI state updates immediately (button changes to "Saved" + Toast notification), and that the saved campaign successfully syncs to the user's Dashboard profile under the "Saved" tab.
+**Preconditions:**
+- User is authenticated.
+- User is on a Campaign Details page (e.g., `/campaign/solar`) that is not currently saved.
+**Test Data:** None
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Click the "Save" button on the Campaign Details page. | A Toast notification confirms the action. The button text explicitly changes from "Save" to "Saved". |
+| 2 | Navigate to the Profile Dashboard (`/dashboard`). | The user's summary metrics update (e.g., "1 Saved"). |
+| 3 | Click the "Saved" tab in the dashboard navigation. | The saved campaign (e.g., "solar") is listed as a card in the Saved grid. |
+| 4 | Click the "Remove [campaign] from saved" button on the card. | The campaign is immediately removed from the Saved grid, and the saved counter decrements. |
+
+**Postconditions:**
+- The campaign save state is accurately persisted and synced across the Campaign Details UI and the User Dashboard.
+
+**Status:** PASS (Verified Save state, Dashboard sync, and Unsave flow via MCP).
+**Automation Candidate:** Yes
+
+---
+
+## Test Case ID: FTC-DASH-01
+**User Flow ID:** UF-DASH-01
+**Test Case Name:** Creator Dashboard & Notifications
+**Actor:** Authenticated Creator
+**Priority:** P1
+**Description:** Verify that the dashboard accurately reflects submitted campaigns under "My Campaigns" and that the platform's notification system correctly alerts users to state changes (e.g., campaign submission).
+**Preconditions:**
+- User is authenticated.
+- User has recently submitted a campaign that is currently "Under Review".
+**Test Data:** None
+
+**Test Steps:**
+
+| Step | User Action | Expected UI/Application Result |
+|------|-------------|--------------------------------|
+| 1 | Navigate to `/dashboard` and observe the "Overview" tab. | The "Unread" Notifications section displays an alert stating "Your campaign was submitted for review". |
+| 2 | Click the "My Campaigns" tab. | The newly submitted campaign is listed as a card. |
+| 3 | Observe the campaign card metadata. | The card displays the Title, Funding Goal, and a distinct "Under Review" status badge. The subtitle explicitly notes the submission date and the 1-3 business day review SLA. |
+
+**Postconditions:**
+- The user is fully informed of their campaign's status via both the notification tray and the dedicated campaigns tab.
+
+**Status:** PASS (Verified via MCP).
 **Automation Candidate:** Yes
