@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
 test.describe('5. Campaign Details Flows', () => {
   test('UF-CAMP-01: Campaign Detail Tabs Navigation', async ({ page }) => {

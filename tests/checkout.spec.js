@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
 test.describe('6. Checkout & Pledging Flows', () => {
   test('UF-BACK-01: Reward & Add-on Selection', async ({ page }) => {

@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
 test.describe('Dashboard specific flows', () => {
   test('UF-DASH-01: Creator Dashboard Notifications', async ({ page }) => {

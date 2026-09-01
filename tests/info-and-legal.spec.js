@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
 test.describe('7. Informational & Legal Flows', () => {
   test.use({ storageState: { cookies: [], origins: [] } });
