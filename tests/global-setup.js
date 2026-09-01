@@ -10,8 +10,8 @@ module.exports = async config => {
   await page.goto('https://187.77.79.40.nip.io/login');
   
   // Fill credentials
-  await page.locator('input[name="email"]').fill('hello@ideakicks.com');
-  await page.locator('input[name="password"]').fill(`r9Ff{A0Z'kY:{V1W`);  
+  await page.locator('input[name="email"]').fill('kirtanthakkar6@gmail.com');
+  await page.locator('input[name="password"]').fill('czBfHbCiMUNpqa4');  
   
   await page.getByRole('button', { name: 'Log In' }).click();
   
