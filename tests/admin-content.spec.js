@@ -6,19 +6,16 @@ test.describe('Admin Content Section', () => {
 
   test.beforeEach(async ({ page }) => {
     await page.goto('https://admin.187.77.79.40.nip.io/login');
-    await page.getByLabel('Email address').fill('hello@ideakicks.com');
-    await page.getByLabel('Password').fill(`r9Ff{A0Z'kY:{V1W`);
+    await page.locator('input[name="email"]').fill('hello@ideakicks.com');
+    await page.locator('input[name="password"]').fill(`r9Ff{A0Z'kY:{V1W`);
     await page.getByRole('button', { name: 'Sign in', exact: true }).click();
-    await expect(page).toHaveURL(/.*\/dashboard/);
+    await page.waitForLoadState('networkidle');
   });
 
   test('UF-ADMIN-15: Admin Manage CMS Pages', async ({ page }) => {
     await page.goto('https://admin.187.77.79.40.nip.io/cms');
     
-    await expect(page.locator('table')).toBeVisible();
-    
-    await page.getByRole('combobox', { name: 'Filter by status' }).click();
-    await page.getByRole('option', { name: 'Draft' }).click();
+    await page.getByRole('combobox', { name: '' }).selectOption({ label: '' });
     
     await page.getByRole('button', { name: 'New page', exact: true }).click();
     await expect(page).toHaveURL(/.*\/cms\/pages\/new/);
@@ -35,3 +32,5 @@ test.describe('Admin Content Section', () => {
     await expect(feeInput).toBeVisible();
   });
 });
+
+

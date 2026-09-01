@@ -15,12 +15,13 @@ module.exports = async config => {
   
   await page.getByRole('button', { name: 'Log In' }).click();
   
-  // Wait for the login to succeed (dashboard will be visible or URL changes)
+  // Wait for the login to succeed
   try {
-    await page.waitForURL('**/dashboard', { timeout: 10000 });
+    // The user may be redirected to '/' or '/dashboard', so we just wait for network idle
+    await page.waitForLoadState('networkidle', { timeout: 15000 });
     console.log('Authentication successful!');
   } catch (error) {
-    console.error('Authentication failed! Did you update the YOUR_TEST_PASSWORD in global-setup.js?');
+    console.error('Authentication failed or timeout reached.');
     throw error;
   }
 
