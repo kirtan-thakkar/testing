@@ -1,36 +1,34 @@
 const { test, expect } = require('@playwright/test');
 
-const BASE_URL = 'https://187.77.79.40.nip.io';
-
-test.describe('Authentication Suite', () => {
-
-  // Unauthenticated tests should not use the injected token
+test.describe('1. Authentication & Registration Flows', () => {
   test.use({ storageState: { cookies: [], origins: [] } });
 
-  test('TC-004: Empty Login Validation', async ({ page }) => {
-    await page.goto(`${BASE_URL}/login`);
-
-    await page.getByRole('button', { name: 'Log In' }).click();
-
-    await expect(page.getByText('Invalid email address')).toBeVisible();
-    await expect(page.getByText('Too small')).toBeVisible();
+  test('UF-AUTH-01: User Registration and Verification Status', async ({ page }) => {
+    await page.goto('/');
+    await page.goto('/register');
+    await page.fill('input[name="name"], input[placeholder*="Name"]', 'Test User');
+    await page.fill('input[name="email"], input[type="email"]', `test-${Date.now()}@example.com`);
+    await page.fill('input[name="password"], input[type="password"]', 'password123');
+    await page.click('button[type="submit"]');
+    await page.waitForURL('**/dashboard');
+    await page.click('text=Settings');
+    await expect(page.locator('text=Unverified')).toBeVisible();
   });
 
-  test('TC-003: Invalid Login Validation (BUG-001)', async ({ page }) => {
-    await page.goto(`${BASE_URL}/login`);
-
-    const loginResponse = page.waitForResponse(res => res.url().includes('/auth/login') && res.request().method() === 'POST');
-
-    await page.locator('input[name="email"]').fill('invalid@example.com');
-    await page.locator('input[name="password"]').fill('wrongpassword');
-
-    await page.getByRole('button', { name: 'Log In' }).click();
-    
-    const response = await loginResponse;
-    expect(response.status()).toBe(401);
-
-    // This is the bug: visual error does not appear. (We uncomment if it ever gets fixed)
-    // await expect(page.getByText('Invalid email or password')).toBeVisible();
+  test('UF-AUTH-02: Login - Invalid Credentials (Negative Path)', async ({ page }) => {
+    await page.goto('/login');
+    await page.fill('input[name="email"], input[type="email"]', 'wrong@example.com');
+    await page.fill('input[name="password"], input[type="password"]', 'wrongpass');
+    await page.click('button[type="submit"]');
+    await expect(page.locator('text=Invalid credentials')).toBeVisible();
+    await expect(page).toHaveURL(/.*\/login/);
   });
 
+  test('UF-AUTH-03: Login - Success (Positive Path)', async ({ page }) => {
+    await page.goto('/login');
+    await page.fill('input[name="email"], input[type="email"]', 'valid@example.com');
+    await page.fill('input[name="password"], input[type="password"]', 'validpass123');
+    await page.click('button[type="submit"]');
+    await page.waitForURL('**/dashboard');
+  });
 });

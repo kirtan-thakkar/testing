@@ -1,32 +1,32 @@
 const { test, expect } = require('@playwright/test');
 
-const BASE_URL = 'https://187.77.79.40.nip.io';
+test.describe('4. Discovery & Search Flows', () => {
+  test.use({ storageState: { cookies: [], origins: [] } });
 
-test.describe('Campaign Discovery Suite', () => {
-
-  test('TC-005: Search for a campaign on Explore page', async ({ page }) => {
-    await page.goto(`${BASE_URL}/explore`);
-
-    const searchInput = page.locator('input[placeholder*="Search"]').first();
-    await searchInput.fill('solar');
-    await searchInput.press('Enter');
-
-    await expect(page.getByText('solar', { exact: false }).first()).toBeVisible();
+  test('UF-DISC-01: Global Header Search', async ({ page }) => {
+    await page.goto('/');
+    const searchBtn = page.locator('button').filter({ hasText: /search/i }).first();
+    if(await searchBtn.isVisible()) {
+      await searchBtn.click();
+    }
+    await page.fill('input[type="search"]', 'solar');
+    await page.keyboard.press('Enter');
+    await page.waitForURL('**/explore?q=solar');
+    await expect(page.locator('input[type="search"]')).toHaveValue('solar');
+    await expect(page.locator('text=campaigns')).toBeVisible();
   });
 
-  test('TC-006: Open global search from header', async ({ page }) => {
-    await page.goto(`${BASE_URL}/`);
-
-    // Click "Open search" button in header
-    await page.getByRole('button', { name: 'Open search' }).click();
-
-    // Verify search input expands
-    const searchInput = page.getByPlaceholder('Search campaigns…');
-    await expect(searchInput).toBeVisible();
-    
-    // Close the modal
-    await page.getByRole('button', { name: 'Close search' }).click();
-    await expect(searchInput).not.toBeVisible();
+  test('UF-DISC-02: Unsuccessful Campaign Search', async ({ page }) => {
+    await page.goto('/explore');
+    await page.fill('input[type="search"]', 'xyz123nonsense');
+    await page.keyboard.press('Enter');
+    await expect(page.locator('text=No campaigns found')).toBeVisible();
   });
 
+  test('UF-DISC-03: Explore Category Filtering', async ({ page }) => {
+    await page.goto('/explore');
+    const techBtn = page.locator('button:has-text("Technology")');
+    await techBtn.click();
+    await expect(page.locator('text=Showing Technology')).toBeVisible();
+  });
 });
