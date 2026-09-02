@@ -3,18 +3,15 @@ import { test, expect } from '@playwright/test';
 test.describe('Dashboard specific flows', () => {
   test('UF-DASH-01: Creator Dashboard Tabs Navigation', async ({ page }) => {
     await page.goto('/dashboard');
+    await page.waitForLoadState('networkidle');
     
-    // Test tabs exist and work
-    const myCampaignsTab = page.getByRole('tab', { name: /My Campaigns/i });
-    if (await myCampaignsTab.isVisible()) {
-        await myCampaignsTab.click();
-        await expect(page).toHaveURL(/.*tab=campaigns/i);
-    }
+    // Verify dashboard heading
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
     
-    const backedTab = page.getByRole('tab', { name: /Backed Projects/i });
-    if (await backedTab.isVisible()) {
-        await backedTab.click();
-        await expect(page).toHaveURL(/.*tab=backed/i);
-    }
+    // Test dashboard tabs (they are buttons, NOT tabs)
+    await page.getByRole('button', { name: 'Backed Projects' }).click();
+    await page.getByRole('button', { name: 'Saved' }).click();
+    await page.getByRole('button', { name: 'My Campaigns' }).click();
+    await page.getByRole('button', { name: 'Overview' }).click();
   });
 });
