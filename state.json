@@ -1,22 +1,22 @@
 {
   "cookies": [
     {
-      "name": "ik_refresh",
-      "value": "rRpz7er5ctAHgJ8kCJ0-djnweQoiq-0H8XSX7ft0f7PxyOoWdVfezUk3Fx7X05vM",
-      "domain": ".187.77.79.40.nip.io",
-      "path": "/",
-      "expires": 1790943943.513951,
-      "httpOnly": true,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
       "name": "ik_web_active",
       "value": "1",
       "domain": ".187.77.79.40.nip.io",
       "path": "/",
-      "expires": 1790943943.515261,
+      "expires": 1791013050.456606,
       "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ik_refresh",
+      "value": "dGs2LDkq3QJaE_UzoPbXZhyJnFC0WVHM31PuTAHpM_aNBRTzfC04L1denI2P5g1h",
+      "domain": ".187.77.79.40.nip.io",
+      "path": "/",
+      "expires": 1791013050.456486,
+      "httpOnly": true,
       "secure": false,
       "sameSite": "Lax"
     }
