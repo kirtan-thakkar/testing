@@ -1,0 +1,2450 @@
+2026-09-03 15:41:10.830 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 15:41:11.416 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 15:41:16.090 [INFO ] WIZ-01 :: start
+2026-09-03 15:41:16.091 [INFO ] login :: navigating to /login
+2026-09-03 15:42:17.038 [INFO ] login :: already authed (no email input found)
+2026-09-03 15:42:17.474 [INFO ] cookies :: dismissed
+2026-09-03 15:42:18.348 [INFO ] WIZ-01 :: pass
+2026-09-03 15:42:19.494 [INFO ] WIZ-02 :: start
+2026-09-03 15:42:19.495 [INFO ] login :: navigating to /login
+2026-09-03 15:42:23.255 [INFO ] login :: ok
+2026-09-03 15:42:24.719 [INFO ] cookies :: dismissed
+2026-09-03 15:42:25.586 [INFO ] WIZ-02 :: pass
+2026-09-03 15:42:26.709 [INFO ] WIZ-03 :: start
+2026-09-03 15:42:26.709 [INFO ] login :: navigating to /login
+2026-09-03 15:42:34.245 [INFO ] login :: ok
+2026-09-03 15:42:35.618 [INFO ] cookies :: dismissed
+2026-09-03 15:42:36.433 [INFO ] WIZ-03 :: placeholder=ABCDE1234F
+2026-09-03 15:42:37.560 [INFO ] WIZ-04 :: start
+2026-09-03 15:42:37.560 [INFO ] login :: navigating to /login
+2026-09-03 15:42:40.967 [INFO ] login :: ok
+2026-09-03 15:42:41.819 [INFO ] cookies :: dismissed
+2026-09-03 15:42:42.959 [INFO ] WIZ-04 :: advanced to step 2
+2026-09-03 15:42:44.087 [INFO ] WIZ-05 :: start
+2026-09-03 15:42:44.088 [INFO ] login :: navigating to /login
+2026-09-03 15:42:47.553 [INFO ] login :: ok
+2026-09-03 15:42:49.036 [INFO ] cookies :: dismissed
+2026-09-03 15:42:49.878 [INFO ] WIZ-05 :: pasted 5000 chars, form still alive
+2026-09-03 15:42:51.010 [INFO ] WIZ-06 :: start
+2026-09-03 15:42:51.010 [INFO ] login :: navigating to /login
+2026-09-03 15:42:55.373 [INFO ] login :: ok
+2026-09-03 15:42:56.319 [INFO ] cookies :: dismissed
+2026-09-03 15:42:57.174 [INFO ] WIZ-06 :: pasted 59 chars, no XSS execution
+2026-09-03 15:42:58.302 [INFO ] WIZ-07 :: start
+2026-09-03 15:42:58.303 [INFO ] login :: navigating to /login
+2026-09-03 15:44:33.730 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 15:44:38.682 [INFO ] WIZ-08 :: start
+2026-09-03 15:44:38.683 [INFO ] login :: navigating to /login
+2026-09-03 15:44:57.156 [INFO ] login :: ok
+2026-09-03 15:44:59.817 [INFO ] cookies :: dismissed
+2026-09-03 15:45:01.678 [INFO ] WIZ-08 :: page alive with empty form
+2026-09-03 15:45:02.864 [INFO ] WIZ-09 :: start
+2026-09-03 15:45:02.865 [INFO ] login :: navigating to /login
+2026-09-03 15:45:13.388 [INFO ] login :: ok
+2026-09-03 15:45:15.280 [INFO ] cookies :: dismissed
+2026-09-03 15:45:20.453 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 15:45:25.380 [INFO ] WIZ-10 :: start
+2026-09-03 15:45:25.381 [INFO ] login :: navigating to /login
+2026-09-03 15:45:29.145 [INFO ] login :: ok
+2026-09-03 15:45:29.962 [INFO ] cookies :: dismissed
+2026-09-03 15:45:30.808 [INFO ] WIZ-10 :: country options: 13
+2026-09-03 15:45:32.027 [INFO ] WIZ-11 :: start
+2026-09-03 15:45:32.027 [INFO ] login :: navigating to /login
+2026-09-03 15:45:41.122 [INFO ] login :: ok
+2026-09-03 15:45:42.627 [INFO ] cookies :: dismissed
+2026-09-03 15:45:43.988 [INFO ] WIZ-11 :: Technology subcategories: 5
+2026-09-03 15:45:44.502 [INFO ] WIZ-11 :: next-category subcategories: 4
+2026-09-03 15:45:45.815 [INFO ] WIZ-12 :: start
+2026-09-03 15:45:45.816 [INFO ] login :: navigating to /login
+2026-09-03 15:45:49.630 [INFO ] login :: ok
+2026-09-03 15:45:50.560 [INFO ] cookies :: dismissed
+2026-09-03 15:45:51.399 [INFO ] WIZ-12 :: entered lowercase, got: abcde1234f
+2026-09-03 15:45:52.612 [INFO ] WIZ-13 :: start
+2026-09-03 15:45:52.613 [INFO ] login :: navigating to /login
+2026-09-03 15:45:55.933 [INFO ] login :: ok
+2026-09-03 15:45:56.794 [INFO ] cookies :: dismissed
+2026-09-03 15:45:59.475 [INFO ] WIZ-13 :: whitespace name → onStep2=false (expected false)
+2026-09-03 15:46:00.640 [INFO ] WIZ-14 :: start
+2026-09-03 15:46:00.642 [INFO ] login :: navigating to /login
+2026-09-03 15:46:04.573 [INFO ] login :: ok
+2026-09-03 15:46:05.944 [INFO ] cookies :: dismissed
+2026-09-03 15:46:06.767 [INFO ] WIZ-14 :: GSTIN entered: 22ABCDE1234F1Z5
+2026-09-03 15:46:07.908 [INFO ] WIZ-15 :: start
+2026-09-03 15:46:07.909 [INFO ] login :: navigating to /login
+2026-09-03 15:46:11.847 [INFO ] login :: ok
+2026-09-03 15:46:12.843 [INFO ] cookies :: dismissed
+2026-09-03 15:46:14.796 [INFO ] WIZ-15 :: after reload, company name = "Acme Corp"
+2026-09-03 15:46:16.015 [INFO ] WIZ-16 :: start
+2026-09-03 15:46:16.016 [INFO ] login :: navigating to /login
+2026-09-03 15:46:19.507 [INFO ] login :: ok
+2026-09-03 15:46:20.777 [INFO ] cookies :: dismissed
+2026-09-03 15:46:22.347 [INFO ] WIZ-16 :: after back(), onStep1=false
+2026-09-03 15:46:23.595 [INFO ] WIZ-17 :: start
+2026-09-03 15:46:23.596 [INFO ] login :: navigating to /login
+2026-09-03 15:47:58.664 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 15:48:03.436 [INFO ] WIZ-18 :: start
+2026-09-03 15:48:03.437 [INFO ] login :: navigating to /login
+2026-09-03 15:48:08.866 [INFO ] login :: ok
+2026-09-03 15:48:09.774 [INFO ] cookies :: dismissed
+2026-09-03 15:48:16.674 [INFO ] WIZ-19 :: start
+2026-09-03 15:48:16.675 [INFO ] login :: navigating to /login
+2026-09-03 15:48:26.581 [INFO ] login :: ok
+2026-09-03 15:48:28.041 [INFO ] cookies :: dismissed
+2026-09-03 15:48:28.871 [INFO ] WIZ-19 :: first Tab focused: BODY
+2026-09-03 15:48:31.197 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 15:48:36.036 [INFO ] WIZ-20 :: start
+2026-09-03 15:48:36.037 [INFO ] login :: navigating to /login
+2026-09-03 15:48:40.914 [INFO ] login :: ok
+2026-09-03 15:48:41.871 [INFO ] cookies :: dismissed
+2026-09-03 15:48:41.874 [INFO ] WIZ-20 :: URL is https://187.77.79.40.nip.io/start/application
+2026-09-03 15:48:41.901 [INFO ] WIZ-21 :: start
+2026-09-03 15:48:45.797 [INFO ] WIZ-21 :: unauthed → final URL: https://187.77.79.40.nip.io/start/application
+2026-09-03 15:48:46.963 [INFO ] WIZ-22 :: start
+2026-09-03 15:48:46.964 [INFO ] login :: navigating to /login
+2026-09-03 15:48:51.125 [INFO ] login :: ok
+2026-09-03 15:48:52.070 [INFO ] cookies :: dismissed
+2026-09-03 15:48:55.014 [INFO ] WIZ-22 :: after double-click: step2=true step3=false
+2026-09-03 15:53:45.903 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 15:53:46.500 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 15:53:51.318 [INFO ] WIZ-07 :: start
+2026-09-03 15:53:51.319 [INFO ] login :: navigating to /login
+2026-09-03 15:54:54.527 [INFO ] login :: already authed (no email input found)
+2026-09-03 15:54:56.326 [INFO ] cookies :: dismissed
+2026-09-03 15:54:57.058 [INFO ] WIZ-07 :: step 2 file inputs: 2
+2026-09-03 15:54:58.334 [INFO ] WIZ-09 :: start
+2026-09-03 15:54:58.335 [INFO ] login :: navigating to /login
+2026-09-03 15:55:01.530 [INFO ] login :: ok
+2026-09-03 15:55:02.622 [INFO ] cookies :: dismissed
+2026-09-03 15:55:05.530 [WARN ] WIZ-09 :: BUG: form advanced to step 2 with unchecked eligibility checkboxes
+2026-09-03 15:55:06.699 [INFO ] WIZ-17 :: start
+2026-09-03 15:55:06.699 [INFO ] login :: navigating to /login
+2026-09-03 15:55:10.763 [INFO ] login :: ok
+2026-09-03 15:55:12.089 [INFO ] cookies :: dismissed
+2026-09-03 15:55:13.831 [INFO ] WIZ-17 :: step 2: fileInputs=2 dropZones=1
+2026-09-03 15:55:15.043 [INFO ] WIZ-19 :: start
+2026-09-03 15:55:15.043 [INFO ] login :: navigating to /login
+2026-09-03 15:55:18.743 [INFO ] login :: ok
+2026-09-03 15:55:19.588 [INFO ] cookies :: dismissed
+2026-09-03 15:55:20.401 [INFO ] WIZ-19 :: after up to 5 Tabs, focused: A
+2026-09-03 15:56:48.052 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 15:56:48.640 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 15:56:53.393 [INFO ] WIZ-01 :: start
+2026-09-03 15:56:53.394 [INFO ] login :: navigating to /login
+2026-09-03 15:57:54.314 [INFO ] login :: already authed (no email input found)
+2026-09-03 15:57:55.356 [INFO ] cookies :: dismissed
+2026-09-03 15:57:56.229 [INFO ] WIZ-01 :: pass
+2026-09-03 15:57:57.375 [INFO ] WIZ-02 :: start
+2026-09-03 15:57:57.376 [INFO ] login :: navigating to /login
+2026-09-03 15:58:06.904 [INFO ] login :: ok
+2026-09-03 15:58:08.833 [INFO ] cookies :: dismissed
+2026-09-03 15:58:09.720 [INFO ] WIZ-02 :: pass
+2026-09-03 15:58:11.000 [INFO ] WIZ-03 :: start
+2026-09-03 15:58:11.001 [INFO ] login :: navigating to /login
+2026-09-03 15:58:14.233 [INFO ] login :: ok
+2026-09-03 15:58:15.415 [INFO ] cookies :: dismissed
+2026-09-03 15:58:16.225 [INFO ] WIZ-03 :: placeholder=ABCDE1234F
+2026-09-03 15:58:17.374 [INFO ] WIZ-04 :: start
+2026-09-03 15:58:17.374 [INFO ] login :: navigating to /login
+2026-09-03 15:58:20.586 [INFO ] login :: ok
+2026-09-03 15:58:21.465 [INFO ] cookies :: dismissed
+2026-09-03 15:58:24.116 [INFO ] WIZ-04 :: advanced to step 2
+2026-09-03 15:58:25.271 [INFO ] WIZ-05 :: start
+2026-09-03 15:58:25.271 [INFO ] login :: navigating to /login
+2026-09-03 15:58:31.183 [INFO ] login :: ok
+2026-09-03 15:58:32.132 [INFO ] cookies :: dismissed
+2026-09-03 15:58:32.966 [INFO ] WIZ-05 :: pasted 5000 chars, form still alive
+2026-09-03 15:58:34.118 [INFO ] WIZ-06 :: start
+2026-09-03 15:58:34.119 [INFO ] login :: navigating to /login
+2026-09-03 15:58:38.938 [INFO ] login :: ok
+2026-09-03 15:58:40.098 [INFO ] cookies :: dismissed
+2026-09-03 15:58:40.937 [INFO ] WIZ-06 :: pasted 59 chars, no XSS execution
+2026-09-03 15:58:42.082 [INFO ] WIZ-07 :: start
+2026-09-03 15:58:42.083 [INFO ] login :: navigating to /login
+2026-09-03 16:00:17.954 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 16:00:22.780 [INFO ] WIZ-08 :: start
+2026-09-03 16:00:22.781 [INFO ] login :: navigating to /login
+2026-09-03 16:00:27.621 [INFO ] login :: ok
+2026-09-03 16:00:28.577 [INFO ] cookies :: dismissed
+2026-09-03 16:00:29.389 [INFO ] WIZ-08 :: page alive with empty form
+2026-09-03 16:00:30.537 [INFO ] WIZ-09 :: start
+2026-09-03 16:00:30.538 [INFO ] login :: navigating to /login
+2026-09-03 16:00:37.069 [INFO ] login :: ok
+2026-09-03 16:00:38.627 [INFO ] cookies :: dismissed
+2026-09-03 16:00:41.535 [WARN ] WIZ-09 :: BUG: form advanced to step 2 with unchecked eligibility checkboxes
+2026-09-03 16:00:42.680 [INFO ] WIZ-10 :: start
+2026-09-03 16:00:42.681 [INFO ] login :: navigating to /login
+2026-09-03 16:00:46.450 [INFO ] login :: ok
+2026-09-03 16:00:48.274 [INFO ] cookies :: dismissed
+2026-09-03 16:00:49.115 [INFO ] WIZ-10 :: country options: 13
+2026-09-03 16:00:50.267 [INFO ] WIZ-11 :: start
+2026-09-03 16:00:50.268 [INFO ] login :: navigating to /login
+2026-09-03 16:00:53.422 [INFO ] login :: ok
+2026-09-03 16:00:54.624 [INFO ] cookies :: dismissed
+2026-09-03 16:00:55.972 [INFO ] WIZ-11 :: Technology subcategories: 5
+2026-09-03 16:00:56.487 [INFO ] WIZ-11 :: next-category subcategories: 4
+2026-09-03 16:00:57.646 [INFO ] WIZ-12 :: start
+2026-09-03 16:00:57.646 [INFO ] login :: navigating to /login
+2026-09-03 16:01:09.752 [INFO ] login :: ok
+2026-09-03 16:01:11.290 [INFO ] cookies :: dismissed
+2026-09-03 16:01:12.125 [INFO ] WIZ-12 :: entered lowercase, got: abcde1234f
+2026-09-03 16:01:13.295 [INFO ] WIZ-13 :: start
+2026-09-03 16:01:13.296 [INFO ] login :: navigating to /login
+2026-09-03 16:02:51.345 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 16:02:56.094 [INFO ] WIZ-14 :: start
+2026-09-03 16:02:56.095 [INFO ] login :: navigating to /login
+2026-09-03 16:03:00.102 [INFO ] login :: ok
+2026-09-03 16:03:02.223 [INFO ] cookies :: dismissed
+2026-09-03 16:03:03.070 [INFO ] WIZ-14 :: GSTIN entered: 22ABCDE1234F1Z5
+2026-09-03 16:03:04.228 [INFO ] WIZ-15 :: start
+2026-09-03 16:03:04.229 [INFO ] login :: navigating to /login
+2026-09-03 16:03:07.472 [INFO ] login :: ok
+2026-09-03 16:03:09.353 [INFO ] cookies :: dismissed
+2026-09-03 16:03:10.653 [INFO ] WIZ-15 :: after reload, company name = "Acme Corp"
+2026-09-03 16:03:11.788 [INFO ] WIZ-16 :: start
+2026-09-03 16:03:11.789 [INFO ] login :: navigating to /login
+2026-09-03 16:03:15.997 [INFO ] login :: ok
+2026-09-03 16:03:16.852 [INFO ] cookies :: dismissed
+2026-09-03 16:03:18.326 [INFO ] WIZ-16 :: after back(), onStep1=false
+2026-09-03 16:03:19.475 [INFO ] WIZ-17 :: start
+2026-09-03 16:03:19.476 [INFO ] login :: navigating to /login
+2026-09-03 16:03:23.704 [INFO ] login :: ok
+2026-09-03 16:03:24.601 [INFO ] cookies :: dismissed
+2026-09-03 16:03:25.757 [INFO ] WIZ-17 :: step 2: fileInputs=2 dropZones=1
+2026-09-03 16:03:26.899 [INFO ] WIZ-18 :: start
+2026-09-03 16:03:26.899 [INFO ] login :: navigating to /login
+2026-09-03 16:03:30.223 [INFO ] login :: ok
+2026-09-03 16:03:31.585 [INFO ] cookies :: dismissed
+2026-09-03 16:03:38.434 [INFO ] WIZ-19 :: start
+2026-09-03 16:03:38.434 [INFO ] login :: navigating to /login
+2026-09-03 16:05:15.772 [INFO ] WIZARD-SUITE :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 16:05:20.548 [INFO ] WIZ-20 :: start
+2026-09-03 16:05:20.549 [INFO ] login :: navigating to /login
+2026-09-03 16:05:25.599 [INFO ] login :: ok
+2026-09-03 16:05:26.580 [INFO ] cookies :: dismissed
+2026-09-03 16:05:26.584 [INFO ] WIZ-20 :: URL is https://187.77.79.40.nip.io/start/application
+2026-09-03 16:05:26.607 [INFO ] WIZ-21 :: start
+2026-09-03 16:05:30.462 [INFO ] WIZ-21 :: unauthed → final URL: https://187.77.79.40.nip.io/start/application
+2026-09-03 16:05:31.603 [INFO ] WIZ-22 :: start
+2026-09-03 16:05:31.604 [INFO ] login :: navigating to /login
+2026-09-03 16:05:34.948 [INFO ] login :: ok
+2026-09-03 16:05:37.897 [INFO ] cookies :: dismissed
+2026-09-03 16:05:40.822 [INFO ] WIZ-22 :: after double-click: step2=true step3=false
+2026-09-03 16:22:08.116 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:22:16.223 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:22:16.233 [INFO ] ADM-01-N :: start
+2026-09-03 16:22:18.944 [INFO ] ADM-01-N :: empty state shown for no-match search
+2026-09-03 16:22:18.952 [INFO ] ADM-01-N2 :: start
+2026-09-03 16:22:21.655 [INFO ] ADM-01-N2 :: search survived 5000 chars
+2026-09-03 16:22:21.664 [INFO ] ADM-03-N :: start
+2026-09-03 16:22:24.378 [INFO ] ADM-03-N :: no XSS via search
+2026-09-03 16:22:24.389 [INFO ] ADM-99-N :: start
+2026-09-03 16:22:28.129 [INFO ] ADM-99-N :: unauthed → https://admin.187.77.79.40.nip.io/login
+2026-09-03 16:22:28.169 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:22:34.903 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:22:34.913 [INFO ] ADM-01-P :: start
+2026-09-03 16:22:36.091 [INFO ] ADM-01-P :: ok
+2026-09-03 16:22:36.103 [INFO ] ADM-02-P :: start
+2026-09-03 16:22:37.789 [INFO ] ADM-02-P :: filter controls: 2
+2026-09-03 16:22:37.804 [INFO ] ADM-03-P :: start
+2026-09-03 16:22:38.257 [INFO ] ADM-04-P :: start
+2026-09-03 16:22:38.737 [INFO ] ADM-05-P :: start
+2026-09-03 16:22:39.262 [INFO ] ADM-06-P :: start
+2026-09-03 16:22:39.920 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:22:45.646 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:22:45.656 [INFO ] CMS-N1 :: start
+2026-09-03 16:22:45.828 [INFO ] CMS-N1 :: status: 404
+2026-09-03 16:22:45.855 [INFO ] CMS-N2 :: start
+2026-09-03 16:22:47.752 [INFO ] CMS-N2 :: 2 inputs found, trying first
+2026-09-03 16:24:49.347 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:24:58.921 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:24:58.935 [INFO ] CMS-15-P :: start
+2026-09-03 16:24:59.990 [INFO ] CMS-16-P :: start
+2026-09-03 16:25:00.498 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:25:05.604 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:25:05.614 [INFO ] ENG-N1 :: start
+2026-09-03 16:25:08.337 [INFO ] ENG-N2 :: start
+2026-09-03 16:25:11.074 [INFO ] ENG-N3 :: start
+2026-09-03 16:25:12.274 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:25:16.930 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:25:16.944 [INFO ] ENG-13-P :: start
+2026-09-03 16:25:17.982 [INFO ] ENG-14-P :: start
+2026-09-03 16:27:50.595 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:27:58.412 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:27:58.422 [INFO ] FIN-N1 :: start
+2026-09-03 16:27:58.588 [INFO ] FIN-N1 :: status: 404
+2026-09-03 16:27:58.617 [INFO ] FIN-N2 :: start
+2026-09-03 16:27:59.802 [INFO ] FIN-N3 :: start
+2026-09-03 16:28:01.028 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:28:06.199 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:28:06.207 [INFO ] FIN-07-P :: start
+2026-09-03 16:28:07.259 [INFO ] FIN-08-P :: start
+2026-09-03 16:28:08.414 [INFO ] FIN-09-P :: start
+2026-09-03 16:28:08.852 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:28:13.443 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:28:13.454 [INFO ] PPL-N1 :: start
+2026-09-03 16:28:16.188 [INFO ] PPL-N2 :: start
+2026-09-03 16:28:18.891 [INFO ] PPL-N3 :: start
+2026-09-03 16:28:21.598 [INFO ] PPL-N4 :: start
+2026-09-03 16:28:21.827 [INFO ] PPL-N4 :: status: 200
+2026-09-03 16:28:21.876 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:28:26.465 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:28:26.475 [INFO ] PPL-10-P :: start
+2026-09-03 16:28:26.995 [INFO ] PPL-11-P :: start
+2026-09-03 16:28:27.509 [INFO ] PPL-12-P :: start
+2026-09-03 16:28:28.555 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:28:33.600 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-03 16:28:33.610 [INFO ] SYS-N1 :: start
+2026-09-03 16:28:35.341 [INFO ] SYS-N1 :: JS errors: 0
+2026-09-03 16:28:35.351 [INFO ] SYS-N2 :: start
+2026-09-03 16:28:36.757 [INFO ] SYS-N3 :: start
+2026-09-03 16:28:38.098 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:28:43.566 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-03 16:28:43.577 [INFO ] SYS-17-P :: start
+2026-09-03 16:28:44.625 [INFO ] SYS-18-P :: start
+2026-09-03 16:33:02.581 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-03 16:33:02.626 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 16:33:03.372 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-03 16:33:08.313 [INFO ] WIZ-09-N :: start
+2026-09-03 16:33:08.315 [INFO ] login :: navigating to /login
+2026-09-03 16:34:09.320 [INFO ] login :: already authed
+2026-09-03 16:34:09.968 [INFO ] cookies :: dismissed
+2026-09-03 16:34:13.425 [WARN ] WIZ-09-N :: BUG CONFIRMED: form advanced to step 2 with unchecked eligibility
+2026-09-03 16:34:14.735 [INFO ] WIZ-13-N :: start
+2026-09-03 16:34:14.736 [INFO ] login :: navigating to /login
+2026-09-03 16:34:20.051 [INFO ] login :: ok
+2026-09-03 16:34:22.349 [INFO ] cookies :: dismissed
+2026-09-03 16:34:25.216 [INFO ] WIZ-13-N :: whitespace-only → onStep2=false (expected false)
+2026-09-03 16:34:26.376 [INFO ] WIZ-05-N :: start
+2026-09-03 16:34:26.377 [INFO ] login :: navigating to /login
+2026-09-03 16:34:31.575 [INFO ] login :: ok
+2026-09-03 16:34:33.631 [INFO ] cookies :: dismissed
+2026-09-03 16:34:34.465 [INFO ] WIZ-05-N :: pasted 5000 chars
+2026-09-03 16:34:35.697 [INFO ] WIZ-06-N :: start
+2026-09-03 16:34:35.698 [INFO ] login :: navigating to /login
+2026-09-03 16:34:41.066 [INFO ] login :: ok
+2026-09-03 16:34:44.315 [INFO ] cookies :: dismissed
+2026-09-03 16:34:46.210 [INFO ] WIZ-06-N :: no XSS execution
+2026-09-03 16:34:47.494 [INFO ] WIZ-12-N :: start
+2026-09-03 16:34:47.495 [INFO ] login :: navigating to /login
+2026-09-03 16:34:51.845 [INFO ] login :: ok
+2026-09-03 16:34:53.281 [INFO ] cookies :: dismissed
+2026-09-03 16:34:55.391 [INFO ] WIZ-15-N :: start
+2026-09-03 16:34:55.392 [INFO ] login :: navigating to /login
+2026-09-03 16:35:00.290 [INFO ] login :: ok
+2026-09-03 16:35:03.330 [INFO ] cookies :: dismissed
+2026-09-03 16:35:05.194 [INFO ] WIZ-15-N :: after reload, value = "Acme Corp"
+2026-09-03 16:35:06.463 [INFO ] WIZ-16-N :: start
+2026-09-03 16:35:06.463 [INFO ] login :: navigating to /login
+2026-09-03 16:36:40.257 [WARN ] safeLogin :: login timed out: page.waitForURL: Timeout 90000ms exceeded.
+2026-09-03 16:36:41.411 [INFO ] WIZ-22-N :: start
+2026-09-03 16:36:41.412 [INFO ] login :: navigating to /login
+2026-09-03 16:36:49.578 [INFO ] login :: ok
+2026-09-03 16:36:51.573 [INFO ] cookies :: dismissed
+2026-09-03 16:36:55.020 [INFO ] WIZ-22-N :: after double-click: onStep3=false (expected false)
+2026-09-03 16:36:56.164 [INFO ] WIZ-19-N :: start
+2026-09-03 16:36:56.164 [INFO ] login :: navigating to /login
+2026-09-03 16:37:01.359 [INFO ] login :: ok
+2026-09-03 16:37:02.209 [INFO ] cookies :: dismissed
+2026-09-03 16:37:03.038 [INFO ] WIZ-19-N :: after up to 5 Tabs, focused: A
+2026-09-03 16:37:03.056 [INFO ] WIZ-21-N :: start
+2026-09-03 16:37:07.439 [INFO ] WIZ-21-N :: unauthed → https://187.77.79.40.nip.io/login?next=/start/application
+2026-09-03 16:37:08.599 [INFO ] WIZ-17-N :: start
+2026-09-03 16:37:08.600 [INFO ] login :: navigating to /login
+2026-09-03 16:37:12.157 [INFO ] login :: ok
+2026-09-03 16:37:13.039 [INFO ] cookies :: dismissed
+2026-09-03 16:37:14.212 [INFO ] WIZ-17-N :: fileInputs=2 drops=1
+2026-09-03 16:37:15.381 [INFO ] WIZ-18-N :: start
+2026-09-03 16:37:15.382 [INFO ] login :: navigating to /login
+2026-09-03 16:37:20.942 [INFO ] login :: ok
+2026-09-03 16:37:22.588 [INFO ] cookies :: dismissed
+2026-09-03 16:37:28.380 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-03 16:37:29.510 [INFO ] WIZ-01-P :: start
+2026-09-03 16:37:29.511 [INFO ] login :: navigating to /login
+2026-09-03 16:37:35.222 [INFO ] login :: ok
+2026-09-03 16:37:36.204 [INFO ] cookies :: dismissed
+2026-09-03 16:37:37.058 [INFO ] WIZ-01-P :: all expected elements visible
+2026-09-03 16:37:38.212 [INFO ] WIZ-02-P :: start
+2026-09-03 16:37:38.213 [INFO ] login :: navigating to /login
+2026-09-03 16:39:12.504 [INFO ] WIZ-03-P :: start
+2026-09-03 16:39:12.505 [INFO ] login :: navigating to /login
+2026-09-03 16:39:18.065 [INFO ] login :: ok
+2026-09-03 16:39:21.549 [INFO ] cookies :: dismissed
+2026-09-03 16:39:23.509 [INFO ] WIZ-04-P :: start
+2026-09-03 16:39:23.510 [INFO ] login :: navigating to /login
+2026-09-03 16:39:27.836 [INFO ] login :: ok
+2026-09-03 16:39:29.315 [INFO ] cookies :: dismissed
+2026-09-03 16:39:30.416 [INFO ] WIZ-04-P :: advanced to step 2
+2026-09-03 16:39:31.558 [INFO ] WIZ-07-P :: start
+2026-09-03 16:39:31.559 [INFO ] login :: navigating to /login
+2026-09-03 16:39:36.012 [INFO ] login :: ok
+2026-09-03 16:39:38.882 [INFO ] cookies :: dismissed
+2026-09-03 16:39:40.014 [INFO ] WIZ-07-P :: step 2 has 2 file inputs
+2026-09-03 16:39:41.018 [INFO ] WIZ-08-P :: start
+2026-09-03 16:39:41.018 [INFO ] login :: navigating to /login
+2026-09-03 16:39:45.045 [INFO ] login :: ok
+2026-09-03 16:39:46.449 [INFO ] cookies :: dismissed
+2026-09-03 16:39:48.278 [INFO ] WIZ-08-P :: JS errors on load: 0
+2026-09-03 16:39:49.486 [INFO ] WIZ-10-P :: start
+2026-09-03 16:39:49.487 [INFO ] login :: navigating to /login
+2026-09-03 16:39:53.470 [INFO ] login :: ok
+2026-09-03 16:39:54.584 [INFO ] cookies :: dismissed
+2026-09-03 16:39:55.408 [INFO ] WIZ-10-P :: 13 country options, India present
+2026-09-03 16:39:56.566 [INFO ] WIZ-11-P :: start
+2026-09-03 16:39:56.567 [INFO ] login :: navigating to /login
+2026-09-03 16:41:32.273 [INFO ] WIZ-14-P :: start
+2026-09-03 16:41:32.274 [INFO ] login :: navigating to /login
+2026-09-03 16:41:36.950 [INFO ] login :: ok
+2026-09-03 16:41:38.676 [INFO ] cookies :: dismissed
+2026-09-03 16:41:40.670 [INFO ] WIZ-20-P :: start
+2026-09-03 16:41:40.671 [INFO ] login :: navigating to /login
+2026-09-03 16:41:46.951 [INFO ] login :: ok
+2026-09-03 16:41:48.476 [INFO ] cookies :: dismissed
+2026-09-03 16:50:37.337 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:50:41.928 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:50:41.936 [INFO ] ADM-01-P :: start
+2026-09-03 16:50:42.949 [INFO ] ADM-01-P :: ok
+2026-09-03 16:50:42.956 [INFO ] ADM-02-P :: start
+2026-09-03 16:50:44.647 [INFO ] ADM-02-P :: filter controls: 2
+2026-09-03 16:50:44.656 [INFO ] ADM-03-P :: start
+2026-09-03 16:50:45.080 [INFO ] ADM-04-P :: start
+2026-09-03 16:50:45.497 [INFO ] ADM-05-P :: start
+2026-09-03 16:50:46.025 [INFO ] ADM-06-P :: start
+2026-09-03 16:50:46.459 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:50:51.044 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:50:51.053 [INFO ] CMS-15-P :: start
+2026-09-03 16:50:52.083 [INFO ] CMS-16-P :: start
+2026-09-03 16:50:52.513 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:50:57.111 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:50:57.118 [INFO ] ENG-13-P :: start
+2026-09-03 16:50:58.157 [INFO ] ENG-14-P :: start
+2026-09-03 16:50:58.572 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:51:03.140 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:51:03.154 [INFO ] FIN-07-P :: start
+2026-09-03 16:51:04.175 [INFO ] FIN-08-P :: start
+2026-09-03 16:51:04.598 [INFO ] FIN-09-P :: start
+2026-09-03 16:51:05.047 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:51:09.617 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:51:09.627 [INFO ] PPL-10-P :: start
+2026-09-03 16:51:10.169 [INFO ] PPL-11-P :: start
+2026-09-03 16:51:10.656 [INFO ] PPL-12-P :: start
+2026-09-03 16:51:11.103 [INFO ] admin :: launching browser & logging in
+2026-09-03 16:51:15.685 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-03 16:51:15.694 [INFO ] SYS-17-P :: start
+2026-09-03 16:51:16.708 [INFO ] SYS-18-P :: start
+2026-09-03 17:21:27.094 [INFO ] UP-06-N :: start
+2026-09-03 17:21:28.385 [INFO ] UP-07-N :: start
+2026-09-03 17:21:28.386 [INFO ] login :: navigating to /login
+2026-09-03 17:22:29.407 [INFO ] login :: already authed
+2026-09-03 17:22:29.974 [INFO ] cookies :: dismissed
+2026-09-03 17:22:38.701 [INFO ] UP-07-N :: 237MB video: rejection_message=true stuck_uploading=true
+2026-09-03 17:22:38.701 [INFO ] UP-07-N :: rejection error visible
+2026-09-03 17:22:39.889 [INFO ] UP-08-N :: start
+2026-09-03 17:22:39.890 [INFO ] login :: navigating to /login
+2026-09-03 17:22:45.072 [INFO ] login :: ok
+2026-09-03 17:22:47.212 [INFO ] cookies :: dismissed
+2026-09-03 17:22:51.352 [INFO ] UP-08-N :: mp3 in video slot: rejected_text=false
+2026-09-03 17:22:52.517 [INFO ] UP-09-N :: start
+2026-09-03 17:22:52.517 [INFO ] login :: navigating to /login
+2026-09-03 17:22:57.626 [INFO ] login :: ok
+2026-09-03 17:23:00.960 [INFO ] cookies :: dismissed
+2026-09-03 17:23:02.127 [INFO ] UP-09-N :: Continue with no cover image: enabled=true
+2026-09-03 17:23:02.127 [WARN ] UP-09-N :: Continue is enabled with no cover — server may reject on submit
+2026-09-03 17:23:03.290 [INFO ] UP-10-N :: start
+2026-09-03 17:23:03.291 [INFO ] login :: navigating to /login
+2026-09-03 17:23:07.785 [INFO ] login :: ok
+2026-09-03 17:23:08.894 [INFO ] cookies :: dismissed
+2026-09-03 17:23:10.058 [INFO ] UP-10-N :: garbage in URL field: {"valid":false,"typeMismatch":true,"badInput":false}
+2026-09-03 17:23:11.226 [INFO ] UP-11-N :: start
+2026-09-03 17:23:11.227 [INFO ] login :: navigating to /login
+2026-09-03 17:23:16.702 [INFO ] login :: ok
+2026-09-03 17:23:18.743 [INFO ] cookies :: dismissed
+2026-09-03 17:23:19.976 [INFO ] UP-11-N :: entered 29 chars (under 30 minimum)
+2026-09-03 17:23:19.984 [INFO ] UP-11-N :: entered 30 chars (boundary case)
+2026-09-03 17:23:21.152 [INFO ] UP-12-N :: start
+2026-09-03 17:23:21.152 [INFO ] login :: navigating to /login
+2026-09-03 17:23:25.535 [INFO ] login :: ok
+2026-09-03 17:23:27.494 [INFO ] cookies :: dismissed
+2026-09-03 17:23:29.134 [INFO ] UP-12-N :: goal=0 accepted: 0
+2026-09-03 17:23:30.309 [INFO ] UP-13-N :: start
+2026-09-03 17:23:30.310 [INFO ] login :: navigating to /login
+2026-09-03 17:25:05.553 [WARN ] safeLogin :: login timeout: page.waitForURL: Timeout 90000ms exceeded.
+2026-09-03 17:27:00.469 [INFO ] UP-01-P :: start
+2026-09-03 17:27:00.470 [INFO ] login :: navigating to /login
+2026-09-03 17:28:01.255 [INFO ] login :: already authed
+2026-09-03 17:28:01.706 [INFO ] cookies :: dismissed
+2026-09-03 17:28:02.959 [INFO ] UP-01-P :: cover image rendered
+2026-09-03 17:28:04.122 [INFO ] UP-02-P :: start
+2026-09-03 17:28:04.123 [INFO ] login :: navigating to /login
+2026-09-03 17:28:10.187 [INFO ] login :: ok
+2026-09-03 17:28:12.918 [INFO ] cookies :: dismissed
+2026-09-03 17:28:20.224 [INFO ] UP-03-P :: start
+2026-09-03 17:28:20.225 [INFO ] login :: navigating to /login
+2026-09-03 17:28:26.491 [INFO ] login :: ok
+2026-09-03 17:28:29.752 [INFO ] cookies :: dismissed
+2026-09-03 17:28:36.430 [INFO ] UP-04-P :: start
+2026-09-03 17:28:36.432 [INFO ] login :: navigating to /login
+2026-09-03 17:28:41.470 [INFO ] login :: ok
+2026-09-03 17:28:42.732 [INFO ] cookies :: dismissed
+2026-09-03 17:28:49.365 [INFO ] UP-05-P :: start
+2026-09-03 17:28:49.367 [INFO ] login :: navigating to /login
+2026-09-03 17:28:53.421 [INFO ] login :: ok
+2026-09-03 17:28:54.550 [INFO ] cookies :: dismissed
+2026-09-03 17:28:55.758 [INFO ] UP-05-P :: youtube URL accepted
+2026-09-03 17:44:18.657 [INFO ] UP-01-P :: start
+2026-09-03 17:44:18.659 [INFO ] login :: navigating to /login
+2026-09-03 17:45:19.509 [INFO ] login :: already authed
+2026-09-03 17:45:20.112 [INFO ] cookies :: dismissed
+2026-09-03 17:45:20.770 [INFO ] UP-01-P :: cover image rendered
+2026-09-03 17:45:21.918 [INFO ] UP-02-P :: start
+2026-09-03 17:45:21.919 [INFO ] login :: navigating to /login
+2026-09-03 17:45:26.745 [INFO ] login :: ok
+2026-09-03 17:45:28.474 [INFO ] cookies :: dismissed
+2026-09-03 17:45:36.193 [INFO ] UP-02-P :: 3 files uploaded sequentially, 5 images in DOM
+2026-09-03 17:45:37.351 [INFO ] UP-03-P :: start
+2026-09-03 17:45:37.352 [INFO ] login :: navigating to /login
+2026-09-03 17:45:41.584 [INFO ] login :: ok
+2026-09-03 17:45:43.091 [INFO ] cookies :: dismissed
+2026-09-03 17:46:01.812 [INFO ] UP-03-P :: 12 files uploaded sequentially, 12 images in DOM (incl. cover)
+2026-09-03 17:46:03.022 [INFO ] UP-04-P :: start
+2026-09-03 17:46:03.023 [INFO ] login :: navigating to /login
+2026-09-03 17:46:07.429 [INFO ] login :: ok
+2026-09-03 17:46:08.574 [INFO ] cookies :: dismissed
+2026-09-03 17:46:15.335 [INFO ] UP-04-P :: video + image upload did not crash
+2026-09-03 17:46:16.610 [INFO ] UP-05-P :: start
+2026-09-03 17:46:16.611 [INFO ] login :: navigating to /login
+2026-09-03 17:46:21.502 [INFO ] login :: ok
+2026-09-03 17:46:22.591 [INFO ] cookies :: dismissed
+2026-09-03 17:46:23.787 [INFO ] UP-05-P :: youtube URL accepted
+2026-09-03 17:51:14.176 [INFO ] UP-06-N :: start
+2026-09-03 17:51:15.401 [INFO ] UP-13-N :: start
+2026-09-03 17:51:15.402 [INFO ] login :: navigating to /login
+2026-09-03 17:52:16.627 [INFO ] login :: already authed
+2026-09-03 17:52:17.610 [INFO ] cookies :: dismissed
+2026-09-03 17:52:18.882 [INFO ] UP-13-N :: goal=-100: value="-100" valid=false underflow=true
+2026-09-03 17:56:29.719 [INFO ] UP-06-N :: start
+2026-09-03 18:27:04.762 [INFO ] DISCOVERY :: start
+2026-09-03 18:27:04.764 [INFO ] login :: navigating to /login
+2026-09-03 18:28:05.838 [INFO ] login :: already authed
+2026-09-03 18:28:06.327 [INFO ] cookies :: dismissed
+2026-09-03 18:28:15.012 [INFO ] DISCOVERY-S3 :: == STEP 3 SNAPSHOT ==
+2026-09-03 18:28:15.016 [INFO ] DISCOVERY-S3 :: TITLE: Start your campaign
+2026-09-03 18:28:15.032 [INFO ] DISCOVERY-S3 :: H2s: Review & Submit
+2026-09-03 18:28:15.035 [INFO ] DISCOVERY-S3 :: H3s: DRAFT DETAILS REVIEW
+2026-09-03 18:28:15.039 [INFO ] DISCOVERY-S3 :: INPUTS: 
+2026-09-03 18:28:15.042 [INFO ] DISCOVERY-S3 :: BUTTONS: Back | Submit for Review
+2026-09-03 18:28:15.045 [INFO ] DISCOVERY-S3-BODY :: Discover
+Home
+How it works
+Start a Project
+About
+john doe
+Start your campaign
+
+Let's get the details down. You can always edit this later.
+
+PLAN & SET UP
+BUILD PAGE
+REVIEW & SUBMIT
+DONE
+STEP 3 OF 4
+Review & Submit
+
+Verify your details and submit your campaign for review.
+
+DRAFT DETAILS REVIEW
+PROJECT TITLE
+Discovery Test Campaign
+CATEGORY
+Technology — Alien Technology
+FUNDING GOAL
+₹250,000
+COUNTRY
+India
+COMPANY NAME
+Acme Corp
+BUSINESS ADDRESS
+123 Test Street, Ahmedabad, GJ 380001
+STORY PREVIEW
+
+“This is a long enough story for the wizard to accept and proceed forward.”
+
+PAYOUT BANK ACCOUNT
+
+Not needed yet — once your campaign is approved, you'll add the payout bank account for it from Dashboard → My Campaigns.
+
+Submit to IdeaKicks: Standard human reviews take 1 to 3 business days. We'll verify your business and payout details during the review.
+Back
+Submit for Review
+2026-09-03 18:32:00.985 [INFO ] DISCOVERY :: start
+2026-09-03 18:32:00.986 [INFO ] login :: navigating to /login
+2026-09-03 18:33:03.416 [INFO ] login :: already authed
+2026-09-03 18:33:05.266 [INFO ] cookies :: dismissed
+2026-09-03 18:33:26.037 [INFO ] DISCOVERY-S3 :: == STEP 3 SNAPSHOT ==
+2026-09-03 18:33:26.042 [INFO ] DISCOVERY-S3 :: TITLE: Start your campaign
+2026-09-03 18:33:26.065 [INFO ] DISCOVERY-S3 :: H2s: Review & Submit
+2026-09-03 18:33:26.070 [INFO ] DISCOVERY-S3 :: H3s: DRAFT DETAILS REVIEW
+2026-09-03 18:33:26.076 [INFO ] DISCOVERY-S3 :: INPUTS: 
+2026-09-03 18:33:26.081 [INFO ] DISCOVERY-S3 :: BUTTONS: Back | Submit for Review | ×
+2026-09-03 18:33:26.084 [INFO ] DISCOVERY-S3-BODY :: Discover
+Home
+How it works
+Start a Project
+About
+john doe
+Start your campaign
+
+Let's get the details down. You can always edit this later.
+
+PLAN & SET UP
+BUILD PAGE
+REVIEW & SUBMIT
+DONE
+STEP 3 OF 4
+Review & Submit
+
+Verify your details and submit your campaign for review.
+
+DRAFT DETAILS REVIEW
+PROJECT TITLE
+Discovery Test Campaign
+CATEGORY
+Technology — Alien Technology
+FUNDING GOAL
+₹250,000
+COUNTRY
+India
+COMPANY NAME
+Acme Corp
+BUSINESS ADDRESS
+123 Test Street, Ahmedabad, GJ 380001
+STORY PREVIEW
+
+“This is a long enough story for the wizard to accept and proceed forward.”
+
+PAYOUT BANK ACCOUNT
+
+Not needed yet — once your campaign is approved, you'll add the payout bank account for it from Dashboard → My Campaigns.
+
+Submit to IdeaKicks: Standard human reviews take 1 to 3 business days. We'll verify your business and payout details during the review.
+Back
+Submit for Review
+
+Cover image uploaded
+
+×
+2026-09-03 18:33:26.085 [INFO ] DISCOVERY-S3 :: clicking Submit for Review
+2026-09-03 18:44:24.706 [INFO ] S3-07-N :: start
+2026-09-03 18:44:24.707 [INFO ] login :: navigating to /login
+2026-09-03 18:45:26.337 [INFO ] login :: already authed
+2026-09-03 18:45:27.007 [INFO ] cookies :: dismissed
+2026-09-03 18:47:26.640 [INFO ] S3-08-N :: start
+2026-09-03 18:47:26.641 [INFO ] login :: navigating to /login
+2026-09-03 18:47:30.523 [INFO ] login :: ok
+2026-09-03 18:47:31.713 [INFO ] cookies :: dismissed
+2026-09-03 18:50:28.986 [INFO ] S3-09-N :: start
+2026-09-03 18:50:28.988 [INFO ] login :: navigating to /login
+2026-09-03 18:50:36.774 [INFO ] login :: ok
+2026-09-03 18:50:40.658 [INFO ] cookies :: dismissed
+2026-09-03 18:53:30.956 [INFO ] S3-10-N :: start
+2026-09-03 18:53:30.958 [INFO ] login :: navigating to /login
+2026-09-03 18:53:36.640 [INFO ] login :: ok
+2026-09-03 18:53:40.381 [INFO ] cookies :: dismissed
+2026-09-03 18:56:32.626 [INFO ] S4-01-N :: start
+2026-09-03 18:56:32.628 [INFO ] login :: navigating to /login
+2026-09-03 18:56:37.469 [INFO ] login :: ok
+2026-09-03 18:56:39.955 [INFO ] cookies :: dismissed
+2026-09-03 18:59:34.637 [INFO ] S4-02-N :: start
+2026-09-03 18:59:34.638 [INFO ] login :: navigating to /login
+2026-09-03 18:59:42.586 [INFO ] login :: ok
+2026-09-03 18:59:48.532 [INFO ] cookies :: dismissed
+2026-09-03 19:02:36.725 [INFO ] S4-03-N :: start
+2026-09-03 19:02:36.727 [INFO ] login :: navigating to /login
+2026-09-03 19:02:41.369 [INFO ] login :: ok
+2026-09-03 19:02:43.607 [INFO ] cookies :: dismissed
+2026-09-03 19:07:12.365 [INFO ] S3-01-P :: start
+2026-09-03 19:08:46.801 [INFO ] S3-02-P :: start
+2026-09-03 19:10:19.593 [INFO ] S3-03-P :: start
+2026-09-03 19:11:53.019 [INFO ] S3-04-P :: start
+2026-09-04 08:29:18.013 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 08:29:18.026 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 08:29:24.003 [INFO ] S3-01-P :: start
+2026-09-04 08:55:00.483 [INFO ] SEQ :: starting sequential walk through all 4 steps
+2026-09-04 08:55:00.494 [INFO ] SEQ-SETUP :: navigating to /start/application
+2026-09-04 08:55:04.165 [INFO ] SEQ-SETUP :: step 1: ticking eligibility + filling fields
+2026-09-04 09:10:09.092 [INFO ] SEQ :: starting sequential walk through all 4 steps
+2026-09-04 09:10:09.102 [INFO ] SEQ-SETUP :: navigating to /start/application
+2026-09-04 09:10:13.315 [INFO ] SEQ-SETUP :: step 1: ticking eligibility + filling fields
+2026-09-04 09:25:23.595 [INFO ] SEQ :: starting sequential walk through all 4 steps
+2026-09-04 09:25:23.606 [INFO ] SEQ-SETUP :: navigating to /start/application
+2026-09-04 09:25:28.010 [INFO ] SEQ-SETUP :: step 1: ticking eligibility + filling fields
+2026-09-04 09:35:23.645 [WARN ] SEQ-SETUP :: step 1 failed: locator.isChecked: Target page, context or browser has been closed
+2026-09-04 09:43:11.386 [INFO ] SEQ :: beforeAll: walk through steps 1 → 3
+2026-09-04 09:43:38.112 [WARN ] SEQ :: setup failed: locator.isChecked: Target page, context or browser has been closed
+2026-09-04 09:59:43.334 [INFO ] SEQ :: beforeAll: walk through steps 1 → 3
+2026-09-04 10:00:10.080 [WARN ] SEQ :: setup failed: locator.isChecked: Target page, context or browser has been closed
+2026-09-04 10:17:46.008 [INFO ] SEQ :: beforeAll: walk through steps 1 → 3
+2026-09-04 10:18:12.748 [WARN ] SEQ :: setup failed: locator.isChecked: Target page, context or browser has been closed
+2026-09-04 10:30:43.020 [INFO ] SEQ :: === STARTING FULL WALK ===
+2026-09-04 10:30:43.022 [INFO ] SEQ :: navigating to /start/application
+2026-09-04 10:30:46.943 [INFO ] SEQ :: on step 1
+2026-09-04 10:54:41.383 [INFO ] SEQ :: === STARTING FULL WALK ===
+2026-09-04 10:54:41.384 [INFO ] SEQ :: navigating to /start/application
+2026-09-04 10:54:44.548 [INFO ] SEQ :: on step 1
+2026-09-04 11:06:50.810 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:06:50.820 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 11:06:53.141 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:07:01.149 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 11:07:01.172 [INFO ] ADM-01-N :: start
+2026-09-04 11:07:04.052 [INFO ] ADM-01-N :: empty state shown for no-match search
+2026-09-04 11:07:04.087 [INFO ] ADM-01-N2 :: start
+2026-09-04 11:07:06.860 [INFO ] ADM-01-N2 :: search survived 5000 chars
+2026-09-04 11:07:06.889 [INFO ] ADM-03-N :: start
+2026-09-04 11:07:09.688 [INFO ] ADM-03-N :: no XSS via search
+2026-09-04 11:07:09.703 [INFO ] ADM-99-N :: start
+2026-09-04 11:07:13.663 [INFO ] ADM-99-N :: unauthed → https://admin.187.77.79.40.nip.io/login
+2026-09-04 11:07:13.721 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:07:18.941 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:07:18.964 [INFO ] ADM-01-P :: start
+2026-09-04 11:07:20.038 [INFO ] ADM-01-P :: ok
+2026-09-04 11:07:20.053 [INFO ] ADM-02-P :: start
+2026-09-04 11:07:21.738 [INFO ] ADM-02-P :: filter controls: 2
+2026-09-04 11:07:21.747 [INFO ] ADM-03-P :: start
+2026-09-04 11:07:22.712 [INFO ] ADM-04-P :: start
+2026-09-04 11:07:23.228 [INFO ] ADM-05-P :: start
+2026-09-04 11:07:23.641 [INFO ] ADM-06-P :: start
+2026-09-04 11:07:24.184 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:07:28.917 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 11:07:28.926 [INFO ] CMS-N1 :: start
+2026-09-04 11:07:29.111 [INFO ] CMS-N1 :: status: 404
+2026-09-04 11:07:29.143 [INFO ] CMS-N2 :: start
+2026-09-04 11:07:30.886 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:07:36.183 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:07:36.197 [INFO ] CMS-15-P :: start
+2026-09-04 11:07:37.250 [INFO ] CMS-16-P :: start
+2026-09-04 11:07:39.527 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:07:44.255 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 11:07:44.267 [INFO ] ENG-N1 :: start
+2026-09-04 11:07:45.661 [INFO ] ENG-N2 :: start
+2026-09-04 11:07:47.003 [INFO ] ENG-N3 :: start
+2026-09-04 11:07:49.849 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:07:58.580 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 11:07:58.599 [INFO ] ENG-13-P :: start
+2026-09-04 11:08:00.356 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:08:05.987 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:08:07.431 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:08:07.452 [INFO ] FIN-N1 :: start
+2026-09-04 11:08:07.639 [INFO ] FIN-N1 :: status: 404
+2026-09-04 11:08:07.687 [INFO ] FIN-N2 :: start
+2026-09-04 11:08:08.914 [INFO ] FIN-N3 :: start
+2026-09-04 11:08:13.621 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:08:13.640 [INFO ] FIN-07-P :: start
+2026-09-04 11:08:14.722 [INFO ] FIN-08-P :: start
+2026-09-04 11:08:16.429 [INFO ] FIN-09-P :: start
+2026-09-04 11:08:17.748 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:08:23.625 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:08:23.639 [INFO ] PPL-N1 :: start
+2026-09-04 11:08:26.419 [INFO ] PPL-N2 :: start
+2026-09-04 11:08:28.375 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:08:29.234 [INFO ] PPL-N3 :: start
+2026-09-04 11:08:31.986 [INFO ] PPL-N4 :: start
+2026-09-04 11:08:32.298 [INFO ] PPL-N4 :: status: 200
+2026-09-04 11:08:34.164 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:08:34.177 [INFO ] PPL-10-P :: start
+2026-09-04 11:08:36.317 [INFO ] PPL-11-P :: start
+2026-09-04 11:08:36.804 [INFO ] PPL-12-P :: start
+2026-09-04 11:08:37.894 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:08:42.757 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 11:08:42.773 [INFO ] SYS-N1 :: start
+2026-09-04 11:08:44.452 [INFO ] SYS-N1 :: JS errors: 0
+2026-09-04 11:08:44.475 [INFO ] SYS-N2 :: start
+2026-09-04 11:08:45.288 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:08:46.092 [INFO ] SYS-N3 :: start
+2026-09-04 11:08:55.277 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 11:08:55.298 [INFO ] SYS-17-P :: start
+2026-09-04 11:10:16.695 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:10:17.897 [INFO ] WIZ-09-N :: start
+2026-09-04 11:10:17.898 [INFO ] login :: navigating to /login
+2026-09-04 11:10:22.212 [INFO ] login :: ok
+2026-09-04 11:10:23.707 [INFO ] cookies :: dismissed
+2026-09-04 11:10:30.656 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 11:10:31.835 [INFO ] WIZ-01-P :: start
+2026-09-04 11:10:31.836 [INFO ] login :: navigating to /login
+2026-09-04 11:10:36.207 [INFO ] login :: ok
+2026-09-04 11:10:37.436 [INFO ] cookies :: dismissed
+2026-09-04 11:10:43.950 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 11:10:48.642 [INFO ] WIZ-02-P :: start
+2026-09-04 11:10:48.643 [INFO ] login :: navigating to /login
+2026-09-04 11:10:53.563 [INFO ] login :: ok
+2026-09-04 11:10:54.570 [INFO ] cookies :: dismissed
+2026-09-04 11:12:17.441 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:12:21.994 [INFO ] WIZ-13-N :: start
+2026-09-04 11:12:21.995 [INFO ] login :: navigating to /login
+2026-09-04 11:12:28.447 [INFO ] login :: ok
+2026-09-04 11:12:29.951 [INFO ] cookies :: dismissed
+2026-09-04 11:12:45.988 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 11:12:50.777 [INFO ] WIZ-03-P :: start
+2026-09-04 11:12:50.778 [INFO ] login :: navigating to /login
+2026-09-04 11:13:02.049 [INFO ] login :: ok
+2026-09-04 11:13:06.334 [INFO ] cookies :: dismissed
+2026-09-04 11:14:19.357 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:14:23.835 [INFO ] WIZ-05-N :: start
+2026-09-04 11:14:23.836 [INFO ] login :: navigating to /login
+2026-09-04 11:14:46.358 [INFO ] login :: ok
+2026-09-04 11:14:48.412 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 11:14:48.881 [INFO ] cookies :: dismissed
+2026-09-04 11:14:52.985 [INFO ] WIZ-04-P :: start
+2026-09-04 11:14:52.986 [INFO ] login :: navigating to /login
+2026-09-04 11:15:03.906 [INFO ] login :: ok
+2026-09-04 11:15:05.662 [INFO ] cookies :: dismissed
+2026-09-04 11:16:21.275 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:16:25.811 [INFO ] WIZ-06-N :: start
+2026-09-04 11:16:25.812 [INFO ] login :: navigating to /login
+2026-09-04 11:16:31.266 [INFO ] login :: ok
+2026-09-04 11:16:32.742 [INFO ] cookies :: dismissed
+2026-09-04 11:16:50.353 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 11:16:55.012 [INFO ] WIZ-07-P :: start
+2026-09-04 11:16:55.013 [INFO ] login :: navigating to /login
+2026-09-04 11:16:59.992 [INFO ] login :: ok
+2026-09-04 11:17:02.039 [INFO ] cookies :: dismissed
+2026-09-04 11:18:23.189 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:18:27.773 [INFO ] WIZ-12-N :: start
+2026-09-04 11:18:27.774 [INFO ] login :: navigating to /login
+2026-09-04 11:18:32.080 [INFO ] login :: ok
+2026-09-04 11:18:33.655 [INFO ] cookies :: dismissed
+2026-09-04 11:18:52.364 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 11:18:57.404 [INFO ] WIZ-08-P :: start
+2026-09-04 11:18:57.406 [INFO ] login :: navigating to /login
+2026-09-04 11:19:02.121 [INFO ] login :: ok
+2026-09-04 11:19:04.622 [INFO ] cookies :: dismissed
+2026-09-04 11:19:06.445 [INFO ] WIZ-08-P :: JS errors on load: 0
+2026-09-04 11:19:07.689 [INFO ] WIZ-10-P :: start
+2026-09-04 11:19:07.690 [INFO ] login :: navigating to /login
+2026-09-04 11:19:19.802 [INFO ] login :: ok
+2026-09-04 11:19:21.485 [INFO ] cookies :: dismissed
+2026-09-04 11:19:22.997 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 11:19:27.598 [INFO ] WIZ-11-P :: start
+2026-09-04 11:19:27.599 [INFO ] login :: navigating to /login
+2026-09-04 11:19:36.891 [INFO ] login :: ok
+2026-09-04 11:19:38.956 [INFO ] cookies :: dismissed
+2026-09-04 11:20:25.082 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:20:29.534 [INFO ] WIZ-15-N :: start
+2026-09-04 11:20:29.535 [INFO ] login :: navigating to /login
+2026-09-04 11:20:35.208 [INFO ] login :: ok
+2026-09-04 11:20:36.367 [INFO ] cookies :: dismissed
+2026-09-04 11:21:24.949 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 11:21:29.433 [INFO ] WIZ-14-P :: start
+2026-09-04 11:21:29.434 [INFO ] login :: navigating to /login
+2026-09-04 11:21:34.020 [INFO ] login :: ok
+2026-09-04 11:21:35.529 [INFO ] cookies :: dismissed
+2026-09-04 11:21:37.548 [INFO ] WIZ-20-P :: start
+2026-09-04 11:21:37.549 [INFO ] login :: navigating to /login
+2026-09-04 11:21:43.548 [INFO ] login :: ok
+2026-09-04 11:21:44.978 [INFO ] cookies :: dismissed
+2026-09-04 11:21:46.127 [INFO ] UP-06-N :: start
+2026-09-04 11:21:47.278 [INFO ] UP-07-N :: start
+2026-09-04 11:21:47.279 [INFO ] login :: navigating to /login
+2026-09-04 11:21:52.180 [INFO ] login :: ok
+2026-09-04 11:21:53.163 [INFO ] cookies :: dismissed
+2026-09-04 11:22:26.976 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:22:31.489 [INFO ] WIZ-16-N :: start
+2026-09-04 11:22:31.490 [INFO ] login :: navigating to /login
+2026-09-04 11:22:44.568 [INFO ] login :: ok
+2026-09-04 11:22:46.427 [INFO ] cookies :: dismissed
+2026-09-04 11:24:29.002 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:24:33.643 [INFO ] WIZ-22-N :: start
+2026-09-04 11:24:33.644 [INFO ] login :: navigating to /login
+2026-09-04 11:24:45.986 [INFO ] login :: ok
+2026-09-04 11:24:48.355 [INFO ] cookies :: dismissed
+2026-09-04 11:24:52.203 [INFO ] UP-08-N :: start
+2026-09-04 11:24:52.206 [INFO ] login :: navigating to /login
+2026-09-04 11:24:59.933 [INFO ] login :: ok
+2026-09-04 11:25:01.387 [INFO ] cookies :: dismissed
+2026-09-04 11:35:25.970 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:35:25.974 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 11:35:50.569 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:35:55.820 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:35:55.831 [INFO ] ADM-01-N :: start
+2026-09-04 11:35:58.597 [INFO ] ADM-01-N :: empty state shown for no-match search
+2026-09-04 11:35:58.609 [INFO ] ADM-01-N2 :: start
+2026-09-04 11:36:01.320 [INFO ] ADM-01-N2 :: search survived 5000 chars
+2026-09-04 11:36:01.333 [INFO ] ADM-03-N :: start
+2026-09-04 11:36:04.306 [INFO ] ADM-03-N :: no XSS via search
+2026-09-04 11:36:04.322 [INFO ] ADM-99-N :: start
+2026-09-04 11:36:08.260 [INFO ] ADM-99-N :: unauthed → https://admin.187.77.79.40.nip.io/login
+2026-09-04 11:36:08.320 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:36:13.000 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:36:13.013 [INFO ] ADM-01-P :: start
+2026-09-04 11:36:13.559 [INFO ] ADM-01-P :: ok
+2026-09-04 11:36:13.573 [INFO ] ADM-02-P :: start
+2026-09-04 11:36:15.373 [INFO ] ADM-02-P :: filter controls: 2
+2026-09-04 11:36:15.384 [INFO ] ADM-03-P :: start
+2026-09-04 11:36:15.821 [INFO ] ADM-04-P :: start
+2026-09-04 11:36:16.328 [INFO ] ADM-05-P :: start
+2026-09-04 11:36:16.872 [INFO ] ADM-06-P :: start
+2026-09-04 11:36:40.155 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:36:45.365 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:36:45.379 [INFO ] CMS-N1 :: start
+2026-09-04 11:36:45.554 [INFO ] CMS-N1 :: status: 404
+2026-09-04 11:36:45.597 [INFO ] CMS-N2 :: start
+2026-09-04 11:36:47.501 [INFO ] CMS-N2 :: 2 inputs found, trying first
+2026-09-04 11:36:57.516 [WARN ] CMS-N2 :: fill failed: locator.fill: Timeout 10000ms exceeded. — page may have navigated
+2026-09-04 11:36:57.581 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:37:02.625 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:37:02.650 [INFO ] CMS-15-P :: start
+2026-09-04 11:37:03.756 [INFO ] CMS-16-P :: start
+2026-09-04 11:37:18.842 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:37:23.585 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:37:23.599 [INFO ] ENG-N1 :: start
+2026-09-04 11:37:26.359 [INFO ] ENG-N2 :: start
+2026-09-04 11:37:29.149 [INFO ] ENG-N3 :: start
+2026-09-04 11:37:30.381 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:37:36.032 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:37:36.047 [INFO ] ENG-13-P :: start
+2026-09-04 11:37:37.119 [INFO ] ENG-14-P :: start
+2026-09-04 11:37:55.487 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:38:11.393 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 11:38:11.409 [INFO ] FIN-N1 :: start
+2026-09-04 11:38:12.442 [INFO ] FIN-N1 :: status: 404
+2026-09-04 11:38:12.482 [INFO ] FIN-N2 :: start
+2026-09-04 11:38:14.462 [INFO ] FIN-N3 :: start
+2026-09-04 11:38:16.634 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:38:28.109 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 11:38:28.124 [INFO ] FIN-07-P :: start
+2026-09-04 11:38:59.266 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:39:04.491 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:39:04.502 [INFO ] PPL-N1 :: start
+2026-09-04 11:39:07.279 [INFO ] PPL-N2 :: start
+2026-09-04 11:39:09.991 [INFO ] PPL-N3 :: start
+2026-09-04 11:39:12.720 [INFO ] PPL-N4 :: start
+2026-09-04 11:39:12.954 [INFO ] PPL-N4 :: status: 200
+2026-09-04 11:39:13.011 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:39:17.657 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:39:17.668 [INFO ] PPL-10-P :: start
+2026-09-04 11:39:18.255 [INFO ] PPL-11-P :: start
+2026-09-04 11:39:18.786 [INFO ] PPL-12-P :: start
+2026-09-04 11:39:33.676 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:39:38.283 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 11:39:38.294 [INFO ] SYS-N1 :: start
+2026-09-04 11:39:39.983 [INFO ] SYS-N1 :: JS errors: 0
+2026-09-04 11:39:39.998 [INFO ] SYS-N2 :: start
+2026-09-04 11:39:41.282 [INFO ] SYS-N3 :: start
+2026-09-04 11:39:42.503 [INFO ] admin :: launching browser & logging in
+2026-09-04 11:39:47.645 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 11:39:47.661 [INFO ] SYS-17-P :: start
+2026-09-04 11:42:52.576 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:42:53.835 [INFO ] WIZ-09-N :: start
+2026-09-04 11:42:53.836 [INFO ] login :: navigating to /login
+2026-09-04 11:43:00.239 [INFO ] login :: ok
+2026-09-04 11:43:02.528 [INFO ] cookies :: dismissed
+2026-09-04 11:44:53.355 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:44:58.025 [INFO ] WIZ-13-N :: start
+2026-09-04 11:44:58.026 [INFO ] login :: navigating to /login
+2026-09-04 11:45:01.965 [INFO ] login :: ok
+2026-09-04 11:45:04.009 [INFO ] cookies :: dismissed
+2026-09-04 11:46:55.296 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:46:59.803 [INFO ] WIZ-05-N :: start
+2026-09-04 11:46:59.804 [INFO ] login :: navigating to /login
+2026-09-04 11:47:03.940 [INFO ] login :: ok
+2026-09-04 11:47:05.052 [INFO ] cookies :: dismissed
+2026-09-04 11:48:57.172 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:49:01.828 [INFO ] WIZ-06-N :: start
+2026-09-04 11:49:01.829 [INFO ] login :: navigating to /login
+2026-09-04 11:49:16.889 [INFO ] login :: ok
+2026-09-04 11:49:17.433 [INFO ] cookies :: dismissed
+2026-09-04 11:50:59.101 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:51:03.665 [INFO ] WIZ-12-N :: start
+2026-09-04 11:51:03.666 [INFO ] login :: navigating to /login
+2026-09-04 11:51:14.906 [INFO ] login :: ok
+2026-09-04 11:51:16.108 [INFO ] cookies :: dismissed
+2026-09-04 11:53:01.135 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:53:05.962 [INFO ] WIZ-15-N :: start
+2026-09-04 11:53:05.963 [INFO ] login :: navigating to /login
+2026-09-04 11:53:14.760 [INFO ] login :: ok
+2026-09-04 11:53:15.641 [INFO ] cookies :: dismissed
+2026-09-04 11:55:03.212 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:55:07.944 [INFO ] WIZ-16-N :: start
+2026-09-04 11:55:07.945 [INFO ] login :: navigating to /login
+2026-09-04 11:55:11.941 [INFO ] login :: ok
+2026-09-04 11:55:14.197 [INFO ] cookies :: dismissed
+2026-09-04 11:57:05.279 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:57:09.994 [INFO ] WIZ-22-N :: start
+2026-09-04 11:57:09.995 [INFO ] login :: navigating to /login
+2026-09-04 11:57:32.098 [INFO ] login :: ok
+2026-09-04 11:57:38.095 [INFO ] cookies :: dismissed
+2026-09-04 11:59:07.366 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 11:59:12.025 [INFO ] WIZ-19-N :: start
+2026-09-04 11:59:12.026 [INFO ] login :: navigating to /login
+2026-09-04 11:59:17.353 [INFO ] login :: ok
+2026-09-04 11:59:18.837 [INFO ] cookies :: dismissed
+2026-09-04 11:59:19.690 [INFO ] WIZ-19-N :: after up to 5 Tabs, focused: A
+2026-09-04 11:59:19.721 [INFO ] WIZ-21-N :: start
+2026-09-04 11:59:25.274 [INFO ] WIZ-21-N :: unauthed → https://187.77.79.40.nip.io/start/application
+2026-09-04 11:59:26.466 [INFO ] WIZ-17-N :: start
+2026-09-04 11:59:26.468 [INFO ] login :: navigating to /login
+2026-09-04 11:59:31.286 [INFO ] login :: ok
+2026-09-04 11:59:32.205 [INFO ] cookies :: dismissed
+2026-09-04 12:04:07.004 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:04:07.655 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:04:12.402 [INFO ] WIZ-09-N :: start
+2026-09-04 12:04:12.403 [INFO ] login :: navigating to /login
+2026-09-04 12:05:16.312 [INFO ] login :: already authed
+2026-09-04 12:05:17.352 [INFO ] cookies :: dismissed
+2026-09-04 12:06:09.680 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:06:14.523 [INFO ] WIZ-13-N :: start
+2026-09-04 12:06:14.523 [INFO ] login :: navigating to /login
+2026-09-04 12:06:50.301 [INFO ] login :: ok
+2026-09-04 12:06:51.037 [INFO ] cookies :: dismissed
+2026-09-04 12:08:11.725 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:08:16.347 [INFO ] WIZ-05-N :: start
+2026-09-04 12:08:16.348 [INFO ] login :: navigating to /login
+2026-09-04 12:08:26.132 [INFO ] login :: ok
+2026-09-04 12:08:27.135 [INFO ] cookies :: dismissed
+2026-09-04 12:10:13.680 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:10:18.373 [INFO ] WIZ-06-N :: start
+2026-09-04 12:10:18.374 [INFO ] login :: navigating to /login
+2026-09-04 12:10:22.644 [INFO ] login :: ok
+2026-09-04 12:10:23.726 [INFO ] cookies :: dismissed
+2026-09-04 12:12:15.720 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:12:20.511 [INFO ] WIZ-12-N :: start
+2026-09-04 12:12:20.512 [INFO ] login :: navigating to /login
+2026-09-04 12:12:24.321 [INFO ] login :: ok
+2026-09-04 12:12:25.290 [INFO ] cookies :: dismissed
+2026-09-04 12:14:17.667 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:14:22.252 [INFO ] WIZ-15-N :: start
+2026-09-04 12:14:22.252 [INFO ] login :: navigating to /login
+2026-09-04 12:14:31.619 [INFO ] login :: ok
+2026-09-04 12:14:33.417 [INFO ] cookies :: dismissed
+2026-09-04 12:16:21.125 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:16:25.681 [INFO ] WIZ-16-N :: start
+2026-09-04 12:16:25.682 [INFO ] login :: navigating to /login
+2026-09-04 12:16:33.887 [INFO ] login :: ok
+2026-09-04 12:16:35.529 [INFO ] cookies :: dismissed
+2026-09-04 12:16:59.082 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:16:59.676 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:17:04.291 [INFO ] WIZ-09-N :: start
+2026-09-04 12:17:04.292 [INFO ] login :: navigating to /login
+2026-09-04 12:18:05.312 [INFO ] login :: already authed
+2026-09-04 12:18:05.878 [INFO ] cookies :: dismissed
+2026-09-04 12:18:24.564 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:18:29.171 [INFO ] WIZ-22-N :: start
+2026-09-04 12:18:29.172 [INFO ] login :: navigating to /login
+2026-09-04 12:18:39.882 [INFO ] login :: ok
+2026-09-04 12:18:41.425 [INFO ] cookies :: dismissed
+2026-09-04 12:19:03.160 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:19:07.769 [INFO ] WIZ-13-N :: start
+2026-09-04 12:19:07.770 [INFO ] login :: navigating to /login
+2026-09-04 12:19:18.518 [INFO ] login :: ok
+2026-09-04 12:19:20.456 [INFO ] cookies :: dismissed
+2026-09-04 12:20:28.028 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:20:32.624 [INFO ] WIZ-19-N :: start
+2026-09-04 12:20:32.625 [INFO ] login :: navigating to /login
+2026-09-04 12:20:37.641 [INFO ] login :: ok
+2026-09-04 12:20:38.753 [INFO ] cookies :: dismissed
+2026-09-04 12:20:39.583 [INFO ] WIZ-19-N :: after up to 5 Tabs, focused: A
+2026-09-04 12:20:39.605 [INFO ] WIZ-21-N :: start
+2026-09-04 12:20:43.989 [INFO ] WIZ-21-N :: unauthed → https://187.77.79.40.nip.io/login?next=/start/application
+2026-09-04 12:20:45.154 [INFO ] WIZ-17-N :: start
+2026-09-04 12:20:45.155 [INFO ] login :: navigating to /login
+2026-09-04 12:20:48.835 [INFO ] login :: ok
+2026-09-04 12:20:49.819 [INFO ] cookies :: dismissed
+2026-09-04 12:21:06.637 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:21:11.255 [INFO ] WIZ-05-N :: start
+2026-09-04 12:21:11.256 [INFO ] login :: navigating to /login
+2026-09-04 12:21:15.522 [INFO ] login :: ok
+2026-09-04 12:21:16.568 [INFO ] cookies :: dismissed
+2026-09-04 12:22:46.273 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:22:50.866 [INFO ] WIZ-18-N :: start
+2026-09-04 12:22:50.867 [INFO ] login :: navigating to /login
+2026-09-04 12:22:56.529 [INFO ] login :: ok
+2026-09-04 12:22:58.180 [INFO ] cookies :: dismissed
+2026-09-04 12:23:10.110 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:23:14.684 [INFO ] WIZ-06-N :: start
+2026-09-04 12:23:14.685 [INFO ] login :: navigating to /login
+2026-09-04 12:23:19.523 [INFO ] login :: ok
+2026-09-04 12:23:20.697 [INFO ] cookies :: dismissed
+2026-09-04 12:25:13.583 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:25:18.161 [INFO ] WIZ-12-N :: start
+2026-09-04 12:25:18.162 [INFO ] login :: navigating to /login
+2026-09-04 12:25:22.525 [INFO ] login :: ok
+2026-09-04 12:25:23.843 [INFO ] cookies :: dismissed
+2026-09-04 12:27:17.027 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:27:21.617 [INFO ] WIZ-15-N :: start
+2026-09-04 12:27:21.618 [INFO ] login :: navigating to /login
+2026-09-04 12:27:26.495 [INFO ] login :: ok
+2026-09-04 12:27:31.402 [INFO ] cookies :: dismissed
+2026-09-04 12:29:20.503 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:29:25.083 [INFO ] WIZ-16-N :: start
+2026-09-04 12:29:25.084 [INFO ] login :: navigating to /login
+2026-09-04 12:29:34.608 [INFO ] login :: ok
+2026-09-04 12:29:35.749 [INFO ] cookies :: dismissed
+2026-09-04 12:31:23.956 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:31:28.623 [INFO ] WIZ-22-N :: start
+2026-09-04 12:31:28.624 [INFO ] login :: navigating to /login
+2026-09-04 12:31:31.839 [INFO ] login :: ok
+2026-09-04 12:31:32.877 [INFO ] cookies :: dismissed
+2026-09-04 12:33:27.473 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:33:32.053 [INFO ] WIZ-19-N :: start
+2026-09-04 12:33:32.054 [INFO ] login :: navigating to /login
+2026-09-04 12:33:35.610 [INFO ] login :: ok
+2026-09-04 12:33:36.754 [INFO ] cookies :: dismissed
+2026-09-04 12:33:37.592 [INFO ] WIZ-19-N :: after up to 5 Tabs, focused: A
+2026-09-04 12:33:37.619 [INFO ] WIZ-21-N :: start
+2026-09-04 12:33:42.057 [INFO ] WIZ-21-N :: unauthed → https://187.77.79.40.nip.io/login?next=/start/application
+2026-09-04 12:33:43.317 [INFO ] WIZ-17-N :: start
+2026-09-04 12:33:43.318 [INFO ] login :: navigating to /login
+2026-09-04 12:33:49.157 [INFO ] login :: ok
+2026-09-04 12:33:53.341 [INFO ] cookies :: dismissed
+2026-09-04 12:34:05.658 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:34:06.268 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:34:10.919 [INFO ] WIZ-09-N :: start
+2026-09-04 12:34:10.920 [INFO ] login :: navigating to /login
+2026-09-04 12:35:13.265 [INFO ] login :: already authed
+2026-09-04 12:35:18.270 [INFO ] cookies :: dismissed
+2026-09-04 12:35:44.367 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:35:49.315 [INFO ] WIZ-18-N :: start
+2026-09-04 12:35:49.316 [INFO ] login :: navigating to /login
+2026-09-04 12:35:56.129 [INFO ] login :: ok
+2026-09-04 12:35:57.284 [INFO ] cookies :: dismissed
+2026-09-04 12:38:09.738 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:38:14.366 [INFO ] WIZ-13-N :: start
+2026-09-04 12:38:14.367 [INFO ] login :: navigating to /login
+2026-09-04 12:38:18.391 [INFO ] login :: ok
+2026-09-04 12:38:19.513 [INFO ] cookies :: dismissed
+2026-09-04 12:42:13.228 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:42:17.818 [INFO ] WIZ-05-N :: start
+2026-09-04 12:42:17.819 [INFO ] login :: navigating to /login
+2026-09-04 12:42:21.989 [INFO ] login :: ok
+2026-09-04 12:42:23.133 [INFO ] cookies :: dismissed
+2026-09-04 12:46:16.652 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:46:21.206 [INFO ] WIZ-06-N :: start
+2026-09-04 12:46:21.207 [INFO ] login :: navigating to /login
+2026-09-04 12:46:31.796 [INFO ] login :: ok
+2026-09-04 12:46:33.308 [INFO ] cookies :: dismissed
+2026-09-04 12:50:20.107 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:50:24.671 [INFO ] WIZ-12-N :: start
+2026-09-04 12:50:24.671 [INFO ] login :: navigating to /login
+2026-09-04 12:50:29.089 [INFO ] login :: ok
+2026-09-04 12:50:30.132 [INFO ] cookies :: dismissed
+2026-09-04 12:54:23.578 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:54:28.165 [INFO ] WIZ-15-N :: start
+2026-09-04 12:54:28.166 [INFO ] login :: navigating to /login
+2026-09-04 12:54:32.696 [INFO ] login :: ok
+2026-09-04 12:54:33.672 [INFO ] cookies :: dismissed
+2026-09-04 12:58:27.074 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 12:58:31.906 [INFO ] WIZ-16-N :: start
+2026-09-04 12:58:31.906 [INFO ] login :: navigating to /login
+2026-09-04 12:58:35.402 [INFO ] login :: ok
+2026-09-04 12:58:36.846 [INFO ] cookies :: dismissed
+2026-09-04 13:06:00.713 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 13:06:01.327 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 13:06:06.024 [INFO ] WIZ-09-N :: start
+2026-09-04 13:06:06.025 [INFO ] login :: navigating to /login
+2026-09-04 13:07:06.771 [INFO ] login :: already authed
+2026-09-04 13:07:07.045 [INFO ] cookies :: dismissed
+2026-09-04 13:10:04.769 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 13:10:09.034 [INFO ] WIZ-13-N :: start
+2026-09-04 13:10:09.035 [INFO ] login :: navigating to /login
+2026-09-04 13:10:13.578 [INFO ] login :: ok
+2026-09-04 13:10:13.950 [INFO ] cookies :: dismissed
+2026-09-04 13:14:08.074 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 13:14:12.339 [INFO ] WIZ-05-N :: start
+2026-09-04 13:14:12.340 [INFO ] login :: navigating to /login
+2026-09-04 13:14:16.245 [INFO ] login :: ok
+2026-09-04 13:14:16.579 [INFO ] cookies :: dismissed
+2026-09-04 13:18:11.408 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 13:18:15.611 [INFO ] WIZ-06-N :: start
+2026-09-04 13:18:15.612 [INFO ] login :: navigating to /login
+2026-09-04 13:18:22.145 [INFO ] login :: ok
+2026-09-04 13:18:23.350 [INFO ] cookies :: dismissed
+2026-09-04 13:22:14.665 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 13:22:18.886 [INFO ] WIZ-12-N :: start
+2026-09-04 13:22:18.886 [INFO ] login :: navigating to /login
+2026-09-04 13:22:24.221 [INFO ] login :: ok
+2026-09-04 13:22:25.054 [INFO ] cookies :: dismissed
+2026-09-04 13:26:17.947 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 13:26:22.243 [INFO ] WIZ-15-N :: start
+2026-09-04 13:26:22.244 [INFO ] login :: navigating to /login
+2026-09-04 13:26:26.329 [INFO ] login :: ok
+2026-09-04 13:26:26.712 [INFO ] cookies :: dismissed
+2026-09-04 13:30:21.236 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 13:30:25.548 [INFO ] WIZ-16-N :: start
+2026-09-04 13:30:25.549 [INFO ] login :: navigating to /login
+2026-09-04 13:30:29.540 [INFO ] login :: ok
+2026-09-04 13:30:29.920 [INFO ] cookies :: dismissed
+2026-09-04 13:30:41.075 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Page crashed
+2026-09-04 13:30:42.170 [INFO ] WIZ-22-N :: start
+2026-09-04 13:30:42.170 [INFO ] login :: navigating to /login
+2026-09-04 14:06:51.393 [INFO ] PERF-01 :: start
+2026-09-04 14:06:52.876 [INFO ] PERF-01 :: homepage warm load: 316ms
+2026-09-04 14:06:55.541 [INFO ] PERF-02 :: start
+2026-09-04 14:06:56.593 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.ioexplore: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.ioexplore/
+2026-09-04 14:07:00.877 [INFO ] PERF-03 :: start
+2026-09-04 14:07:00.913 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iologin: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iologin/
+2026-09-04 14:07:03.507 [INFO ] PERF-04 :: start
+2026-09-04 14:07:03.537 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iostart/application: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iostart/application
+2026-09-04 14:07:04.852 [INFO ] STRESS-01 :: start
+2026-09-04 14:07:07.270 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.ioexplore: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.ioexplore/
+2026-09-04 14:07:08.655 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iologin: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iologin/
+2026-09-04 14:07:09.944 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iohow-it-works: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iohow-it-works/
+2026-09-04 14:07:10.874 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.ioabout: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.ioabout/
+2026-09-04 14:07:15.334 [INFO ] STRESS-01 :: 5 parallel navs in 10480ms
+2026-09-04 14:07:15.336 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io -> 1149ms
+2026-09-04 14:07:15.338 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.ioexplore -> FAIL
+2026-09-04 14:07:15.340 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.iologin -> FAIL
+2026-09-04 14:07:15.341 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.iohow-it-works -> FAIL
+2026-09-04 14:07:15.343 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.ioabout -> FAIL
+2026-09-04 14:07:17.213 [INFO ] STRESS-02 :: start
+2026-09-04 14:07:20.614 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iologin: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iologin/
+2026-09-04 14:07:21.671 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iologin: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iologin/
+2026-09-04 14:07:22.787 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iologin: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iologin/
+2026-09-04 14:07:23.881 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iologin: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iologin/
+2026-09-04 14:07:25.012 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iologin: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iologin/
+2026-09-04 14:07:26.165 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iologin: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iologin/
+2026-09-04 14:07:27.295 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iologin: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iologin/
+2026-09-04 14:07:28.392 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iologin: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iologin/
+2026-09-04 14:07:29.478 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iologin: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iologin/
+2026-09-04 14:07:30.572 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.iologin: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.iologin/
+2026-09-04 14:07:35.580 [INFO ] STRESS-02 :: 10 parallel /login in 18365ms
+2026-09-04 14:07:35.582 [INFO ] STRESS-02 :: succeeded: 0/10
+2026-09-04 14:07:46.576 [INFO ] PERF-05 :: start
+2026-09-04 14:07:46.601 [WARN ] timeNav :: nav failed for https://187.77.79.40.nip.ioexplore: page.goto: net::ERR_NAME_NOT_RESOLVED at https://187.77.79.40.nip.ioexplore/
+2026-09-04 14:07:48.987 [INFO ] PERF-06 :: start
+2026-09-04 14:07:52.019 [INFO ] PERF-06 :: homepage HTML body: 75.7 KB
+2026-09-04 14:07:52.025 [INFO ] PERF-06 :: (domcontentloaded in 3035ms)
+2026-09-04 14:08:43.731 [INFO ] PERF-01 :: start
+2026-09-04 14:08:45.247 [INFO ] PERF-01 :: homepage warm load: 395ms
+2026-09-04 14:08:47.665 [INFO ] PERF-02 :: start
+2026-09-04 14:08:48.778 [INFO ] PERF-02 :: /explore load: 243ms
+2026-09-04 14:08:50.735 [INFO ] PERF-03 :: start
+2026-09-04 14:08:51.493 [INFO ] PERF-03 :: /login load: 756ms
+2026-09-04 14:08:53.083 [INFO ] PERF-04 :: start
+2026-09-04 14:08:53.860 [INFO ] PERF-04 :: /start/application load: 775ms
+2026-09-04 14:08:54.292 [INFO ] STRESS-01 :: start
+2026-09-04 14:09:01.399 [INFO ] STRESS-01 :: 5 parallel navs in 7105ms
+2026-09-04 14:09:01.406 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/ -> 907ms
+2026-09-04 14:09:01.409 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/explore -> 1328ms
+2026-09-04 14:09:01.411 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/login -> 736ms
+2026-09-04 14:09:01.413 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/how-it-works -> 922ms
+2026-09-04 14:09:01.415 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/about -> 860ms
+2026-09-04 14:09:01.446 [INFO ] STRESS-02 :: start
+2026-09-04 14:09:14.188 [INFO ] STRESS-02 :: 10 parallel /login in 12740ms
+2026-09-04 14:09:14.190 [INFO ] STRESS-02 :: succeeded: 10/10
+2026-09-04 14:09:15.353 [INFO ] PERF-05 :: start
+2026-09-04 14:09:17.731 [INFO ] PERF-06 :: start
+2026-09-04 14:09:18.585 [INFO ] PERF-06 :: homepage HTML body: 75.7 KB
+2026-09-04 14:09:18.587 [INFO ] PERF-06 :: (domcontentloaded in 854ms)
+2026-09-04 14:11:21.141 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 14:16:59.675 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 14:16:59.756 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 14:17:38.905 [INFO ] admin :: launching browser & logging in
+2026-09-04 14:17:43.828 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 14:17:43.842 [INFO ] ADM-01-N :: start
+2026-09-04 14:17:46.647 [INFO ] ADM-01-N :: empty state shown for no-match search
+2026-09-04 14:17:46.664 [INFO ] ADM-01-N2 :: start
+2026-09-04 14:17:49.391 [INFO ] ADM-01-N2 :: search survived 5000 chars
+2026-09-04 14:17:49.404 [INFO ] ADM-03-N :: start
+2026-09-04 14:17:52.163 [INFO ] ADM-03-N :: no XSS via search
+2026-09-04 14:17:52.174 [INFO ] ADM-99-N :: start
+2026-09-04 14:17:55.971 [INFO ] ADM-99-N :: unauthed → https://admin.187.77.79.40.nip.io/projects
+2026-09-04 14:17:58.372 [INFO ] admin :: launching browser & logging in
+2026-09-04 14:18:07.836 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 14:18:07.854 [INFO ] ADM-01-P :: start
+2026-09-04 14:18:08.379 [INFO ] ADM-01-P :: ok
+2026-09-04 14:18:08.391 [INFO ] ADM-02-P :: start
+2026-09-04 14:18:10.217 [INFO ] ADM-02-P :: filter controls: 2
+2026-09-04 14:18:10.236 [INFO ] ADM-03-P :: start
+2026-09-04 14:18:10.710 [INFO ] ADM-04-P :: start
+2026-09-04 14:18:11.347 [INFO ] ADM-05-P :: start
+2026-09-04 14:18:11.897 [INFO ] ADM-06-P :: start
+2026-09-04 14:18:33.734 [INFO ] admin :: launching browser & logging in
+2026-09-04 14:18:39.252 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 14:18:39.268 [INFO ] CMS-N1 :: start
+2026-09-04 14:18:39.463 [INFO ] CMS-N1 :: status: 404
+2026-09-04 14:18:39.500 [INFO ] CMS-N2 :: start
+2026-09-04 14:18:41.378 [INFO ] CMS-N2 :: 2 inputs found, trying first
+2026-09-04 14:18:51.393 [WARN ] CMS-N2 :: fill failed: locator.fill: Timeout 10000ms exceeded. — page may have navigated
+2026-09-04 14:18:51.434 [INFO ] admin :: launching browser & logging in
+2026-09-04 14:18:57.256 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 14:18:57.266 [INFO ] CMS-15-P :: start
+2026-09-04 14:18:57.798 [INFO ] CMS-16-P :: start
+2026-09-04 14:19:11.705 [INFO ] admin :: launching browser & logging in
+2026-09-04 14:19:16.906 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 14:19:16.923 [INFO ] ENG-N1 :: start
+2026-09-04 14:19:19.698 [INFO ] ENG-N2 :: start
+2026-09-04 14:19:22.462 [INFO ] ENG-N3 :: start
+2026-09-04 14:19:23.727 [INFO ] admin :: launching browser & logging in
+2026-09-04 14:19:29.154 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 14:19:29.179 [INFO ] ENG-13-P :: start
+2026-09-04 14:19:29.757 [INFO ] ENG-14-P :: start
+2026-09-04 14:19:41.371 [INFO ] admin :: launching browser & logging in
+2026-09-04 14:19:46.002 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 14:19:46.016 [INFO ] FIN-N1 :: start
+2026-09-04 14:19:46.182 [INFO ] FIN-N1 :: status: 404
+2026-09-04 14:19:46.212 [INFO ] FIN-N2 :: start
+2026-09-04 14:19:47.429 [INFO ] FIN-N3 :: start
+2026-09-04 14:19:48.710 [INFO ] admin :: launching browser & logging in
+2026-09-04 14:19:53.434 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 14:19:53.445 [INFO ] FIN-07-P :: start
+2026-09-04 14:20:18.161 [INFO ] admin :: launching browser & logging in
+2026-09-04 14:20:23.897 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 14:20:23.911 [INFO ] PPL-N1 :: start
+2026-09-04 14:20:26.710 [INFO ] PPL-N2 :: start
+2026-09-04 14:20:29.411 [INFO ] PPL-N3 :: start
+2026-09-04 14:20:32.112 [INFO ] PPL-N4 :: start
+2026-09-04 14:20:32.348 [INFO ] PPL-N4 :: status: 200
+2026-09-04 14:20:32.413 [INFO ] admin :: launching browser & logging in
+2026-09-04 14:20:37.127 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 14:20:37.142 [INFO ] PPL-10-P :: start
+2026-09-04 14:20:37.738 [INFO ] PPL-11-P :: start
+2026-09-04 14:20:38.245 [INFO ] PPL-12-P :: start
+2026-09-04 14:20:54.808 [INFO ] admin :: launching browser & logging in
+2026-09-04 14:20:59.529 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 14:20:59.544 [INFO ] SYS-N1 :: start
+2026-09-04 14:21:01.236 [INFO ] SYS-N1 :: JS errors: 0
+2026-09-04 14:21:01.252 [INFO ] SYS-N2 :: start
+2026-09-04 14:21:02.492 [INFO ] SYS-N3 :: start
+2026-09-04 14:21:03.721 [INFO ] admin :: launching browser & logging in
+2026-09-04 14:21:08.474 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 14:21:08.490 [INFO ] SYS-17-P :: start
+2026-09-04 14:21:09.074 [INFO ] SYS-18-P :: start
+2026-09-04 14:23:46.078 [INFO ] PERF-01 :: start
+2026-09-04 14:23:47.147 [INFO ] PERF-01 :: homepage warm load: 224ms
+2026-09-04 14:23:49.649 [INFO ] PERF-02 :: start
+2026-09-04 14:23:50.969 [INFO ] PERF-02 :: /explore load: 413ms
+2026-09-04 14:23:53.155 [INFO ] PERF-03 :: start
+2026-09-04 14:23:53.898 [INFO ] PERF-03 :: /login load: 741ms
+2026-09-04 14:23:55.616 [INFO ] PERF-04 :: start
+2026-09-04 14:23:56.437 [INFO ] PERF-04 :: /start/application load: 819ms
+2026-09-04 14:23:56.872 [INFO ] STRESS-01 :: start
+2026-09-04 14:24:04.430 [INFO ] STRESS-01 :: 5 parallel navs in 7555ms
+2026-09-04 14:24:04.433 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/ -> 888ms
+2026-09-04 14:24:04.435 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/explore -> 769ms
+2026-09-04 14:24:04.437 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/login -> 1325ms
+2026-09-04 14:24:04.439 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/how-it-works -> 870ms
+2026-09-04 14:24:04.441 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/about -> 951ms
+2026-09-04 14:24:04.464 [INFO ] STRESS-02 :: start
+2026-09-04 14:24:16.847 [INFO ] STRESS-02 :: 10 parallel /login in 12381ms
+2026-09-04 14:24:16.849 [INFO ] STRESS-02 :: succeeded: 10/10
+2026-09-04 14:24:18.011 [INFO ] PERF-05 :: start
+2026-09-04 14:24:20.494 [INFO ] PERF-06 :: start
+2026-09-04 14:24:21.375 [INFO ] PERF-06 :: homepage HTML body: 75.7 KB
+2026-09-04 14:24:21.378 [INFO ] PERF-06 :: (domcontentloaded in 881ms)
+2026-09-04 14:24:22.204 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 14:24:23.401 [INFO ] WIZ-09-N :: start
+2026-09-04 14:24:23.403 [INFO ] login :: navigating to /login
+2026-09-04 14:24:27.195 [INFO ] login :: ok
+2026-09-04 14:24:27.673 [INFO ] cookies :: dismissed
+2026-09-04 14:28:31.853 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 14:28:36.289 [INFO ] WIZ-13-N :: start
+2026-09-04 14:28:36.291 [INFO ] login :: navigating to /login
+2026-09-04 14:28:58.741 [INFO ] login :: ok
+2026-09-04 14:32:42.557 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 14:32:47.619 [INFO ] WIZ-05-N :: start
+2026-09-04 14:32:47.621 [INFO ] login :: navigating to /login
+2026-09-04 14:32:53.089 [INFO ] login :: ok
+2026-09-04 14:32:54.163 [INFO ] cookies :: dismissed
+2026-09-04 14:32:58.121 [INFO ] LOAD-01 :: start — concurrency=200, total=200
+2026-09-04 14:33:08.873 [INFO ] LOAD-01 :: done in 10750ms (18.6 req/s) — ok=164 fail=36 other=0
+2026-09-04 14:33:08.875 [INFO ] LOAD-01 :: status codes: {"404":164}
+2026-09-04 14:33:09.581 [INFO ] LOAD-02 :: start — burst of 50
+2026-09-04 14:33:10.292 [INFO ] LOAD-02 :: done in 709ms — codes: {"404":50}
+2026-09-04 14:36:53.376 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 14:36:57.858 [INFO ] WIZ-06-N :: start
+2026-09-04 14:36:57.861 [INFO ] login :: navigating to /login
+2026-09-04 14:37:59.233 [INFO ] login :: already authed
+2026-09-04 14:37:59.581 [INFO ] cookies :: dismissed
+2026-09-04 14:41:02.089 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 14:41:06.650 [INFO ] WIZ-12-N :: start
+2026-09-04 14:41:06.653 [INFO ] login :: navigating to /login
+2026-09-04 14:41:14.829 [INFO ] login :: ok
+2026-09-04 14:41:16.169 [INFO ] cookies :: dismissed
+2026-09-04 14:41:34.173 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Page crashed
+2026-09-04 14:42:19.777 [INFO ] LOAD-01 :: start — concurrency=200, total=200
+2026-09-04 14:42:30.395 [INFO ] LOAD-01 :: done in 10616ms (18.8 req/s) — ok=169 fail=31 other=0
+2026-09-04 14:42:30.397 [INFO ] LOAD-01 :: status codes: {"200":100,"405":69}
+2026-09-04 14:42:31.042 [INFO ] LOAD-02 :: start — burst of 50
+2026-09-04 14:42:32.230 [INFO ] LOAD-02 :: done in 1185ms — codes: {"200":25,"405":25}
+2026-09-04 14:43:12.338 [INFO ] LOAD-01 :: start — concurrency=200, total=200
+2026-09-04 14:43:22.972 [INFO ] LOAD-01 :: done in 10632ms (18.8 req/s) — ok=170 fail=30 other=0
+2026-09-04 14:43:22.974 [INFO ] LOAD-01 :: status codes: {"200":100,"405":70}
+2026-09-04 14:43:22.999 [INFO ] LOAD-02 :: start — burst of 50
+2026-09-04 14:43:23.752 [INFO ] LOAD-02 :: done in 751ms — codes: {"200":25,"405":25}
+2026-09-04 14:43:48.318 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 14:43:48.327 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 14:43:48.921 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 14:43:53.457 [INFO ] WIZ-15-N :: start
+2026-09-04 14:43:53.460 [INFO ] login :: navigating to /login
+2026-09-04 14:44:54.420 [INFO ] login :: already authed
+2026-09-04 14:44:55.299 [INFO ] cookies :: dismissed
+2026-09-04 14:47:32.541 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Page crashed
+2026-09-04 16:21:17.458 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:21:18.053 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:21:22.626 [INFO ] WIZ-09-N :: start
+2026-09-04 16:21:22.627 [INFO ] login :: navigating to /login
+2026-09-04 16:22:07.634 [WARN ] WATCHDOG :: UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) exceeded 45s — forcing skip
+2026-09-04 16:22:10.182 [INFO ] login :: already authed
+2026-09-04 16:22:10.207 [WARN ] safeRun :: server-induced failure, skipping: page.goto: Target page, context or browser has been closed
+2026-09-04 16:22:10.857 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:22:15.471 [INFO ] WIZ-13-N :: start
+2026-09-04 16:22:15.472 [INFO ] login :: navigating to /login
+2026-09-04 16:22:19.770 [INFO ] login :: ok
+2026-09-04 16:22:20.173 [INFO ] cookies :: dismissed
+2026-09-04 16:23:00.478 [WARN ] WATCHDOG :: UF-WIZ-13-N: Whitespace-only company name does not advance exceeded 45s — forcing skip
+2026-09-04 16:23:01.770 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 16:23:02.953 [INFO ] WIZ-05-N :: start
+2026-09-04 16:23:02.954 [INFO ] login :: navigating to /login
+2026-09-04 16:23:08.273 [INFO ] login :: ok
+2026-09-04 16:23:09.438 [INFO ] cookies :: dismissed
+2026-09-04 16:23:47.956 [WARN ] WATCHDOG :: UF-WIZ-05-N: 5000-char paste in company name does not crash exceeded 45s — forcing skip
+2026-09-04 16:23:49.141 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 16:23:50.314 [INFO ] WIZ-06-N :: start
+2026-09-04 16:23:50.316 [INFO ] login :: navigating to /login
+2026-09-04 16:23:54.455 [INFO ] login :: ok
+2026-09-04 16:23:54.770 [INFO ] cookies :: dismissed
+2026-09-04 16:24:35.316 [WARN ] WATCHDOG :: UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break exceeded 45s — forcing skip
+2026-09-04 16:24:36.488 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 16:24:37.652 [INFO ] WIZ-12-N :: start
+2026-09-04 16:24:37.654 [INFO ] login :: navigating to /login
+2026-09-04 16:24:47.571 [INFO ] login :: ok
+2026-09-04 16:25:22.655 [WARN ] WATCHDOG :: UF-WIZ-12-N: Lowercase PAN does not crash the form exceeded 45s — forcing skip
+2026-09-04 16:25:23.768 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 16:25:24.920 [INFO ] WIZ-15-N :: start
+2026-09-04 16:25:24.922 [INFO ] login :: navigating to /login
+2026-09-04 16:25:30.370 [INFO ] login :: ok
+2026-09-04 16:26:09.925 [WARN ] WATCHDOG :: UF-WIZ-15-N: Page reload after partial fill — form behaviour documented exceeded 45s — forcing skip
+2026-09-04 16:26:11.235 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 16:26:12.395 [INFO ] WIZ-16-N :: start
+2026-09-04 16:26:12.397 [INFO ] login :: navigating to /login
+2026-09-04 16:26:21.513 [INFO ] login :: ok
+2026-09-04 16:26:22.636 [INFO ] cookies :: dismissed
+2026-09-04 16:26:57.401 [WARN ] WATCHDOG :: UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) exceeded 45s — forcing skip
+2026-09-04 16:26:58.372 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-04 16:26:59.537 [INFO ] WIZ-22-N :: start
+2026-09-04 16:26:59.539 [INFO ] login :: navigating to /login
+2026-09-04 16:27:11.002 [INFO ] login :: ok
+2026-09-04 16:27:12.595 [INFO ] cookies :: dismissed
+2026-09-04 16:27:44.538 [WARN ] WATCHDOG :: UF-WIZ-22-N: Double-click Continue does not skip a step exceeded 45s — forcing skip
+2026-09-04 16:27:45.468 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-04 16:27:46.622 [INFO ] WIZ-19-N :: start
+2026-09-04 16:27:46.624 [INFO ] login :: navigating to /login
+2026-09-04 16:27:51.156 [INFO ] login :: ok
+2026-09-04 16:27:51.459 [INFO ] cookies :: dismissed
+2026-09-04 16:27:53.284 [INFO ] WIZ-19-N :: after up to 5 Tabs, focused: A
+2026-09-04 16:27:54.588 [INFO ] WIZ-21-N :: start
+2026-09-04 16:27:59.157 [INFO ] WIZ-21-N :: unauthed → https://187.77.79.40.nip.io/start/application
+2026-09-04 16:28:00.739 [INFO ] WIZ-17-N :: start
+2026-09-04 16:28:00.741 [INFO ] login :: navigating to /login
+2026-09-04 16:28:03.911 [INFO ] login :: ok
+2026-09-04 16:28:04.325 [INFO ] cookies :: dismissed
+2026-09-04 16:28:45.745 [WARN ] WATCHDOG :: UF-WIZ-17-N: Step 2 has at least one media upload control exceeded 45s — forcing skip
+2026-09-04 16:28:46.974 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-04 16:28:48.132 [INFO ] WIZ-18-N :: start
+2026-09-04 16:28:48.134 [INFO ] login :: navigating to /login
+2026-09-04 16:28:55.656 [INFO ] login :: ok
+2026-09-04 16:28:56.891 [INFO ] cookies :: dismissed
+2026-09-04 16:29:33.138 [WARN ] WATCHDOG :: UF-WIZ-18-N: Step 3 review reflects company name from step 1 exceeded 45s — forcing skip
+2026-09-04 16:29:34.204 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-04 16:32:52.374 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:32:52.968 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:32:57.514 [INFO ] WIZ-09-N :: start
+2026-09-04 16:32:57.515 [INFO ] login :: navigating to /login
+2026-09-04 16:33:32.520 [WARN ] WATCHDOG :: UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) exceeded 35s — closing context
+2026-09-04 16:33:34.304 [INFO ] login :: already authed
+2026-09-04 16:33:34.308 [WARN ] safeRun :: server-induced failure, skipping: page.goto: Target page, context or browser has been closed
+2026-09-04 16:33:34.967 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:33:39.536 [INFO ] WIZ-13-N :: start
+2026-09-04 16:33:39.538 [INFO ] login :: navigating to /login
+2026-09-04 16:33:44.533 [INFO ] login :: ok
+2026-09-04 16:33:44.930 [INFO ] cookies :: dismissed
+2026-09-04 16:34:14.537 [WARN ] WATCHDOG :: UF-WIZ-13-N: Whitespace-only company name does not advance exceeded 35s — closing context
+2026-09-04 16:34:15.540 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 16:34:16.700 [INFO ] WIZ-05-N :: start
+2026-09-04 16:34:16.703 [INFO ] login :: navigating to /login
+2026-09-04 16:34:26.641 [INFO ] login :: ok
+2026-09-04 16:34:27.995 [INFO ] cookies :: dismissed
+2026-09-04 16:34:51.708 [WARN ] WATCHDOG :: UF-WIZ-05-N: 5000-char paste in company name does not crash exceeded 35s — closing context
+2026-09-04 16:34:52.458 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 16:34:53.626 [INFO ] WIZ-06-N :: start
+2026-09-04 16:34:53.628 [INFO ] login :: navigating to /login
+2026-09-04 16:35:02.745 [INFO ] login :: ok
+2026-09-04 16:35:04.262 [INFO ] cookies :: dismissed
+2026-09-04 16:35:28.636 [WARN ] WATCHDOG :: UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break exceeded 35s — closing context
+2026-09-04 16:35:29.407 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 16:35:30.585 [INFO ] WIZ-12-N :: start
+2026-09-04 16:35:30.587 [INFO ] login :: navigating to /login
+2026-09-04 16:35:35.925 [INFO ] login :: ok
+2026-09-04 16:36:05.594 [WARN ] WATCHDOG :: UF-WIZ-12-N: Lowercase PAN does not crash the form exceeded 35s — closing context
+2026-09-04 16:36:06.554 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 16:36:07.721 [INFO ] WIZ-15-N :: start
+2026-09-04 16:36:07.722 [INFO ] login :: navigating to /login
+2026-09-04 16:36:15.224 [INFO ] login :: ok
+2026-09-04 16:36:17.158 [INFO ] cookies :: dismissed
+2026-09-04 16:36:42.732 [WARN ] WATCHDOG :: UF-WIZ-15-N: Page reload after partial fill — form behaviour documented exceeded 35s — closing context
+2026-09-04 16:36:43.475 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 16:36:44.640 [INFO ] WIZ-16-N :: start
+2026-09-04 16:36:44.642 [INFO ] login :: navigating to /login
+2026-09-04 16:36:49.930 [INFO ] login :: ok
+2026-09-04 16:36:50.940 [INFO ] cookies :: dismissed
+2026-09-04 16:37:19.641 [WARN ] WATCHDOG :: UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) exceeded 35s — closing context
+2026-09-04 16:37:20.616 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-04 16:37:21.770 [INFO ] WIZ-22-N :: start
+2026-09-04 16:37:21.772 [INFO ] login :: navigating to /login
+2026-09-04 16:37:25.832 [INFO ] login :: ok
+2026-09-04 16:37:56.780 [WARN ] WATCHDOG :: UF-WIZ-22-N: Double-click Continue does not skip a step exceeded 35s — closing context
+2026-09-04 16:37:57.792 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-04 16:37:58.970 [INFO ] WIZ-19-N :: start
+2026-09-04 16:37:58.972 [INFO ] login :: navigating to /login
+2026-09-04 16:38:08.072 [INFO ] login :: ok
+2026-09-04 16:38:09.403 [INFO ] cookies :: dismissed
+2026-09-04 16:38:10.747 [INFO ] WIZ-19-N :: after up to 5 Tabs, focused: A
+2026-09-04 16:38:12.024 [INFO ] WIZ-21-N :: start
+2026-09-04 16:38:16.440 [INFO ] WIZ-21-N :: unauthed → https://187.77.79.40.nip.io/start/application
+2026-09-04 16:38:18.024 [INFO ] WIZ-17-N :: start
+2026-09-04 16:38:18.026 [INFO ] login :: navigating to /login
+2026-09-04 16:38:21.673 [INFO ] login :: ok
+2026-09-04 16:38:53.024 [WARN ] WATCHDOG :: UF-WIZ-17-N: Step 2 has at least one media upload control exceeded 35s — closing context
+2026-09-04 16:38:54.050 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-04 16:38:55.218 [INFO ] WIZ-18-N :: start
+2026-09-04 16:38:55.219 [INFO ] login :: navigating to /login
+2026-09-04 16:38:59.718 [INFO ] login :: ok
+2026-09-04 16:39:00.242 [INFO ] cookies :: dismissed
+2026-09-04 16:39:30.228 [WARN ] WATCHDOG :: UF-WIZ-18-N: Step 3 review reflects company name from step 1 exceeded 35s — closing context
+2026-09-04 16:39:31.104 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-04 16:45:50.358 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:45:50.364 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 16:51:38.875 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:51:38.882 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 16:54:50.789 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:54:50.797 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 16:56:48.827 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:56:48.835 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 16:57:27.939 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:57:27.948 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 16:59:06.264 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:59:06.272 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 16:59:45.450 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 16:59:45.459 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 16:59:45.481 [INFO ] RUN-BEGIN :: Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-04_16-59-27.log
+2026-09-04 16:59:54.924 [FAIL ] UF-AUTH-01: User Registration Page Loads :: 0.00s — Error: worker process exited unexpectedly (code=143, signal=null)
+INFO  RUN-SUMMARY ::  | ======================================================================== |   TEST RUN SUMMARY — 2026-09-04_16-59-27 | ======================================================================== |   Total      : 1 |   Passed     : 0  (0.0%) |   Failed     : 1 |   Skipped    : 0 |   Info logs  : 3 |   Warnings   : 0 |   Errors     : 0 |   Duration   : 27.8s |   Run log    : C:\ideakicks\testing\logs\run-2026-09-04_16-59-27.log |   Rolling log: C:\ideakicks\testing\logs\test-execution.log | ======================================================================== | 
+2026-09-04 16:59:54.934 [INFO ] RUN-END :: Status: failed | Duration: 27.8s
+2026-09-04 16:59:54.937 [INFO ] REPORTER :: HTML report: C:\ideakicks\testing\logs\run-2026-09-04_16-59-27.html
+2026-09-04 18:08:37.291 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 18:08:37.303 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 18:08:37.331 [INFO ] RUN-BEGIN :: Suite: unnamed | Tests: 120 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-04_18-08-14.log
+2026-09-04 18:08:54.478 [PASS ] UF-ACCT-01: Update Profile Bio :: 15.28s
+2026-09-04 18:09:04.571 [PASS ] UF-ACCT-02: Change Account Password :: 10.08s
+2026-09-04 18:09:04.595 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:09:09.779 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:09:09.792 [INFO ] ADM-01-N :: start
+2026-09-04 18:09:12.662 [INFO ] ADM-01-N :: empty state shown for no-match search
+2026-09-04 18:09:12.672 [PASS ] UF-ADMIN-01-N: Empty search returns empty state, not error :: 2.87s
+2026-09-04 18:09:12.678 [INFO ] ADM-01-N2 :: start
+2026-09-04 18:09:15.382 [INFO ] ADM-01-N2 :: search survived 5000 chars
+2026-09-04 18:09:15.388 [PASS ] UF-ADMIN-01-N2: 5000-char search does not crash search :: 2.71s
+2026-09-04 18:09:15.392 [INFO ] ADM-03-N :: start
+2026-09-04 18:09:18.122 [INFO ] ADM-03-N :: no XSS via search
+2026-09-04 18:09:18.128 [PASS ] UF-ADMIN-03-N: Special characters in campaign search do not crash :: 2.73s
+2026-09-04 18:09:18.132 [INFO ] ADM-99-N :: start
+2026-09-04 18:09:22.017 [INFO ] ADM-99-N :: unauthed → https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:09:22.084 [PASS ] UF-ADMIN-99-N: Direct visit to admin without auth redirects to /login :: 3.94s
+2026-09-04 18:09:22.094 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:09:27.834 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:09:27.852 [INFO ] ADM-01-P :: start
+2026-09-04 18:09:28.409 [INFO ] ADM-01-P :: ok
+2026-09-04 18:09:28.417 [PASS ] UF-ADMIN-01-P: Project Submissions page loads with heading :: 0.56s
+2026-09-04 18:09:28.424 [INFO ] ADM-02-P :: start
+2026-09-04 18:09:30.244 [INFO ] ADM-02-P :: filter controls: 2
+2026-09-04 18:09:30.253 [PASS ] UF-ADMIN-02-P: Project Submissions filter UI is present :: 1.82s
+2026-09-04 18:09:30.263 [INFO ] ADM-03-P :: start
+2026-09-04 18:09:30.719 [PASS ] UF-ADMIN-03-P: Campaigns list page loads :: 0.45s
+2026-09-04 18:09:30.726 [INFO ] ADM-04-P :: start
+2026-09-04 18:09:31.249 [PASS ] UF-ADMIN-04-P: Categories page loads :: 0.52s
+2026-09-04 18:09:31.256 [INFO ] ADM-05-P :: start
+2026-09-04 18:09:32.536 [PASS ] UF-ADMIN-05-P: Country Fields (Application Fields) page loads :: 1.28s
+2026-09-04 18:09:32.542 [INFO ] ADM-06-P :: start
+2026-09-04 18:09:33.776 [PASS ] UF-ADMIN-06-P: Partners page loads :: 1.21s
+2026-09-04 18:09:45.032 [PASS ] UF-ADMIN-01: Admin View Project Submissions :: 2.50s
+2026-09-04 18:09:47.550 [PASS ] UF-ADMIN-02: Admin Filter Project Submissions :: 2.51s
+2026-09-04 18:09:50.306 [PASS ] UF-ADMIN-03: Admin Search & Filter Campaigns :: 2.74s
+2026-09-04 18:09:52.673 [PASS ] UF-ADMIN-04: Admin Categories Page :: 2.35s
+2026-09-04 18:09:54.921 [PASS ] UF-ADMIN-05: Admin Application Fields Page :: 2.24s
+2026-09-04 18:09:57.392 [PASS ] UF-ADMIN-06: Admin View Partners Tab :: 2.40s
+2026-09-04 18:09:57.404 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:10:02.850 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:10:02.867 [INFO ] CMS-N1 :: start
+2026-09-04 18:10:03.165 [INFO ] CMS-N1 :: status: 404
+2026-09-04 18:10:03.200 [PASS ] UF-CMS-N1: Visit a non-existent CMS page returns 404 or friendly error :: 0.33s
+2026-09-04 18:10:03.208 [INFO ] CMS-N2 :: start
+2026-09-04 18:10:04.911 [INFO ] CMS-N2 :: 2 inputs found, trying first
+2026-09-04 18:10:14.924 [WARN ] CMS-N2 :: fill failed: locator.fill: Timeout 10000ms exceeded. — page may have navigated
+2026-09-04 18:10:14.950 [SKIP ] UF-CMS-N2: 5000-char input in any visible CMS field does not crash :: skipped
+2026-09-04 18:10:14.962 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:10:21.961 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:10:21.978 [INFO ] CMS-15-P :: start
+2026-09-04 18:10:23.090 [PASS ] UF-ADMIN-15-P: CMS Pages list loads with heading :: 1.11s
+2026-09-04 18:10:23.095 [INFO ] CMS-16-P :: start
+2026-09-04 18:10:23.575 [PASS ] UF-ADMIN-16-P: CMS settings page loads :: 0.45s
+2026-09-04 18:10:34.232 [PASS ] UF-ADMIN-15: Admin Manage CMS Pages :: 3.84s
+2026-09-04 18:10:36.574 [PASS ] UF-ADMIN-16: Admin Configure Global CMS Content :: 2.27s
+2026-09-04 18:10:36.590 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:10:43.776 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:10:43.795 [INFO ] ENG-N1 :: start
+2026-09-04 18:10:46.602 [PASS ] UF-ENG-N1: Inbox empty search returns empty state :: 2.80s
+2026-09-04 18:10:46.608 [INFO ] ENG-N2 :: start
+2026-09-04 18:10:49.360 [PASS ] UF-ENG-N2: Subscribers 5000-char search does not crash :: 2.75s
+2026-09-04 18:10:49.365 [INFO ] ENG-N3 :: start
+2026-09-04 18:10:50.586 [SKIP ] UF-ENG-N3: Inbox reply with XSS payload does not execute :: skipped
+2026-09-04 18:10:50.600 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:10:55.770 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:10:55.784 [INFO ] ENG-13-P :: start
+2026-09-04 18:10:56.340 [PASS ] UF-ADMIN-13-P: Contact Inbox page loads :: 0.55s
+2026-09-04 18:10:56.347 [INFO ] ENG-14-P :: start
+2026-09-04 18:10:56.904 [PASS ] UF-ADMIN-14-P: Subscribers page loads :: 0.54s
+2026-09-04 18:11:06.566 [PASS ] UF-ADMIN-13: Admin Manage Contact Inbox :: 2.54s
+2026-09-04 18:11:08.920 [PASS ] UF-ADMIN-14: Admin View Subscribers :: 2.28s
+2026-09-04 18:11:08.935 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:11:14.083 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:11:14.106 [INFO ] FIN-N1 :: start
+2026-09-04 18:11:14.276 [INFO ] FIN-N1 :: status: 404
+2026-09-04 18:11:14.307 [PASS ] UF-FIN-N1: Payouts with non-existent ID shows error, not crash :: 0.20s
+2026-09-04 18:11:14.314 [INFO ] FIN-N2 :: start
+2026-09-04 18:11:15.528 [SKIP ] UF-FIN-N2: 5000-char filter on pledges does not crash :: skipped
+2026-09-04 18:11:15.534 [INFO ] FIN-N3 :: start
+2026-09-04 18:11:16.772 [SKIP ] UF-FIN-N3: Refunds date filter with junk value does not crash :: skipped
+2026-09-04 18:11:16.786 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:11:22.608 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:11:22.624 [INFO ] FIN-07-P :: start
+2026-09-04 18:11:24.259 [PASS ] UF-ADMIN-07-P: Payouts page loads :: 1.63s
+2026-09-04 18:11:24.267 [INFO ] FIN-08-P :: start
+2026-09-04 18:11:24.985 [PASS ] UF-ADMIN-08-P: Pledges page loads :: 0.71s
+2026-09-04 18:11:24.993 [INFO ] FIN-09-P :: start
+2026-09-04 18:11:25.752 [PASS ] UF-ADMIN-09-P: Refunds log page loads :: 0.73s
+2026-09-04 18:11:34.423 [PASS ] UF-ADMIN-07: Admin View Payouts :: 2.34s
+2026-09-04 18:11:37.087 [PASS ] UF-ADMIN-08: Admin Manage Pledges :: 2.65s
+2026-09-04 18:11:39.389 [PASS ] UF-ADMIN-09: Admin View Refunds Log :: 2.21s
+2026-09-04 18:11:39.404 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:11:44.539 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:11:44.555 [INFO ] PPL-N1 :: start
+2026-09-04 18:11:45.770 [SKIP ] UF-PPL-N1: User search with no matches shows empty state :: skipped
+2026-09-04 18:11:45.779 [INFO ] PPL-N2 :: start
+2026-09-04 18:11:48.644 [PASS ] UF-PPL-N2: User search with XSS does not execute :: 2.86s
+2026-09-04 18:11:48.651 [INFO ] PPL-N3 :: start
+2026-09-04 18:11:51.385 [PASS ] UF-PPL-N3: 5000-char user search does not crash :: 2.73s
+2026-09-04 18:11:51.395 [INFO ] PPL-N4 :: start
+2026-09-04 18:11:52.135 [INFO ] PPL-N4 :: status: 200
+2026-09-04 18:11:52.190 [PASS ] UF-PPL-N4: Visit /users/<junk-id> does not crash :: 0.77s
+2026-09-04 18:11:52.209 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:11:57.480 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:11:57.501 [INFO ] PPL-10-P :: start
+2026-09-04 18:12:03.887 [FAIL ] UF-ADMIN-10-P: User Management page loads with "New user" CTA :: 6.24s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+2026-09-04 18:12:03.890 [SKIP ] UF-ADMIN-11-P: Roles page loads with "New role" CTA :: skipped
+2026-09-04 18:12:03.891 [SKIP ] UF-ADMIN-12-P: Deletion Requests page loads :: skipped
+2026-09-04 18:12:21.523 [PASS ] UF-ADMIN-10: Admin User Management :: 4.92s
+2026-09-04 18:12:23.947 [PASS ] UF-ADMIN-11: Admin Manage Roles :: 2.41s
+2026-09-04 18:12:26.475 [PASS ] UF-ADMIN-12: Admin Review Deletion Requests :: 2.44s
+2026-09-04 18:12:26.491 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:12:32.348 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:12:32.361 [INFO ] SYS-N1 :: start
+2026-09-04 18:12:34.101 [INFO ] SYS-N1 :: JS errors: 0
+2026-09-04 18:12:34.111 [PASS ] UF-SYS-N1: Notifications page with no JS errors on load :: 1.75s
+2026-09-04 18:12:34.118 [INFO ] SYS-N2 :: start
+2026-09-04 18:12:35.422 [SKIP ] UF-SYS-N2: Activity log filter with junk date does not crash :: skipped
+2026-09-04 18:12:35.428 [INFO ] SYS-N3 :: start
+2026-09-04 18:12:36.642 [SKIP ] UF-SYS-N3: 5000-char search on activity log does not crash :: skipped
+2026-09-04 18:12:36.660 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:12:41.813 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:12:41.830 [INFO ] SYS-17-P :: start
+2026-09-04 18:12:42.870 [PASS ] UF-ADMIN-17-P: Notifications page loads :: 1.03s
+2026-09-04 18:12:42.877 [INFO ] SYS-18-P :: start
+2026-09-04 18:12:43.489 [PASS ] UF-ADMIN-18-P: Activity log page loads :: 0.58s
+2026-09-04 18:12:53.144 [PASS ] UF-ADMIN-17: Admin View Notifications :: 2.60s
+2026-09-04 18:12:55.677 [PASS ] UF-ADMIN-18: Admin View Activity Log :: 2.44s
+2026-09-04 18:13:03.634 [PASS ] UF-AUTH-01: User Registration Page Loads :: 7.94s
+2026-09-04 18:13:09.530 [PASS ] UF-AUTH-02: Login - Invalid Credentials (Negative Path) :: 5.88s
+2026-09-04 18:13:18.183 [PASS ] UF-AUTH-03: Login - Success (Positive Path) :: 8.64s
+2026-09-04 18:13:29.081 [PASS ] UF-CREA-01: Campaign Application Page Loads :: 10.88s
+2026-09-04 18:13:38.820 [PASS ] UF-CREA-02: Campaign Application - Navigate to Application :: 9.71s
+2026-09-04 18:13:45.795 [PASS ] UF-CAMP-01: Campaign Detail Tabs Navigation :: 6.93s
+2026-09-04 18:13:58.270 [PASS ] UF-CAMP-02: Save Campaign & Dashboard Sync :: 12.46s
+2026-09-04 18:14:07.468 [PASS ] UF-BACK-01: Reward & Add-on Selection :: 9.18s
+2026-09-04 18:14:17.226 [PASS ] UF-BACK-02: Payment Terms Validation (Negative Path) :: 9.75s
+2026-09-04 18:14:26.762 [PASS ] UF-BACK-03: Complete Pledge (Positive Path) :: 9.52s
+2026-09-04 18:14:38.984 [PASS ] UF-DASH-01: Creator Dashboard Tabs Navigation :: 12.20s
+2026-09-04 18:14:50.161 [PASS ] UF-DISC-01: Global Header Search (Positive Path) :: 11.15s
+2026-09-04 18:14:57.129 [PASS ] UF-DISC-02: Unsuccessful Campaign Search (Empty State) :: 6.95s
+2026-09-04 18:15:02.426 [PASS ] UF-DISC-03: Explore Category Filtering :: 5.28s
+2026-09-04 18:15:24.717 [PASS ] UF-INFO-01: Global Static Page Navigation :: 22.26s
+2026-09-04 18:15:38.410 [PASS ] UF-INFO-02: Dynamic Legal Hub Navigation :: 13.68s
+2026-09-04 18:15:43.318 [PASS ] UF-INFO-03: Cookie Preferences Management :: 4.89s
+2026-09-04 18:15:52.663 [PASS ] UF-BUG-01: Footer Social Icons Interactivity :: 9.33s
+2026-09-04 18:15:52.679 [INFO ] LOAD-01 :: start — concurrency=200, total=200
+2026-09-04 18:16:04.203 [INFO ] LOAD-01 :: done in 11522ms (17.4 req/s) — ok=186 fail=14 other=0
+2026-09-04 18:16:04.205 [INFO ] LOAD-01 :: status codes: {"200":100,"405":86}
+2026-09-04 18:16:04.213 [PASS ] UF-LOAD-01: Login endpoint survives concurrent invalid requests :: 11.53s
+2026-09-04 18:16:04.221 [INFO ] LOAD-02 :: start — burst of 50
+2026-09-04 18:16:06.039 [INFO ] LOAD-02 :: done in 1815ms — codes: {"200":25,"405":25}
+2026-09-04 18:16:06.048 [PASS ] UF-LOAD-02: Login endpoint survives burst of 50 requests in 1s :: 1.82s
+2026-09-04 18:16:07.307 [INFO ] PERF-01 :: start
+2026-09-04 18:16:08.537 [INFO ] PERF-01 :: homepage warm load: 243ms
+2026-09-04 18:16:09.854 [PASS ] UF-PERF-01: Homepage loads in under 5s (warm) :: 3.79s
+2026-09-04 18:16:11.086 [INFO ] PERF-02 :: start
+2026-09-04 18:16:13.936 [INFO ] PERF-02 :: /explore load: 455ms
+2026-09-04 18:16:14.901 [PASS ] UF-PERF-02: /explore (discover) loads in under 8s (warm) :: 5.03s
+2026-09-04 18:16:16.124 [INFO ] PERF-03 :: start
+2026-09-04 18:16:17.032 [INFO ] PERF-03 :: /login load: 906ms
+2026-09-04 18:16:18.467 [PASS ] UF-PERF-03: /login loads in under 5s :: 3.55s
+2026-09-04 18:16:19.719 [INFO ] PERF-04 :: start
+2026-09-04 18:16:20.535 [INFO ] PERF-04 :: /start/application load: 814ms
+2026-09-04 18:16:20.988 [PASS ] UF-PERF-04: /start/application wizard loads in under 8s :: 2.51s
+2026-09-04 18:16:20.992 [INFO ] STRESS-01 :: start
+2026-09-04 18:16:32.060 [INFO ] STRESS-01 :: 5 parallel navs in 11065ms
+2026-09-04 18:16:32.063 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/ -> 1656ms
+2026-09-04 18:16:32.065 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/explore -> 1397ms
+2026-09-04 18:16:32.067 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/login -> 2546ms
+2026-09-04 18:16:32.069 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/how-it-works -> 3872ms
+2026-09-04 18:16:32.071 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/about -> 3513ms
+2026-09-04 18:16:32.081 [PASS ] UF-STRESS-01: 5 parallel page loads all complete within 30s :: 11.08s
+2026-09-04 18:16:32.086 [INFO ] STRESS-02 :: start
+2026-09-04 18:16:45.644 [INFO ] STRESS-02 :: 10 parallel /login in 13556ms
+2026-09-04 18:16:45.646 [INFO ] STRESS-02 :: succeeded: 10/10
+2026-09-04 18:16:45.655 [PASS ] UF-STRESS-02: 10 parallel /login navigations do not crash the server :: 13.56s
+2026-09-04 18:16:46.812 [INFO ] PERF-05 :: start
+2026-09-04 18:16:48.252 [SKIP ] UF-PERF-05: /explore responds to search query within 5s :: skipped
+2026-09-04 18:16:49.406 [INFO ] PERF-06 :: start
+2026-09-04 18:16:50.365 [INFO ] PERF-06 :: homepage HTML body: 75.7 KB
+2026-09-04 18:16:50.368 [INFO ] PERF-06 :: (domcontentloaded in 959ms)
+2026-09-04 18:16:51.473 [PASS ] UF-PERF-06: Homepage HTML payload is under 200KB :: 3.21s
+2026-09-04 18:16:51.479 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 18:16:52.667 [INFO ] WIZ-09-N :: start
+2026-09-04 18:16:52.670 [INFO ] login :: navigating to /login
+2026-09-04 18:17:02.241 [INFO ] login :: ok
+2026-09-04 18:17:27.670 [WARN ] WATCHDOG :: UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) exceeded 35s — closing context
+2026-09-04 18:17:28.881 [WARN ] safeRun :: server-induced failure, skipping: locator.selectOption: Target page, context or browser has been closed
+2026-09-04 18:17:28.891 [SKIP ] UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) :: skipped
+2026-09-04 18:17:30.061 [INFO ] WIZ-13-N :: start
+2026-09-04 18:17:30.063 [INFO ] login :: navigating to /login
+2026-09-04 18:17:37.127 [INFO ] login :: ok
+2026-09-04 18:17:40.348 [INFO ] cookies :: dismissed
+2026-09-04 18:18:05.064 [WARN ] WATCHDOG :: UF-WIZ-13-N: Whitespace-only company name does not advance exceeded 35s — closing context
+2026-09-04 18:18:06.023 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 18:18:06.033 [SKIP ] UF-WIZ-13-N: Whitespace-only company name does not advance :: skipped
+2026-09-04 18:18:07.234 [INFO ] WIZ-05-N :: start
+2026-09-04 18:18:07.236 [INFO ] login :: navigating to /login
+2026-09-04 18:18:22.054 [INFO ] login :: ok
+2026-09-04 18:18:23.435 [INFO ] cookies :: dismissed
+2026-09-04 18:18:42.243 [WARN ] WATCHDOG :: UF-WIZ-05-N: 5000-char paste in company name does not crash exceeded 35s — closing context
+2026-09-04 18:18:43.257 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 18:18:43.269 [SKIP ] UF-WIZ-05-N: 5000-char paste in company name does not crash :: skipped
+2026-09-04 18:18:44.573 [INFO ] WIZ-06-N :: start
+2026-09-04 18:18:44.575 [INFO ] login :: navigating to /login
+2026-09-04 18:18:53.159 [INFO ] login :: ok
+2026-09-04 18:19:19.576 [WARN ] WATCHDOG :: UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break exceeded 35s — closing context
+2026-09-04 18:19:20.585 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 18:19:20.595 [SKIP ] UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break :: skipped
+2026-09-04 18:19:21.809 [INFO ] WIZ-12-N :: start
+2026-09-04 18:19:21.811 [INFO ] login :: navigating to /login
+2026-09-04 18:19:25.684 [INFO ] login :: ok
+2026-09-04 18:19:56.812 [WARN ] WATCHDOG :: UF-WIZ-12-N: Lowercase PAN does not crash the form exceeded 35s — closing context
+2026-09-04 18:19:58.535 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 18:19:58.544 [SKIP ] UF-WIZ-12-N: Lowercase PAN does not crash the form :: skipped
+2026-09-04 18:19:59.811 [INFO ] WIZ-15-N :: start
+2026-09-04 18:19:59.813 [INFO ] login :: navigating to /login
+2026-09-04 18:20:06.178 [INFO ] login :: ok
+2026-09-04 18:20:34.814 [WARN ] WATCHDOG :: UF-WIZ-15-N: Page reload after partial fill — form behaviour documented exceeded 35s — closing context
+2026-09-04 18:20:36.262 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-04 18:20:36.274 [SKIP ] UF-WIZ-15-N: Page reload after partial fill — form behaviour documented :: skipped
+2026-09-04 18:20:37.503 [INFO ] WIZ-16-N :: start
+2026-09-04 18:20:37.505 [INFO ] login :: navigating to /login
+2026-09-04 18:20:48.793 [INFO ] login :: ok
+2026-09-04 18:21:12.508 [WARN ] WATCHDOG :: UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) exceeded 35s — closing context
+2026-09-04 18:21:13.402 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-04 18:21:13.412 [SKIP ] UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) :: skipped
+2026-09-04 18:21:14.631 [INFO ] WIZ-22-N :: start
+2026-09-04 18:21:14.633 [INFO ] login :: navigating to /login
+2026-09-04 18:21:19.286 [INFO ] login :: ok
+2026-09-04 18:21:49.637 [WARN ] WATCHDOG :: UF-WIZ-22-N: Double-click Continue does not skip a step exceeded 35s — closing context
+2026-09-04 18:21:51.108 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-04 18:21:51.118 [SKIP ] UF-WIZ-22-N: Double-click Continue does not skip a step :: skipped
+2026-09-04 18:21:52.331 [INFO ] WIZ-19-N :: start
+2026-09-04 18:21:52.333 [INFO ] login :: navigating to /login
+2026-09-04 18:21:57.059 [INFO ] login :: ok
+2026-09-04 18:21:59.052 [INFO ] WIZ-19-N :: after up to 5 Tabs, focused: A
+2026-09-04 18:21:59.207 [PASS ] UF-WIZ-19-N: First Tab reaches a focusable element :: 8.08s
+2026-09-04 18:22:00.362 [INFO ] WIZ-21-N :: start
+2026-09-04 18:22:04.869 [INFO ] WIZ-21-N :: unauthed → https://187.77.79.40.nip.io/login?next=/start/application
+2026-09-04 18:22:05.610 [PASS ] UF-WIZ-21-N: Unauthenticated wizard access is gated :: 6.39s
+2026-09-04 18:22:06.772 [INFO ] WIZ-17-N :: start
+2026-09-04 18:22:06.774 [INFO ] login :: navigating to /login
+2026-09-04 18:22:13.402 [INFO ] login :: ok
+2026-09-04 18:22:15.727 [INFO ] cookies :: dismissed
+2026-09-04 18:22:41.775 [WARN ] WATCHDOG :: UF-WIZ-17-N: Step 2 has at least one media upload control exceeded 35s — closing context
+2026-09-04 18:22:42.979 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-04 18:22:42.991 [SKIP ] UF-WIZ-17-N: Step 2 has at least one media upload control :: skipped
+2026-09-04 18:22:44.180 [INFO ] WIZ-18-N :: start
+2026-09-04 18:22:44.182 [INFO ] login :: navigating to /login
+2026-09-04 18:22:53.228 [INFO ] login :: ok
+2026-09-04 18:23:19.180 [WARN ] WATCHDOG :: UF-WIZ-18-N: Step 3 review reflects company name from step 1 exceeded 35s — closing context
+2026-09-04 18:23:20.218 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-04 18:23:20.227 [SKIP ] UF-WIZ-18-N: Step 3 review reflects company name from step 1 :: skipped
+2026-09-04 18:23:20.232 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 18:23:21.383 [INFO ] WIZ-01-P :: start
+2026-09-04 18:23:21.385 [INFO ] login :: navigating to /login
+2026-09-04 18:23:30.501 [INFO ] login :: ok
+2026-09-04 18:23:32.859 [INFO ] cookies :: dismissed
+2026-09-04 18:23:40.136 [FAIL ] UF-WIZ-01-P: Wizard page renders step 1 with all required fields :: 19.82s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+2026-09-04 18:23:40.780 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 18:23:45.271 [INFO ] WIZ-02-P :: start
+2026-09-04 18:23:45.274 [INFO ] login :: navigating to /login
+2026-09-04 18:23:49.994 [INFO ] login :: ok
+2026-09-04 18:23:51.155 [INFO ] cookies :: dismissed
+2026-09-04 18:25:46.421 [FAIL ] UF-WIZ-02-P: Continue is enabled when all required fields are filled :: 124.40s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-04 18:25:47.002 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 18:25:51.484 [INFO ] WIZ-03-P :: start
+2026-09-04 18:25:51.486 [INFO ] login :: navigating to /login
+2026-09-04 18:25:56.432 [INFO ] login :: ok
+2026-09-04 18:25:57.784 [INFO ] cookies :: dismissed
+2026-09-04 18:27:53.274 [FAIL ] UF-WIZ-03-P: PAN field shows correct placeholder :: 125.03s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-04 18:27:53.944 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 18:27:58.788 [INFO ] WIZ-04-P :: start
+2026-09-04 18:27:58.791 [INFO ] login :: navigating to /login
+2026-09-04 18:28:18.238 [INFO ] login :: ok
+2026-09-04 18:28:24.065 [INFO ] cookies :: dismissed
+2026-09-04 18:29:57.982 [FAIL ] UF-WIZ-04-P: Step 1 happy path advances to step 2 :: 122.66s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-04 18:29:58.593 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 18:30:03.325 [INFO ] WIZ-07-P :: start
+2026-09-04 18:30:03.327 [INFO ] login :: navigating to /login
+2026-09-04 18:30:08.882 [INFO ] login :: ok
+2026-09-04 18:30:11.487 [INFO ] cookies :: dismissed
+2026-09-04 18:32:06.390 [FAIL ] UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs :: 126.43s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-04 18:32:07.343 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 18:32:13.104 [INFO ] WIZ-08-P :: start
+2026-09-04 18:32:13.106 [INFO ] login :: navigating to /login
+2026-09-04 18:32:21.724 [INFO ] login :: ok
+2026-09-04 18:32:24.226 [INFO ] cookies :: dismissed
+2026-09-04 18:32:26.044 [INFO ] WIZ-08-P :: JS errors on load: 0
+2026-09-04 18:32:26.317 [PASS ] UF-WIZ-08-P: Step 1 page loads cleanly with no JS errors :: 17.18s
+2026-09-04 18:32:27.591 [INFO ] WIZ-10-P :: start
+2026-09-04 18:32:27.593 [INFO ] login :: navigating to /login
+2026-09-04 18:32:35.473 [INFO ] login :: ok
+2026-09-04 18:32:37.731 [INFO ] cookies :: dismissed
+2026-09-04 18:32:38.889 [FAIL ] UF-WIZ-10-P: Country dropdown lists India :: 12.47s — Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+2026-09-04 18:32:39.595 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 18:32:44.592 [INFO ] WIZ-11-P :: start
+2026-09-04 18:32:44.595 [INFO ] login :: navigating to /login
+2026-09-04 18:32:50.355 [INFO ] login :: ok
+2026-09-04 18:32:51.369 [INFO ] cookies :: dismissed
+2026-09-04 18:33:11.980 [FAIL ] UF-WIZ-11-P: Subcategory populates after category chosen :: 30.87s — Error: locator.selectOption: Page crashed
+2026-09-04 18:35:01.373 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 18:35:01.383 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 18:35:01.410 [INFO ] RUN-BEGIN :: Suite: unnamed | Tests: 2 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-04_18-34-37.log
+2026-09-04 18:35:22.822 [PASS ] UF-AUTH-01: User Registration Page Loads :: 19.54s
+2026-09-04 18:35:30.849 [PASS ] UF-AUTH-02: Login - Invalid Credentials (Negative Path) :: 8.01s
+INFO  RUN-SUMMARY ::  | ======================================================================== |   TEST RUN SUMMARY — 2026-09-04_18-34-37 | ======================================================================== |   Total      : 2 |   Passed     : 2  (100.0%) |   Failed     : 0 |   Skipped    : 0 |   Info logs  : 3 |   Warnings   : 0 |   Errors     : 0 |   Duration   : 53.0s |   Run log    : C:\ideakicks\testing\logs\run-2026-09-04_18-34-37.log |   Rolling log: C:\ideakicks\testing\logs\test-execution.log | ======================================================================== | 
+2026-09-04 18:35:30.951 [INFO ] RUN-END :: Status: passed | Duration: 53.0s
+2026-09-04 18:35:30.953 [INFO ] REPORTER :: HTML report: C:\ideakicks\testing\logs\run-2026-09-04_18-34-37.html
+2026-09-04 18:35:54.454 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 18:35:54.466 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-04 18:35:54.490 [INFO ] RUN-BEGIN :: Suite: unnamed | Tests: 120 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-04_18-35-40.log
+2026-09-04 18:36:13.848 [PASS ] UF-ACCT-01: Update Profile Bio :: 17.44s
+2026-09-04 18:36:20.939 [PASS ] UF-ACCT-02: Change Account Password :: 7.08s
+2026-09-04 18:36:20.955 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:36:25.604 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:36:25.613 [INFO ] ADM-01-N :: start
+2026-09-04 18:36:28.623 [INFO ] ADM-01-N :: empty state shown for no-match search
+2026-09-04 18:36:28.628 [PASS ] UF-ADMIN-01-N: Empty search returns empty state, not error :: 3.01s
+2026-09-04 18:36:28.632 [INFO ] ADM-01-N2 :: start
+2026-09-04 18:36:31.337 [INFO ] ADM-01-N2 :: search survived 5000 chars
+2026-09-04 18:36:31.342 [PASS ] UF-ADMIN-01-N2: 5000-char search does not crash search :: 2.71s
+2026-09-04 18:36:31.346 [INFO ] ADM-03-N :: start
+2026-09-04 18:36:34.074 [INFO ] ADM-03-N :: no XSS via search
+2026-09-04 18:36:34.079 [PASS ] UF-ADMIN-03-N: Special characters in campaign search do not crash :: 2.73s
+2026-09-04 18:36:34.084 [INFO ] ADM-99-N :: start
+2026-09-04 18:36:37.873 [INFO ] ADM-99-N :: unauthed → https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:36:37.929 [PASS ] UF-ADMIN-99-N: Direct visit to admin without auth redirects to /login :: 3.83s
+2026-09-04 18:36:37.941 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:36:43.200 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:36:43.210 [INFO ] ADM-01-P :: start
+2026-09-04 18:36:43.726 [INFO ] ADM-01-P :: ok
+2026-09-04 18:36:43.731 [PASS ] UF-ADMIN-01-P: Project Submissions page loads with heading :: 0.52s
+2026-09-04 18:36:43.735 [INFO ] ADM-02-P :: start
+2026-09-04 18:36:45.518 [INFO ] ADM-02-P :: filter controls: 2
+2026-09-04 18:36:45.525 [PASS ] UF-ADMIN-02-P: Project Submissions filter UI is present :: 1.79s
+2026-09-04 18:36:45.529 [INFO ] ADM-03-P :: start
+2026-09-04 18:36:45.929 [PASS ] UF-ADMIN-03-P: Campaigns list page loads :: 0.40s
+2026-09-04 18:36:45.933 [INFO ] ADM-04-P :: start
+2026-09-04 18:36:46.440 [PASS ] UF-ADMIN-04-P: Categories page loads :: 0.50s
+2026-09-04 18:36:46.444 [INFO ] ADM-05-P :: start
+2026-09-04 18:36:47.485 [PASS ] UF-ADMIN-05-P: Country Fields (Application Fields) page loads :: 1.04s
+2026-09-04 18:36:47.489 [INFO ] ADM-06-P :: start
+2026-09-04 18:36:47.904 [PASS ] UF-ADMIN-06-P: Partners page loads :: 0.40s
+2026-09-04 18:36:57.283 [PASS ] UF-ADMIN-01: Admin View Project Submissions :: 2.42s
+2026-09-04 18:36:59.749 [PASS ] UF-ADMIN-02: Admin Filter Project Submissions :: 2.46s
+2026-09-04 18:37:02.524 [PASS ] UF-ADMIN-03: Admin Search & Filter Campaigns :: 2.77s
+2026-09-04 18:37:04.924 [PASS ] UF-ADMIN-04: Admin Categories Page :: 2.39s
+2026-09-04 18:37:07.223 [PASS ] UF-ADMIN-05: Admin Application Fields Page :: 2.29s
+2026-09-04 18:37:09.686 [PASS ] UF-ADMIN-06: Admin View Partners Tab :: 2.40s
+2026-09-04 18:37:09.700 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:37:14.419 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:37:14.429 [INFO ] CMS-N1 :: start
+2026-09-04 18:37:14.608 [INFO ] CMS-N1 :: status: 404
+2026-09-04 18:37:14.634 [PASS ] UF-CMS-N1: Visit a non-existent CMS page returns 404 or friendly error :: 0.20s
+2026-09-04 18:37:14.638 [INFO ] CMS-N2 :: start
+2026-09-04 18:37:16.346 [SKIP ] UF-CMS-N2: 5000-char input in any visible CMS field does not crash :: skipped
+2026-09-04 18:37:16.359 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:37:21.043 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:37:21.053 [INFO ] CMS-15-P :: start
+2026-09-04 18:37:22.120 [PASS ] UF-ADMIN-15-P: CMS Pages list loads with heading :: 1.06s
+2026-09-04 18:37:22.125 [INFO ] CMS-16-P :: start
+2026-09-04 18:37:23.216 [PASS ] UF-ADMIN-16-P: CMS settings page loads :: 1.07s
+2026-09-04 18:37:34.559 [PASS ] UF-ADMIN-15: Admin Manage CMS Pages :: 4.08s
+2026-09-04 18:37:37.839 [PASS ] UF-ADMIN-16: Admin Configure Global CMS Content :: 3.21s
+2026-09-04 18:37:37.854 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:37:45.310 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:37:45.338 [INFO ] ENG-N1 :: start
+2026-09-04 18:37:46.692 [SKIP ] UF-ENG-N1: Inbox empty search returns empty state :: skipped
+2026-09-04 18:37:46.701 [INFO ] ENG-N2 :: start
+2026-09-04 18:37:49.448 [PASS ] UF-ENG-N2: Subscribers 5000-char search does not crash :: 2.74s
+2026-09-04 18:37:49.455 [INFO ] ENG-N3 :: start
+2026-09-04 18:37:51.024 [SKIP ] UF-ENG-N3: Inbox reply with XSS payload does not execute :: skipped
+2026-09-04 18:37:51.042 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:38:00.747 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:38:00.762 [INFO ] ENG-13-P :: start
+2026-09-04 18:38:06.866 [FAIL ] UF-ADMIN-13-P: Contact Inbox page loads :: 5.93s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+2026-09-04 18:38:06.868 [SKIP ] UF-ADMIN-14-P: Subscribers page loads :: skipped
+2026-09-04 18:38:31.218 [PASS ] UF-ADMIN-13: Admin Manage Contact Inbox :: 2.60s
+2026-09-04 18:38:33.799 [PASS ] UF-ADMIN-14: Admin View Subscribers :: 2.48s
+2026-09-04 18:38:33.821 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:38:39.151 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:38:39.170 [INFO ] FIN-N1 :: start
+2026-09-04 18:38:39.346 [INFO ] FIN-N1 :: status: 404
+2026-09-04 18:38:39.378 [PASS ] UF-FIN-N1: Payouts with non-existent ID shows error, not crash :: 0.20s
+2026-09-04 18:38:39.384 [INFO ] FIN-N2 :: start
+2026-09-04 18:38:40.643 [SKIP ] UF-FIN-N2: 5000-char filter on pledges does not crash :: skipped
+2026-09-04 18:38:40.652 [INFO ] FIN-N3 :: start
+2026-09-04 18:38:41.933 [SKIP ] UF-FIN-N3: Refunds date filter with junk value does not crash :: skipped
+2026-09-04 18:38:41.958 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:38:49.955 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:38:49.973 [INFO ] FIN-07-P :: start
+2026-09-04 18:38:51.036 [PASS ] UF-ADMIN-07-P: Payouts page loads :: 1.06s
+2026-09-04 18:38:51.042 [INFO ] FIN-08-P :: start
+2026-09-04 18:38:55.718 [PASS ] UF-ADMIN-08-P: Pledges page loads :: 4.67s
+2026-09-04 18:38:55.724 [INFO ] FIN-09-P :: start
+2026-09-04 18:38:57.312 [PASS ] UF-ADMIN-09-P: Refunds log page loads :: 1.57s
+2026-09-04 18:39:08.834 [PASS ] UF-ADMIN-07: Admin View Payouts :: 2.35s
+2026-09-04 18:39:11.351 [PASS ] UF-ADMIN-08: Admin Manage Pledges :: 2.51s
+2026-09-04 18:39:13.642 [PASS ] UF-ADMIN-09: Admin View Refunds Log :: 2.22s
+2026-09-04 18:39:13.655 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:39:18.515 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:39:18.524 [INFO ] PPL-N1 :: start
+2026-09-04 18:39:21.868 [PASS ] UF-PPL-N1: User search with no matches shows empty state :: 3.34s
+2026-09-04 18:39:21.871 [INFO ] PPL-N2 :: start
+2026-09-04 18:39:24.600 [PASS ] UF-PPL-N2: User search with XSS does not execute :: 2.73s
+2026-09-04 18:39:24.603 [INFO ] PPL-N3 :: start
+2026-09-04 18:39:27.296 [PASS ] UF-PPL-N3: 5000-char user search does not crash :: 2.69s
+2026-09-04 18:39:27.299 [INFO ] PPL-N4 :: start
+2026-09-04 18:39:27.501 [INFO ] PPL-N4 :: status: 200
+2026-09-04 18:39:27.531 [PASS ] UF-PPL-N4: Visit /users/<junk-id> does not crash :: 0.22s
+2026-09-04 18:39:27.541 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:39:32.786 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:39:32.795 [INFO ] PPL-10-P :: start
+2026-09-04 18:39:33.822 [PASS ] UF-ADMIN-10-P: User Management page loads with "New user" CTA :: 1.02s
+2026-09-04 18:39:33.826 [INFO ] PPL-11-P :: start
+2026-09-04 18:39:34.882 [PASS ] UF-ADMIN-11-P: Roles page loads with "New role" CTA :: 1.05s
+2026-09-04 18:39:34.885 [INFO ] PPL-12-P :: start
+2026-09-04 18:39:35.322 [PASS ] UF-ADMIN-12-P: Deletion Requests page loads :: 0.42s
+2026-09-04 18:39:46.012 [PASS ] UF-ADMIN-10: Admin User Management :: 3.82s
+2026-09-04 18:39:48.247 [PASS ] UF-ADMIN-11: Admin Manage Roles :: 2.23s
+2026-09-04 18:39:50.641 [PASS ] UF-ADMIN-12: Admin Review Deletion Requests :: 2.33s
+2026-09-04 18:39:50.653 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:39:55.375 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-04 18:39:55.389 [INFO ] SYS-N1 :: start
+2026-09-04 18:39:57.079 [INFO ] SYS-N1 :: JS errors: 0
+2026-09-04 18:39:57.089 [PASS ] UF-SYS-N1: Notifications page with no JS errors on load :: 1.70s
+2026-09-04 18:39:57.097 [INFO ] SYS-N2 :: start
+2026-09-04 18:39:58.469 [SKIP ] UF-SYS-N2: Activity log filter with junk date does not crash :: skipped
+2026-09-04 18:39:58.476 [INFO ] SYS-N3 :: start
+2026-09-04 18:39:59.722 [SKIP ] UF-SYS-N3: 5000-char search on activity log does not crash :: skipped
+2026-09-04 18:39:59.741 [INFO ] admin :: launching browser & logging in
+2026-09-04 18:40:06.644 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-04 18:40:06.657 [INFO ] SYS-17-P :: start
+2026-09-04 18:40:12.020 [FAIL ] UF-ADMIN-17-P: Notifications page loads :: 5.24s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+2026-09-04 18:40:12.022 [SKIP ] UF-ADMIN-18-P: Activity log page loads :: skipped
+2026-09-04 18:40:26.646 [PASS ] UF-ADMIN-17: Admin View Notifications :: 2.42s
+2026-09-04 18:40:29.198 [PASS ] UF-ADMIN-18: Admin View Activity Log :: 2.45s
+2026-09-04 18:40:36.565 [PASS ] UF-AUTH-01: User Registration Page Loads :: 7.34s
+2026-09-04 18:40:42.520 [PASS ] UF-AUTH-02: Login - Invalid Credentials (Negative Path) :: 5.94s
+2026-09-04 18:40:50.757 [PASS ] UF-AUTH-03: Login - Success (Positive Path) :: 8.21s
+2026-09-04 18:41:00.206 [PASS ] UF-CREA-01: Campaign Application Page Loads :: 9.42s
+2026-09-04 18:41:10.843 [PASS ] UF-CREA-02: Campaign Application - Navigate to Application :: 10.62s
+2026-09-04 18:41:17.245 [PASS ] UF-CAMP-01: Campaign Detail Tabs Navigation :: 6.37s
+2026-09-04 18:41:23.757 [PASS ] UF-CAMP-02: Save Campaign & Dashboard Sync :: 6.50s
+2026-09-04 18:41:31.618 [PASS ] UF-BACK-01: Reward & Add-on Selection :: 7.84s
+2026-09-04 18:41:36.882 [PASS ] UF-BACK-02: Payment Terms Validation (Negative Path) :: 5.25s
+2026-09-04 18:41:42.094 [PASS ] UF-BACK-03: Complete Pledge (Positive Path) :: 5.20s
+2026-09-04 18:41:51.184 [PASS ] UF-DASH-01: Creator Dashboard Tabs Navigation :: 9.07s
+2026-09-04 18:41:59.943 [PASS ] UF-DISC-01: Global Header Search (Positive Path) :: 8.74s
+2026-09-04 18:42:11.311 [PASS ] UF-DISC-02: Unsuccessful Campaign Search (Empty State) :: 11.36s
+2026-09-04 18:42:16.614 [PASS ] UF-DISC-03: Explore Category Filtering :: 5.29s
+2026-09-04 18:42:37.470 [PASS ] UF-INFO-01: Global Static Page Navigation :: 20.83s
+2026-09-04 18:42:45.733 [PASS ] UF-INFO-02: Dynamic Legal Hub Navigation :: 8.25s
+2026-09-04 18:42:49.701 [PASS ] UF-INFO-03: Cookie Preferences Management :: 3.96s
+2026-09-04 18:42:59.481 [PASS ] UF-BUG-01: Footer Social Icons Interactivity :: 9.77s
+2026-09-04 18:42:59.500 [INFO ] LOAD-01 :: start — concurrency=200, total=200
+2026-09-04 18:43:10.592 [INFO ] LOAD-01 :: done in 11089ms (18.0 req/s) — ok=162 fail=38 other=0
+2026-09-04 18:43:10.594 [INFO ] LOAD-01 :: status codes: {"200":100,"405":62}
+2026-09-04 18:43:10.599 [PASS ] UF-LOAD-01: Login endpoint survives concurrent invalid requests :: 11.10s
+2026-09-04 18:43:10.602 [INFO ] LOAD-02 :: start — burst of 50
+2026-09-04 18:43:11.375 [INFO ] LOAD-02 :: done in 771ms — codes: {"200":25,"405":25}
+2026-09-04 18:43:11.382 [PASS ] UF-LOAD-02: Login endpoint survives burst of 50 requests in 1s :: 0.78s
+2026-09-04 18:43:12.596 [INFO ] PERF-01 :: start
+2026-09-04 18:43:13.765 [INFO ] PERF-01 :: homepage warm load: 321ms
+2026-09-04 18:43:14.871 [PASS ] UF-PERF-01: Homepage loads in under 5s (warm) :: 3.46s
+2026-09-04 18:43:16.055 [INFO ] PERF-02 :: start
+2026-09-04 18:43:17.250 [INFO ] PERF-02 :: /explore load: 202ms
+2026-09-04 18:43:17.938 [PASS ] UF-PERF-02: /explore (discover) loads in under 8s (warm) :: 3.06s
+2026-09-04 18:43:19.117 [INFO ] PERF-03 :: start
+2026-09-04 18:43:20.291 [INFO ] PERF-03 :: /login load: 1172ms
+2026-09-04 18:43:20.575 [PASS ] UF-PERF-03: /login loads in under 5s :: 2.62s
+2026-09-04 18:43:21.704 [INFO ] PERF-04 :: start
+2026-09-04 18:43:22.478 [INFO ] PERF-04 :: /start/application load: 772ms
+2026-09-04 18:43:22.892 [PASS ] UF-PERF-04: /start/application wizard loads in under 8s :: 2.31s
+2026-09-04 18:43:22.895 [INFO ] STRESS-01 :: start
+2026-09-04 18:43:29.880 [INFO ] STRESS-01 :: 5 parallel navs in 6983ms
+2026-09-04 18:43:29.883 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/ -> 926ms
+2026-09-04 18:43:29.884 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/explore -> 1863ms
+2026-09-04 18:43:29.885 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/login -> 769ms
+2026-09-04 18:43:29.886 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/how-it-works -> 848ms
+2026-09-04 18:43:29.888 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/about -> 867ms
+2026-09-04 18:43:29.895 [PASS ] UF-STRESS-01: 5 parallel page loads all complete within 30s :: 7.00s
+2026-09-04 18:43:29.897 [INFO ] STRESS-02 :: start
+2026-09-04 18:43:42.275 [INFO ] STRESS-02 :: 10 parallel /login in 12376ms
+2026-09-04 18:43:42.277 [INFO ] STRESS-02 :: succeeded: 10/10
+2026-09-04 18:43:42.283 [PASS ] UF-STRESS-02: 10 parallel /login navigations do not crash the server :: 12.38s
+2026-09-04 18:43:43.456 [INFO ] PERF-05 :: start
+2026-09-04 18:43:44.672 [SKIP ] UF-PERF-05: /explore responds to search query within 5s :: skipped
+2026-09-04 18:43:45.808 [INFO ] PERF-06 :: start
+2026-09-04 18:43:46.694 [INFO ] PERF-06 :: homepage HTML body: 75.7 KB
+2026-09-04 18:43:46.696 [INFO ] PERF-06 :: (domcontentloaded in 887ms)
+2026-09-04 18:43:47.429 [PASS ] UF-PERF-06: Homepage HTML payload is under 200KB :: 2.75s
+2026-09-04 18:43:47.435 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-04 18:43:48.622 [INFO ] WIZ-09-N :: start
+2026-09-04 18:43:48.624 [INFO ] login :: navigating to /login
+2026-09-04 18:43:52.325 [INFO ] login :: ok
+2026-09-04 18:43:52.754 [INFO ] cookies :: dismissed
+2026-09-04 18:44:23.626 [WARN ] WATCHDOG :: UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) exceeded 35s — closing context
+2026-09-04 18:44:24.653 [WARN ] safeRun :: server-induced failure, skipping: locator.selectOption: Target page, context or browser has been closed
+2026-09-04 18:44:24.662 [SKIP ] UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) :: skipped
+2026-09-04 18:44:26.095 [FAIL ] UF-WIZ-13-N: Whitespace-only company name does not advance :: 1.36s — Error: browserContext.newPage: Target crashed 
+2026-09-04 18:44:26.397 [FAIL ] UF-WIZ-05-N: 5000-char paste in company name does not crash :: 0.00s — Error: worker process exited unexpectedly (code=3221225794, signal=null)
+2026-09-04 18:44:26.399 [SKIP ] UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break :: skipped
+2026-09-04 18:44:26.400 [SKIP ] UF-WIZ-12-N: Lowercase PAN does not crash the form :: skipped
+2026-09-04 18:44:26.402 [SKIP ] UF-WIZ-15-N: Page reload after partial fill — form behaviour documented :: skipped
+2026-09-04 18:44:26.403 [SKIP ] UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) :: skipped
+2026-09-04 18:44:26.404 [SKIP ] UF-WIZ-22-N: Double-click Continue does not skip a step :: skipped
+2026-09-04 18:44:26.405 [SKIP ] UF-WIZ-19-N: First Tab reaches a focusable element :: skipped
+2026-09-04 18:44:26.407 [SKIP ] UF-WIZ-21-N: Unauthenticated wizard access is gated :: skipped
+2026-09-04 18:44:26.408 [SKIP ] UF-WIZ-17-N: Step 2 has at least one media upload control :: skipped
+2026-09-04 18:44:26.409 [SKIP ] UF-WIZ-18-N: Step 3 review reflects company name from step 1 :: skipped
+2026-09-04 18:44:26.411 [FAIL ] UF-WIZ-01-P: Wizard page renders step 1 with all required fields :: 0.00s — Error: worker process exited unexpectedly (code=3221225794, signal=null)
+2026-09-04 18:44:26.413 [SKIP ] UF-WIZ-02-P: Continue is enabled when all required fields are filled :: skipped
+2026-09-04 18:44:26.415 [SKIP ] UF-WIZ-03-P: PAN field shows correct placeholder :: skipped
+2026-09-04 18:44:26.416 [SKIP ] UF-WIZ-04-P: Step 1 happy path advances to step 2 :: skipped
+2026-09-04 18:44:26.417 [SKIP ] UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs :: skipped
+2026-09-04 18:44:26.419 [SKIP ] UF-WIZ-08-P: Step 1 page loads cleanly with no JS errors :: skipped
+2026-09-04 18:44:26.420 [SKIP ] UF-WIZ-10-P: Country dropdown lists India :: skipped
+2026-09-04 18:44:26.422 [SKIP ] UF-WIZ-11-P: Subcategory populates after category chosen :: skipped
+2026-09-04 18:44:26.423 [SKIP ] UF-WIZ-14-P: GSTIN optional field accepts valid value :: skipped
+2026-09-04 18:44:26.424 [SKIP ] UF-WIZ-20-P: Wizard URL is exactly /start/application :: skipped
+2026-09-04 18:44:26.704 [FAIL ] UF-UP-06-N: Gallery upload of 15 images exceeds documented 12-item limit :: 0.00s — Error: worker process exited unexpectedly (code=3221225794, signal=null)
+2026-09-04 18:44:26.706 [SKIP ] UF-UP-07-N: Video >100MB is rejected (size validation) :: skipped
+2026-09-04 18:44:26.707 [SKIP ] UF-UP-08-N: Audio file (mp3) is rejected as non-image/non-video :: skipped
+2026-09-04 18:44:26.708 [SKIP ] UF-UP-09-N: Continue button is disabled with no cover image :: skipped
+2026-09-04 18:44:26.709 [SKIP ] UF-UP-10-N: Pitch video URL rejects non-URL string :: skipped
+2026-09-04 18:44:26.710 [SKIP ] UF-UP-11-N: Story field enforces 30-char minimum (boundary) :: skipped
+2026-09-04 18:44:26.712 [SKIP ] UF-UP-12-N: Funding goal of 0 is accepted (per UI hint) :: skipped
+2026-09-04 18:44:26.713 [SKIP ] UF-UP-13-N: Funding goal with negative number is rejected by input :: skipped
+2026-09-04 18:44:26.715 [FAIL ] UF-UP-01-P: Cover image upload (small JPG) succeeds :: 0.00s — Error: worker process exited unexpectedly (code=3221225794, signal=null)
+2026-09-04 18:44:26.716 [SKIP ] UF-UP-02-P: Gallery upload of 3 small images succeeds (one at a time) :: skipped
+2026-09-04 18:44:26.717 [SKIP ] UF-UP-03-P: Gallery upload of 12 images (the documented max) is accepted (one at a time) :: skipped
+2026-09-04 18:44:26.719 [SKIP ] UF-UP-04-P: Small video (<100MB) upload succeeds :: skipped
+2026-09-04 18:44:26.720 [SKIP ] UF-UP-05-P: Pitch video URL accepts a YouTube link :: skipped
+INFO  RUN-SUMMARY ::  | ======================================================================== |   TEST RUN SUMMARY — 2026-09-04_18-35-40 | ======================================================================== |   Total      : 120 |   Passed     : 73  (60.8%) |   Failed     : 7 |   Skipped    : 40 |   Info logs  : 3 |   Warnings   : 0 |   Errors     : 0 |   Duration   : 526.6s |   Run log    : C:\ideakicks\testing\logs\run-2026-09-04_18-35-40.log |   Rolling log: C:\ideakicks\testing\logs\test-execution.log | ======================================================================== | 
+2026-09-04 18:44:26.729 [INFO ] RUN-END :: Status: failed | Duration: 526.6s
+2026-09-04 18:44:26.731 [INFO ] REPORTER :: HTML report: C:\ideakicks\testing\logs\run-2026-09-04_18-35-40.html
+2026-09-04 18:44:29.966 [INFO ] RUN-BEGIN :: Suite: unnamed | Tests: 0 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-04_18-44-19.log
+2026-09-04 18:44:29.968 [ERROR] REPORTER :: Error: browserContext.newPage: Target crashed 
+INFO  RUN-SUMMARY ::  | ======================================================================== |   TEST RUN SUMMARY — 2026-09-04_18-44-19 | ======================================================================== |   Total      : 0 |   Passed     : 0  (0.0%) |   Failed     : 0 |   Skipped    : 0 |   Info logs  : 1 |   Warnings   : 0 |   Errors     : 1 |   Duration   : 10.5s |   Run log    : C:\ideakicks\testing\logs\run-2026-09-04_18-44-19.log |   Rolling log: C:\ideakicks\testing\logs\test-execution.log | ======================================================================== | 
+2026-09-04 18:44:29.973 [INFO ] RUN-END :: Status: failed | Duration: 10.5s
+2026-09-04 18:44:29.975 [INFO ] REPORTER :: HTML report: C:\ideakicks\testing\logs\run-2026-09-04_18-44-19.html
+2026-09-05 06:36:23.480 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-05 06:36:23.499 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 06:36:23.540 [INFO ] RUN-BEGIN :: Suite: unnamed | Tests: 120 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_06-35-44.log
+2026-09-05 06:36:44.507 [PASS ] UF-ACCT-01: Update Profile Bio :: 19.09s
+2026-09-05 06:36:51.669 [PASS ] UF-ACCT-02: Change Account Password :: 7.14s
+2026-09-05 06:36:51.690 [INFO ] admin :: launching browser & logging in
+2026-09-05 06:37:00.063 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-05 06:37:00.083 [INFO ] ADM-01-N :: start
+2026-09-05 06:37:01.385 [SKIP ] UF-ADMIN-01-N: Empty search returns empty state, not error :: skipped
+2026-09-05 06:37:01.387 [INFO ] ADM-01-N2 :: start
+2026-09-05 06:37:04.221 [INFO ] ADM-01-N2 :: search survived 5000 chars
+2026-09-05 06:37:04.233 [PASS ] UF-ADMIN-01-N2: 5000-char search does not crash search :: 2.84s
+2026-09-05 06:37:04.239 [INFO ] ADM-03-N :: start
+2026-09-05 06:37:07.009 [INFO ] ADM-03-N :: no XSS via search
+2026-09-05 06:37:07.021 [PASS ] UF-ADMIN-03-N: Special characters in campaign search do not crash :: 2.77s
+2026-09-05 06:37:07.024 [INFO ] ADM-99-N :: start
+2026-09-05 06:37:11.084 [INFO ] ADM-99-N :: unauthed → https://admin.187.77.79.40.nip.io/login
+2026-09-05 06:37:11.170 [PASS ] UF-ADMIN-99-N: Direct visit to admin without auth redirects to /login :: 4.11s
+2026-09-05 06:37:11.190 [INFO ] admin :: launching browser & logging in
+2026-09-05 06:37:15.946 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-05 06:37:15.964 [INFO ] ADM-01-P :: start
+2026-09-05 06:37:17.039 [INFO ] ADM-01-P :: ok
+2026-09-05 06:37:17.051 [PASS ] UF-ADMIN-01-P: Project Submissions page loads with heading :: 1.08s
+2026-09-05 06:37:17.054 [INFO ] ADM-02-P :: start
+2026-09-05 06:37:18.755 [INFO ] ADM-02-P :: filter controls: 2
+2026-09-05 06:37:18.767 [PASS ] UF-ADMIN-02-P: Project Submissions filter UI is present :: 1.70s
+2026-09-05 06:37:18.769 [INFO ] ADM-03-P :: start
+2026-09-05 06:37:19.228 [PASS ] UF-ADMIN-03-P: Campaigns list page loads :: 0.45s
+2026-09-05 06:37:19.231 [INFO ] ADM-04-P :: start
+2026-09-05 06:37:19.706 [PASS ] UF-ADMIN-04-P: Categories page loads :: 0.47s
+2026-09-05 06:37:19.710 [INFO ] ADM-05-P :: start
+2026-09-05 06:37:20.293 [PASS ] UF-ADMIN-05-P: Country Fields (Application Fields) page loads :: 0.57s
+2026-09-05 06:37:20.300 [INFO ] ADM-06-P :: start
+2026-09-05 06:37:20.881 [PASS ] UF-ADMIN-06-P: Partners page loads :: 0.56s
+2026-09-05 06:37:30.606 [PASS ] UF-ADMIN-01: Admin View Project Submissions :: 2.75s
+2026-09-05 06:37:33.439 [PASS ] UF-ADMIN-02: Admin Filter Project Submissions :: 2.82s
+2026-09-05 06:37:37.027 [PASS ] UF-ADMIN-03: Admin Search & Filter Campaigns :: 3.58s
+2026-09-05 06:37:39.459 [PASS ] UF-ADMIN-04: Admin Categories Page :: 2.42s
+2026-09-05 06:37:42.110 [PASS ] UF-ADMIN-05: Admin Application Fields Page :: 2.64s
+2026-09-05 06:37:44.811 [PASS ] UF-ADMIN-06: Admin View Partners Tab :: 2.64s
+2026-09-05 06:37:44.820 [INFO ] admin :: launching browser & logging in
+2026-09-05 06:37:49.450 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-05 06:37:49.458 [INFO ] CMS-N1 :: start
+2026-09-05 06:37:49.647 [INFO ] CMS-N1 :: status: 404
+2026-09-05 06:37:49.669 [PASS ] UF-CMS-N1: Visit a non-existent CMS page returns 404 or friendly error :: 0.21s
+2026-09-05 06:37:49.671 [INFO ] CMS-N2 :: start
+2026-09-05 06:37:51.388 [SKIP ] UF-CMS-N2: 5000-char input in any visible CMS field does not crash :: skipped
+2026-09-05 06:37:51.397 [INFO ] admin :: launching browser & logging in
+2026-09-05 06:38:00.215 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-05 06:38:00.224 [INFO ] CMS-15-P :: start
+2026-09-05 06:38:00.765 [PASS ] UF-ADMIN-15-P: CMS Pages list loads with heading :: 0.54s
+2026-09-05 06:38:00.767 [INFO ] CMS-16-P :: start
+2026-09-05 06:38:01.459 [PASS ] UF-ADMIN-16-P: CMS settings page loads :: 0.68s
+2026-09-05 06:38:12.320 [PASS ] UF-ADMIN-15: Admin Manage CMS Pages :: 4.10s
+2026-09-05 06:38:14.726 [PASS ] UF-ADMIN-16: Admin Configure Global CMS Content :: 2.35s
+2026-09-05 06:38:14.735 [INFO ] admin :: launching browser & logging in
+2026-09-05 06:38:22.309 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-05 06:38:22.319 [INFO ] ENG-N1 :: start
+2026-09-05 06:38:25.045 [PASS ] UF-ENG-N1: Inbox empty search returns empty state :: 2.72s
+2026-09-05 06:38:25.046 [INFO ] ENG-N2 :: start
+2026-09-05 06:38:27.777 [PASS ] UF-ENG-N2: Subscribers 5000-char search does not crash :: 2.73s
+2026-09-05 06:38:27.778 [INFO ] ENG-N3 :: start
+2026-09-05 06:38:28.972 [SKIP ] UF-ENG-N3: Inbox reply with XSS payload does not execute :: skipped
+2026-09-05 06:38:28.982 [INFO ] admin :: launching browser & logging in
+2026-09-05 06:38:35.199 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-05 06:38:35.208 [INFO ] ENG-13-P :: start
+2026-09-05 06:38:37.332 [PASS ] UF-ADMIN-13-P: Contact Inbox page loads :: 2.12s
+2026-09-05 06:38:37.337 [INFO ] ENG-14-P :: start
+2026-09-05 06:38:37.814 [PASS ] UF-ADMIN-14-P: Subscribers page loads :: 0.45s
+2026-09-05 06:38:49.799 [PASS ] UF-ADMIN-13: Admin Manage Contact Inbox :: 2.59s
+2026-09-05 06:38:52.270 [PASS ] UF-ADMIN-14: Admin View Subscribers :: 2.40s
+2026-09-05 06:38:52.282 [INFO ] admin :: launching browser & logging in
+2026-09-05 06:38:59.588 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/login
+2026-09-05 06:38:59.607 [INFO ] FIN-N1 :: start
+2026-09-05 06:38:59.814 [INFO ] FIN-N1 :: status: 404
+2026-09-05 06:38:59.855 [PASS ] UF-FIN-N1: Payouts with non-existent ID shows error, not crash :: 0.24s
+2026-09-05 06:38:59.860 [INFO ] FIN-N2 :: start
+2026-09-05 06:39:01.091 [SKIP ] UF-FIN-N2: 5000-char filter on pledges does not crash :: skipped
+2026-09-05 06:39:01.095 [INFO ] FIN-N3 :: start
+2026-09-05 06:39:02.364 [SKIP ] UF-FIN-N3: Refunds date filter with junk value does not crash :: skipped
+2026-09-05 06:39:02.382 [INFO ] admin :: launching browser & logging in
+2026-09-05 06:39:09.970 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-05 06:39:09.985 [INFO ] FIN-07-P :: start
+2026-09-05 06:39:10.562 [PASS ] UF-ADMIN-07-P: Payouts page loads :: 0.57s
+2026-09-05 06:39:10.569 [INFO ] FIN-08-P :: start
+2026-09-05 06:39:11.151 [PASS ] UF-ADMIN-08-P: Pledges page loads :: 0.58s
+2026-09-05 06:39:11.156 [INFO ] FIN-09-P :: start
+2026-09-05 06:39:11.653 [PASS ] UF-ADMIN-09-P: Refunds log page loads :: 0.47s
+2026-09-05 06:39:21.039 [PASS ] UF-ADMIN-07: Admin View Payouts :: 2.53s
+2026-09-05 06:39:23.730 [PASS ] UF-ADMIN-08: Admin Manage Pledges :: 2.67s
+2026-09-05 06:39:26.310 [PASS ] UF-ADMIN-09: Admin View Refunds Log :: 2.48s
+2026-09-05 06:39:26.328 [INFO ] admin :: launching browser & logging in
+2026-09-05 06:39:34.123 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-05 06:39:34.148 [INFO ] PPL-N1 :: start
+2026-09-05 06:39:36.943 [PASS ] UF-PPL-N1: User search with no matches shows empty state :: 2.79s
+2026-09-05 06:39:36.949 [INFO ] PPL-N2 :: start
+2026-09-05 06:39:39.699 [PASS ] UF-PPL-N2: User search with XSS does not execute :: 2.74s
+2026-09-05 06:39:39.704 [INFO ] PPL-N3 :: start
+2026-09-05 06:39:42.459 [PASS ] UF-PPL-N3: 5000-char user search does not crash :: 2.75s
+2026-09-05 06:39:42.466 [INFO ] PPL-N4 :: start
+2026-09-05 06:39:42.716 [INFO ] PPL-N4 :: status: 200
+2026-09-05 06:39:42.773 [PASS ] UF-PPL-N4: Visit /users/<junk-id> does not crash :: 0.28s
+2026-09-05 06:39:42.791 [INFO ] admin :: launching browser & logging in
+2026-09-05 06:39:50.666 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-05 06:39:50.684 [INFO ] PPL-10-P :: start
+2026-09-05 06:39:51.785 [PASS ] UF-ADMIN-10-P: User Management page loads with "New user" CTA :: 1.09s
+2026-09-05 06:39:51.798 [INFO ] PPL-11-P :: start
+2026-09-05 06:39:52.373 [PASS ] UF-ADMIN-11-P: Roles page loads with "New role" CTA :: 0.57s
+2026-09-05 06:39:52.380 [INFO ] PPL-12-P :: start
+2026-09-05 06:39:52.940 [PASS ] UF-ADMIN-12-P: Deletion Requests page loads :: 0.53s
+2026-09-05 06:40:06.912 [PASS ] UF-ADMIN-10: Admin User Management :: 3.98s
+2026-09-05 06:40:09.338 [PASS ] UF-ADMIN-11: Admin Manage Roles :: 2.41s
+2026-09-05 06:40:11.934 [PASS ] UF-ADMIN-12: Admin Review Deletion Requests :: 2.51s
+2026-09-05 06:40:11.957 [INFO ] admin :: launching browser & logging in
+2026-09-05 06:40:16.728 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-05 06:40:16.748 [INFO ] SYS-N1 :: start
+2026-09-05 06:40:18.453 [INFO ] SYS-N1 :: JS errors: 0
+2026-09-05 06:40:18.467 [PASS ] UF-SYS-N1: Notifications page with no JS errors on load :: 1.71s
+2026-09-05 06:40:18.479 [INFO ] SYS-N2 :: start
+2026-09-05 06:40:19.750 [SKIP ] UF-SYS-N2: Activity log filter with junk date does not crash :: skipped
+2026-09-05 06:40:19.757 [INFO ] SYS-N3 :: start
+2026-09-05 06:40:20.997 [SKIP ] UF-SYS-N3: 5000-char search on activity log does not crash :: skipped
+2026-09-05 06:40:21.019 [INFO ] admin :: launching browser & logging in
+2026-09-05 06:40:28.798 [INFO ] admin :: logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+2026-09-05 06:40:28.824 [INFO ] SYS-17-P :: start
+2026-09-05 06:40:29.921 [PASS ] UF-ADMIN-17-P: Notifications page loads :: 1.09s
+2026-09-05 06:40:29.930 [INFO ] SYS-18-P :: start
+2026-09-05 06:40:31.016 [PASS ] UF-ADMIN-18-P: Activity log page loads :: 1.05s
+2026-09-05 06:40:40.209 [PASS ] UF-ADMIN-17: Admin View Notifications :: 2.47s
+2026-09-05 06:40:42.880 [PASS ] UF-ADMIN-18: Admin View Activity Log :: 2.58s
+2026-09-05 06:40:56.191 [PASS ] UF-AUTH-01: User Registration Page Loads :: 13.28s
+2026-09-05 06:41:01.024 [PASS ] UF-AUTH-02: Login - Invalid Credentials (Negative Path) :: 4.81s
+2026-09-05 06:41:16.324 [PASS ] UF-AUTH-03: Login - Success (Positive Path) :: 15.28s
+2026-09-05 06:41:24.047 [PASS ] UF-CREA-01: Campaign Application Page Loads :: 7.69s
+2026-09-05 06:41:37.497 [PASS ] UF-CREA-02: Campaign Application - Navigate to Application :: 13.43s
+2026-09-05 06:41:52.035 [PASS ] UF-CAMP-01: Campaign Detail Tabs Navigation :: 14.50s
+2026-09-05 06:42:00.043 [PASS ] UF-CAMP-02: Save Campaign & Dashboard Sync :: 7.99s
+2026-09-05 06:42:07.077 [PASS ] UF-BACK-01: Reward & Add-on Selection :: 7.00s
+2026-09-05 06:42:19.835 [PASS ] UF-BACK-02: Payment Terms Validation (Negative Path) :: 12.74s
+2026-09-05 06:42:32.726 [PASS ] UF-BACK-03: Complete Pledge (Positive Path) :: 12.87s
+2026-09-05 06:42:47.922 [PASS ] UF-DASH-01: Creator Dashboard Tabs Navigation :: 15.16s
+2026-09-05 06:42:55.669 [PASS ] UF-DISC-01: Global Header Search (Positive Path) :: 7.71s
+2026-09-05 06:43:08.065 [PASS ] UF-DISC-02: Unsuccessful Campaign Search (Empty State) :: 12.38s
+2026-09-05 06:43:17.317 [PASS ] UF-DISC-03: Explore Category Filtering :: 9.23s
+2026-09-05 06:43:33.539 [PASS ] UF-INFO-01: Global Static Page Navigation :: 16.19s
+2026-09-05 06:43:47.375 [PASS ] UF-INFO-02: Dynamic Legal Hub Navigation :: 13.81s
+2026-09-05 06:43:51.185 [PASS ] UF-INFO-03: Cookie Preferences Management :: 3.79s
+2026-09-05 06:43:56.535 [PASS ] UF-BUG-01: Footer Social Icons Interactivity :: 5.33s
+2026-09-05 06:43:56.557 [INFO ] LOAD-01 :: start — concurrency=200, total=200
+2026-09-05 06:44:07.139 [INFO ] LOAD-01 :: done in 10579ms (18.9 req/s) — ok=158 fail=42 other=0
+2026-09-05 06:44:07.140 [INFO ] LOAD-01 :: status codes: {"200":100,"405":58}
+2026-09-05 06:44:07.151 [PASS ] UF-LOAD-01: Login endpoint survives concurrent invalid requests :: 10.59s
+2026-09-05 06:44:07.157 [INFO ] LOAD-02 :: start — burst of 50
+2026-09-05 06:44:07.860 [INFO ] LOAD-02 :: done in 701ms — codes: {"200":25,"405":25}
+2026-09-05 06:44:07.870 [PASS ] UF-LOAD-02: Login endpoint survives burst of 50 requests in 1s :: 0.71s
+2026-09-05 06:44:09.012 [INFO ] PERF-01 :: start
+2026-09-05 06:44:10.072 [INFO ] PERF-01 :: homepage warm load: 189ms
+2026-09-05 06:44:11.154 [PASS ] UF-PERF-01: Homepage loads in under 5s (warm) :: 3.27s
+2026-09-05 06:44:12.306 [INFO ] PERF-02 :: start
+2026-09-05 06:44:13.597 [INFO ] PERF-02 :: /explore load: 338ms
+2026-09-05 06:44:14.275 [PASS ] UF-PERF-02: /explore (discover) loads in under 8s (warm) :: 3.11s
+2026-09-05 06:44:15.400 [INFO ] PERF-03 :: start
+2026-09-05 06:44:16.148 [INFO ] PERF-03 :: /login load: 746ms
+2026-09-05 06:44:16.566 [PASS ] UF-PERF-03: /login loads in under 5s :: 2.28s
+2026-09-05 06:44:17.710 [INFO ] PERF-04 :: start
+2026-09-05 06:44:18.473 [INFO ] PERF-04 :: /start/application load: 762ms
+2026-09-05 06:44:18.908 [PASS ] UF-PERF-04: /start/application wizard loads in under 8s :: 2.33s
+2026-09-05 06:44:18.915 [INFO ] STRESS-01 :: start
+2026-09-05 06:44:25.819 [INFO ] STRESS-01 :: 5 parallel navs in 6902ms
+2026-09-05 06:44:25.821 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/ -> 949ms
+2026-09-05 06:44:25.822 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/explore -> 796ms
+2026-09-05 06:44:25.823 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/login -> 825ms
+2026-09-05 06:44:25.824 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/how-it-works -> 897ms
+2026-09-05 06:44:25.825 [INFO ] STRESS-01 ::   https://187.77.79.40.nip.io/about -> 882ms
+2026-09-05 06:44:25.832 [PASS ] UF-STRESS-01: 5 parallel page loads all complete within 30s :: 6.92s
+2026-09-05 06:44:25.839 [INFO ] STRESS-02 :: start
+2026-09-05 06:44:37.956 [INFO ] STRESS-02 :: 10 parallel /login in 12116ms
+2026-09-05 06:44:37.958 [INFO ] STRESS-02 :: succeeded: 10/10
+2026-09-05 06:44:37.969 [PASS ] UF-STRESS-02: 10 parallel /login navigations do not crash the server :: 12.13s
+2026-09-05 06:44:39.148 [INFO ] PERF-05 :: start
+2026-09-05 06:44:40.339 [SKIP ] UF-PERF-05: /explore responds to search query within 5s :: skipped
+2026-09-05 06:44:41.502 [INFO ] PERF-06 :: start
+2026-09-05 06:44:42.476 [INFO ] PERF-06 :: homepage HTML body: 75.7 KB
+2026-09-05 06:44:42.479 [INFO ] PERF-06 :: (domcontentloaded in 975ms)
+2026-09-05 06:44:43.399 [PASS ] UF-PERF-06: Homepage HTML payload is under 200KB :: 3.04s
+2026-09-05 06:44:43.410 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-05 06:44:44.670 [INFO ] WIZ-09-N :: start
+2026-09-05 06:44:44.672 [INFO ] login :: navigating to /login
+2026-09-05 06:44:48.207 [INFO ] login :: ok
+2026-09-05 06:45:19.670 [WARN ] WATCHDOG :: UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) exceeded 35s — closing context
+2026-09-05 06:45:21.243 [WARN ] safeRun :: server-induced failure, skipping: locator.selectOption: Target page, context or browser has been closed
+2026-09-05 06:45:21.261 [SKIP ] UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) :: skipped
+2026-09-05 06:45:22.483 [INFO ] WIZ-13-N :: start
+2026-09-05 06:45:22.485 [INFO ] login :: navigating to /login
+2026-09-05 06:45:35.093 [INFO ] login :: ok
+2026-09-05 06:45:57.483 [WARN ] WATCHDOG :: UF-WIZ-13-N: Whitespace-only company name does not advance exceeded 35s — closing context
+2026-09-05 06:45:58.711 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-05 06:45:58.732 [SKIP ] UF-WIZ-13-N: Whitespace-only company name does not advance :: skipped
+2026-09-05 06:46:00.031 [INFO ] WIZ-05-N :: start
+2026-09-05 06:46:00.033 [INFO ] login :: navigating to /login
+2026-09-05 06:46:00.047 [WARN ] safeLogin :: login timed out: page.goto: net::ERR_INTERNET_DISCONNECTED at https://187.77.79.40.nip.io/login
+2026-09-05 06:46:01.390 [SKIP ] UF-WIZ-05-N: 5000-char paste in company name does not crash :: skipped
+2026-09-05 06:46:02.622 [INFO ] WIZ-06-N :: start
+2026-09-05 06:46:02.624 [INFO ] login :: navigating to /login
+2026-09-05 06:46:02.635 [WARN ] safeLogin :: login timed out: page.goto: net::ERR_INTERNET_DISCONNECTED at https://187.77.79.40.nip.io/login
+2026-09-05 06:46:03.980 [SKIP ] UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break :: skipped
+2026-09-05 06:46:05.152 [INFO ] WIZ-12-N :: start
+2026-09-05 06:46:05.155 [INFO ] login :: navigating to /login
+2026-09-05 06:46:05.164 [WARN ] safeLogin :: login timed out: page.goto: net::ERR_INTERNET_DISCONNECTED at https://187.77.79.40.nip.io/login
+2026-09-05 06:46:06.487 [SKIP ] UF-WIZ-12-N: Lowercase PAN does not crash the form :: skipped
+2026-09-05 06:46:07.675 [INFO ] WIZ-15-N :: start
+2026-09-05 06:46:07.678 [INFO ] login :: navigating to /login
+2026-09-05 06:46:07.688 [WARN ] safeLogin :: login timed out: page.goto: net::ERR_INTERNET_DISCONNECTED at https://187.77.79.40.nip.io/login
+2026-09-05 06:46:09.096 [SKIP ] UF-WIZ-15-N: Page reload after partial fill — form behaviour documented :: skipped
+2026-09-05 06:46:10.402 [INFO ] WIZ-16-N :: start
+2026-09-05 06:46:10.404 [INFO ] login :: navigating to /login
+2026-09-05 06:46:27.756 [INFO ] login :: ok
+2026-09-05 06:46:45.412 [WARN ] WATCHDOG :: UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) exceeded 35s — closing context
+2026-09-05 06:46:46.629 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-05 06:46:46.650 [SKIP ] UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) :: skipped
+2026-09-05 06:46:47.881 [INFO ] WIZ-22-N :: start
+2026-09-05 06:46:47.884 [INFO ] login :: navigating to /login
+2026-09-05 06:47:01.119 [INFO ] login :: ok
+2026-09-05 06:47:22.892 [WARN ] WATCHDOG :: UF-WIZ-22-N: Double-click Continue does not skip a step exceeded 35s — closing context
+2026-09-05 06:47:23.894 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-05 06:47:23.912 [SKIP ] UF-WIZ-22-N: Double-click Continue does not skip a step :: skipped
+2026-09-05 06:47:25.113 [INFO ] WIZ-19-N :: start
+2026-09-05 06:47:25.115 [INFO ] login :: navigating to /login
+2026-09-05 06:47:33.983 [INFO ] login :: ok
+2026-09-05 06:47:36.126 [INFO ] WIZ-19-N :: after up to 5 Tabs, focused: A
+2026-09-05 06:47:36.310 [PASS ] UF-WIZ-19-N: First Tab reaches a focusable element :: 12.37s
+2026-09-05 06:47:37.592 [INFO ] WIZ-21-N :: start
+2026-09-05 06:47:42.610 [INFO ] WIZ-21-N :: unauthed → https://187.77.79.40.nip.io/start/application
+2026-09-05 06:47:43.243 [PASS ] UF-WIZ-21-N: Unauthenticated wizard access is gated :: 6.91s
+2026-09-05 06:47:44.394 [INFO ] WIZ-17-N :: start
+2026-09-05 06:47:44.397 [INFO ] login :: navigating to /login
+2026-09-05 06:47:56.413 [INFO ] login :: ok
+2026-09-05 06:47:58.076 [INFO ] cookies :: dismissed
+2026-09-05 06:48:19.404 [WARN ] WATCHDOG :: UF-WIZ-17-N: Step 2 has at least one media upload control exceeded 35s — closing context
+2026-09-05 06:48:20.321 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-05 06:48:20.340 [SKIP ] UF-WIZ-17-N: Step 2 has at least one media upload control :: skipped
+2026-09-05 06:48:21.506 [INFO ] WIZ-18-N :: start
+2026-09-05 06:48:21.508 [INFO ] login :: navigating to /login
+2026-09-05 06:48:27.376 [INFO ] login :: ok
+2026-09-05 06:48:56.512 [WARN ] WATCHDOG :: UF-WIZ-18-N: Step 3 review reflects company name from step 1 exceeded 35s — closing context
+2026-09-05 06:48:58.053 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-05 06:48:58.071 [SKIP ] UF-WIZ-18-N: Step 3 review reflects company name from step 1 :: skipped
+2026-09-05 06:48:58.077 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 06:48:59.232 [INFO ] WIZ-01-P :: start
+2026-09-05 06:48:59.235 [INFO ] login :: navigating to /login
+2026-09-05 06:49:08.758 [INFO ] login :: ok
+2026-09-05 06:49:10.447 [INFO ] cookies :: dismissed
+2026-09-05 06:49:16.816 [FAIL ] UF-WIZ-01-P: Wizard page renders step 1 with all required fields :: 18.65s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+2026-09-05 06:49:17.482 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 06:49:22.058 [INFO ] WIZ-02-P :: start
+2026-09-05 06:49:22.060 [INFO ] login :: navigating to /login
+2026-09-05 06:49:30.446 [INFO ] login :: ok
+2026-09-05 06:49:32.606 [INFO ] cookies :: dismissed
+2026-09-05 06:51:22.968 [FAIL ] UF-WIZ-02-P: Continue is enabled when all required fields are filled :: 124.12s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-05 06:51:23.550 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 06:51:28.021 [INFO ] WIZ-03-P :: start
+2026-09-05 06:51:28.023 [INFO ] login :: navigating to /login
+2026-09-05 06:51:33.566 [INFO ] login :: ok
+2026-09-05 06:51:34.552 [INFO ] cookies :: dismissed
+2026-09-05 06:53:29.164 [FAIL ] UF-WIZ-03-P: PAN field shows correct placeholder :: 124.35s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-05 06:53:29.744 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 06:53:34.209 [INFO ] WIZ-04-P :: start
+2026-09-05 06:53:34.211 [INFO ] login :: navigating to /login
+2026-09-05 06:53:39.962 [INFO ] login :: ok
+2026-09-05 06:53:40.630 [INFO ] cookies :: dismissed
+2026-09-05 06:55:35.879 [FAIL ] UF-WIZ-04-P: Step 1 happy path advances to step 2 :: 124.86s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-05 06:55:36.468 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 06:55:40.985 [INFO ] WIZ-07-P :: start
+2026-09-05 06:55:40.988 [INFO ] login :: navigating to /login
+2026-09-05 06:55:46.285 [INFO ] login :: ok
+2026-09-05 06:55:47.290 [INFO ] cookies :: dismissed
+2026-09-05 06:57:44.175 [FAIL ] UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs :: 126.44s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-05 06:57:44.819 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 06:57:49.698 [INFO ] WIZ-08-P :: start
+2026-09-05 06:57:49.701 [INFO ] login :: navigating to /login
+2026-09-05 06:58:04.801 [INFO ] login :: ok
+2026-09-05 06:58:06.342 [INFO ] cookies :: dismissed
+2026-09-05 06:58:08.317 [INFO ] WIZ-08-P :: JS errors on load: 0
+2026-09-05 06:58:08.556 [PASS ] UF-WIZ-08-P: Step 1 page loads cleanly with no JS errors :: 22.45s
+2026-09-05 06:58:09.809 [INFO ] WIZ-10-P :: start
+2026-09-05 06:58:09.811 [INFO ] login :: navigating to /login
+2026-09-05 06:58:37.469 [INFO ] login :: ok
+2026-09-05 06:58:38.933 [INFO ] cookies :: dismissed
+2026-09-05 06:58:40.001 [FAIL ] UF-WIZ-10-P: Country dropdown lists India :: 31.37s — Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+2026-09-05 06:58:40.591 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 06:58:45.136 [INFO ] WIZ-11-P :: start
+2026-09-05 06:58:45.139 [INFO ] login :: navigating to /login
+2026-09-05 06:58:54.900 [INFO ] login :: ok
+2026-09-05 06:58:56.184 [INFO ] cookies :: dismissed
+2026-09-05 07:00:46.393 [FAIL ] UF-WIZ-11-P: Subcategory populates after category chosen :: 124.51s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-05 07:00:46.989 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 07:00:51.613 [INFO ] WIZ-14-P :: start
+2026-09-05 07:00:51.616 [INFO ] login :: navigating to /login
+2026-09-05 07:00:57.783 [INFO ] login :: ok
+2026-09-05 07:00:58.812 [INFO ] cookies :: dismissed
+2026-09-05 07:00:59.811 [SKIP ] UF-WIZ-14-P: GSTIN optional field accepts valid value :: skipped
+2026-09-05 07:01:00.974 [INFO ] WIZ-20-P :: start
+2026-09-05 07:01:00.976 [INFO ] login :: navigating to /login
+2026-09-05 07:01:04.370 [INFO ] login :: ok
+2026-09-05 07:01:04.833 [INFO ] cookies :: dismissed
+2026-09-05 07:01:04.988 [PASS ] UF-WIZ-20-P: Wizard URL is exactly /start/application :: 5.16s
+2026-09-05 07:01:06.157 [INFO ] UP-06-N :: start
+2026-09-05 07:01:06.278 [SKIP ] UF-UP-06-N: Gallery upload of 15 images exceeds documented 12-item limit :: skipped
+2026-09-05 07:01:07.421 [INFO ] UP-07-N :: start
+2026-09-05 07:01:07.424 [INFO ] login :: navigating to /login
+2026-09-05 07:01:19.060 [INFO ] login :: ok
+2026-09-05 07:01:20.611 [INFO ] cookies :: dismissed
+2026-09-05 07:04:12.890 [FAIL ] UF-UP-07-N: Video >100MB is rejected (size validation) :: 186.54s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:04:18.010 [INFO ] UP-08-N :: start
+2026-09-05 07:04:18.014 [INFO ] login :: navigating to /login
+2026-09-05 07:04:40.862 [INFO ] login :: ok
+2026-09-05 07:04:42.754 [INFO ] cookies :: dismissed
+2026-09-05 07:07:20.890 [FAIL ] UF-UP-08-N: Audio file (mp3) is rejected as non-image/non-video :: 186.12s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:07:25.963 [INFO ] UP-09-N :: start
+2026-09-05 07:07:25.966 [INFO ] login :: navigating to /login
+2026-09-05 07:07:30.015 [INFO ] login :: ok
+2026-09-05 07:07:31.102 [INFO ] cookies :: dismissed
+2026-09-05 07:10:29.282 [FAIL ] UF-UP-09-N: Continue button is disabled with no cover image :: 186.52s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:10:34.344 [INFO ] UP-10-N :: start
+2026-09-05 07:10:34.347 [INFO ] login :: navigating to /login
+2026-09-05 07:10:42.135 [INFO ] login :: ok
+2026-09-05 07:10:42.672 [INFO ] cookies :: dismissed
+2026-09-05 07:13:37.622 [FAIL ] UF-UP-10-N: Pitch video URL rejects non-URL string :: 186.51s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:13:42.724 [INFO ] UP-11-N :: start
+2026-09-05 07:13:42.727 [INFO ] login :: navigating to /login
+2026-09-05 07:13:51.747 [INFO ] login :: ok
+2026-09-05 07:13:52.315 [INFO ] cookies :: dismissed
+2026-09-05 07:16:46.108 [FAIL ] UF-UP-11-N: Story field enforces 30-char minimum (boundary) :: 186.62s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:16:51.169 [INFO ] UP-12-N :: start
+2026-09-05 07:16:51.173 [INFO ] login :: navigating to /login
+2026-09-05 07:17:02.415 [INFO ] login :: ok
+2026-09-05 07:17:04.306 [INFO ] cookies :: dismissed
+2026-09-05 07:19:54.470 [FAIL ] UF-UP-12-N: Funding goal of 0 is accepted (per UI hint) :: 186.50s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:19:59.635 [INFO ] UP-13-N :: start
+2026-09-05 07:19:59.638 [INFO ] login :: navigating to /login
+2026-09-05 07:20:04.092 [INFO ] login :: ok
+2026-09-05 07:20:04.835 [INFO ] cookies :: dismissed
+2026-09-05 07:23:01.293 [FAIL ] UF-UP-13-N: Funding goal with negative number is rejected by input :: 184.95s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:23:06.643 [INFO ] UP-01-P :: start
+2026-09-05 07:23:06.646 [INFO ] login :: navigating to /login
+2026-09-05 07:23:39.991 [WARN ] safeLogin :: login timeout: page.goto: net::ERR_TIMED_OUT at https://187.77.79.40.nip.io/login
+2026-09-05 07:23:42.882 [SKIP ] UF-UP-01-P: Cover image upload (small JPG) succeeds :: skipped
+2026-09-05 07:23:44.051 [INFO ] UP-02-P :: start
+2026-09-05 07:23:44.052 [INFO ] login :: navigating to /login
+2026-09-05 07:23:52.040 [INFO ] login :: ok
+2026-09-05 07:23:52.938 [INFO ] cookies :: dismissed
+2026-09-05 07:26:47.561 [FAIL ] UF-UP-02-P: Gallery upload of 3 small images succeeds (one at a time) :: 184.62s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:26:52.510 [INFO ] UP-03-P :: start
+2026-09-05 07:26:52.513 [INFO ] login :: navigating to /login
+2026-09-05 07:27:01.024 [INFO ] login :: ok
+2026-09-05 07:27:02.082 [INFO ] cookies :: dismissed
+2026-09-05 07:29:59.724 [FAIL ] UF-UP-03-P: Gallery upload of 12 images (the documented max) is accepted (one at a time) :: 190.39s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:30:05.732 [INFO ] UP-04-P :: start
+2026-09-05 07:30:05.866 [INFO ] login :: navigating to /login
+2026-09-05 07:30:11.045 [INFO ] login :: ok
+2026-09-05 07:30:12.044 [INFO ] cookies :: dismissed
+2026-09-05 07:33:11.215 [FAIL ] UF-UP-04-P: Small video (<100MB) upload succeeds :: 189.34s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:33:16.982 [INFO ] UP-05-P :: start
+2026-09-05 07:33:16.985 [INFO ] login :: navigating to /login
+2026-09-05 07:33:22.056 [INFO ] login :: ok
+2026-09-05 07:33:22.977 [INFO ] cookies :: dismissed
+2026-09-05 07:35:44.516 [ERROR] REPORTER :: [31mTimed out waiting 3600s for the test suite to run[39m
+2026-09-05 07:35:44.521 [ERROR] REPORTER :: [31mTimed out waiting 3600s for the teardown for test suite to run[39m
+INFO  RUN-SUMMARY ::  | ======================================================================== |   TEST RUN SUMMARY — 2026-09-05_06-35-44 | ======================================================================== |   Total      : 119 |   Passed     : 81  (68.1%) |   Failed     : 17 |   Skipped    : 21 |   Info logs  : 3 |   Warnings   : 0 |   Errors     : 2 |   Duration   : 3600.1s |   Run log    : C:\ideakicks\testing\logs\run-2026-09-05_06-35-44.log |   Rolling log: C:\ideakicks\testing\logs\test-execution.log | ======================================================================== | 
+2026-09-05 07:35:44.548 [INFO ] RUN-END :: Status: timedout | Duration: 3600.0s
+2026-09-05 07:35:44.552 [INFO ] REPORTER :: HTML report: C:\ideakicks\testing\logs\run-2026-09-05_06-35-44.html

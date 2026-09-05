@@ -1,0 +1,5 @@
+2026-09-05 06:51:23.550 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 06:51:28.021 [INFO ] WIZ-03-P :: start
+2026-09-05 06:51:28.023 [INFO ] login :: navigating to /login
+2026-09-05 06:51:33.566 [INFO ] login :: ok
+2026-09-05 06:51:34.552 [INFO ] cookies :: dismissed

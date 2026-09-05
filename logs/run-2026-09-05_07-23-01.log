@@ -1,0 +1,7 @@
+2026-09-05 07:23:06.643 [INFO ] UP-01-P :: start
+2026-09-05 07:23:06.646 [INFO ] login :: navigating to /login
+2026-09-05 07:23:39.991 [WARN ] safeLogin :: login timeout: page.goto: net::ERR_TIMED_OUT at https://187.77.79.40.nip.io/login
+2026-09-05 07:23:44.051 [INFO ] UP-02-P :: start
+2026-09-05 07:23:44.052 [INFO ] login :: navigating to /login
+2026-09-05 07:23:52.040 [INFO ] login :: ok
+2026-09-05 07:23:52.938 [INFO ] cookies :: dismissed

@@ -14,20 +14,20 @@ module.exports = async config => {
     const context = await browser.newContext();
     const page = await context.newPage();
 
-    await page.goto('https://187.77.79.40.nip.io/login');
+    await page.goto('https://187.77.79.40.nip.io/login', { waitUntil: 'domcontentloaded', timeout: 60000 });
     await page.locator('input[name="email"]').fill('kirtanthakkar6@gmail.com');
     await page.locator('input[name="password"]').fill('czBfHbCiMUNpqa4');
     await page.getByRole('button', { name: 'Log In' }).click();
 
     // Wait for redirect away from /login
     await page.waitForURL(u => !u.toString().includes('/login'), { timeout: 20000 });
-    await page.waitForLoadState('networkidle', { timeout: 15000 });
+    await page.waitForLoadState('domcontentloaded', { timeout: 30000 });
 
     // Now visit /dashboard to force the client to fully hydrate session
     // (localStorage + cookies) so that subsequent tests with state.json see
     // a working session even when navigating directly to /dashboard.
-    await page.goto('https://187.77.79.40.nip.io/dashboard');
-    await page.waitForLoadState('networkidle', { timeout: 15000 });
+    await page.goto('https://187.77.79.40.nip.io/dashboard', { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await page.waitForLoadState('domcontentloaded', { timeout: 30000 });
 
     // If we ended up back on /login, the auth chain failed — bail loudly.
     if (page.url().includes('/login')) {
@@ -50,14 +50,14 @@ module.exports = async config => {
     console.log('Authenticating admin user via global setup...');
     const adminContext = await browser.newContext();
     const adminPage = await adminContext.newPage();
-    await adminPage.goto('https://admin.187.77.79.40.nip.io/login');
+    await adminPage.goto('https://admin.187.77.79.40.nip.io/login', { waitUntil: 'domcontentloaded', timeout: 60000 });
     await adminPage.getByRole('textbox', { name: 'Email' }).fill('hello@ideakicks.com');
     await adminPage.getByRole('textbox', { name: 'Password' }).fill(`r9Ff{A0Z'kY:{V1W`);
     await adminPage.getByRole('button', { name: 'Sign in' }).click({ force: true });
-    await adminPage.waitForLoadState('networkidle', { timeout: 15000 });
+    await adminPage.waitForLoadState('domcontentloaded', { timeout: 30000 });
     // Visit dashboard so state captures the authed session properly
-    await adminPage.goto('https://admin.187.77.79.40.nip.io/');
-    await adminPage.waitForLoadState('networkidle', { timeout: 15000 });
+    await adminPage.goto('https://admin.187.77.79.40.nip.io/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await adminPage.waitForLoadState('domcontentloaded', { timeout: 30000 });
     await adminContext.storageState({ path: 'admin-state.json' });
     await adminPage.close();
     await adminContext.close();

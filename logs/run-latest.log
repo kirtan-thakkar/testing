@@ -1,0 +1,127 @@
+2026-09-05 06:36:23.480 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-05 06:36:23.499 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 06:36:23.540 [INFO ] RUN-BEGIN :: Suite: unnamed | Tests: 120 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_06-35-44.log
+2026-09-05 06:36:44.507 [PASS ] UF-ACCT-01: Update Profile Bio :: 19.09s
+2026-09-05 06:36:51.669 [PASS ] UF-ACCT-02: Change Account Password :: 7.14s
+2026-09-05 06:37:01.385 [SKIP ] UF-ADMIN-01-N: Empty search returns empty state, not error :: skipped
+2026-09-05 06:37:04.233 [PASS ] UF-ADMIN-01-N2: 5000-char search does not crash search :: 2.84s
+2026-09-05 06:37:07.021 [PASS ] UF-ADMIN-03-N: Special characters in campaign search do not crash :: 2.77s
+2026-09-05 06:37:11.170 [PASS ] UF-ADMIN-99-N: Direct visit to admin without auth redirects to /login :: 4.11s
+2026-09-05 06:37:17.051 [PASS ] UF-ADMIN-01-P: Project Submissions page loads with heading :: 1.08s
+2026-09-05 06:37:18.767 [PASS ] UF-ADMIN-02-P: Project Submissions filter UI is present :: 1.70s
+2026-09-05 06:37:19.228 [PASS ] UF-ADMIN-03-P: Campaigns list page loads :: 0.45s
+2026-09-05 06:37:19.706 [PASS ] UF-ADMIN-04-P: Categories page loads :: 0.47s
+2026-09-05 06:37:20.293 [PASS ] UF-ADMIN-05-P: Country Fields (Application Fields) page loads :: 0.57s
+2026-09-05 06:37:20.881 [PASS ] UF-ADMIN-06-P: Partners page loads :: 0.56s
+2026-09-05 06:37:30.606 [PASS ] UF-ADMIN-01: Admin View Project Submissions :: 2.75s
+2026-09-05 06:37:33.439 [PASS ] UF-ADMIN-02: Admin Filter Project Submissions :: 2.82s
+2026-09-05 06:37:37.027 [PASS ] UF-ADMIN-03: Admin Search & Filter Campaigns :: 3.58s
+2026-09-05 06:37:39.459 [PASS ] UF-ADMIN-04: Admin Categories Page :: 2.42s
+2026-09-05 06:37:42.110 [PASS ] UF-ADMIN-05: Admin Application Fields Page :: 2.64s
+2026-09-05 06:37:44.811 [PASS ] UF-ADMIN-06: Admin View Partners Tab :: 2.64s
+2026-09-05 06:37:49.669 [PASS ] UF-CMS-N1: Visit a non-existent CMS page returns 404 or friendly error :: 0.21s
+2026-09-05 06:37:51.388 [SKIP ] UF-CMS-N2: 5000-char input in any visible CMS field does not crash :: skipped
+2026-09-05 06:38:00.765 [PASS ] UF-ADMIN-15-P: CMS Pages list loads with heading :: 0.54s
+2026-09-05 06:38:01.459 [PASS ] UF-ADMIN-16-P: CMS settings page loads :: 0.68s
+2026-09-05 06:38:12.320 [PASS ] UF-ADMIN-15: Admin Manage CMS Pages :: 4.10s
+2026-09-05 06:38:14.726 [PASS ] UF-ADMIN-16: Admin Configure Global CMS Content :: 2.35s
+2026-09-05 06:38:25.045 [PASS ] UF-ENG-N1: Inbox empty search returns empty state :: 2.72s
+2026-09-05 06:38:27.777 [PASS ] UF-ENG-N2: Subscribers 5000-char search does not crash :: 2.73s
+2026-09-05 06:38:28.972 [SKIP ] UF-ENG-N3: Inbox reply with XSS payload does not execute :: skipped
+2026-09-05 06:38:37.332 [PASS ] UF-ADMIN-13-P: Contact Inbox page loads :: 2.12s
+2026-09-05 06:38:37.814 [PASS ] UF-ADMIN-14-P: Subscribers page loads :: 0.45s
+2026-09-05 06:38:49.799 [PASS ] UF-ADMIN-13: Admin Manage Contact Inbox :: 2.59s
+2026-09-05 06:38:52.270 [PASS ] UF-ADMIN-14: Admin View Subscribers :: 2.40s
+2026-09-05 06:38:59.855 [PASS ] UF-FIN-N1: Payouts with non-existent ID shows error, not crash :: 0.24s
+2026-09-05 06:39:01.091 [SKIP ] UF-FIN-N2: 5000-char filter on pledges does not crash :: skipped
+2026-09-05 06:39:02.364 [SKIP ] UF-FIN-N3: Refunds date filter with junk value does not crash :: skipped
+2026-09-05 06:39:10.562 [PASS ] UF-ADMIN-07-P: Payouts page loads :: 0.57s
+2026-09-05 06:39:11.151 [PASS ] UF-ADMIN-08-P: Pledges page loads :: 0.58s
+2026-09-05 06:39:11.653 [PASS ] UF-ADMIN-09-P: Refunds log page loads :: 0.47s
+2026-09-05 06:39:21.039 [PASS ] UF-ADMIN-07: Admin View Payouts :: 2.53s
+2026-09-05 06:39:23.730 [PASS ] UF-ADMIN-08: Admin Manage Pledges :: 2.67s
+2026-09-05 06:39:26.310 [PASS ] UF-ADMIN-09: Admin View Refunds Log :: 2.48s
+2026-09-05 06:39:36.943 [PASS ] UF-PPL-N1: User search with no matches shows empty state :: 2.79s
+2026-09-05 06:39:39.699 [PASS ] UF-PPL-N2: User search with XSS does not execute :: 2.74s
+2026-09-05 06:39:42.459 [PASS ] UF-PPL-N3: 5000-char user search does not crash :: 2.75s
+2026-09-05 06:39:42.773 [PASS ] UF-PPL-N4: Visit /users/<junk-id> does not crash :: 0.28s
+2026-09-05 06:39:51.785 [PASS ] UF-ADMIN-10-P: User Management page loads with "New user" CTA :: 1.09s
+2026-09-05 06:39:52.373 [PASS ] UF-ADMIN-11-P: Roles page loads with "New role" CTA :: 0.57s
+2026-09-05 06:39:52.940 [PASS ] UF-ADMIN-12-P: Deletion Requests page loads :: 0.53s
+2026-09-05 06:40:06.912 [PASS ] UF-ADMIN-10: Admin User Management :: 3.98s
+2026-09-05 06:40:09.338 [PASS ] UF-ADMIN-11: Admin Manage Roles :: 2.41s
+2026-09-05 06:40:11.934 [PASS ] UF-ADMIN-12: Admin Review Deletion Requests :: 2.51s
+2026-09-05 06:40:18.467 [PASS ] UF-SYS-N1: Notifications page with no JS errors on load :: 1.71s
+2026-09-05 06:40:19.750 [SKIP ] UF-SYS-N2: Activity log filter with junk date does not crash :: skipped
+2026-09-05 06:40:20.997 [SKIP ] UF-SYS-N3: 5000-char search on activity log does not crash :: skipped
+2026-09-05 06:40:29.921 [PASS ] UF-ADMIN-17-P: Notifications page loads :: 1.09s
+2026-09-05 06:40:31.016 [PASS ] UF-ADMIN-18-P: Activity log page loads :: 1.05s
+2026-09-05 06:40:40.209 [PASS ] UF-ADMIN-17: Admin View Notifications :: 2.47s
+2026-09-05 06:40:42.880 [PASS ] UF-ADMIN-18: Admin View Activity Log :: 2.58s
+2026-09-05 06:40:56.191 [PASS ] UF-AUTH-01: User Registration Page Loads :: 13.28s
+2026-09-05 06:41:01.024 [PASS ] UF-AUTH-02: Login - Invalid Credentials (Negative Path) :: 4.81s
+2026-09-05 06:41:16.324 [PASS ] UF-AUTH-03: Login - Success (Positive Path) :: 15.28s
+2026-09-05 06:41:24.047 [PASS ] UF-CREA-01: Campaign Application Page Loads :: 7.69s
+2026-09-05 06:41:37.497 [PASS ] UF-CREA-02: Campaign Application - Navigate to Application :: 13.43s
+2026-09-05 06:41:52.035 [PASS ] UF-CAMP-01: Campaign Detail Tabs Navigation :: 14.50s
+2026-09-05 06:42:00.043 [PASS ] UF-CAMP-02: Save Campaign & Dashboard Sync :: 7.99s
+2026-09-05 06:42:07.077 [PASS ] UF-BACK-01: Reward & Add-on Selection :: 7.00s
+2026-09-05 06:42:19.835 [PASS ] UF-BACK-02: Payment Terms Validation (Negative Path) :: 12.74s
+2026-09-05 06:42:32.726 [PASS ] UF-BACK-03: Complete Pledge (Positive Path) :: 12.87s
+2026-09-05 06:42:47.922 [PASS ] UF-DASH-01: Creator Dashboard Tabs Navigation :: 15.16s
+2026-09-05 06:42:55.669 [PASS ] UF-DISC-01: Global Header Search (Positive Path) :: 7.71s
+2026-09-05 06:43:08.065 [PASS ] UF-DISC-02: Unsuccessful Campaign Search (Empty State) :: 12.38s
+2026-09-05 06:43:17.317 [PASS ] UF-DISC-03: Explore Category Filtering :: 9.23s
+2026-09-05 06:43:33.539 [PASS ] UF-INFO-01: Global Static Page Navigation :: 16.19s
+2026-09-05 06:43:47.375 [PASS ] UF-INFO-02: Dynamic Legal Hub Navigation :: 13.81s
+2026-09-05 06:43:51.185 [PASS ] UF-INFO-03: Cookie Preferences Management :: 3.79s
+2026-09-05 06:43:56.535 [PASS ] UF-BUG-01: Footer Social Icons Interactivity :: 5.33s
+2026-09-05 06:44:07.151 [PASS ] UF-LOAD-01: Login endpoint survives concurrent invalid requests :: 10.59s
+2026-09-05 06:44:07.870 [PASS ] UF-LOAD-02: Login endpoint survives burst of 50 requests in 1s :: 0.71s
+2026-09-05 06:44:11.154 [PASS ] UF-PERF-01: Homepage loads in under 5s (warm) :: 3.27s
+2026-09-05 06:44:14.275 [PASS ] UF-PERF-02: /explore (discover) loads in under 8s (warm) :: 3.11s
+2026-09-05 06:44:16.566 [PASS ] UF-PERF-03: /login loads in under 5s :: 2.28s
+2026-09-05 06:44:18.908 [PASS ] UF-PERF-04: /start/application wizard loads in under 8s :: 2.33s
+2026-09-05 06:44:25.832 [PASS ] UF-STRESS-01: 5 parallel page loads all complete within 30s :: 6.92s
+2026-09-05 06:44:37.969 [PASS ] UF-STRESS-02: 10 parallel /login navigations do not crash the server :: 12.13s
+2026-09-05 06:44:40.339 [SKIP ] UF-PERF-05: /explore responds to search query within 5s :: skipped
+2026-09-05 06:44:43.399 [PASS ] UF-PERF-06: Homepage HTML payload is under 200KB :: 3.04s
+2026-09-05 06:45:21.261 [SKIP ] UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) :: skipped
+2026-09-05 06:45:58.732 [SKIP ] UF-WIZ-13-N: Whitespace-only company name does not advance :: skipped
+2026-09-05 06:46:01.390 [SKIP ] UF-WIZ-05-N: 5000-char paste in company name does not crash :: skipped
+2026-09-05 06:46:03.980 [SKIP ] UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break :: skipped
+2026-09-05 06:46:06.487 [SKIP ] UF-WIZ-12-N: Lowercase PAN does not crash the form :: skipped
+2026-09-05 06:46:09.096 [SKIP ] UF-WIZ-15-N: Page reload after partial fill — form behaviour documented :: skipped
+2026-09-05 06:46:46.650 [SKIP ] UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) :: skipped
+2026-09-05 06:47:23.912 [SKIP ] UF-WIZ-22-N: Double-click Continue does not skip a step :: skipped
+2026-09-05 06:47:36.310 [PASS ] UF-WIZ-19-N: First Tab reaches a focusable element :: 12.37s
+2026-09-05 06:47:43.243 [PASS ] UF-WIZ-21-N: Unauthenticated wizard access is gated :: 6.91s
+2026-09-05 06:48:20.340 [SKIP ] UF-WIZ-17-N: Step 2 has at least one media upload control :: skipped
+2026-09-05 06:48:58.071 [SKIP ] UF-WIZ-18-N: Step 3 review reflects company name from step 1 :: skipped
+2026-09-05 06:49:16.816 [FAIL ] UF-WIZ-01-P: Wizard page renders step 1 with all required fields :: 18.65s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+2026-09-05 06:51:22.968 [FAIL ] UF-WIZ-02-P: Continue is enabled when all required fields are filled :: 124.12s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-05 06:53:29.164 [FAIL ] UF-WIZ-03-P: PAN field shows correct placeholder :: 124.35s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-05 06:55:35.879 [FAIL ] UF-WIZ-04-P: Step 1 happy path advances to step 2 :: 124.86s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-05 06:57:44.175 [FAIL ] UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs :: 126.44s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-05 06:58:08.556 [PASS ] UF-WIZ-08-P: Step 1 page loads cleanly with no JS errors :: 22.45s
+2026-09-05 06:58:40.001 [FAIL ] UF-WIZ-10-P: Country dropdown lists India :: 31.37s — Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+2026-09-05 07:00:46.393 [FAIL ] UF-WIZ-11-P: Subcategory populates after category chosen :: 124.51s — [31mTest timeout of 120000ms exceeded.[39m
+2026-09-05 07:00:59.811 [SKIP ] UF-WIZ-14-P: GSTIN optional field accepts valid value :: skipped
+2026-09-05 07:01:04.988 [PASS ] UF-WIZ-20-P: Wizard URL is exactly /start/application :: 5.16s
+2026-09-05 07:01:06.278 [SKIP ] UF-UP-06-N: Gallery upload of 15 images exceeds documented 12-item limit :: skipped
+2026-09-05 07:04:12.890 [FAIL ] UF-UP-07-N: Video >100MB is rejected (size validation) :: 186.54s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:07:20.890 [FAIL ] UF-UP-08-N: Audio file (mp3) is rejected as non-image/non-video :: 186.12s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:10:29.282 [FAIL ] UF-UP-09-N: Continue button is disabled with no cover image :: 186.52s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:13:37.622 [FAIL ] UF-UP-10-N: Pitch video URL rejects non-URL string :: 186.51s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:16:46.108 [FAIL ] UF-UP-11-N: Story field enforces 30-char minimum (boundary) :: 186.62s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:19:54.470 [FAIL ] UF-UP-12-N: Funding goal of 0 is accepted (per UI hint) :: 186.50s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:23:01.293 [FAIL ] UF-UP-13-N: Funding goal with negative number is rejected by input :: 184.95s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:23:42.882 [SKIP ] UF-UP-01-P: Cover image upload (small JPG) succeeds :: skipped
+2026-09-05 07:26:47.561 [FAIL ] UF-UP-02-P: Gallery upload of 3 small images succeeds (one at a time) :: 184.62s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:29:59.724 [FAIL ] UF-UP-03-P: Gallery upload of 12 images (the documented max) is accepted (one at a time) :: 190.39s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:33:11.215 [FAIL ] UF-UP-04-P: Small video (<100MB) upload succeeds :: 189.34s — [31mTest timeout of 180000ms exceeded.[39m
+2026-09-05 07:35:44.516 [ERROR] REPORTER :: [31mTimed out waiting 3600s for the test suite to run[39m
+2026-09-05 07:35:44.521 [ERROR] REPORTER :: [31mTimed out waiting 3600s for the teardown for test suite to run[39m
+INFO  RUN-SUMMARY ::  | ======================================================================== |   TEST RUN SUMMARY — 2026-09-05_06-35-44 | ======================================================================== |   Total      : 119 |   Passed     : 81  (68.1%) |   Failed     : 17 |   Skipped    : 21 |   Info logs  : 3 |   Warnings   : 0 |   Errors     : 2 |   Duration   : 3600.1s |   Run log    : C:\ideakicks\testing\logs\run-2026-09-05_06-35-44.log |   Rolling log: C:\ideakicks\testing\logs\test-execution.log | ======================================================================== | 
+2026-09-05 07:35:44.548 [INFO ] RUN-END :: Status: timedout | Duration: 3600.0s
+2026-09-05 07:35:44.552 [INFO ] REPORTER :: HTML report: C:\ideakicks\testing\logs\run-2026-09-05_06-35-44.html

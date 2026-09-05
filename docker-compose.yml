@@ -1,9 +1,0 @@
-version: '3.8'
-services:
-  playwright-tests:
-    build: .
-    volumes:
-      # Map the local logs folder to the container to persist Apache logs
-      - ./logs:/app/logs
-    environment:
-      - CI=true

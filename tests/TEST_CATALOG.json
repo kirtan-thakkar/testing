@@ -1,0 +1,346 @@
+[
+  {
+    "file": "tests\\account.spec.js",
+    "describe": "3. Account Management Flows",
+    "tests": [
+      "UF-ACCT-01: Update Profile Bio",
+      "UF-ACCT-02: Change Account Password"
+    ],
+    "count": 2
+  },
+  {
+    "file": "tests\\admin-campaigns.negative.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-01-N: Empty search returns empty state, not error",
+      "UF-ADMIN-01-N2: 5000-char search does not crash search",
+      "UF-ADMIN-03-N: Special characters in campaign search do not crash",
+      "UF-ADMIN-99-N: Direct visit to admin without auth redirects to /login"
+    ],
+    "count": 4
+  },
+  {
+    "file": "tests\\admin-campaigns.positive.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-01-P: Project Submissions page loads with heading",
+      "UF-ADMIN-02-P: Project Submissions filter UI is present",
+      "UF-ADMIN-03-P: Campaigns list page loads",
+      "UF-ADMIN-04-P: Categories page loads",
+      "UF-ADMIN-05-P: Country Fields (Application Fields) page loads",
+      "UF-ADMIN-06-P: Partners page loads"
+    ],
+    "count": 6
+  },
+  {
+    "file": "tests\\admin-campaigns.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-01: Admin View Project Submissions",
+      "UF-ADMIN-02: Admin Filter Project Submissions",
+      "UF-ADMIN-03: Admin Search & Filter Campaigns",
+      "UF-ADMIN-04: Admin Categories Page",
+      "UF-ADMIN-05: Admin Application Fields Page",
+      "UF-ADMIN-06: Admin View Partners Tab"
+    ],
+    "count": 6
+  },
+  {
+    "file": "tests\\admin-content.negative.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-CMS-N1: Visit a non-existent CMS page returns 404 or friendly error",
+      "UF-CMS-N2: 5000-char input in any visible CMS field does not crash"
+    ],
+    "count": 2
+  },
+  {
+    "file": "tests\\admin-content.positive.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-15-P: CMS Pages list loads with heading",
+      "UF-ADMIN-16-P: CMS settings page loads"
+    ],
+    "count": 2
+  },
+  {
+    "file": "tests\\admin-content.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-15: Admin Manage CMS Pages",
+      "UF-ADMIN-16: Admin Configure Global CMS Content"
+    ],
+    "count": 2
+  },
+  {
+    "file": "tests\\admin-engagement.negative.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ENG-N1: Inbox empty search returns empty state",
+      "UF-ENG-N2: Subscribers 5000-char search does not crash",
+      "UF-ENG-N3: Inbox reply with XSS payload does not execute"
+    ],
+    "count": 3
+  },
+  {
+    "file": "tests\\admin-engagement.positive.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-13-P: Contact Inbox page loads",
+      "UF-ADMIN-14-P: Subscribers page loads"
+    ],
+    "count": 2
+  },
+  {
+    "file": "tests\\admin-engagement.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-13: Admin Manage Contact Inbox",
+      "UF-ADMIN-14: Admin View Subscribers"
+    ],
+    "count": 2
+  },
+  {
+    "file": "tests\\admin-finance.negative.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-FIN-N1: Payouts with non-existent ID shows error, not crash",
+      "UF-FIN-N2: 5000-char filter on pledges does not crash",
+      "UF-FIN-N3: Refunds date filter with junk value does not crash"
+    ],
+    "count": 3
+  },
+  {
+    "file": "tests\\admin-finance.positive.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-07-P: Payouts page loads",
+      "UF-ADMIN-08-P: Pledges page loads",
+      "UF-ADMIN-09-P: Refunds log page loads"
+    ],
+    "count": 3
+  },
+  {
+    "file": "tests\\admin-finance.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-07: Admin View Payouts",
+      "UF-ADMIN-08: Admin Manage Pledges",
+      "UF-ADMIN-09: Admin View Refunds Log"
+    ],
+    "count": 3
+  },
+  {
+    "file": "tests\\admin-people.negative.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-PPL-N1: User search with no matches shows empty state",
+      "UF-PPL-N2: User search with XSS does not execute",
+      "UF-PPL-N3: 5000-char user search does not crash",
+      "UF-PPL-N4: Visit /users/<junk-id> does not crash"
+    ],
+    "count": 4
+  },
+  {
+    "file": "tests\\admin-people.positive.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-10-P: User Management page loads with ",
+      "UF-ADMIN-11-P: Roles page loads with ",
+      "UF-ADMIN-12-P: Deletion Requests page loads"
+    ],
+    "count": 3
+  },
+  {
+    "file": "tests\\admin-people.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-10: Admin User Management",
+      "UF-ADMIN-11: Admin Manage Roles",
+      "UF-ADMIN-12: Admin Review Deletion Requests"
+    ],
+    "count": 3
+  },
+  {
+    "file": "tests\\admin-system.negative.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-SYS-N1: Notifications page with no JS errors on load",
+      "UF-SYS-N2: Activity log filter with junk date does not crash",
+      "UF-SYS-N3: 5000-char search on activity log does not crash"
+    ],
+    "count": 3
+  },
+  {
+    "file": "tests\\admin-system.positive.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-17-P: Notifications page loads",
+      "UF-ADMIN-18-P: Activity log page loads"
+    ],
+    "count": 2
+  },
+  {
+    "file": "tests\\admin-system.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-ADMIN-17: Admin View Notifications",
+      "UF-ADMIN-18: Admin View Activity Log"
+    ],
+    "count": 2
+  },
+  {
+    "file": "tests\\auth.spec.js",
+    "describe": "1. Authentication & Registration Flows",
+    "tests": [
+      "UF-AUTH-01: User Registration Page Loads",
+      "UF-AUTH-02: Login - Invalid Credentials (Negative Path)",
+      "UF-AUTH-03: Login - Success (Positive Path)"
+    ],
+    "count": 3
+  },
+  {
+    "file": "tests\\campaign-creation.spec.js",
+    "describe": "2. Campaign Creation (Creator Wizard) Flows",
+    "tests": [
+      "UF-CREA-01: Campaign Application Page Loads",
+      "UF-CREA-02: Campaign Application - Navigate to Application"
+    ],
+    "count": 2
+  },
+  {
+    "file": "tests\\campaign-details.spec.js",
+    "describe": "5. Campaign Details Flows",
+    "tests": [
+      "UF-CAMP-01: Campaign Detail Tabs Navigation",
+      "UF-CAMP-02: Save Campaign & Dashboard Sync"
+    ],
+    "count": 2
+  },
+  {
+    "file": "tests\\checkout.spec.js",
+    "describe": "6. Checkout & Pledging Flows",
+    "tests": [
+      "UF-BACK-01: Reward & Add-on Selection",
+      "UF-BACK-02: Payment Terms Validation (Negative Path)",
+      "UF-BACK-03: Complete Pledge (Positive Path)"
+    ],
+    "count": 3
+  },
+  {
+    "file": "tests\\dashboard.spec.js",
+    "describe": "Dashboard specific flows",
+    "tests": [
+      "UF-DASH-01: Creator Dashboard Tabs Navigation"
+    ],
+    "count": 1
+  },
+  {
+    "file": "tests\\discover.spec.js",
+    "describe": "4. Discovery & Search Flows",
+    "tests": [
+      "UF-DISC-01: Global Header Search (Positive Path)",
+      "UF-DISC-02: Unsuccessful Campaign Search (Empty State)",
+      "UF-DISC-03: Explore Category Filtering"
+    ],
+    "count": 3
+  },
+  {
+    "file": "tests\\info-and-legal.spec.js",
+    "describe": "7. Informational & Legal Flows",
+    "tests": [
+      "UF-INFO-01: Global Static Page Navigation",
+      "UF-INFO-02: Dynamic Legal Hub Navigation",
+      "UF-INFO-03: Cookie Preferences Management",
+      "UF-BUG-01: Footer Social Icons Interactivity"
+    ],
+    "count": 4
+  },
+  {
+    "file": "tests\\login-load.spec.js",
+    "describe": "(no describe)",
+    "tests": [
+      "UF-LOAD-01: Login endpoint survives concurrent invalid requests",
+      "UF-LOAD-02: Login endpoint survives burst of 50 requests in 1s"
+    ],
+    "count": 2
+  },
+  {
+    "file": "tests\\performance.spec.js",
+    "describe": "Performance & Stress — IdeaKicks",
+    "tests": [
+      "UF-PERF-01: Homepage loads in under 5s (warm)",
+      "UF-PERF-02: /explore (discover) loads in under 8s (warm)",
+      "UF-PERF-03: /login loads in under 5s",
+      "UF-PERF-04: /start/application wizard loads in under 8s",
+      "UF-STRESS-01: 5 parallel page loads all complete within 30s",
+      "UF-STRESS-02: 10 parallel /login navigations do not crash the server",
+      "UF-PERF-05: /explore responds to search query within 5s",
+      "UF-PERF-06: Homepage HTML payload is under 200KB"
+    ],
+    "count": 8
+  },
+  {
+    "file": "tests\\wizard-application.negative.spec.js",
+    "describe": "8. Campaign Application Wizard — NEGATIVE / EDGE flows",
+    "tests": [
+      "UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG)",
+      "UF-WIZ-13-N: Whitespace-only company name does not advance",
+      "UF-WIZ-05-N: 5000-char paste in company name does not crash",
+      "UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break",
+      "UF-WIZ-12-N: Lowercase PAN does not crash the form",
+      "UF-WIZ-15-N: Page reload after partial fill — form behaviour documented",
+      "UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash)",
+      "UF-WIZ-22-N: Double-click Continue does not skip a step",
+      "UF-WIZ-19-N: First Tab reaches a focusable element",
+      "UF-WIZ-21-N: Unauthenticated wizard access is gated",
+      "UF-WIZ-17-N: Step 2 has at least one media upload control",
+      "UF-WIZ-18-N: Step 3 review reflects company name from step 1"
+    ],
+    "count": 12
+  },
+  {
+    "file": "tests\\wizard-application.positive.spec.js",
+    "describe": "8. Campaign Application Wizard — POSITIVE flows",
+    "tests": [
+      "UF-WIZ-01-P: Wizard page renders step 1 with all required fields",
+      "UF-WIZ-02-P: Continue is enabled when all required fields are filled",
+      "UF-WIZ-03-P: PAN field shows correct placeholder",
+      "UF-WIZ-04-P: Step 1 happy path advances to step 2",
+      "UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs",
+      "UF-WIZ-08-P: Step 1 page loads cleanly with no JS errors",
+      "UF-WIZ-10-P: Country dropdown lists India",
+      "UF-WIZ-11-P: Subcategory populates after category chosen",
+      "UF-WIZ-14-P: GSTIN optional field accepts valid value",
+      "UF-WIZ-20-P: Wizard URL is exactly /start/application"
+    ],
+    "count": 10
+  },
+  {
+    "file": "tests\\wizard-step2-uploads.negative.spec.js",
+    "describe": "Wizard Step 2 — Media uploads (NEGATIVE / EDGE)",
+    "tests": [
+      "UF-UP-06-N: Gallery upload of 15 images exceeds documented 12-item limit",
+      "UF-UP-07-N: Video >100MB is rejected (size validation)",
+      "UF-UP-08-N: Audio file (mp3) is rejected as non-image/non-video",
+      "UF-UP-09-N: Continue button is disabled with no cover image",
+      "UF-UP-10-N: Pitch video URL rejects non-URL string",
+      "UF-UP-11-N: Story field enforces 30-char minimum (boundary)",
+      "UF-UP-12-N: Funding goal of 0 is accepted (per UI hint)",
+      "UF-UP-13-N: Funding goal with negative number is rejected by input"
+    ],
+    "count": 8
+  },
+  {
+    "file": "tests\\wizard-step2-uploads.positive.spec.js",
+    "describe": "Wizard Step 2 — Media uploads (POSITIVE)",
+    "tests": [
+      "UF-UP-01-P: Cover image upload (small JPG) succeeds",
+      "UF-UP-02-P: Gallery upload of 3 small images succeeds (one at a time)",
+      "UF-UP-03-P: Gallery upload of 12 images (the documented max) is accepted (one at a time)",
+      "UF-UP-04-P: Small video (<100MB) upload succeeds",
+      "UF-UP-05-P: Pitch video URL accepts a YouTube link"
+    ],
+    "count": 5
+  }
+]

@@ -1,25 +1,4 @@
 {
-  "cookies": [
-    {
-      "name": "ik_admin_active",
-      "value": "1",
-      "domain": ".187.77.79.40.nip.io",
-      "path": "/",
-      "expires": 1788422860.805105,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Strict"
-    },
-    {
-      "name": "ik_admin_refresh",
-      "value": "fq-McVbJyAjfuqmNN22y9ffDQszF7VMybWMASYdxQ02YWIN9XUr7q219UCQgKO7U",
-      "domain": ".187.77.79.40.nip.io",
-      "path": "/",
-      "expires": 1788422860.804983,
-      "httpOnly": true,
-      "secure": false,
-      "sameSite": "Strict"
-    }
-  ],
+  "cookies": [],
   "origins": []
 }
