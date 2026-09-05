@@ -28,12 +28,14 @@ const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const BIG_VIDEO = path.join(PUBLIC_DIR, '222.mp4');                            // 237MB > 100MB limit
 const MP3_AUDIO = path.join(PUBLIC_DIR, 'rediskasound-bossa-jazz-instrumental-554529.mp3'); // wrong type
 const IMG_9M    = path.join(PUBLIC_DIR, 'karsten-winegeart-jQcbjj-BrdA-unsplash.jpg');     // 9.4M (close to 10M)
-const ALL_IMAGES = fs.readdirSync(PUBLIC_DIR)
-  .filter(f => f.toLowerCase().endsWith('.jpg') || f.toLowerCase().endsWith('.jpeg'))
-  .map(f => path.join(PUBLIC_DIR, f));
+const ALL_IMAGES = fs.existsSync(PUBLIC_DIR)
+  ? fs.readdirSync(PUBLIC_DIR)
+      .filter(f => f.toLowerCase().endsWith('.jpg') || f.toLowerCase().endsWith('.jpeg'))
+      .map(f => path.join(PUBLIC_DIR, f))
+  : [];
 
 function requireFixture(p) {
-  if (!fs.existsSync(p)) throw new Error(`Missing test fixture: ${p}`);
+  test.skip(!fs.existsSync(p), `Missing test fixture: ${p}`);
 }
 
 async function safeLogin(page) {
