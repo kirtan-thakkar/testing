@@ -5,6 +5,11 @@
 const { defineConfig, devices } = require('@playwright/test');
 const path = require('node:path');
 
+// Guarantee a single run ID across all worker processes and reporters
+if (!process.env.PLAYWRIGHT_RUN_ID) {
+  process.env.PLAYWRIGHT_RUN_ID = new Date().toISOString().replace(/[:.]/g, '-').replace('T', '_').slice(0, 19);
+}
+
 module.exports = defineConfig({
   testDir: './tests',
   globalSetup: require.resolve('./tests/global-setup.js'),

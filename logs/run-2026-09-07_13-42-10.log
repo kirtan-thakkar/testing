@@ -1,0 +1,22 @@
+13:42:24.740 [INFO] WIZARD-NEG   negative & edge-case suite
+13:42:24.750 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+13:42:24.778 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-07_13-42-10.log
+13:42:25.421 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+13:42:32.571 [INFO] login        already authed (via /dashboard)
+13:42:33.019 [INFO] WIZ-01-P     start
+13:42:35.401 [WARN] wizard       user already has a submitted campaign (under review)
+13:42:35.406 [INFO] WIZ-01-P     Campaign already submitted and Under Review — verified submission state
+13:42:35.585 [PASS] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 8.83s
+
+========================================================================
+  RUN SUMMARY  2026-09-07_13-42-10
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 25.9s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-07_13-42-10.log
+========================================================================
+13:42:36.184 [INFO] RUN-END      Status: passed | Duration: 25.9s
+13:42:36.187 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-07_13-42-10.html

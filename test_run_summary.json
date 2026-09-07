@@ -1,0 +1,1202 @@
+{
+  "UF-WIZ-09-N": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Form advances even with unchecked eligibility (BUG)",
+    "runs_seen": 3,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 2
+  },
+  "UF-WIZ-13-N": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Whitespace-only company name does not advance",
+    "runs_seen": 3,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 3
+  },
+  "UF-WIZ-05-N": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "5000-char paste in company name does not crash",
+    "runs_seen": 3,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 3
+  },
+  "UF-WIZ-06-N": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "XSS / SQL-injection payload in company name does not break",
+    "runs_seen": 3,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 2
+  },
+  "UF-WIZ-12-N": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Lowercase PAN does not crash the form",
+    "runs_seen": 3,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 3
+  },
+  "UF-WIZ-15-N": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Page reload after partial fill \u2014 form behaviour documented",
+    "runs_seen": 3,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 3
+  },
+  "UF-WIZ-16-N": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Browser back from step 2 lands on step 1 (or stays step 2 without crash)",
+    "runs_seen": 3,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 3
+  },
+  "UF-WIZ-22-N": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Double-click Continue does not skip a step",
+    "runs_seen": 3,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 2
+  },
+  "UF-WIZ-19-N": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "First Tab reaches a focusable element",
+    "runs_seen": 3,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 2
+  },
+  "UF-WIZ-21-N": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "18.40s",
+    "name": "Unauthenticated wizard access is gated",
+    "runs_seen": 3,
+    "pass_count": 2,
+    "fail_count": 0,
+    "skip_count": 1
+  },
+  "UF-WIZ-17-N": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Step 2 has at least one media upload control",
+    "runs_seen": 3,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 3
+  },
+  "UF-WIZ-18-N": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Step 3 review reflects company name from step 1",
+    "runs_seen": 3,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 3
+  },
+  "UF-WIZ-01-P": {
+    "last_status": "FAIL",
+    "last_run": "latest",
+    "last_duration": "15.99s",
+    "name": "Wizard page renders step 1 with all required fields",
+    "runs_seen": 25,
+    "pass_count": 7,
+    "fail_count": 16,
+    "skip_count": 2
+  },
+  "UF-WIZ-02-P": {
+    "last_status": "FAIL",
+    "last_run": "latest",
+    "last_duration": "32.51s",
+    "name": "Continue is enabled when all required fields are filled",
+    "runs_seen": 10,
+    "pass_count": 0,
+    "fail_count": 10,
+    "skip_count": 0
+  },
+  "UF-WIZ-03-P": {
+    "last_status": "FAIL",
+    "last_run": "latest",
+    "last_duration": "62.44s",
+    "name": "PAN field shows correct placeholder",
+    "runs_seen": 9,
+    "pass_count": 0,
+    "fail_count": 9,
+    "skip_count": 0
+  },
+  "UF-WIZ-04-P": {
+    "last_status": "FAIL",
+    "last_run": "latest",
+    "last_duration": "62.63s",
+    "name": "Step 1 happy path advances to step 2",
+    "runs_seen": 9,
+    "pass_count": 0,
+    "fail_count": 9,
+    "skip_count": 0
+  },
+  "UF-WIZ-07-P": {
+    "last_status": "FAIL",
+    "last_run": "latest",
+    "last_duration": "0.00s",
+    "name": "Step 2 Build Page is reachable and has file inputs",
+    "runs_seen": 8,
+    "pass_count": 0,
+    "fail_count": 8,
+    "skip_count": 0
+  },
+  "UF-WIZ-08-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-45-56",
+    "last_duration": "9.49s",
+    "name": "Step 1 page loads cleanly with no JS errors",
+    "runs_seen": 6,
+    "pass_count": 3,
+    "fail_count": 3,
+    "skip_count": 0
+  },
+  "UF-WIZ-10-P": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-45-56",
+    "last_duration": "skipped",
+    "name": "Country dropdown lists India",
+    "runs_seen": 6,
+    "pass_count": 0,
+    "fail_count": 3,
+    "skip_count": 3
+  },
+  "UF-WIZ-11-P": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "58.59s",
+    "name": "Subcategory populates after category chosen",
+    "runs_seen": 5,
+    "pass_count": 0,
+    "fail_count": 4,
+    "skip_count": 1
+  },
+  "UF-WIZ-14-P": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "GSTIN optional field accepts valid value",
+    "runs_seen": 5,
+    "pass_count": 0,
+    "fail_count": 2,
+    "skip_count": 3
+  },
+  "UF-WIZ-20-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "3.41s",
+    "name": "Wizard URL is exactly /start/application",
+    "runs_seen": 5,
+    "pass_count": 3,
+    "fail_count": 1,
+    "skip_count": 1
+  },
+  "UF-ACCT-01": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "31.10s",
+    "name": "Update Profile Bio",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  },
+  "UF-ACCT-02": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "10.15s",
+    "name": "Change Account Password",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-01-N": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.75s",
+    "name": "Empty search returns empty state, not error",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-01-N2": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.75s",
+    "name": "5000-char search does not crash search",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-03-N": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.78s",
+    "name": "Special characters in campaign search do not crash",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-99-N": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "3.68s",
+    "name": "Direct visit to admin without auth redirects to /login",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-01-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "0.57s",
+    "name": "Project Submissions page loads with heading",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-02-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "1.81s",
+    "name": "Project Submissions filter UI is present",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-03-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "0.48s",
+    "name": "Campaigns list page loads",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-04-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "0.52s",
+    "name": "Categories page loads",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-05-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "1.05s",
+    "name": "Country Fields (Application Fields) page loads",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-06-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "0.41s",
+    "name": "Partners page loads",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-01": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.49s",
+    "name": "Admin View Project Submissions",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-02": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.67s",
+    "name": "Admin Filter Project Submissions",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-03": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.95s",
+    "name": "Admin Search & Filter Campaigns",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-04": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.48s",
+    "name": "Admin Categories Page",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-05": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.50s",
+    "name": "Admin Application Fields Page",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-06": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.56s",
+    "name": "Admin View Partners Tab",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-CMS-N1": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "0.25s",
+    "name": "Visit a non-existent CMS page returns 404 or friendly error",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-CMS-N2": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "5000-char input in any visible CMS field does not crash",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 1
+  },
+  "UF-ADMIN-15-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "1.08s",
+    "name": "CMS Pages list loads with heading",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-16-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "0.42s",
+    "name": "CMS settings page loads",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-15": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "4.04s",
+    "name": "Admin Manage CMS Pages",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-16": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.29s",
+    "name": "Admin Configure Global CMS Content",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ENG-N1": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.76s",
+    "name": "Inbox empty search returns empty state",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ENG-N2": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.77s",
+    "name": "Subscribers 5000-char search does not crash",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ENG-N3": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Inbox reply with XSS payload does not execute",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 1
+  },
+  "UF-ADMIN-13-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "1.11s",
+    "name": "Contact Inbox page loads",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-14-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "1.05s",
+    "name": "Subscribers page loads",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-13": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.43s",
+    "name": "Admin Manage Contact Inbox",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-14": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.22s",
+    "name": "Admin View Subscribers",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-FIN-N1": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "0.23s",
+    "name": "Payouts with non-existent ID shows error, not crash",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-FIN-N2": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "5000-char filter on pledges does not crash",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 1
+  },
+  "UF-FIN-N3": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Refunds date filter with junk value does not crash",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 1
+  },
+  "UF-ADMIN-07-P": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "5.25s",
+    "name": "Payouts page loads",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  },
+  "UF-ADMIN-08-P": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Pledges page loads",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 1
+  },
+  "UF-ADMIN-09-P": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Refunds log page loads",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 1
+  },
+  "UF-ADMIN-07": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.43s",
+    "name": "Admin View Payouts",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-08": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.62s",
+    "name": "Admin Manage Pledges",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-09": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.57s",
+    "name": "Admin View Refunds Log",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-PPL-N1": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "3.31s",
+    "name": "User search with no matches shows empty state",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-PPL-N2": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.75s",
+    "name": "User search with XSS does not execute",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-PPL-N3": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.72s",
+    "name": "5000-char user search does not crash",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-PPL-N4": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "0.38s",
+    "name": "Visit /users/<junk-id> does not crash",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-10-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "1.10s",
+    "name": "User Management page loads with \"New user\" CTA",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-11-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "0.45s",
+    "name": "Roles page loads with \"New role\" CTA",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-12-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "0.42s",
+    "name": "Deletion Requests page loads",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-10": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "4.17s",
+    "name": "Admin User Management",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-11": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.32s",
+    "name": "Admin Manage Roles",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-12": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.45s",
+    "name": "Admin Review Deletion Requests",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-SYS-N1": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "1.70s",
+    "name": "Notifications page with no JS errors on load",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-SYS-N2": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Activity log filter with junk date does not crash",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 1
+  },
+  "UF-SYS-N3": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "5000-char search on activity log does not crash",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 1
+  },
+  "UF-ADMIN-17-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "1.08s",
+    "name": "Notifications page loads",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-18-P": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "0.45s",
+    "name": "Activity log page loads",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-17": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.45s",
+    "name": "Admin View Notifications",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-ADMIN-18": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.29s",
+    "name": "Admin View Activity Log",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-AUTH-01": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "5.36s",
+    "name": "User Registration Page Loads",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-AUTH-02": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "5.25s",
+    "name": "Login - Invalid Credentials (Negative Path)",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-AUTH-03": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "7.67s",
+    "name": "Login - Success (Positive Path)",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-CREA-01": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "7.43s",
+    "name": "Campaign Application Page Loads",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-CREA-02": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "7.37s",
+    "name": "Campaign Application - Navigate to Application",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-CAMP-01": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "6.09s",
+    "name": "Campaign Detail Tabs Navigation",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-CAMP-02": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "6.24s",
+    "name": "Save Campaign & Dashboard Sync",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-BACK-01": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "6.75s",
+    "name": "Reward & Add-on Selection",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-BACK-02": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "5.34s",
+    "name": "Payment Terms Validation (Negative Path)",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-BACK-03": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "5.20s",
+    "name": "Complete Pledge (Positive Path)",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-DASH-01": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "8.48s",
+    "name": "Creator Dashboard Tabs Navigation",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-DISC-01": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "7.76s",
+    "name": "Global Header Search (Positive Path)",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-DISC-02": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "6.21s",
+    "name": "Unsuccessful Campaign Search (Empty State)",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-DISC-03": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "4.88s",
+    "name": "Explore Category Filtering",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-INFO-01": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "15.64s",
+    "name": "Global Static Page Navigation",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-INFO-02": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "5.65s",
+    "name": "Dynamic Legal Hub Navigation",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-INFO-03": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "4.48s",
+    "name": "Cookie Preferences Management",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-BUG-01": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "5.30s",
+    "name": "Footer Social Icons Interactivity",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-LOAD-01": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "10.72s",
+    "name": "Login endpoint survives concurrent invalid requests",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-LOAD-02": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "0.73s",
+    "name": "Login endpoint survives burst of 50 requests in 1s",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-PERF-01": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "3.56s",
+    "name": "Homepage loads in under 5s (warm)",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-PERF-02": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "3.69s",
+    "name": "/explore (discover) loads in under 8s (warm)",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-PERF-03": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "4.34s",
+    "name": "/login loads in under 5s",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-PERF-04": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "2.41s",
+    "name": "/start/application wizard loads in under 8s",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-STRESS-01": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "7.54s",
+    "name": "5 parallel page loads all complete within 30s",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-STRESS-02": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "12.44s",
+    "name": "10 parallel /login navigations do not crash the server",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-PERF-05": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "/explore responds to search query within 5s",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 1
+  },
+  "UF-PERF-06": {
+    "last_status": "PASS",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "3.38s",
+    "name": "Homepage HTML payload is under 200KB",
+    "runs_seen": 1,
+    "pass_count": 1,
+    "fail_count": 0,
+    "skip_count": 0
+  },
+  "UF-UP-06-N": {
+    "last_status": "SKIP",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "skipped",
+    "name": "Gallery upload of 15 images exceeds documented 12-item limit",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 0,
+    "skip_count": 1
+  },
+  "UF-UP-07-N": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "48.12s",
+    "name": "Video >100MB is rejected (size validation)",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  },
+  "UF-UP-08-N": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "50.35s",
+    "name": "Audio file (mp3) is rejected as non-image/non-video",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  },
+  "UF-UP-09-N": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "50.31s",
+    "name": "Continue button is disabled with no cover image",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  },
+  "UF-UP-10-N": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "49.95s",
+    "name": "Pitch video URL rejects non-URL string",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  },
+  "UF-UP-11-N": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "50.53s",
+    "name": "Story field enforces 30-char minimum (boundary)",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  },
+  "UF-UP-12-N": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "50.40s",
+    "name": "Funding goal of 0 is accepted (per UI hint)",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  },
+  "UF-UP-13-N": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "50.77s",
+    "name": "Funding goal with negative number is rejected by input",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  },
+  "UF-UP-01-P": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-35-46",
+    "last_duration": "0.00s",
+    "name": "Cover image upload (small JPG) succeeds",
+    "runs_seen": 2,
+    "pass_count": 0,
+    "fail_count": 2,
+    "skip_count": 0
+  },
+  "UF-UP-02-P": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "50.02s",
+    "name": "Gallery upload of 3 small images succeeds (one at a time)",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  },
+  "UF-UP-03-P": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "50.01s",
+    "name": "Gallery upload of 12 images (the documented max) is accepted (one at a time)",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  },
+  "UF-UP-04-P": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "50.13s",
+    "name": "Small video (<100MB) upload succeeds",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  },
+  "UF-UP-05-P": {
+    "last_status": "FAIL",
+    "last_run": "2026-09-07_13-03-50",
+    "last_duration": "50.94s",
+    "name": "Pitch video URL accepts a YouTube link",
+    "runs_seen": 1,
+    "pass_count": 0,
+    "fail_count": 1,
+    "skip_count": 0
+  }
+}

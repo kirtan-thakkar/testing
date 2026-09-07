@@ -13,6 +13,7 @@ const log = require('./logger.js');
 
 class IdeakicksReporter {
   onBegin(config, suite) {
+    try { fs.writeFileSync(path.join(process.cwd(), 'logs', 'run-latest.log'), '', 'utf8'); } catch {}
     log.info('RUN-BEGIN',
       `Suite: ${suite.title || 'unnamed'} | ` +
       `Tests: ${suite.allTests().length} | ` +

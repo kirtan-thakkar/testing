@@ -1,0 +1,370 @@
+13:04:51.558 [INFO] WIZARD-NEG   negative & edge-case suite
+13:04:51.571 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+13:04:51.612 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 120 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-07_13-03-50.log
+13:05:24.805 [FAIL] UF-ACCT-01: Update Profile Bio 31.10s — [31mTest timeout of 30000ms exceeded.[39m
+13:06:12.792 [PASS] UF-ACCT-02: Change Account Password 10.15s
+13:06:12.824 [INFO] admin        launching browser & logging in
+13:06:17.595 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+13:06:17.620 [INFO] ADM-01-N     start
+13:06:20.367 [INFO] ADM-01-N     empty state shown for no-match search
+13:06:20.381 [PASS] UF-ADMIN-01-N: Empty search returns empty state, not error 2.75s
+13:06:20.381 [INFO] ADM-01-N2    start
+13:06:23.124 [INFO] ADM-01-N2    search survived 5000 chars
+13:06:23.138 [PASS] UF-ADMIN-01-N2: 5000-char search does not crash search 2.75s
+13:06:23.140 [INFO] ADM-03-N     start
+13:06:25.916 [INFO] ADM-03-N     no XSS via search
+13:06:25.929 [PASS] UF-ADMIN-03-N: Special characters in campaign search do not crash 2.78s
+13:06:25.931 [INFO] ADM-99-N     start
+13:06:29.561 [INFO] ADM-99-N     unauthed → https://admin.187.77.79.40.nip.io/login
+13:06:29.653 [PASS] UF-ADMIN-99-N: Direct visit to admin without auth redirects to /login 3.68s
+13:06:29.670 [INFO] admin        launching browser & logging in
+13:06:34.487 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+13:06:34.505 [INFO] ADM-01-P     start
+13:06:35.075 [INFO] ADM-01-P     ok
+13:06:35.092 [PASS] UF-ADMIN-01-P: Project Submissions page loads with heading 0.57s
+13:06:35.102 [INFO] ADM-02-P     start
+13:06:36.909 [INFO] ADM-02-P     filter controls: 2
+13:06:36.924 [PASS] UF-ADMIN-02-P: Project Submissions filter UI is present 1.81s
+13:06:36.926 [INFO] ADM-03-P     start
+13:06:37.413 [PASS] UF-ADMIN-03-P: Campaigns list page loads 0.48s
+13:06:37.416 [INFO] ADM-04-P     start
+13:06:37.948 [PASS] UF-ADMIN-04-P: Categories page loads 0.52s
+13:06:37.949 [INFO] ADM-05-P     start
+13:06:39.004 [PASS] UF-ADMIN-05-P: Country Fields (Application Fields) page loads 1.05s
+13:06:39.005 [INFO] ADM-06-P     start
+13:06:39.434 [PASS] UF-ADMIN-06-P: Partners page loads 0.41s
+13:06:48.698 [PASS] UF-ADMIN-01: Admin View Project Submissions 2.49s
+13:06:51.382 [PASS] UF-ADMIN-02: Admin Filter Project Submissions 2.67s
+13:06:54.351 [PASS] UF-ADMIN-03: Admin Search & Filter Campaigns 2.95s
+13:06:56.855 [PASS] UF-ADMIN-04: Admin Categories Page 2.48s
+13:06:59.382 [PASS] UF-ADMIN-05: Admin Application Fields Page 2.50s
+13:07:02.036 [PASS] UF-ADMIN-06: Admin View Partners Tab 2.56s
+13:07:02.053 [INFO] admin        launching browser & logging in
+13:07:06.872 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+13:07:06.889 [INFO] CMS-N1       start
+13:07:07.105 [INFO] CMS-N1       status: 404
+13:07:07.145 [PASS] UF-CMS-N1: Visit a non-existent CMS page returns 404 or friendly error 0.25s
+13:07:07.152 [INFO] CMS-N2       start
+13:07:08.881 [SKIP] UF-CMS-N2: 5000-char input in any visible CMS field does not crash skipped
+13:07:08.894 [INFO] admin        launching browser & logging in
+13:07:13.578 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+13:07:13.590 [INFO] CMS-15-P     start
+13:07:14.680 [PASS] UF-ADMIN-15-P: CMS Pages list loads with heading 1.08s
+13:07:14.684 [INFO] CMS-16-P     start
+13:07:15.132 [PASS] UF-ADMIN-16-P: CMS settings page loads 0.42s
+13:07:26.085 [PASS] UF-ADMIN-15: Admin Manage CMS Pages 4.04s
+13:07:28.470 [PASS] UF-ADMIN-16: Admin Configure Global CMS Content 2.29s
+13:07:28.487 [INFO] admin        launching browser & logging in
+13:07:33.217 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+13:07:33.232 [INFO] ENG-N1       start
+13:07:36.000 [PASS] UF-ENG-N1: Inbox empty search returns empty state 2.76s
+13:07:36.004 [INFO] ENG-N2       start
+13:07:38.791 [PASS] UF-ENG-N2: Subscribers 5000-char search does not crash 2.77s
+13:07:38.797 [INFO] ENG-N3       start
+13:07:40.015 [SKIP] UF-ENG-N3: Inbox reply with XSS payload does not execute skipped
+13:07:40.031 [INFO] admin        launching browser & logging in
+13:07:45.122 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+13:07:45.138 [INFO] ENG-13-P     start
+13:07:46.261 [PASS] UF-ADMIN-13-P: Contact Inbox page loads 1.11s
+13:07:46.269 [INFO] ENG-14-P     start
+13:07:47.344 [PASS] UF-ADMIN-14-P: Subscribers page loads 1.05s
+13:07:56.557 [PASS] UF-ADMIN-13: Admin Manage Contact Inbox 2.43s
+13:07:58.868 [PASS] UF-ADMIN-14: Admin View Subscribers 2.22s
+13:07:58.885 [INFO] admin        launching browser & logging in
+13:08:03.548 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+13:08:03.564 [INFO] FIN-N1       start
+13:08:03.764 [INFO] FIN-N1       status: 404
+13:08:03.805 [PASS] UF-FIN-N1: Payouts with non-existent ID shows error, not crash 0.23s
+13:08:03.812 [INFO] FIN-N2       start
+13:08:05.023 [SKIP] UF-FIN-N2: 5000-char filter on pledges does not crash skipped
+13:08:05.029 [INFO] FIN-N3       start
+13:08:06.280 [SKIP] UF-FIN-N3: Refunds date filter with junk value does not crash skipped
+13:08:06.300 [INFO] admin        launching browser & logging in
+13:08:11.062 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+13:08:11.080 [INFO] FIN-07-P     start
+13:08:16.470 [FAIL] UF-ADMIN-07-P: Payouts page loads 5.25s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+13:08:16.480 [SKIP] UF-ADMIN-08-P: Pledges page loads skipped
+13:08:16.493 [SKIP] UF-ADMIN-09-P: Refunds log page loads skipped
+13:08:30.652 [PASS] UF-ADMIN-07: Admin View Payouts 2.43s
+13:08:33.281 [PASS] UF-ADMIN-08: Admin Manage Pledges 2.62s
+13:08:35.957 [PASS] UF-ADMIN-09: Admin View Refunds Log 2.57s
+13:08:35.978 [INFO] admin        launching browser & logging in
+13:08:40.893 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+13:08:40.913 [INFO] PPL-N1       start
+13:08:44.239 [PASS] UF-PPL-N1: User search with no matches shows empty state 3.31s
+13:08:44.245 [INFO] PPL-N2       start
+13:08:47.007 [PASS] UF-PPL-N2: User search with XSS does not execute 2.75s
+13:08:47.009 [INFO] PPL-N3       start
+13:08:49.743 [PASS] UF-PPL-N3: 5000-char user search does not crash 2.72s
+13:08:49.745 [INFO] PPL-N4       start
+13:08:50.089 [INFO] PPL-N4       status: 200
+13:08:50.158 [PASS] UF-PPL-N4: Visit /users/<junk-id> does not crash 0.38s
+13:08:50.171 [INFO] admin        launching browser & logging in
+13:08:55.028 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+13:08:55.040 [INFO] PPL-10-P     start
+13:08:56.147 [PASS] UF-ADMIN-10-P: User Management page loads with "New user" CTA 1.10s
+13:08:56.149 [INFO] PPL-11-P     start
+13:08:56.609 [PASS] UF-ADMIN-11-P: Roles page loads with "New role" CTA 0.45s
+13:08:56.610 [INFO] PPL-12-P     start
+13:08:57.058 [PASS] UF-ADMIN-12-P: Deletion Requests page loads 0.42s
+13:09:08.086 [PASS] UF-ADMIN-10: Admin User Management 4.17s
+13:09:10.417 [PASS] UF-ADMIN-11: Admin Manage Roles 2.32s
+13:09:12.958 [PASS] UF-ADMIN-12: Admin Review Deletion Requests 2.45s
+13:09:12.973 [INFO] admin        launching browser & logging in
+13:09:17.829 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+13:09:17.843 [INFO] SYS-N1       start
+13:09:19.543 [INFO] SYS-N1       JS errors: 0
+13:09:19.557 [PASS] UF-SYS-N1: Notifications page with no JS errors on load 1.70s
+13:09:19.563 [INFO] SYS-N2       start
+13:09:20.855 [SKIP] UF-SYS-N2: Activity log filter with junk date does not crash skipped
+13:09:20.859 [INFO] SYS-N3       start
+13:09:22.122 [SKIP] UF-SYS-N3: 5000-char search on activity log does not crash skipped
+13:09:22.149 [INFO] admin        launching browser & logging in
+13:09:26.964 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+13:09:26.979 [INFO] SYS-17-P     start
+13:09:28.067 [PASS] UF-ADMIN-17-P: Notifications page loads 1.08s
+13:09:28.075 [INFO] SYS-18-P     start
+13:09:28.548 [PASS] UF-ADMIN-18-P: Activity log page loads 0.45s
+13:09:37.761 [PASS] UF-ADMIN-17: Admin View Notifications 2.45s
+13:09:40.129 [PASS] UF-ADMIN-18: Admin View Activity Log 2.29s
+13:09:45.518 [PASS] UF-AUTH-01: User Registration Page Loads 5.36s
+13:09:50.790 [PASS] UF-AUTH-02: Login - Invalid Credentials (Negative Path) 5.25s
+13:09:58.473 [PASS] UF-AUTH-03: Login - Success (Positive Path) 7.67s
+13:10:05.934 [PASS] UF-CREA-01: Campaign Application Page Loads 7.43s
+13:10:13.324 [PASS] UF-CREA-02: Campaign Application - Navigate to Application 7.37s
+13:10:19.445 [PASS] UF-CAMP-01: Campaign Detail Tabs Navigation 6.09s
+13:10:25.702 [PASS] UF-CAMP-02: Save Campaign & Dashboard Sync 6.24s
+13:10:32.485 [PASS] UF-BACK-01: Reward & Add-on Selection 6.75s
+13:10:37.838 [PASS] UF-BACK-02: Payment Terms Validation (Negative Path) 5.34s
+13:10:43.050 [PASS] UF-BACK-03: Complete Pledge (Positive Path) 5.20s
+13:10:51.557 [PASS] UF-DASH-01: Creator Dashboard Tabs Navigation 8.48s
+13:10:59.375 [PASS] UF-DISC-01: Global Header Search (Positive Path) 7.76s
+13:11:05.601 [PASS] UF-DISC-02: Unsuccessful Campaign Search (Empty State) 6.21s
+13:11:10.489 [PASS] UF-DISC-03: Explore Category Filtering 4.88s
+13:11:26.171 [PASS] UF-INFO-01: Global Static Page Navigation 15.64s
+13:11:31.834 [PASS] UF-INFO-02: Dynamic Legal Hub Navigation 5.65s
+13:11:36.333 [PASS] UF-INFO-03: Cookie Preferences Management 4.48s
+13:11:41.646 [PASS] UF-BUG-01: Footer Social Icons Interactivity 5.30s
+13:11:41.679 [INFO] LOAD-01      start — concurrency=200, total=200
+13:11:52.399 [INFO] LOAD-01      done in 10718ms (18.7 req/s) — ok=172 fail=28 other=0
+13:11:52.401 [INFO] LOAD-01      status codes: {"200":100,"405":72}
+13:11:52.409 [PASS] UF-LOAD-01: Login endpoint survives concurrent invalid requests 10.72s
+13:11:52.412 [INFO] LOAD-02      start — burst of 50
+13:11:53.143 [INFO] LOAD-02      done in 730ms — codes: {"200":25,"405":25}
+13:11:53.152 [PASS] UF-LOAD-02: Login endpoint survives burst of 50 requests in 1s 0.73s
+13:11:54.578 [INFO] PERF-01      start
+13:11:55.575 [INFO] PERF-01      homepage warm load: 278ms
+13:11:56.732 [PASS] UF-PERF-01: Homepage loads in under 5s (warm) 3.56s
+13:11:58.031 [INFO] PERF-02      start
+13:11:59.674 [INFO] PERF-02      /explore load: 693ms
+13:12:00.435 [PASS] UF-PERF-02: /explore (discover) loads in under 8s (warm) 3.69s
+13:12:01.700 [INFO] PERF-03      start
+13:12:02.899 [INFO] PERF-03      /login load: 1197ms
+13:12:04.788 [PASS] UF-PERF-03: /login loads in under 5s 4.34s
+13:12:05.994 [INFO] PERF-04      start
+13:12:06.892 [INFO] PERF-04      /start/application load: 897ms
+13:12:07.213 [PASS] UF-PERF-04: /start/application wizard loads in under 8s 2.41s
+13:12:07.217 [INFO] STRESS-01    start
+13:12:14.739 [INFO] STRESS-01    5 parallel navs in 7520ms
+13:12:14.741 [INFO] STRESS-01      https://187.77.79.40.nip.io/ -> 941ms
+13:12:14.743 [INFO] STRESS-01      https://187.77.79.40.nip.io/explore -> 990ms
+13:12:14.745 [INFO] STRESS-01      https://187.77.79.40.nip.io/login -> 808ms
+13:12:14.747 [INFO] STRESS-01      https://187.77.79.40.nip.io/how-it-works -> 949ms
+13:12:14.748 [INFO] STRESS-01      https://187.77.79.40.nip.io/about -> 884ms
+13:12:14.764 [PASS] UF-STRESS-01: 5 parallel page loads all complete within 30s 7.54s
+13:12:14.768 [INFO] STRESS-02    start
+13:12:27.199 [INFO] STRESS-02    10 parallel /login in 12429ms
+13:12:27.201 [INFO] STRESS-02    succeeded: 10/10
+13:12:27.216 [PASS] UF-STRESS-02: 10 parallel /login navigations do not crash the server 12.44s
+13:12:28.440 [INFO] PERF-05      start
+13:12:29.596 [SKIP] UF-PERF-05: /explore responds to search query within 5s skipped
+13:12:30.993 [INFO] PERF-06      start
+13:12:32.043 [INFO] PERF-06      homepage HTML body: 75.7 KB
+13:12:32.046 [INFO] PERF-06      (domcontentloaded in 1051ms)
+13:12:32.989 [PASS] UF-PERF-06: Homepage HTML payload is under 200KB 3.38s
+13:12:33.259 [INFO] WIZARD-NEG   negative & edge-case suite
+13:12:37.806 [WARN] wizard       user already has a submitted campaign — wizard steps not reachable
+13:12:38.007 [SKIP] UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) skipped
+13:12:50.496 [INFO] WIZ-13-N     start
+13:12:50.736 [INFO] login        already authed (via /dashboard)
+13:13:21.040 [WARN] safeRun      server-induced failure, skipping: locator.waitFor: Timeout 30000ms exceeded.
+13:13:22.535 [SKIP] UF-WIZ-13-N: Whitespace-only company name does not advance skipped
+13:13:34.635 [INFO] WIZ-05-N     start
+13:13:34.849 [INFO] login        already authed (via /dashboard)
+13:14:05.074 [WARN] safeRun      server-induced failure, skipping: locator.waitFor: Timeout 30000ms exceeded.
+13:14:07.039 [SKIP] UF-WIZ-05-N: 5000-char paste in company name does not crash skipped
+13:14:19.110 [INFO] WIZ-06-N     start
+13:14:19.321 [INFO] login        already authed (via /dashboard)
+13:14:49.580 [WARN] safeRun      server-induced failure, skipping: locator.waitFor: Timeout 30000ms exceeded.
+13:14:51.274 [SKIP] UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break skipped
+13:15:03.269 [INFO] WIZ-12-N     start
+13:15:03.621 [INFO] login        already authed (via /dashboard)
+13:15:33.841 [WARN] safeRun      server-induced failure, skipping: locator.waitFor: Timeout 30000ms exceeded.
+13:15:35.711 [SKIP] UF-WIZ-12-N: Lowercase PAN does not crash the form skipped
+13:15:49.025 [INFO] WIZ-15-N     start
+13:15:49.250 [INFO] login        already authed (via /dashboard)
+13:15:49.557 [INFO] cookies      dismissed
+13:16:19.562 [WARN] safeRun      server-induced failure, skipping: locator.waitFor: Timeout 30000ms exceeded.
+13:16:20.896 [SKIP] UF-WIZ-15-N: Page reload after partial fill — form behaviour documented skipped
+13:16:32.840 [INFO] WIZ-16-N     start
+13:16:33.069 [INFO] login        already authed (via /dashboard)
+13:17:03.297 [WARN] safeRun      server-induced failure, skipping: locator.waitFor: Timeout 30000ms exceeded.
+13:17:05.172 [SKIP] UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) skipped
+13:17:20.675 [INFO] WIZ-22-N     start
+13:17:21.384 [INFO] login        already authed (via /dashboard)
+13:17:51.649 [WARN] safeRun      server-induced failure, skipping: locator.waitFor: Timeout 30000ms exceeded.
+13:17:53.370 [SKIP] UF-WIZ-22-N: Double-click Continue does not skip a step skipped
+13:18:05.534 [INFO] WIZ-19-N     start
+13:18:05.764 [INFO] login        already authed (via /dashboard)
+13:18:36.379 [WARN] WIZ-19-N     page load failed: locator.waitFor: Timeout 30000ms exceeded.
+13:18:36.453 [SKIP] UF-WIZ-19-N: First Tab reaches a focusable element skipped
+13:18:48.552 [INFO] WIZ-21-N     start
+13:18:53.916 [INFO] WIZ-21-N     unauthed → https://187.77.79.40.nip.io/start/application
+13:18:54.873 [PASS] UF-WIZ-21-N: Unauthenticated wizard access is gated 18.40s
+13:19:07.871 [INFO] WIZ-17-N     start
+13:19:08.081 [INFO] login        already authed (via /dashboard)
+13:19:38.324 [WARN] safeRun      server-induced failure, skipping: locator.waitFor: Timeout 30000ms exceeded.
+13:19:40.406 [SKIP] UF-WIZ-17-N: Step 2 has at least one media upload control skipped
+13:19:54.608 [INFO] WIZ-18-N     start
+13:19:55.186 [INFO] login        already authed (via /dashboard)
+13:20:25.470 [WARN] safeRun      server-induced failure, skipping: locator.waitFor: Timeout 30000ms exceeded.
+13:20:27.169 [SKIP] UF-WIZ-18-N: Step 3 review reflects company name from step 1 skipped
+13:20:27.261 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+13:20:30.993 [INFO] login        already authed (via /dashboard)
+13:20:41.209 [INFO] WIZ-01-P     start
+13:20:47.100 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 19.73s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+13:20:47.851 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+13:20:53.947 [INFO] login        already authed (via /dashboard)
+13:20:54.327 [INFO] WIZ-02-P     start
+13:21:11.698 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:21:17.497 [FAIL] UF-WIZ-02-P: Continue is enabled when all required fields are filled 28.41s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeEnabled[2m([22m[2m)[22m failed
+13:21:18.238 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+13:21:26.068 [INFO] login        already authed (via /dashboard)
+13:21:27.358 [INFO] WIZ-03-P     start
+13:21:27.683 [INFO] login        already authed (via /dashboard)
+13:22:17.833 [WARN] WATCHDOG     UF-WIZ-03-P: PAN field shows correct placeholder exceeded 55s — closing context
+13:22:19.914 [FAIL] UF-WIZ-03-P: PAN field shows correct placeholder 60.35s — [31mTest timeout of 60000ms exceeded.[39m
+13:22:20.639 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+13:22:27.822 [INFO] login        already authed (via /dashboard)
+13:22:28.689 [INFO] WIZ-04-P     start
+13:22:30.576 [INFO] login        already authed (via /dashboard)
+13:22:51.152 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:23:20.136 [WARN] WATCHDOG     UF-WIZ-04-P: Step 1 happy path advances to step 2 exceeded 55s — closing context
+13:23:22.318 [FAIL] UF-WIZ-04-P: Step 1 happy path advances to step 2 60.39s — [31mTest timeout of 60000ms exceeded.[39m
+13:23:23.054 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+13:23:28.884 [INFO] login        already authed (via /dashboard)
+13:23:29.267 [INFO] WIZ-07-P     start
+13:23:29.629 [INFO] login        already authed (via /dashboard)
+13:23:48.060 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:24:22.763 [WARN] WATCHDOG     UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs exceeded 55s — closing context
+13:24:25.088 [FAIL] UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs 60.64s — [31mTest timeout of 60000ms exceeded.[39m
+13:24:25.815 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+13:24:32.252 [INFO] login        already authed (via /dashboard)
+13:24:32.561 [INFO] WIZ-08-P     start
+13:24:32.811 [INFO] login        already authed (via /dashboard)
+13:24:36.377 [INFO] WIZ-08-P     JS errors on load: 0
+13:24:36.553 [PASS] UF-WIZ-08-P: Step 1 page loads cleanly with no JS errors 9.59s
+13:24:38.846 [INFO] login        already authed (via /dashboard)
+13:24:39.790 [INFO] WIZ-10-P     start
+13:24:40.434 [INFO] login        already authed (via /dashboard)
+13:24:43.379 [SKIP] UF-WIZ-10-P: Country dropdown lists India skipped
+13:24:45.222 [INFO] login        already authed (via /dashboard)
+13:24:45.407 [INFO] WIZ-11-P     start
+13:24:45.797 [INFO] login        already authed (via /dashboard)
+13:25:39.506 [WARN] WATCHDOG     UF-WIZ-11-P: Subcategory populates after category chosen exceeded 55s — closing context
+13:25:42.041 [FAIL] UF-WIZ-11-P: Subcategory populates after category chosen 58.59s — Error: locator.selectOption: Target page, context or browser has been closed
+13:25:42.778 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+13:25:48.251 [INFO] login        already authed (via /dashboard)
+13:25:48.685 [INFO] WIZ-14-P     start
+13:25:49.102 [INFO] login        already authed (via /dashboard)
+13:25:52.070 [SKIP] UF-WIZ-14-P: GSTIN optional field accepts valid value skipped
+13:25:54.049 [INFO] login        already authed (via /dashboard)
+13:25:54.441 [INFO] WIZ-20-P     start
+13:25:54.834 [INFO] login        already authed (via /dashboard)
+13:25:55.493 [PASS] UF-WIZ-20-P: Wizard URL is exactly /start/application 3.41s
+13:25:56.638 [INFO] UP-06-N      start
+13:25:56.814 [SKIP] UF-UP-06-N: Gallery upload of 15 images exceeds documented 12-item limit skipped
+13:25:58.026 [INFO] UP-07-N      start
+13:25:58.829 [INFO] login        already authed (via /dashboard)
+13:26:00.330 [INFO] cookies      dismissed
+13:26:16.670 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:26:43.027 [WARN] WATCHDOG     UF-UP-07-N: Video >100MB is rejected (size validation) exceeded 45s — closing context
+13:26:44.998 [FAIL] UF-UP-07-N: Video >100MB is rejected (size validation) 48.12s — Error: locator.click: Target page, context or browser has been closed
+13:26:50.214 [INFO] UP-08-N      start
+13:26:51.328 [INFO] login        already authed (via /dashboard)
+13:26:52.809 [INFO] cookies      dismissed
+13:27:09.135 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:27:35.215 [WARN] WATCHDOG     UF-UP-08-N: Audio file (mp3) is rejected as non-image/non-video exceeded 45s — closing context
+13:27:37.335 [FAIL] UF-UP-08-N: Audio file (mp3) is rejected as non-image/non-video 50.35s — [31mTest timeout of 50000ms exceeded.[39m
+13:27:42.688 [INFO] UP-09-N      start
+13:27:44.381 [INFO] login        already authed (via /dashboard)
+13:27:46.669 [INFO] cookies      dismissed
+13:28:02.999 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:28:27.693 [WARN] WATCHDOG     UF-UP-09-N: Continue button is disabled with no cover image exceeded 45s — closing context
+13:28:29.707 [FAIL] UF-UP-09-N: Continue button is disabled with no cover image 50.31s — [31mTest timeout of 50000ms exceeded.[39m
+13:28:35.045 [INFO] UP-10-N      start
+13:28:35.974 [INFO] login        already authed (via /dashboard)
+13:28:37.535 [INFO] cookies      dismissed
+13:28:53.876 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:29:20.053 [WARN] WATCHDOG     UF-UP-10-N: Pitch video URL rejects non-URL string exceeded 45s — closing context
+13:29:21.722 [FAIL] UF-UP-10-N: Pitch video URL rejects non-URL string 49.95s — Error: locator.click: Target page, context or browser has been closed
+13:29:27.158 [INFO] UP-11-N      start
+13:29:28.089 [INFO] login        already authed (via /dashboard)
+13:29:29.516 [INFO] cookies      dismissed
+13:29:45.832 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:30:12.171 [WARN] WATCHDOG     UF-UP-11-N: Story field enforces 30-char minimum (boundary) exceeded 45s — closing context
+13:30:14.329 [FAIL] UF-UP-11-N: Story field enforces 30-char minimum (boundary) 50.53s — [31mTest timeout of 50000ms exceeded.[39m
+13:30:19.660 [INFO] UP-12-N      start
+13:30:23.241 [INFO] login        already authed (via /dashboard)
+13:30:24.612 [INFO] cookies      dismissed
+13:30:40.954 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:31:04.665 [WARN] WATCHDOG     UF-UP-12-N: Funding goal of 0 is accepted (per UI hint) exceeded 45s — closing context
+13:31:06.810 [FAIL] UF-UP-12-N: Funding goal of 0 is accepted (per UI hint) 50.40s — [31mTest timeout of 50000ms exceeded.[39m
+13:31:12.646 [INFO] UP-13-N      start
+13:31:13.398 [INFO] login        already authed (via /dashboard)
+13:31:14.922 [INFO] cookies      dismissed
+13:31:31.276 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:31:57.660 [WARN] WATCHDOG     UF-UP-13-N: Funding goal with negative number is rejected by input exceeded 45s — closing context
+13:31:59.720 [FAIL] UF-UP-13-N: Funding goal with negative number is rejected by input 50.77s — [31mTest timeout of 50000ms exceeded.[39m
+13:32:04.888 [INFO] UP-01-P      start
+13:32:06.047 [INFO] login        already authed (via /dashboard)
+13:32:08.841 [INFO] cookies      dismissed
+13:32:25.196 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:32:49.897 [WARN] WATCHDOG     UF-UP-01-P: Cover image upload (small JPG) succeeds exceeded 45s — closing context
+13:32:51.834 [FAIL] UF-UP-01-P: Cover image upload (small JPG) succeeds 50.11s — [31mTest timeout of 50000ms exceeded.[39m
+13:32:56.899 [INFO] UP-02-P      start
+13:32:59.174 [INFO] login        already authed (via /dashboard)
+13:33:00.622 [INFO] cookies      dismissed
+13:33:16.950 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:33:41.902 [WARN] WATCHDOG     UF-UP-02-P: Gallery upload of 3 small images succeeds (one at a time) exceeded 45s — closing context
+13:33:43.851 [FAIL] UF-UP-02-P: Gallery upload of 3 small images succeeds (one at a time) 50.02s — [31mTest timeout of 50000ms exceeded.[39m
+13:33:48.926 [INFO] UP-03-P      start
+13:33:50.456 [INFO] login        already authed (via /dashboard)
+13:33:54.031 [INFO] cookies      dismissed
+13:34:10.379 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:34:33.934 [WARN] WATCHDOG     UF-UP-03-P: Gallery upload of 12 images (the documented max) is accepted (one at a time) exceeded 45s — closing context
+13:34:35.790 [FAIL] UF-UP-03-P: Gallery upload of 12 images (the documented max) is accepted (one at a time) 50.01s — [31mTest timeout of 50000ms exceeded.[39m
+13:34:40.931 [INFO] UP-04-P      start
+13:34:41.689 [INFO] login        already authed (via /dashboard)
+13:35:01.936 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:35:25.944 [WARN] WATCHDOG     UF-UP-04-P: Small video (<100MB) upload succeeds exceeded 45s — closing context
+13:35:27.873 [FAIL] UF-UP-04-P: Small video (<100MB) upload succeeds 50.13s — [31mTest timeout of 50000ms exceeded.[39m
+13:35:33.467 [INFO] UP-05-P      start
+13:35:34.629 [INFO] login        already authed (via /dashboard)
+13:35:36.196 [INFO] cookies      dismissed
+13:35:52.537 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+13:36:18.471 [WARN] WATCHDOG     UF-UP-05-P: Pitch video URL accepts a YouTube link exceeded 45s — closing context
+13:36:22.520 [FAIL] UF-UP-05-P: Pitch video URL accepts a YouTube link 50.94s — [31mTest timeout of 50000ms exceeded.[39m
+
+========================================================================
+  RUN SUMMARY  2026-09-07_13-03-50
+========================================================================
+  Total    : 120
+  Passed   : 77  (64.2%)
+  Failed   : 20
+  Skipped  : 23
+  Duration : 1952.1s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-07_13-03-50.log
+========================================================================
+13:36:22.558 [INFO] RUN-END      Status: failed | Duration: 1952.1s
+13:36:22.562 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-07_13-03-50.html

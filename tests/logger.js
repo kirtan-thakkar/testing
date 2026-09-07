@@ -17,9 +17,10 @@ const ROLLING_LOG = path.join(LOG_DIR, 'test-execution.log');
 
 if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true });
 
-const runId = new Date().toISOString().replace(/[:.]/g, '-').replace('T', '_').slice(0, 19);
+const runId = process.env.PLAYWRIGHT_RUN_ID || new Date().toISOString().replace(/[:.]/g, '-').replace('T', '_').slice(0, 19);
+if (!process.env.PLAYWRIGHT_RUN_ID) process.env.PLAYWRIGHT_RUN_ID = runId;
 const runLog = path.join(LOG_DIR, `run-${runId}.log`);
-let latestContent = '';
+const LATEST_LOG = path.join(LOG_DIR, 'run-latest.log');
 
 const counts = { passed: 0, failed: 0, skipped: 0 };
 
@@ -36,9 +37,9 @@ function write(line) {
   // rolling
   try { fs.appendFileSync(ROLLING_LOG, line + '\n', 'utf8'); } catch {}
   // per-run
-  latestContent += line + '\n';
   try { fs.appendFileSync(runLog, line + '\n', 'utf8'); } catch {}
-  try { fs.writeFileSync(path.join(LOG_DIR, 'run-latest.log'), latestContent, 'utf8'); } catch {}
+  // latest run mirror
+  try { fs.appendFileSync(LATEST_LOG, line + '\n', 'utf8'); } catch {}
 }
 
 const log = {
@@ -73,8 +74,7 @@ const log = {
     ].join('\n');
     try { fs.appendFileSync(runLog, summary, 'utf8'); } catch {}
     try { fs.appendFileSync(ROLLING_LOG, summary, 'utf8'); } catch {}
-    latestContent += summary;
-    try { fs.writeFileSync(path.join(LOG_DIR, 'run-latest.log'), latestContent, 'utf8'); } catch {}
+    try { fs.appendFileSync(LATEST_LOG, summary, 'utf8'); } catch {}
     return summary;
   },
 };
