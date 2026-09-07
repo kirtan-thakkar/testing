@@ -2,6 +2,8 @@
 
 **32 spec files · 120 active tests**
 
+Re-generate with: `node tests/build-catalog.js`
+
 ## Index
 
 - **AUTH & Account** — 6 test groups, 6 tests

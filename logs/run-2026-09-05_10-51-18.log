@@ -1,0 +1,6 @@
+10:51:18.925 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:51:24.084 [INFO] WIZ-07-P     start
+10:51:24.086 [INFO] login        navigating to /login
+10:51:27.346 [INFO] login        ok
+10:51:28.192 [INFO] cookies      dismissed
+10:51:59.084 [WARN] WATCHDOG     UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs exceeded 35s — closing context

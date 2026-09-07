@@ -1,0 +1,6 @@
+2026-09-05 09:17:40.452 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 09:17:45.254 [INFO ] WIZ-03-P :: start
+2026-09-05 09:17:45.257 [INFO ] login :: navigating to /login
+2026-09-05 09:17:49.237 [INFO ] login :: ok
+2026-09-05 09:17:50.394 [INFO ] cookies :: dismissed
+2026-09-05 09:18:20.255 [WARN ] WATCHDOG :: UF-WIZ-03-P: PAN field shows correct placeholder exceeded 35s — closing context

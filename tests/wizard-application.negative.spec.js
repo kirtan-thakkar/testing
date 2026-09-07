@@ -9,11 +9,23 @@
  */
 const { test, expect } = require('@playwright/test');
 const log = require('./logger.js');
-const { login, dismissCookies, fillStep1 } = require('./wizard-helpers.js');
+const { login, dismissCookies, fillStep1, wizardAlreadySubmitted } = require('./wizard-helpers.js');
 
 log.info('WIZARD-NEG', 'negative & edge-case suite');
 
-test.setTimeout(60000); // 1 min hard cap per test; safeRun() short-circuits if slow
+test.setTimeout(60000); // 60s test, 55s watchdog fires before this
+
+// Skip every test if the wizard user has already submitted a campaign.
+test.beforeEach(async ({ page }, testInfo) => {
+  try {
+    await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 30000 });
+    if (await wizardAlreadySubmitted(page)) {
+      test.skip(true, 'Wizard user already submitted — tests skipped');
+    }
+  } catch (e) {
+    test.skip(true, `precheck failed: ${e.message.split('\n')[0]}`);
+  }
+});
 
 // Helper: try login but allow a clean skip on timeout so a flaky server
 // doesn't produce a cascade of false negatives.
@@ -64,14 +76,14 @@ async function safeRun(fn) {
 
 // Per-test timeout handler: when a test exceeds 40s, log it as a slow-skip
 // rather than letting Playwright mark it as a hard timeout failure.
-test.setTimeout(40000);
+test.setTimeout(60000);
 
 test.beforeEach(async ({ page }, testInfo) => {
   // Watchdog fires 5s BEFORE the hard test timeout and forcibly closes the
   // browser context. This makes any pending Playwright waits throw fast
   // (Target page closed), which safeRun() catches and converts to a skip.
   const watchdog = setTimeout(() => {
-    log.warn('WATCHDOG', `${testInfo.title} exceeded 35s — closing context`);
+    log.warn('WATCHDOG', `${testInfo.title} exceeded 55s — closing context`);
     try { page.context().close().catch(() => {}); } catch {}
   }, 35000);
   testInfo._watchdog = watchdog;

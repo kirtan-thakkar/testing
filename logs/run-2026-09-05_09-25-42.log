@@ -1,0 +1,4 @@
+2026-09-05 09:25:47.444 [INFO ] UP-12-N :: start
+2026-09-05 09:25:47.448 [INFO ] login :: navigating to /login
+2026-09-05 09:26:32.445 [WARN ] WATCHDOG :: UF-UP-12-N: Funding goal of 0 is accepted (per UI hint) exceeded 45s — closing context
+2026-09-05 09:26:37.517 [INFO ] login :: already authed

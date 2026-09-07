@@ -1,0 +1,8 @@
+2026-09-05 09:24:18.617 [INFO ] UP-10-N :: start
+2026-09-05 09:24:18.620 [INFO ] login :: navigating to /login
+2026-09-05 09:24:51.195 [WARN ] safeLogin :: login timeout: page.goto: net::ERR_TIMED_OUT at https://187.77.79.40.nip.io/login
+2026-09-05 09:24:55.540 [INFO ] UP-11-N :: start
+2026-09-05 09:24:55.542 [INFO ] login :: navigating to /login
+2026-09-05 09:25:15.626 [INFO ] login :: ok
+2026-09-05 09:25:16.722 [INFO ] cookies :: dismissed
+2026-09-05 09:25:40.543 [WARN ] WATCHDOG :: UF-UP-11-N: Story field enforces 30-char minimum (boundary) exceeded 45s — closing context

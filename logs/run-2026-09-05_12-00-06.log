@@ -1,0 +1,25 @@
+12:00:20.267 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:00:20.280 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 10 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_12-00-06.log
+12:00:35.749 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 13.55s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+12:01:20.619 [FAIL] UF-WIZ-02-P: Continue is enabled when all required fields are filled 42.95s — Error: locator.click: Target page, context or browser has been closed
+12:02:05.082 [FAIL] UF-WIZ-03-P: PAN field shows correct placeholder 42.54s — Error: locator.click: Target page, context or browser has been closed
+12:02:50.029 [FAIL] UF-WIZ-04-P: Step 1 happy path advances to step 2 43.01s — Error: locator.click: Target page, context or browser has been closed
+12:03:35.953 [FAIL] UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs 44.00s — Error: locator.click: Target page, context or browser has been closed
+12:03:36.235 [FAIL] UF-WIZ-08-P: Step 1 page loads cleanly with no JS errors 0.00s — Error: worker process exited unexpectedly (code=3221225794, signal=null)
+12:03:36.238 [SKIP] UF-WIZ-10-P: Country dropdown lists India skipped
+12:03:36.239 [SKIP] UF-WIZ-11-P: Subcategory populates after category chosen skipped
+12:03:36.242 [SKIP] UF-WIZ-14-P: GSTIN optional field accepts valid value skipped
+12:03:36.244 [SKIP] UF-WIZ-20-P: Wizard URL is exactly /start/application skipped
+
+========================================================================
+  RUN SUMMARY  2026-09-05_12-00-06
+========================================================================
+  Total    : 10
+  Passed   : 0  (0.0%)
+  Failed   : 6
+  Skipped  : 4
+  Duration : 209.8s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_12-00-06.log
+========================================================================
+12:03:36.251 [INFO] RUN-END      Status: failed | Duration: 209.8s
+12:03:36.253 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_12-00-06.html

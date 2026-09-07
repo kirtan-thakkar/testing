@@ -1,0 +1,19 @@
+10:16:41.821 [INFO] WIZARD-NEG   negative & edge-case suite
+10:16:41.873 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:16:41.884 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 22 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_10-15-55.log
+10:17:24.617 [FAIL] UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) 40.71s — [31mTest timeout of 40000ms exceeded.[39m
+10:17:54.951 [SKIP] UF-WIZ-13-N: Whitespace-only company name does not advance skipped
+10:18:33.632 [SKIP] UF-WIZ-05-N: 5000-char paste in company name does not crash skipped
+10:19:15.202 [FAIL] UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break 41.50s — [31mTest timeout of 40000ms exceeded.[39m
+10:19:46.527 [SKIP] UF-WIZ-12-N: Lowercase PAN does not crash the form skipped
+10:20:11.554 [SKIP] UF-WIZ-15-N: Page reload after partial fill — form behaviour documented skipped
+10:20:49.706 [SKIP] UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) skipped
+10:21:30.893 [FAIL] UF-WIZ-22-N: Double-click Continue does not skip a step 41.12s — [31mTest timeout of 40000ms exceeded.[39m
+10:22:00.889 [SKIP] UF-WIZ-19-N: First Tab reaches a focusable element skipped
+10:22:25.685 [SKIP] UF-WIZ-21-N: Unauthenticated wizard access is gated skipped
+10:23:04.005 [SKIP] UF-WIZ-17-N: Step 2 has at least one media upload control skipped
+10:23:42.007 [SKIP] UF-WIZ-18-N: Step 3 review reflects company name from step 1 skipped
+10:24:07.172 [SKIP] UF-WIZ-01-P: Wizard page renders step 1 with all required fields skipped
+10:24:48.363 [FAIL] UF-WIZ-02-P: Continue is enabled when all required fields are filled 41.13s — [31mTest timeout of 40000ms exceeded.[39m
+10:25:31.181 [FAIL] UF-WIZ-03-P: PAN field shows correct placeholder 40.81s — [31mTest timeout of 40000ms exceeded.[39m
+10:25:53.704 [FAIL] UF-WIZ-04-P: Step 1 happy path advances to step 2 20.54s — Error: locator.check: Page crashed

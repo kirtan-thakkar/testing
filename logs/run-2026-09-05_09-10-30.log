@@ -1,0 +1,6 @@
+2026-09-05 09:10:30.747 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-05 09:10:35.314 [INFO ] WIZ-09-N :: start
+2026-09-05 09:10:35.317 [INFO ] login :: navigating to /login
+2026-09-05 09:11:10.343 [WARN ] WATCHDOG :: UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) exceeded 35s — closing context
+2026-09-05 09:11:14.125 [INFO ] login :: already authed
+2026-09-05 09:11:14.132 [WARN ] safeRun :: server-induced failure, skipping: page.goto: Target page, context or browser has been closed

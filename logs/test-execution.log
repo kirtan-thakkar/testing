@@ -2448,3 +2448,746 @@ INFO  RUN-SUMMARY ::  | ========================================================
 INFO  RUN-SUMMARY ::  | ======================================================================== |   TEST RUN SUMMARY — 2026-09-05_06-35-44 | ======================================================================== |   Total      : 119 |   Passed     : 81  (68.1%) |   Failed     : 17 |   Skipped    : 21 |   Info logs  : 3 |   Warnings   : 0 |   Errors     : 2 |   Duration   : 3600.1s |   Run log    : C:\ideakicks\testing\logs\run-2026-09-05_06-35-44.log |   Rolling log: C:\ideakicks\testing\logs\test-execution.log | ======================================================================== | 
 2026-09-05 07:35:44.548 [INFO ] RUN-END :: Status: timedout | Duration: 3600.0s
 2026-09-05 07:35:44.552 [INFO ] REPORTER :: HTML report: C:\ideakicks\testing\logs\run-2026-09-05_06-35-44.html
+2026-09-05 09:10:29.910 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-05 09:10:30.037 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 09:10:30.138 [INFO ] RUN-BEGIN :: Suite: unnamed | Tests: 35 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_09-10-05.log
+2026-09-05 09:10:30.747 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-05 09:10:35.314 [INFO ] WIZ-09-N :: start
+2026-09-05 09:10:35.317 [INFO ] login :: navigating to /login
+2026-09-05 09:11:10.343 [WARN ] WATCHDOG :: UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) exceeded 35s — closing context
+2026-09-05 09:11:14.125 [INFO ] login :: already authed
+2026-09-05 09:11:14.132 [WARN ] safeRun :: server-induced failure, skipping: page.goto: Target page, context or browser has been closed
+2026-09-05 09:11:14.206 [FAIL ] UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) :: 42.16s — [31mTest timeout of 40000ms exceeded.[39m
+2026-09-05 09:11:14.846 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-05 09:11:19.587 [INFO ] WIZ-13-N :: start
+2026-09-05 09:11:19.589 [INFO ] login :: navigating to /login
+2026-09-05 09:11:23.479 [INFO ] login :: ok
+2026-09-05 09:11:54.603 [WARN ] WATCHDOG :: UF-WIZ-13-N: Whitespace-only company name does not advance exceeded 35s — closing context
+2026-09-05 09:11:55.988 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-05 09:11:56.005 [SKIP ] UF-WIZ-13-N: Whitespace-only company name does not advance :: skipped
+2026-09-05 09:11:57.259 [INFO ] WIZ-05-N :: start
+2026-09-05 09:11:57.262 [INFO ] login :: navigating to /login
+2026-09-05 09:12:07.151 [INFO ] login :: ok
+2026-09-05 09:12:32.274 [WARN ] WATCHDOG :: UF-WIZ-05-N: 5000-char paste in company name does not crash exceeded 35s — closing context
+2026-09-05 09:12:33.395 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-05 09:12:33.399 [SKIP ] UF-WIZ-05-N: 5000-char paste in company name does not crash :: skipped
+2026-09-05 09:12:34.560 [INFO ] WIZ-06-N :: start
+2026-09-05 09:12:34.562 [INFO ] login :: navigating to /login
+2026-09-05 09:12:55.634 [WARN ] safeLogin :: login timed out: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://187.77.79.40.nip.io/login
+2026-09-05 09:12:58.395 [SKIP ] UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break :: skipped
+2026-09-05 09:12:59.506 [INFO ] WIZ-12-N :: start
+2026-09-05 09:12:59.509 [INFO ] login :: navigating to /login
+2026-09-05 09:13:20.569 [WARN ] safeLogin :: login timed out: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://187.77.79.40.nip.io/login
+2026-09-05 09:13:23.343 [SKIP ] UF-WIZ-12-N: Lowercase PAN does not crash the form :: skipped
+2026-09-05 09:13:24.462 [INFO ] WIZ-15-N :: start
+2026-09-05 09:13:24.464 [INFO ] login :: navigating to /login
+2026-09-05 09:13:59.464 [WARN ] WATCHDOG :: UF-WIZ-15-N: Page reload after partial fill — form behaviour documented exceeded 35s — closing context
+2026-09-05 09:14:04.567 [INFO ] login :: already authed
+2026-09-05 09:14:04.578 [WARN ] safeRun :: server-induced failure, skipping: page.goto: Target page, context or browser has been closed
+2026-09-05 09:14:04.626 [FAIL ] UF-WIZ-15-N: Page reload after partial fill — form behaviour documented :: 41.20s — [31mTest timeout of 40000ms exceeded.[39m
+2026-09-05 09:14:05.236 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-05 09:14:09.734 [INFO ] WIZ-16-N :: start
+2026-09-05 09:14:09.736 [INFO ] login :: navigating to /login
+2026-09-05 09:14:26.144 [INFO ] login :: ok
+2026-09-05 09:14:26.680 [INFO ] cookies :: dismissed
+2026-09-05 09:14:44.746 [WARN ] WATCHDOG :: UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) exceeded 35s — closing context
+2026-09-05 09:14:45.548 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-05 09:14:45.565 [SKIP ] UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) :: skipped
+2026-09-05 09:14:46.761 [INFO ] WIZ-22-N :: start
+2026-09-05 09:14:46.763 [INFO ] login :: navigating to /login
+2026-09-05 09:15:08.875 [WARN ] safeLogin :: login timed out: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://187.77.79.40.nip.io/login
+2026-09-05 09:15:11.871 [SKIP ] UF-WIZ-22-N: Double-click Continue does not skip a step :: skipped
+2026-09-05 09:15:12.962 [INFO ] WIZ-19-N :: start
+2026-09-05 09:15:12.965 [INFO ] login :: navigating to /login
+2026-09-05 09:15:20.051 [INFO ] login :: ok
+2026-09-05 09:15:21.207 [INFO ] WIZ-19-N :: after up to 5 Tabs, focused: A
+2026-09-05 09:15:21.384 [PASS ] UF-WIZ-19-N: First Tab reaches a focusable element :: 9.49s
+2026-09-05 09:15:22.593 [INFO ] WIZ-21-N :: start
+2026-09-05 09:15:27.287 [INFO ] WIZ-21-N :: unauthed → https://187.77.79.40.nip.io/login?next=/start/application
+2026-09-05 09:15:27.906 [PASS ] UF-WIZ-21-N: Unauthenticated wizard access is gated :: 6.51s
+2026-09-05 09:15:29.136 [INFO ] WIZ-17-N :: start
+2026-09-05 09:15:29.139 [INFO ] login :: navigating to /login
+2026-09-05 09:15:47.656 [INFO ] login :: ok
+2026-09-05 09:15:48.559 [INFO ] cookies :: dismissed
+2026-09-05 09:16:04.144 [WARN ] WATCHDOG :: UF-WIZ-17-N: Step 2 has at least one media upload control exceeded 35s — closing context
+2026-09-05 09:16:04.800 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-05 09:16:04.805 [SKIP ] UF-WIZ-17-N: Step 2 has at least one media upload control :: skipped
+2026-09-05 09:16:06.064 [INFO ] WIZ-18-N :: start
+2026-09-05 09:16:06.066 [INFO ] login :: navigating to /login
+2026-09-05 09:16:09.870 [INFO ] login :: ok
+2026-09-05 09:16:10.220 [INFO ] cookies :: dismissed
+2026-09-05 09:16:41.067 [WARN ] WATCHDOG :: UF-WIZ-18-N: Step 3 review reflects company name from step 1 exceeded 35s — closing context
+2026-09-05 09:16:42.107 [WARN ] safeRun :: server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+2026-09-05 09:16:42.116 [SKIP ] UF-WIZ-18-N: Step 3 review reflects company name from step 1 :: skipped
+2026-09-05 09:16:42.123 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 09:16:43.361 [INFO ] WIZ-01-P :: start
+2026-09-05 09:16:43.363 [INFO ] login :: navigating to /login
+2026-09-05 09:16:50.026 [INFO ] login :: ok
+2026-09-05 09:16:51.334 [INFO ] cookies :: dismissed
+2026-09-05 09:16:57.842 [FAIL ] UF-WIZ-01-P: Wizard page renders step 1 with all required fields :: 15.64s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+2026-09-05 09:16:58.522 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 09:17:03.237 [INFO ] WIZ-02-P :: start
+2026-09-05 09:17:03.240 [INFO ] login :: navigating to /login
+2026-09-05 09:17:08.422 [INFO ] login :: ok
+2026-09-05 09:17:09.521 [INFO ] cookies :: dismissed
+2026-09-05 09:17:38.248 [WARN ] WATCHDOG :: UF-WIZ-02-P: Continue is enabled when all required fields are filled exceeded 35s — closing context
+2026-09-05 09:17:39.834 [FAIL ] UF-WIZ-02-P: Continue is enabled when all required fields are filled :: 39.92s — Error: locator.check: Target page, context or browser has been closed
+2026-09-05 09:17:40.452 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 09:17:45.254 [INFO ] WIZ-03-P :: start
+2026-09-05 09:17:45.257 [INFO ] login :: navigating to /login
+2026-09-05 09:17:49.237 [INFO ] login :: ok
+2026-09-05 09:17:50.394 [INFO ] cookies :: dismissed
+2026-09-05 09:18:20.255 [WARN ] WATCHDOG :: UF-WIZ-03-P: PAN field shows correct placeholder exceeded 35s — closing context
+2026-09-05 09:18:21.926 [FAIL ] UF-WIZ-03-P: PAN field shows correct placeholder :: 40.12s — [31mTest timeout of 40000ms exceeded.[39m
+2026-09-05 09:18:22.566 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 09:18:27.240 [INFO ] WIZ-04-P :: start
+2026-09-05 09:18:27.243 [INFO ] login :: navigating to /login
+2026-09-05 09:19:02.252 [WARN ] WATCHDOG :: UF-WIZ-04-P: Step 1 happy path advances to step 2 exceeded 35s — closing context
+2026-09-05 09:19:13.655 [INFO ] login :: already authed
+2026-09-05 09:19:13.750 [FAIL ] UF-WIZ-04-P: Step 1 happy path advances to step 2 :: 49.78s — [31mTest timeout of 40000ms exceeded.[39m
+2026-09-05 09:19:14.425 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 09:19:19.289 [INFO ] WIZ-07-P :: start
+2026-09-05 09:19:19.291 [INFO ] login :: navigating to /login
+2026-09-05 09:19:43.051 [SKIP ] UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs :: skipped
+2026-09-05 09:19:44.260 [INFO ] WIZ-08-P :: start
+2026-09-05 09:19:44.263 [INFO ] login :: navigating to /login
+2026-09-05 09:19:57.252 [INFO ] login :: ok
+2026-09-05 09:19:57.800 [INFO ] cookies :: dismissed
+2026-09-05 09:19:59.621 [INFO ] WIZ-08-P :: JS errors on load: 0
+2026-09-05 09:19:59.774 [PASS ] UF-WIZ-08-P: Step 1 page loads cleanly with no JS errors :: 16.71s
+2026-09-05 09:20:01.057 [INFO ] WIZ-10-P :: start
+2026-09-05 09:20:01.060 [INFO ] login :: navigating to /login
+2026-09-05 09:20:10.425 [INFO ] login :: ok
+2026-09-05 09:20:11.399 [INFO ] cookies :: dismissed
+2026-09-05 09:20:12.473 [FAIL ] UF-WIZ-10-P: Country dropdown lists India :: 12.61s — Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+2026-09-05 09:20:13.210 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
+2026-09-05 09:20:18.044 [INFO ] WIZ-11-P :: start
+2026-09-05 09:20:18.046 [INFO ] login :: navigating to /login
+2026-09-05 09:20:49.787 [SKIP ] UF-WIZ-11-P: Subcategory populates after category chosen :: skipped
+2026-09-05 09:20:51.076 [INFO ] WIZ-14-P :: start
+2026-09-05 09:20:51.078 [INFO ] login :: navigating to /login
+2026-09-05 09:20:57.208 [INFO ] login :: ok
+2026-09-05 09:20:58.312 [INFO ] cookies :: dismissed
+2026-09-05 09:20:59.266 [SKIP ] UF-WIZ-14-P: GSTIN optional field accepts valid value :: skipped
+2026-09-05 09:21:00.545 [INFO ] WIZ-20-P :: start
+2026-09-05 09:21:00.548 [INFO ] login :: navigating to /login
+2026-09-05 09:21:35.547 [WARN ] WATCHDOG :: UF-WIZ-20-P: Wizard URL is exactly /start/application exceeded 35s — closing context
+2026-09-05 09:21:36.163 [INFO ] login :: already authed
+2026-09-05 09:21:36.233 [FAIL ] UF-WIZ-20-P: Wizard URL is exactly /start/application :: 36.90s — Error: page.goto: Target page, context or browser has been closed
+2026-09-05 09:21:41.762 [INFO ] UP-06-N :: start
+2026-09-05 09:21:41.883 [SKIP ] UF-UP-06-N: Gallery upload of 15 images exceeds documented 12-item limit :: skipped
+2026-09-05 09:21:43.081 [INFO ] UP-07-N :: start
+2026-09-05 09:21:43.084 [INFO ] login :: navigating to /login
+2026-09-05 09:21:57.716 [INFO ] login :: ok
+2026-09-05 09:21:58.728 [INFO ] cookies :: dismissed
+2026-09-05 09:22:28.094 [WARN ] WATCHDOG :: UF-UP-07-N: Video >100MB is rejected (size validation) exceeded 45s — closing context
+2026-09-05 09:22:29.145 [FAIL ] UF-UP-07-N: Video >100MB is rejected (size validation) :: 47.20s — Error: locator.check: Target page, context or browser has been closed
+2026-09-05 09:22:35.241 [INFO ] UP-08-N :: start
+2026-09-05 09:22:35.244 [INFO ] login :: navigating to /login
+2026-09-05 09:22:39.128 [INFO ] login :: ok
+2026-09-05 09:22:40.168 [INFO ] cookies :: dismissed
+2026-09-05 09:23:20.254 [WARN ] WATCHDOG :: UF-UP-08-N: Audio file (mp3) is rejected as non-image/non-video exceeded 45s — closing context
+2026-09-05 09:23:21.650 [FAIL ] UF-UP-08-N: Audio file (mp3) is rejected as non-image/non-video :: 50.35s — [31mTest timeout of 50000ms exceeded.[39m
+2026-09-05 09:23:26.951 [INFO ] UP-09-N :: start
+2026-09-05 09:23:26.954 [INFO ] login :: navigating to /login
+2026-09-05 09:23:34.191 [INFO ] login :: ok
+2026-09-05 09:23:35.402 [INFO ] cookies :: dismissed
+2026-09-05 09:24:11.958 [WARN ] WATCHDOG :: UF-UP-09-N: Continue button is disabled with no cover image exceeded 45s — closing context
+2026-09-05 09:24:13.209 [FAIL ] UF-UP-09-N: Continue button is disabled with no cover image :: 49.57s — Error: locator.check: Target page, context or browser has been closed
+2026-09-05 09:24:18.617 [INFO ] UP-10-N :: start
+2026-09-05 09:24:18.620 [INFO ] login :: navigating to /login
+2026-09-05 09:24:51.195 [WARN ] safeLogin :: login timeout: page.goto: net::ERR_TIMED_OUT at https://187.77.79.40.nip.io/login
+2026-09-05 09:24:54.349 [SKIP ] UF-UP-10-N: Pitch video URL rejects non-URL string :: skipped
+2026-09-05 09:24:55.540 [INFO ] UP-11-N :: start
+2026-09-05 09:24:55.542 [INFO ] login :: navigating to /login
+2026-09-05 09:25:15.626 [INFO ] login :: ok
+2026-09-05 09:25:16.722 [INFO ] cookies :: dismissed
+2026-09-05 09:25:40.543 [WARN ] WATCHDOG :: UF-UP-11-N: Story field enforces 30-char minimum (boundary) exceeded 45s — closing context
+2026-09-05 09:25:41.981 [FAIL ] UF-UP-11-N: Story field enforces 30-char minimum (boundary) :: 47.53s — Error: locator.check: Target page, context or browser has been closed
+2026-09-05 09:25:47.444 [INFO ] UP-12-N :: start
+2026-09-05 09:25:47.448 [INFO ] login :: navigating to /login
+2026-09-05 09:26:32.445 [WARN ] WATCHDOG :: UF-UP-12-N: Funding goal of 0 is accepted (per UI hint) exceeded 45s — closing context
+2026-09-05 09:26:37.517 [INFO ] login :: already authed
+2026-09-05 09:26:37.580 [FAIL ] UF-UP-12-N: Funding goal of 0 is accepted (per UI hint) :: 53.54s — [31mTest timeout of 50000ms exceeded.[39m
+2026-09-05 09:26:42.921 [INFO ] UP-13-N :: start
+2026-09-05 09:26:42.924 [INFO ] login :: navigating to /login
+2026-09-05 09:27:03.529 [INFO ] login :: ok
+2026-09-05 09:27:04.095 [INFO ] cookies :: dismissed
+2026-09-05 09:27:27.927 [WARN ] WATCHDOG :: UF-UP-13-N: Funding goal with negative number is rejected by input exceeded 45s — closing context
+2026-09-05 09:27:29.226 [FAIL ] UF-UP-13-N: Funding goal with negative number is rejected by input :: 49.64s — Error: locator.check: Target page, context or browser has been closed
+2026-09-05 09:27:34.863 [INFO ] UP-01-P :: start
+2026-09-05 09:27:34.868 [INFO ] login :: navigating to /login
+2026-09-05 09:27:46.891 [INFO ] login :: ok
+2026-09-05 09:27:47.914 [INFO ] cookies :: dismissed
+2026-09-05 09:28:19.872 [WARN ] WATCHDOG :: UF-UP-01-P: Cover image upload (small JPG) succeeds exceeded 45s — closing context
+2026-09-05 09:28:20.989 [FAIL ] UF-UP-01-P: Cover image upload (small JPG) succeeds :: 49.70s — Error: locator.check: Target page, context or browser has been closed
+2026-09-05 09:28:26.392 [INFO ] UP-02-P :: start
+2026-09-05 09:28:26.395 [INFO ] login :: navigating to /login
+2026-09-05 09:28:47.496 [WARN ] safeLogin :: login timeout: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://187.77.79.40.nip.io/login
+2026-09-05 09:28:49.924 [SKIP ] UF-UP-02-P: Gallery upload of 3 small images succeeds (one at a time) :: skipped
+2026-09-05 09:28:51.131 [INFO ] UP-03-P :: start
+2026-09-05 09:28:51.133 [INFO ] login :: navigating to /login
+2026-09-05 09:28:54.957 [INFO ] login :: ok
+2026-09-05 09:28:55.988 [INFO ] cookies :: dismissed
+2026-09-05 09:29:36.144 [WARN ] WATCHDOG :: UF-UP-03-P: Gallery upload of 12 images (the documented max) is accepted (one at a time) exceeded 45s — closing context
+2026-09-05 09:29:37.506 [FAIL ] UF-UP-03-P: Gallery upload of 12 images (the documented max) is accepted (one at a time) :: 47.52s — Error: locator.check: Target page, context or browser has been closed
+2026-09-05 09:29:42.498 [INFO ] UP-04-P :: start
+2026-09-05 09:29:42.501 [INFO ] login :: navigating to /login
+2026-09-05 09:30:01.830 [INFO ] login :: ok
+2026-09-05 09:30:02.625 [FAIL ] UF-UP-04-P: Small video (<100MB) upload succeeds :: 23.25s — Error: page.goto: Page crashed
+10:08:52.529 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 0 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_10-08-18.log
+10:08:52.533 [ERROR] REPORTER     Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://187.77.79.40.nip.io/login
+Call log:
+[2m  - navigating to "https://187.77.79.40.nip.io/login", waiting until "domcontentloaded"[22m
+
+
+========================================================================
+  RUN SUMMARY  2026-09-05_10-08-18
+========================================================================
+  Total    : 0
+  Passed   : 0  (0.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 34.2s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_10-08-18.log
+========================================================================
+10:08:52.538 [INFO] RUN-END      Status: failed | Duration: 34.2s
+10:08:52.541 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_10-08-18.html
+10:16:41.821 [INFO] WIZARD-NEG   negative & edge-case suite
+10:16:41.873 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:16:41.884 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 22 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_10-15-55.log
+10:16:42.494 [INFO] WIZARD-NEG   negative & edge-case suite
+10:16:55.647 [INFO] WIZ-09-N     start
+10:16:55.650 [INFO] login        navigating to /login
+10:17:24.542 [INFO] login        already authed
+10:17:24.548 [WARN] safeRun      server-induced failure, skipping: page.goto: Target page, context or browser has been closed
+10:17:24.617 [FAIL] UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) 40.71s — [31mTest timeout of 40000ms exceeded.[39m
+10:17:25.268 [INFO] WIZARD-NEG   negative & edge-case suite
+10:17:54.951 [SKIP] UF-WIZ-13-N: Whitespace-only company name does not advance skipped
+10:18:33.632 [SKIP] UF-WIZ-05-N: 5000-char paste in company name does not crash skipped
+10:18:41.458 [INFO] WIZ-06-N     start
+10:18:41.462 [INFO] login        navigating to /login
+10:18:44.932 [INFO] login        ok
+10:19:15.202 [FAIL] UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break 41.50s — [31mTest timeout of 40000ms exceeded.[39m
+10:19:15.810 [INFO] WIZARD-NEG   negative & edge-case suite
+10:19:46.527 [SKIP] UF-WIZ-12-N: Lowercase PAN does not crash the form skipped
+10:20:11.554 [SKIP] UF-WIZ-15-N: Page reload after partial fill — form behaviour documented skipped
+10:20:13.680 [INFO] WIZ-16-N     start
+10:20:13.683 [INFO] login        navigating to /login
+10:20:17.144 [INFO] login        ok
+10:20:48.692 [WARN] WATCHDOG     UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) exceeded 35s — closing context
+10:20:49.697 [WARN] safeRun      server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+10:20:49.706 [SKIP] UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) skipped
+10:20:54.544 [INFO] WIZ-22-N     start
+10:20:54.546 [INFO] login        navigating to /login
+10:20:57.810 [INFO] login        ok
+10:21:29.545 [WARN] WATCHDOG     UF-WIZ-22-N: Double-click Continue does not skip a step exceeded 35s — closing context
+10:21:30.839 [WARN] safeRun      server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+10:21:30.893 [FAIL] UF-WIZ-22-N: Double-click Continue does not skip a step 41.12s — [31mTest timeout of 40000ms exceeded.[39m
+10:21:31.528 [INFO] WIZARD-NEG   negative & edge-case suite
+10:22:00.889 [SKIP] UF-WIZ-19-N: First Tab reaches a focusable element skipped
+10:22:25.685 [SKIP] UF-WIZ-21-N: Unauthenticated wizard access is gated skipped
+10:22:28.070 [INFO] WIZ-17-N     start
+10:22:28.073 [INFO] login        navigating to /login
+10:22:33.558 [INFO] WIZARD-NEG   negative & edge-case suite
+10:22:33.569 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:22:33.599 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_10-21-33.log
+10:22:34.280 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:22:37.122 [INFO] login        ok
+10:22:40.586 [INFO] WIZ-01-P     start
+10:22:40.589 [INFO] login        navigating to /login
+10:22:44.953 [INFO] login        ok
+10:22:45.883 [INFO] cookies      dismissed
+10:22:52.175 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 16.49s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+========================================================================
+  RUN SUMMARY  2026-09-05_10-21-33
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 79.1s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_10-21-33.log
+========================================================================
+10:22:52.200 [INFO] RUN-END      Status: failed | Duration: 79.1s
+10:22:52.203 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_10-21-33.html
+10:23:03.081 [WARN] WATCHDOG     UF-WIZ-17-N: Step 2 has at least one media upload control exceeded 35s — closing context
+10:23:03.993 [WARN] safeRun      server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+10:23:04.005 [SKIP] UF-WIZ-17-N: Step 2 has at least one media upload control skipped
+10:23:05.994 [INFO] WIZ-18-N     start
+10:23:05.996 [INFO] login        navigating to /login
+10:23:09.360 [INFO] login        ok
+10:23:41.000 [WARN] WATCHDOG     UF-WIZ-18-N: Step 3 review reflects company name from step 1 exceeded 35s — closing context
+10:23:41.998 [WARN] safeRun      server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+10:23:42.007 [SKIP] UF-WIZ-18-N: Step 3 review reflects company name from step 1 skipped
+10:23:42.014 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:24:07.172 [SKIP] UF-WIZ-01-P: Wizard page renders step 1 with all required fields skipped
+10:24:18.981 [INFO] WIZ-02-P     start
+10:24:18.984 [INFO] login        navigating to /login
+10:24:22.264 [INFO] login        ok
+10:24:22.792 [INFO] cookies      dismissed
+10:24:48.363 [FAIL] UF-WIZ-02-P: Continue is enabled when all required fields are filled 41.13s — [31mTest timeout of 40000ms exceeded.[39m
+10:24:49.038 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:25:12.182 [INFO] WIZ-03-P     start
+10:25:12.186 [INFO] login        navigating to /login
+10:25:15.644 [INFO] login        ok
+10:25:16.843 [INFO] cookies      dismissed
+10:25:31.181 [FAIL] UF-WIZ-03-P: PAN field shows correct placeholder 40.81s — [31mTest timeout of 40000ms exceeded.[39m
+10:25:31.834 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:25:43.009 [INFO] WIZ-04-P     start
+10:25:43.012 [INFO] login        navigating to /login
+10:25:46.532 [INFO] login        ok
+10:25:47.177 [INFO] cookies      dismissed
+10:25:53.704 [FAIL] UF-WIZ-04-P: Step 1 happy path advances to step 2 20.54s — Error: locator.check: Page crashed
+10:39:05.694 [INFO] WIZARD-NEG   negative & edge-case suite
+10:39:05.742 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:39:05.772 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_10-38-49.log
+10:39:06.366 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:39:12.008 [INFO] WIZ-01-P     start
+10:39:12.012 [INFO] login        navigating to /login
+10:39:47.015 [WARN] WATCHDOG     UF-WIZ-01-P: Wizard page renders step 1 with all required fields exceeded 35s — closing context
+10:39:49.791 [INFO] login        already authed
+10:39:49.875 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 42.22s — [31mTest timeout of 40000ms exceeded.[39m
+
+========================================================================
+  RUN SUMMARY  2026-09-05_10-38-49
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 60.1s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_10-38-49.log
+========================================================================
+10:39:49.907 [INFO] RUN-END      Status: failed | Duration: 60.1s
+10:39:49.910 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_10-38-49.html
+10:42:15.334 [INFO] WIZARD-NEG   negative & edge-case suite
+10:42:15.365 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:42:15.373 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 22 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_10-42-02.log
+10:42:15.998 [INFO] WIZARD-NEG   negative & edge-case suite
+10:42:21.582 [INFO] WIZ-09-N     start
+10:42:21.584 [INFO] login        navigating to /login
+10:42:56.584 [WARN] WATCHDOG     UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) exceeded 35s — closing context
+10:42:58.573 [INFO] login        already authed
+10:42:58.579 [WARN] safeRun      server-induced failure, skipping: page.goto: Target page, context or browser has been closed
+10:42:58.595 [SKIP] UF-WIZ-09-N: Form advances even with unchecked eligibility (BUG) skipped
+10:43:00.702 [INFO] WIZ-13-N     start
+10:43:00.705 [INFO] login        navigating to /login
+10:43:04.182 [INFO] login        ok
+10:43:35.712 [WARN] WATCHDOG     UF-WIZ-13-N: Whitespace-only company name does not advance exceeded 35s — closing context
+10:43:36.704 [WARN] safeRun      server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+10:43:36.713 [SKIP] UF-WIZ-13-N: Whitespace-only company name does not advance skipped
+10:43:38.949 [INFO] WIZ-05-N     start
+10:43:38.951 [INFO] login        navigating to /login
+10:43:41.702 [INFO] login        ok
+10:44:13.948 [WARN] WATCHDOG     UF-WIZ-05-N: 5000-char paste in company name does not crash exceeded 35s — closing context
+10:44:15.032 [WARN] safeRun      server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+10:44:15.042 [SKIP] UF-WIZ-05-N: 5000-char paste in company name does not crash skipped
+10:44:17.130 [INFO] WIZ-06-N     start
+10:44:17.132 [INFO] login        navigating to /login
+10:44:19.892 [INFO] login        ok
+10:44:52.136 [WARN] WATCHDOG     UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break exceeded 35s — closing context
+10:44:53.278 [WARN] safeRun      server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+10:44:53.288 [SKIP] UF-WIZ-06-N: XSS / SQL-injection payload in company name does not break skipped
+10:44:55.439 [INFO] WIZ-12-N     start
+10:44:55.441 [INFO] login        navigating to /login
+10:44:59.054 [INFO] login        ok
+10:45:30.441 [WARN] WATCHDOG     UF-WIZ-12-N: Lowercase PAN does not crash the form exceeded 35s — closing context
+10:45:31.496 [WARN] safeRun      server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+10:45:31.505 [SKIP] UF-WIZ-12-N: Lowercase PAN does not crash the form skipped
+10:45:33.736 [INFO] WIZ-15-N     start
+10:45:33.738 [INFO] login        navigating to /login
+10:45:38.178 [INFO] login        ok
+10:46:08.738 [WARN] WATCHDOG     UF-WIZ-15-N: Page reload after partial fill — form behaviour documented exceeded 35s — closing context
+10:46:09.898 [WARN] safeRun      server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+10:46:09.907 [SKIP] UF-WIZ-15-N: Page reload after partial fill — form behaviour documented skipped
+10:46:12.023 [INFO] WIZ-16-N     start
+10:46:12.026 [INFO] login        navigating to /login
+10:46:14.799 [INFO] login        ok
+10:46:47.032 [WARN] WATCHDOG     UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) exceeded 35s — closing context
+10:46:48.219 [WARN] safeRun      server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+10:46:48.229 [SKIP] UF-WIZ-16-N: Browser back from step 2 lands on step 1 (or stays step 2 without crash) skipped
+10:46:50.328 [INFO] WIZ-22-N     start
+10:46:50.331 [INFO] login        navigating to /login
+10:46:54.199 [INFO] login        ok
+10:47:25.339 [WARN] WATCHDOG     UF-WIZ-22-N: Double-click Continue does not skip a step exceeded 35s — closing context
+10:47:26.358 [WARN] safeRun      server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+10:47:26.368 [SKIP] UF-WIZ-22-N: Double-click Continue does not skip a step skipped
+10:47:28.423 [INFO] WIZ-19-N     start
+10:47:28.425 [INFO] login        navigating to /login
+10:47:32.469 [INFO] login        ok
+10:47:34.159 [INFO] WIZ-19-N     after up to 5 Tabs, focused: A
+10:47:34.304 [PASS] UF-WIZ-19-N: First Tab reaches a focusable element 7.92s
+10:47:36.093 [INFO] WIZ-21-N     start
+10:47:42.032 [INFO] WIZ-21-N     unauthed → https://187.77.79.40.nip.io/login?next=/start/application
+10:47:42.293 [PASS] UF-WIZ-21-N: Unauthenticated wizard access is gated 7.98s
+10:47:44.057 [INFO] WIZ-17-N     start
+10:47:44.059 [INFO] login        navigating to /login
+10:47:47.320 [INFO] login        ok
+10:48:19.066 [WARN] WATCHDOG     UF-WIZ-17-N: Step 2 has at least one media upload control exceeded 35s — closing context
+10:48:20.178 [WARN] safeRun      server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+10:48:20.187 [SKIP] UF-WIZ-17-N: Step 2 has at least one media upload control skipped
+10:48:22.385 [INFO] WIZ-18-N     start
+10:48:22.388 [INFO] login        navigating to /login
+10:48:25.688 [INFO] login        ok
+10:48:57.398 [WARN] WATCHDOG     UF-WIZ-18-N: Step 3 review reflects company name from step 1 exceeded 35s — closing context
+10:48:58.487 [WARN] safeRun      server-induced failure, skipping: locator.check: Target page, context or browser has been closed
+10:48:58.496 [SKIP] UF-WIZ-18-N: Step 3 review reflects company name from step 1 skipped
+10:48:58.504 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:49:00.525 [INFO] WIZ-01-P     start
+10:49:00.527 [INFO] login        navigating to /login
+10:49:04.904 [INFO] login        ok
+10:49:05.751 [INFO] cookies      dismissed
+10:49:12.026 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 13.43s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+10:49:12.667 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:49:18.098 [INFO] WIZ-02-P     start
+10:49:18.101 [INFO] login        navigating to /login
+10:49:21.627 [INFO] login        ok
+10:49:22.512 [INFO] cookies      dismissed
+10:49:53.106 [WARN] WATCHDOG     UF-WIZ-02-P: Continue is enabled when all required fields are filled exceeded 35s — closing context
+10:49:54.207 [FAIL] UF-WIZ-02-P: Continue is enabled when all required fields are filled 40.29s — Error: locator.check: Target page, context or browser has been closed
+10:49:54.826 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:50:00.080 [INFO] WIZ-03-P     start
+10:50:00.082 [INFO] login        navigating to /login
+10:50:03.393 [INFO] login        ok
+10:50:04.245 [INFO] cookies      dismissed
+10:50:35.090 [WARN] WATCHDOG     UF-WIZ-03-P: PAN field shows correct placeholder exceeded 35s — closing context
+10:50:36.338 [FAIL] UF-WIZ-03-P: PAN field shows correct placeholder 40.21s — Error: locator.getAttribute: Target page, context or browser has been closed
+10:50:36.943 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:50:42.269 [INFO] WIZ-04-P     start
+10:50:42.272 [INFO] login        navigating to /login
+10:50:45.705 [INFO] login        ok
+10:50:46.593 [INFO] cookies      dismissed
+10:51:17.269 [WARN] WATCHDOG     UF-WIZ-04-P: Step 1 happy path advances to step 2 exceeded 35s — closing context
+10:51:18.320 [FAIL] UF-WIZ-04-P: Step 1 happy path advances to step 2 40.17s — Error: locator.check: Target page, context or browser has been closed
+10:51:18.925 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:51:24.084 [INFO] WIZ-07-P     start
+10:51:24.086 [INFO] login        navigating to /login
+10:51:27.346 [INFO] login        ok
+10:51:28.192 [INFO] cookies      dismissed
+10:51:59.084 [WARN] WATCHDOG     UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs exceeded 35s — closing context
+10:52:00.181 [FAIL] UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs 40.07s — Error: locator.check: Target page, context or browser has been closed
+10:52:00.795 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:52:06.234 [INFO] WIZ-08-P     start
+10:52:06.237 [INFO] login        navigating to /login
+10:52:09.821 [INFO] login        ok
+10:52:10.688 [INFO] cookies      dismissed
+10:52:12.512 [INFO] WIZ-08-P     JS errors on load: 0
+10:52:12.691 [PASS] UF-WIZ-08-P: Step 1 page loads cleanly with no JS errors 10.73s
+10:52:14.523 [INFO] WIZ-10-P     start
+10:52:14.525 [INFO] login        navigating to /login
+10:52:17.795 [INFO] login        ok
+10:52:18.622 [INFO] cookies      dismissed
+10:52:19.619 [FAIL] UF-WIZ-10-P: Country dropdown lists India 6.87s — Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+10:52:20.187 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:52:25.589 [INFO] WIZ-11-P     start
+10:52:25.592 [INFO] login        navigating to /login
+10:52:29.115 [INFO] login        ok
+10:52:30.407 [INFO] cookies      dismissed
+10:53:00.595 [WARN] WATCHDOG     UF-WIZ-11-P: Subcategory populates after category chosen exceeded 35s — closing context
+10:53:01.765 [FAIL] UF-WIZ-11-P: Subcategory populates after category chosen 40.40s — Error: locator.selectOption: Target page, context or browser has been closed
+10:53:02.340 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:53:07.185 [INFO] WIZ-14-P     start
+10:53:07.188 [INFO] login        navigating to /login
+10:53:10.440 [INFO] login        ok
+10:53:11.305 [INFO] cookies      dismissed
+10:53:12.306 [SKIP] UF-WIZ-14-P: GSTIN optional field accepts valid value skipped
+10:53:14.276 [INFO] WIZ-20-P     start
+10:53:14.278 [INFO] login        navigating to /login
+10:53:17.510 [INFO] login        ok
+10:53:18.338 [INFO] cookies      dismissed
+10:53:18.466 [PASS] UF-WIZ-20-P: Wizard URL is exactly /start/application 6.15s
+
+========================================================================
+  RUN SUMMARY  2026-09-05_10-42-02
+========================================================================
+  Total    : 22
+  Passed   : 4  (18.2%)
+  Failed   : 7
+  Skipped  : 11
+  Duration : 675.8s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_10-42-02.log
+========================================================================
+10:53:18.546 [INFO] RUN-END      Status: failed | Duration: 675.8s
+10:53:18.550 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_10-42-02.html
+10:56:39.681 [INFO] WIZARD-NEG   negative & edge-case suite
+10:56:39.708 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:56:39.728 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_10-56-23.log
+10:56:40.345 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:56:45.985 [INFO] WIZ-01-P     start
+10:56:45.987 [INFO] login        navigating to /login
+10:57:20.991 [WARN] WATCHDOG     UF-WIZ-01-P: Wizard page renders step 1 with all required fields exceeded 55s — closing context
+10:57:23.198 [INFO] login        already authed
+10:57:23.269 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 41.64s — Error: page.goto: Target page, context or browser has been closed
+
+========================================================================
+  RUN SUMMARY  2026-09-05_10-56-23
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 59.5s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_10-56-23.log
+========================================================================
+10:57:23.293 [INFO] RUN-END      Status: failed | Duration: 59.5s
+10:57:23.296 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_10-56-23.html
+11:06:55.675 [INFO] WIZARD-NEG   negative & edge-case suite
+11:06:55.683 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+11:06:55.697 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_11-06-42.log
+11:06:56.279 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+11:07:01.912 [INFO] WIZ-01-P     start
+11:07:01.914 [INFO] login        navigating to /login
+11:07:36.918 [WARN] WATCHDOG     UF-WIZ-01-P: Wizard page renders step 1 with all required fields exceeded 55s — closing context
+11:07:38.824 [INFO] login        already authed
+11:07:38.890 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 41.35s — Error: page.goto: Target page, context or browser has been closed
+
+========================================================================
+  RUN SUMMARY  2026-09-05_11-06-42
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 56.4s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_11-06-42.log
+========================================================================
+11:07:38.915 [INFO] RUN-END      Status: failed | Duration: 56.4s
+11:07:38.917 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_11-06-42.html
+11:14:19.249 [INFO] WIZARD-NEG   negative & edge-case suite
+11:14:19.320 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+11:14:19.338 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_11-14-04.log
+11:14:19.945 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+11:14:24.569 [INFO] WIZ-01-P     start
+11:14:24.572 [INFO] login        navigating to /login
+11:14:59.572 [WARN] WATCHDOG     UF-WIZ-01-P: Wizard page renders step 1 with all required fields exceeded 55s — closing context
+11:15:01.555 [INFO] login        already authed
+11:15:01.622 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 40.37s — Error: page.goto: Target page, context or browser has been closed
+
+========================================================================
+  RUN SUMMARY  2026-09-05_11-14-04
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 57.5s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_11-14-04.log
+========================================================================
+11:15:01.653 [INFO] RUN-END      Status: failed | Duration: 57.5s
+11:15:01.656 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_11-14-04.html
+11:27:48.377 [INFO] WIZARD-NEG   negative & edge-case suite
+11:27:48.385 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+11:27:48.401 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_11-27-33.log
+11:27:49.025 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+11:27:53.798 [INFO] WIZ-01-P     start
+11:27:53.801 [INFO] login        navigating to /login
+11:27:54.771 [INFO] login        already authed (via /dashboard)
+11:27:56.258 [INFO] cookies      dismissed
+11:28:02.510 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 12.16s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+========================================================================
+  RUN SUMMARY  2026-09-05_11-27-33
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 29.3s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_11-27-33.log
+========================================================================
+11:28:02.535 [INFO] RUN-END      Status: failed | Duration: 29.3s
+11:28:02.537 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_11-27-33.html
+11:29:07.896 [INFO] WIZARD-NEG   negative & edge-case suite
+11:29:07.905 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+11:29:07.920 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_11-28-52.log
+11:29:08.529 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+11:29:13.072 [INFO] WIZ-01-P     start
+11:29:13.075 [INFO] login        navigating to /login
+11:29:14.088 [INFO] login        already authed (via /dashboard)
+11:29:16.337 [INFO] cookies      dismissed
+11:29:23.130 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 13.31s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+========================================================================
+  RUN SUMMARY  2026-09-05_11-28-52
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 30.8s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_11-28-52.log
+========================================================================
+11:29:23.155 [INFO] RUN-END      Status: failed | Duration: 30.8s
+11:29:23.157 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_11-28-52.html
+11:57:15.667 [INFO] WIZARD-NEG   negative & edge-case suite
+11:57:15.742 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+11:57:15.760 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_11-56-55.log
+11:57:16.382 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+11:57:20.872 [INFO] WIZ-01-P     start
+11:57:20.875 [INFO] login        navigating to /login
+11:57:21.918 [INFO] login        already authed (via /dashboard)
+11:57:24.536 [INFO] cookies      dismissed
+11:57:30.827 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 13.17s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+========================================================================
+  RUN SUMMARY  2026-09-05_11-56-55
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 34.9s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_11-56-55.log
+========================================================================
+11:57:30.858 [INFO] RUN-END      Status: failed | Duration: 34.9s
+11:57:30.861 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_11-56-55.html
+11:59:35.184 [INFO] WIZARD-NEG   negative & edge-case suite
+11:59:35.263 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+11:59:35.278 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_11-59-21.log
+11:59:35.882 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+11:59:40.439 [INFO] WIZ-01-P     start
+11:59:40.442 [INFO] login        navigating to /login
+11:59:41.488 [INFO] login        already authed (via /dashboard)
+11:59:43.049 [INFO] cookies      dismissed
+11:59:43.869 [INFO] WIZ-01-P     user already has a submitted campaign — skipping
+11:59:43.998 [SKIP] UF-WIZ-01-P: Wizard page renders step 1 with all required fields skipped
+
+========================================================================
+  RUN SUMMARY  2026-09-05_11-59-21
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 0
+  Skipped  : 1
+  Duration : 22.1s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_11-59-21.log
+========================================================================
+11:59:44.066 [INFO] RUN-END      Status: passed | Duration: 22.1s
+11:59:44.069 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_11-59-21.html
+12:00:20.267 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:00:20.280 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 10 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_12-00-06.log
+12:00:20.881 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:00:29.936 [INFO] WIZ-01-P     start
+12:00:29.939 [INFO] login        navigating to /login
+12:00:30.132 [INFO] login        already authed (via /dashboard)
+12:00:30.396 [INFO] cookies      dismissed
+12:00:35.749 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 13.55s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+12:00:36.381 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:00:44.274 [INFO] WIZ-02-P     start
+12:00:44.277 [INFO] login        navigating to /login
+12:00:44.487 [INFO] login        already authed (via /dashboard)
+12:01:19.280 [WARN] WATCHDOG     UF-WIZ-02-P: Continue is enabled when all required fields are filled exceeded 55s — closing context
+12:01:20.619 [FAIL] UF-WIZ-02-P: Continue is enabled when all required fields are filled 42.95s — Error: locator.click: Target page, context or browser has been closed
+12:01:21.242 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:01:28.657 [INFO] WIZ-03-P     start
+12:01:28.660 [INFO] login        navigating to /login
+12:01:28.853 [INFO] login        already authed (via /dashboard)
+12:02:03.657 [WARN] WATCHDOG     UF-WIZ-03-P: PAN field shows correct placeholder exceeded 55s — closing context
+12:02:05.082 [FAIL] UF-WIZ-03-P: PAN field shows correct placeholder 42.54s — Error: locator.click: Target page, context or browser has been closed
+12:02:05.697 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:02:13.715 [INFO] WIZ-04-P     start
+12:02:13.717 [INFO] login        navigating to /login
+12:02:13.921 [INFO] login        already authed (via /dashboard)
+12:02:48.727 [WARN] WATCHDOG     UF-WIZ-04-P: Step 1 happy path advances to step 2 exceeded 55s — closing context
+12:02:50.029 [FAIL] UF-WIZ-04-P: Step 1 happy path advances to step 2 43.01s — Error: locator.click: Target page, context or browser has been closed
+12:02:50.641 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:02:59.626 [INFO] WIZ-07-P     start
+12:02:59.629 [INFO] login        navigating to /login
+12:02:59.810 [INFO] login        already authed (via /dashboard)
+12:03:34.640 [WARN] WATCHDOG     UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs exceeded 55s — closing context
+12:03:35.953 [FAIL] UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs 44.00s — Error: locator.click: Target page, context or browser has been closed
+12:03:36.235 [FAIL] UF-WIZ-08-P: Step 1 page loads cleanly with no JS errors 0.00s — Error: worker process exited unexpectedly (code=3221225794, signal=null)
+12:03:36.238 [SKIP] UF-WIZ-10-P: Country dropdown lists India skipped
+12:03:36.239 [SKIP] UF-WIZ-11-P: Subcategory populates after category chosen skipped
+12:03:36.242 [SKIP] UF-WIZ-14-P: GSTIN optional field accepts valid value skipped
+12:03:36.244 [SKIP] UF-WIZ-20-P: Wizard URL is exactly /start/application skipped
+
+========================================================================
+  RUN SUMMARY  2026-09-05_12-00-06
+========================================================================
+  Total    : 10
+  Passed   : 0  (0.0%)
+  Failed   : 6
+  Skipped  : 4
+  Duration : 209.8s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_12-00-06.log
+========================================================================
+12:03:36.251 [INFO] RUN-END      Status: failed | Duration: 209.8s
+12:03:36.253 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_12-00-06.html
+12:03:55.031 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:03:55.045 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 10 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-05_12-03-11.log
+12:03:55.650 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:04:03.544 [INFO] WIZ-01-P     start
+12:04:03.546 [INFO] login        navigating to /login
+12:04:03.749 [INFO] login        already authed (via /dashboard)
+12:04:04.021 [INFO] cookies      dismissed
+12:04:09.765 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 12.87s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+12:04:10.390 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:04:19.304 [INFO] WIZ-02-P     start
+12:04:19.307 [INFO] login        navigating to /login
+12:04:19.499 [INFO] login        already authed (via /dashboard)
+12:04:54.304 [WARN] WATCHDOG     UF-WIZ-02-P: Continue is enabled when all required fields are filled exceeded 55s — closing context
+12:04:55.622 [FAIL] UF-WIZ-02-P: Continue is enabled when all required fields are filled 43.96s — Error: locator.click: Target page, context or browser has been closed
+12:04:56.230 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:05:03.945 [INFO] WIZ-03-P     start
+12:05:03.947 [INFO] login        navigating to /login
+12:05:04.145 [INFO] login        already authed (via /dashboard)
+12:05:38.949 [WARN] WATCHDOG     UF-WIZ-03-P: PAN field shows correct placeholder exceeded 55s — closing context
+12:05:40.282 [FAIL] UF-WIZ-03-P: PAN field shows correct placeholder 42.78s — Error: locator.click: Target page, context or browser has been closed
+12:05:40.901 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:05:49.936 [INFO] WIZ-04-P     start
+12:05:49.940 [INFO] login        navigating to /login
+12:05:50.128 [INFO] login        already authed (via /dashboard)
+12:06:24.940 [WARN] WATCHDOG     UF-WIZ-04-P: Step 1 happy path advances to step 2 exceeded 55s — closing context
+12:06:26.167 [FAIL] UF-WIZ-04-P: Step 1 happy path advances to step 2 44.01s — Error: locator.click: Target page, context or browser has been closed
+12:06:26.769 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:06:35.692 [INFO] WIZ-07-P     start
+12:06:35.695 [INFO] login        navigating to /login
+12:06:35.876 [INFO] login        already authed (via /dashboard)
+12:07:10.693 [WARN] WATCHDOG     UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs exceeded 55s — closing context
+12:07:11.964 [FAIL] UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs 43.92s — Error: locator.click: Target page, context or browser has been closed
+12:07:12.562 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:07:20.557 [INFO] WIZ-08-P     start
+12:07:20.559 [INFO] login        navigating to /login
+12:07:20.751 [INFO] login        already authed (via /dashboard)
+12:07:55.571 [WARN] WATCHDOG     UF-WIZ-08-P: Step 1 page loads cleanly with no JS errors exceeded 55s — closing context
+12:07:56.891 [FAIL] UF-WIZ-08-P: Step 1 page loads cleanly with no JS errors 43.04s — Error: locator.click: Target page, context or browser has been closed
+12:07:57.505 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:08:05.999 [INFO] WIZ-10-P     start
+12:08:06.002 [INFO] login        navigating to /login
+12:08:06.203 [INFO] login        already authed (via /dashboard)
+12:08:41.002 [WARN] WATCHDOG     UF-WIZ-10-P: Country dropdown lists India exceeded 55s — closing context
+12:08:42.307 [FAIL] UF-WIZ-10-P: Country dropdown lists India 43.50s — Error: locator.click: Target page, context or browser has been closed
+12:08:42.912 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:08:50.881 [INFO] WIZ-11-P     start
+12:08:50.884 [INFO] login        navigating to /login
+12:08:51.067 [INFO] login        already authed (via /dashboard)
+12:09:25.887 [WARN] WATCHDOG     UF-WIZ-11-P: Subcategory populates after category chosen exceeded 55s — closing context
+12:09:27.234 [FAIL] UF-WIZ-11-P: Subcategory populates after category chosen 43.04s — Error: locator.click: Target page, context or browser has been closed
+12:09:27.842 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:09:36.837 [INFO] WIZ-14-P     start
+12:09:36.839 [INFO] login        navigating to /login
+12:09:37.029 [INFO] login        already authed (via /dashboard)
+12:10:11.846 [WARN] WATCHDOG     UF-WIZ-14-P: GSTIN optional field accepts valid value exceeded 55s — closing context
+12:10:13.127 [FAIL] UF-WIZ-14-P: GSTIN optional field accepts valid value 43.98s — Error: locator.click: Target page, context or browser has been closed
+12:10:13.740 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+12:10:21.597 [INFO] WIZ-20-P     start
+12:10:21.600 [INFO] login        navigating to /login
+12:10:21.790 [INFO] login        already authed (via /dashboard)
+12:10:56.612 [WARN] WATCHDOG     UF-WIZ-20-P: Wizard URL is exactly /start/application exceeded 55s — closing context
+12:10:57.907 [FAIL] UF-WIZ-20-P: Wizard URL is exactly /start/application 42.91s — Error: locator.click: Target page, context or browser has been closed
+
+========================================================================
+  RUN SUMMARY  2026-09-05_12-03-11
+========================================================================
+  Total    : 10
+  Passed   : 0  (0.0%)
+  Failed   : 10
+  Skipped  : 0
+  Duration : 466.2s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-05_12-03-11.log
+========================================================================
+12:10:57.931 [INFO] RUN-END      Status: failed | Duration: 466.2s
+12:10:57.935 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-05_12-03-11.html

@@ -1,0 +1,10 @@
+10:52:00.795 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
+10:52:06.234 [INFO] WIZ-08-P     start
+10:52:06.237 [INFO] login        navigating to /login
+10:52:09.821 [INFO] login        ok
+10:52:10.688 [INFO] cookies      dismissed
+10:52:12.512 [INFO] WIZ-08-P     JS errors on load: 0
+10:52:14.523 [INFO] WIZ-10-P     start
+10:52:14.525 [INFO] login        navigating to /login
+10:52:17.795 [INFO] login        ok
+10:52:18.622 [INFO] cookies      dismissed

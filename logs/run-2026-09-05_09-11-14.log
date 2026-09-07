@@ -1,0 +1,22 @@
+2026-09-05 09:11:14.846 [INFO ] WIZARD-NEG :: negative & edge-case suite
+2026-09-05 09:11:19.587 [INFO ] WIZ-13-N :: start
+2026-09-05 09:11:19.589 [INFO ] login :: navigating to /login
+2026-09-05 09:11:23.479 [INFO ] login :: ok
+2026-09-05 09:11:54.603 [WARN ] WATCHDOG :: UF-WIZ-13-N: Whitespace-only company name does not advance exceeded 35s — closing context
+2026-09-05 09:11:55.988 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-05 09:11:57.259 [INFO ] WIZ-05-N :: start
+2026-09-05 09:11:57.262 [INFO ] login :: navigating to /login
+2026-09-05 09:12:07.151 [INFO ] login :: ok
+2026-09-05 09:12:32.274 [WARN ] WATCHDOG :: UF-WIZ-05-N: 5000-char paste in company name does not crash exceeded 35s — closing context
+2026-09-05 09:12:33.395 [WARN ] safeRun :: server-induced failure, skipping: locator.fill: Target page, context or browser has been closed
+2026-09-05 09:12:34.560 [INFO ] WIZ-06-N :: start
+2026-09-05 09:12:34.562 [INFO ] login :: navigating to /login
+2026-09-05 09:12:55.634 [WARN ] safeLogin :: login timed out: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://187.77.79.40.nip.io/login
+2026-09-05 09:12:59.506 [INFO ] WIZ-12-N :: start
+2026-09-05 09:12:59.509 [INFO ] login :: navigating to /login
+2026-09-05 09:13:20.569 [WARN ] safeLogin :: login timed out: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://187.77.79.40.nip.io/login
+2026-09-05 09:13:24.462 [INFO ] WIZ-15-N :: start
+2026-09-05 09:13:24.464 [INFO ] login :: navigating to /login
+2026-09-05 09:13:59.464 [WARN ] WATCHDOG :: UF-WIZ-15-N: Page reload after partial fill — form behaviour documented exceeded 35s — closing context
+2026-09-05 09:14:04.567 [INFO ] login :: already authed
+2026-09-05 09:14:04.578 [WARN ] safeRun :: server-induced failure, skipping: page.goto: Target page, context or browser has been closed

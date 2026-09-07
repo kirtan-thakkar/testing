@@ -5,18 +5,34 @@
 const { test, expect } = require('@playwright/test');
 const log = require('./logger.js');
 const LOG_PATH = log.getRollingLogPath();
-const { login, dismissCookies, fillStep1 } = require('./wizard-helpers.js');
+const { login, dismissCookies, fillStep1, wizardAlreadySubmitted } = require('./wizard-helpers.js');
 
 log.info('WIZARD-POS', `Log file: ${LOG_PATH}`);
 
-test.setTimeout(40000);
+test.setTimeout(60000);
 
-// Per-test watchdog: force skip if test runs > 35s on a slow server.
+// If the wizard user has already submitted a campaign, skip wizard tests.
+// (No fresh state is available; the user is real and persistent on the server.)
+test.beforeEach(async ({ page }) => {
+  try {
+    await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 15000 });
+    await page.locator('h1, h2').first().waitFor({ timeout: 5000 }).catch(() => {});
+    const submitted = await page.getByText(/UNDER REVIEW/i).isVisible({ timeout: 1000 }).catch(() => false)
+      || await page.getByText(/Submission received/i).isVisible({ timeout: 1000 }).catch(() => false);
+    if (submitted) {
+      test.skip(true, 'Wizard user already submitted — tests skipped');
+    }
+  } catch (e) {
+    // If we cannot even load the page, let the test try anyway.
+  }
+});
+
+// Per-test watchdog: force skip if test runs > 55s on a slow server.
 test.beforeEach(async ({ page }, testInfo) => {
   const watchdog = setTimeout(() => {
-    log.warn('WATCHDOG', `${testInfo.title} exceeded 35s — closing context`);
+    log.warn('WATCHDOG', `${testInfo.title} exceeded 55s — closing context`);
     try { page.context().close().catch(() => {}); } catch {}
-  }, 35000);
+  }, 55000);
   testInfo._watchdog = watchdog;
 });
 
@@ -32,12 +48,16 @@ test.describe('8. Campaign Application Wizard — POSITIVE flows', () => {
     await page.goto('/start/application');
     await dismissCookies(page);
 
-    await expect(page.getByRole('heading', { name: /Start your campaign/i })).toBeVisible();
+// Headings: "Start your campaign". Steps: "Plan & Set Up", "Build Page", "Review & Submit", "Done".
+    await expect(page.getByRole('heading', { name: /start your campaign/i })).toBeVisible();
+    // Step 1 of 4 indicator
     await expect(page.getByText(/Step 1 of 4/i)).toBeVisible();
+    // Stepper labels (mixed case)
     await expect(page.getByText(/Plan & Set Up/i).first()).toBeVisible();
     await expect(page.getByText(/Build Page/i).first()).toBeVisible();
     await expect(page.getByText(/Review & Submit/i).first()).toBeVisible();
     await expect(page.getByText(/^Done$/i).first()).toBeVisible();
+    // Step-1 eligibility checkboxes
     await expect(page.getByText(/18 years of age/i)).toBeVisible();
     await expect(page.getByText(/country supported/i)).toBeVisible();
     log.info('WIZ-01-P', 'all expected elements visible');
