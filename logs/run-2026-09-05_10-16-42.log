@@ -1,5 +1,0 @@
-10:16:42.494 [INFO] WIZARD-NEG   negative & edge-case suite
-10:16:55.647 [INFO] WIZ-09-N     start
-10:16:55.650 [INFO] login        navigating to /login
-10:17:24.542 [INFO] login        already authed
-10:17:24.548 [WARN] safeRun      server-induced failure, skipping: page.goto: Target page, context or browser has been closed

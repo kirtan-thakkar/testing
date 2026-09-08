@@ -1,5 +1,0 @@
-2026-09-05 09:27:34.863 [INFO ] UP-01-P :: start
-2026-09-05 09:27:34.868 [INFO ] login :: navigating to /login
-2026-09-05 09:27:46.891 [INFO ] login :: ok
-2026-09-05 09:27:47.914 [INFO ] cookies :: dismissed
-2026-09-05 09:28:19.872 [WARN ] WATCHDOG :: UF-UP-01-P: Cover image upload (small JPG) succeeds exceeded 45s — closing context

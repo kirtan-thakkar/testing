@@ -1,5 +1,0 @@
-2026-09-05 09:22:35.241 [INFO ] UP-08-N :: start
-2026-09-05 09:22:35.244 [INFO ] login :: navigating to /login
-2026-09-05 09:22:39.128 [INFO ] login :: ok
-2026-09-05 09:22:40.168 [INFO ] cookies :: dismissed
-2026-09-05 09:23:20.254 [WARN ] WATCHDOG :: UF-UP-08-N: Audio file (mp3) is rejected as non-image/non-video exceeded 45s — closing context

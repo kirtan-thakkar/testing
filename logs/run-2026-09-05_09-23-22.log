@@ -1,5 +1,0 @@
-2026-09-05 09:23:26.951 [INFO ] UP-09-N :: start
-2026-09-05 09:23:26.954 [INFO ] login :: navigating to /login
-2026-09-05 09:23:34.191 [INFO ] login :: ok
-2026-09-05 09:23:35.402 [INFO ] cookies :: dismissed
-2026-09-05 09:24:11.958 [WARN ] WATCHDOG :: UF-UP-09-N: Continue button is disabled with no cover image exceeded 45s — closing context

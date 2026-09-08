@@ -1,8 +1,0 @@
-2026-09-05 09:28:26.392 [INFO ] UP-02-P :: start
-2026-09-05 09:28:26.395 [INFO ] login :: navigating to /login
-2026-09-05 09:28:47.496 [WARN ] safeLogin :: login timeout: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://187.77.79.40.nip.io/login
-2026-09-05 09:28:51.131 [INFO ] UP-03-P :: start
-2026-09-05 09:28:51.133 [INFO ] login :: navigating to /login
-2026-09-05 09:28:54.957 [INFO ] login :: ok
-2026-09-05 09:28:55.988 [INFO ] cookies :: dismissed
-2026-09-05 09:29:36.144 [WARN ] WATCHDOG :: UF-UP-03-P: Gallery upload of 12 images (the documented max) is accepted (one at a time) exceeded 45s — closing context

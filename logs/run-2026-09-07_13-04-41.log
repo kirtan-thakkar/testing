@@ -1,8 +1,0 @@
-13:04:54.718 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
-13:04:54.745 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 10 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-07_13-04-41.log
-13:04:55.386 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
-13:05:01.637 [INFO] login        already authed (via /dashboard)
-13:05:13.524 [INFO] WIZ-01-P     start
-13:05:13.692 [INFO] login        already authed (via /dashboard)
-13:06:00.093 [FAIL] UF-WIZ-01-P: Wizard page renders step 1 with all required fields 63.16s — [31mTest timeout of 60000ms exceeded.[39m
-13:06:01.018 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log

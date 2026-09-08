@@ -1,5 +1,0 @@
-12:00:20.881 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
-12:00:29.936 [INFO] WIZ-01-P     start
-12:00:29.939 [INFO] login        navigating to /login
-12:00:30.132 [INFO] login        already authed (via /dashboard)
-12:00:30.396 [INFO] cookies      dismissed

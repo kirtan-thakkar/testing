@@ -1,0 +1,19 @@
+13:47:07.442 [INFO] UP-14-P      start
+13:47:07.445 [INFO] login        navigating to /login
+13:47:08.515 [INFO] login        already authed (via /dashboard)
+13:47:10.205 [INFO] cookies      dismissed
+13:48:57.450 [WARN] WATCHDOG     UF-UP-14-P: Parallel upload of 3 cover images (race condition test) exceeded 45s — closing context
+13:49:00.501 [FAIL] UF-UP-14-P: Parallel upload of 3 cover images (race condition test) 116.27s — Error: locator.check: Target page, context or browser has been closed
+
+========================================================================
+  RUN SUMMARY  2026-09-08_13-46-46
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 133.9s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-08_13-46-46.log
+========================================================================
+13:49:00.523 [INFO] RUN-END      Status: failed | Duration: 133.9s
+13:49:00.525 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-08_13-46-46.html

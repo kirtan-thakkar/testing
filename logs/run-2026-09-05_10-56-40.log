@@ -1,5 +1,0 @@
-10:56:40.345 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
-10:56:45.985 [INFO] WIZ-01-P     start
-10:56:45.987 [INFO] login        navigating to /login
-10:57:20.991 [WARN] WATCHDOG     UF-WIZ-01-P: Wizard page renders step 1 with all required fields exceeded 55s — closing context
-10:57:23.198 [INFO] login        already authed

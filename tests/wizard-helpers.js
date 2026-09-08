@@ -1,8 +1,4 @@
-/**
- * Shared helpers for wizard-application.positive.spec.js and
- * wizard-application.negative.spec.js.
- */
-const log = require('./logger.js');
+import log from './logger.js';
 
 async function login(page) {
   log.info('login', 'navigating to /login');
@@ -22,8 +18,8 @@ async function login(page) {
     log.info('login', 'already authed (form not shown)');
     return;
   }
-  await page.getByRole('textbox', { name: 'Email' }).fill('kirtanthakkar6@gmail.com');
-  await page.getByRole('textbox', { name: 'Password' }).fill('czBfHbCiMUNpqa4');
+  await page.getByRole('textbox', { name: 'Email' }).fill('dummy@gmail.com');
+  await page.getByRole('textbox', { name: 'Password' }).fill('Puffyin@69');
   await page.getByRole('button', { name: 'Log In' }).click();
   await page.waitForURL(u => !u.toString().includes('/login'), {
     timeout: 20000, waitUntil: 'domcontentloaded',
@@ -71,6 +67,21 @@ async function wizardAlreadySubmitted(page) {
 }
 
 async function fillStep1(page, overrides = {}) {
+  // Ensure the wizard form is reachable via the user's entry path:
+  // /start -> click [Start Application] -> /start/application
+  try {
+    await page.goto('/start', { waitUntil: 'domcontentloaded', timeout: 15000 });
+    const startAppBtn = page.getByRole('link', { name: /Start Application/i }).first();
+    if (await startAppBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
+      await startAppBtn.click();
+      await page.waitForURL(/start\/application/, { timeout: 15000 });
+    } else {
+      // Fallback: already on /start/application or redirected
+      await page.goto('/start/application', { timeout: 15000 });
+    }
+  } catch (e) {
+    await page.goto('/start/application', { timeout: 15000 });
+  }
   // The page may have just been navigated to /start/application but the
   // wizard UI hasn't rendered yet. Wait for the h1 first (with a short
   // timeout — if it's not there, give up fast and let the test skip).
@@ -81,10 +92,10 @@ async function fillStep1(page, overrides = {}) {
     return;
   }
   if (overrides.age18 !== false) {
-    await page.getByRole('checkbox', { name: /18 years/i }).check();
+    await page.getByRole("checkbox", { name: /18 years of age/i }).check();
   }
   if (overrides.countrySupported !== false) {
-    await page.getByRole('checkbox', { name: /country supported/i }).check();
+    await page.getByRole('checkbox', { name: /country|supported/i }).first().check();
   }
   await page.getByRole('combobox', { name: /^Primary Category/i })
     .selectOption({ label: overrides.category || 'Technology' });

@@ -1,6 +1,0 @@
-10:49:54.826 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
-10:50:00.080 [INFO] WIZ-03-P     start
-10:50:00.082 [INFO] login        navigating to /login
-10:50:03.393 [INFO] login        ok
-10:50:04.245 [INFO] cookies      dismissed
-10:50:35.090 [WARN] WATCHDOG     UF-WIZ-03-P: PAN field shows correct placeholder exceeded 35s — closing context

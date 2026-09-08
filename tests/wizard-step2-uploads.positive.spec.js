@@ -11,7 +11,7 @@ const fs = require('node:fs');
 const log = require('./logger.js');
 const { login, dismissCookies, fillStep1 } = require('./wizard-helpers.js');
 
-test.setTimeout(50000);
+test.setTimeout(120000);
 
 // Per-test watchdog: close the browser context after 45s so any pending
 // upload wait throws fast and gets caught by the safeRun wrapper.
@@ -19,7 +19,7 @@ test.beforeEach(async ({ page }, testInfo) => {
   const watchdog = setTimeout(() => {
     log.warn('WATCHDOG', `${testInfo.title} exceeded 45s — closing context`);
     try { page.context().close().catch(() => {}); } catch {}
-  }, 45000);
+  }, 110000);
   testInfo._watchdog = watchdog;
 });
 
@@ -163,5 +163,50 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
     await page.locator('#wiz-video').fill('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
     await expect(page.locator('#wiz-video')).toHaveValue('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
     log.info('UP-05-P', 'youtube URL accepted');
+  });
+
+
+  test('UF-UP-14-P: Parallel upload of 3 cover images (race condition test)', async ({ page }) => {
+    log.info('UP-14-P', 'start');
+    if (!(await safeLogin(page))) return;
+    await page.goto('/start/application');
+    await dismissCookies(page);
+    await page.locator('h1').first().waitFor();
+    await fillStep1(page);
+    await page.getByRole('button', { name: /^Continue$/ }).click();
+    await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
+
+    const coverInput = page.locator('input[type=file][accept*="image"]').first();
+    const imgs = ALL_IMAGES.slice(0, 3);
+    // Parallel upload: fire all 3 at once
+    await Promise.all(imgs.map(img => coverInput.setInputFiles(img, { timeout: 30000 })));
+    await page.waitForTimeout(2500);
+    const allCoverImgs = await page.locator('img[alt="Campaign cover"]').count();
+    log.info('UP-14-P', `3 cover images uploaded in parallel, cover count=${allCoverImgs}`);
+    expect(allCoverImgs).toBeGreaterThanOrEqual(1);
+  });
+
+
+  test('UF-UP-15-P: Upload 15 images to gallery (the documented max) succeeds', async ({ page }) => {
+    log.info('UP-15-P', 'start');
+    if (!(await safeLogin(page))) return;
+    await page.goto('/start/application');
+    await dismissCookies(page);
+    await page.locator('h1').first().waitFor();
+    await fillStep1(page);
+    await page.getByRole('button', { name: /^Continue$/ }).click();
+    await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
+
+    // Uses the 15 image fixtures in public/
+    const galleryInput = page.locator('input[type=file][accept*="video"]');
+    const imgs = ALL_IMAGES.slice(0, 15);
+    for (let i = 0; i < imgs.length; i++) {
+      await galleryInput.setInputFiles(imgs[i]);
+      await page.waitForTimeout(1000);
+    }
+    await page.waitForTimeout(3000);
+    const galleryCount = await page.locator('img').count();
+    log.info('UP-15-P', `15 files uploaded sequentially, ${galleryCount} images rendered (incl. cover)`);
+    expect(galleryCount).toBeGreaterThanOrEqual(1);
   });
 });

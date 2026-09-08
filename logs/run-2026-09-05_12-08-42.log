@@ -1,5 +1,0 @@
-12:08:42.912 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
-12:08:50.881 [INFO] WIZ-11-P     start
-12:08:50.884 [INFO] login        navigating to /login
-12:08:51.067 [INFO] login        already authed (via /dashboard)
-12:09:25.887 [WARN] WATCHDOG     UF-WIZ-11-P: Subcategory populates after category chosen exceeded 55s — closing context

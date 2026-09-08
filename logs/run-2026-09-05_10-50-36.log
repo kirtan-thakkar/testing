@@ -1,6 +1,0 @@
-10:50:36.943 [INFO] WIZARD-POS   Log file: C:\ideakicks\testing\logs\test-execution.log
-10:50:42.269 [INFO] WIZ-04-P     start
-10:50:42.272 [INFO] login        navigating to /login
-10:50:45.705 [INFO] login        ok
-10:50:46.593 [INFO] cookies      dismissed
-10:51:17.269 [WARN] WATCHDOG     UF-WIZ-04-P: Step 1 happy path advances to step 2 exceeded 35s — closing context

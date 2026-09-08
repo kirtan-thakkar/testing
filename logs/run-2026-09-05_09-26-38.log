@@ -1,5 +1,0 @@
-2026-09-05 09:26:42.921 [INFO ] UP-13-N :: start
-2026-09-05 09:26:42.924 [INFO ] login :: navigating to /login
-2026-09-05 09:27:03.529 [INFO ] login :: ok
-2026-09-05 09:27:04.095 [INFO ] cookies :: dismissed
-2026-09-05 09:27:27.927 [WARN ] WATCHDOG :: UF-UP-13-N: Funding goal with negative number is rejected by input exceeded 45s — closing context

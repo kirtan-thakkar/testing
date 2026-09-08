@@ -1,6 +1,0 @@
-2026-09-05 09:21:41.762 [INFO ] UP-06-N :: start
-2026-09-05 09:21:43.081 [INFO ] UP-07-N :: start
-2026-09-05 09:21:43.084 [INFO ] login :: navigating to /login
-2026-09-05 09:21:57.716 [INFO ] login :: ok
-2026-09-05 09:21:58.728 [INFO ] cookies :: dismissed
-2026-09-05 09:22:28.094 [WARN ] WATCHDOG :: UF-UP-07-N: Video >100MB is rejected (size validation) exceeded 45s — closing context

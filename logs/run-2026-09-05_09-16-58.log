@@ -1,6 +1,0 @@
-2026-09-05 09:16:58.522 [INFO ] WIZARD-POS :: Log file: C:\ideakicks\testing\logs\test-execution.log
-2026-09-05 09:17:03.237 [INFO ] WIZ-02-P :: start
-2026-09-05 09:17:03.240 [INFO ] login :: navigating to /login
-2026-09-05 09:17:08.422 [INFO ] login :: ok
-2026-09-05 09:17:09.521 [INFO ] cookies :: dismissed
-2026-09-05 09:17:38.248 [WARN ] WATCHDOG :: UF-WIZ-02-P: Continue is enabled when all required fields are filled exceeded 35s — closing context
