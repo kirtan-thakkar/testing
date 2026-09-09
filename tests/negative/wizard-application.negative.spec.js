@@ -104,7 +104,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
       await dismissCookies(page);
       await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
       await fillStep1(page, { age18: false, countrySupported: false });
-      await page.getByRole('button', { name: /^Continue$/ }).click();
+      await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
       await page.waitForTimeout(2500);
       const onStep2 = await page.getByText(/Step 2 of 4/i).isVisible().catch(() => false);
       if (onStep2) {
@@ -124,7 +124,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
       await dismissCookies(page);
       await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
       await page.getByRole('textbox', { name: /^Company Name/i }).fill('     ');
-      await page.getByRole('button', { name: /^Continue$/ }).click();
+      await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
       await page.waitForTimeout(2000);
       const onStep2 = await page.getByText(/Step 2 of 4/i).isVisible().catch(() => false);
       log.info('WIZ-13-N', `whitespace-only → onStep2=${onStep2} (expected false)`);
@@ -209,7 +209,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
       await dismissCookies(page);
       await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
       await fillStep1(page, { companyName: 'BackNavTest' });
-      await page.getByRole('button', { name: /^Continue$/ }).click();
+      await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
       await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 60000 });
       await page.goBack({ waitUntil: 'domcontentloaded' });
       await page.locator('h1').first().waitFor();
@@ -226,7 +226,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
       await dismissCookies(page);
       await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
       await fillStep1(page);
-      const btn = page.getByRole('button', { name: /^Continue$/ });
+      const btn = page.getByRole('button', { name: /^Continue/i });
       await Promise.all([btn.click(), btn.click().catch(() => {})]);
       await page.waitForTimeout(2500);
       const onStep3 = await page.getByText(/Step 3 of 4/i).isVisible().catch(() => false);
@@ -291,7 +291,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
       await dismissCookies(page);
       await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
       await fillStep1(page);
-      await page.getByRole('button', { name: /^Continue$/ }).click();
+      await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
       await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 60000 });
       const fileInputs = page.locator('input[type="file"]');
       const drops = page.locator('[class*="drop" i], [data-testid*="upload" i]');
@@ -310,11 +310,11 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
       await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
       const MY_COMPANY = 'ReviewMirrorTest-' + Date.now();
       await fillStep1(page, { companyName: MY_COMPANY });
-      await page.getByRole('button', { name: /^Continue$/ }).click();
+      await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
       for (let i = 0; i < 3; i++) {
         const on3 = await page.getByText(/Step 3 of 4/i).isVisible().catch(() => false);
         if (on3) break;
-        const continueBtn = page.getByRole('button', { name: /^Continue$/ });
+        const continueBtn = page.getByRole('button', { name: /^Continue/i });
         if (!(await continueBtn.isEnabled().catch(() => false))) {
           test.skip(true, 'Step 2 has required input not satisfiable without a file');
           return;

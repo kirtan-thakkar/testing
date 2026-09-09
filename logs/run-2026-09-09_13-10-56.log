@@ -1,0 +1,18 @@
+13:11:08.479 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-09_13-10-56.log
+13:11:13.666 [INFO] UP-14-P      start
+13:11:13.669 [INFO] login        navigating to /login
+13:11:14.677 [INFO] login        already authed (via /dashboard)
+13:11:19.330 [FAIL] UF-UP-14-P: Parallel upload of 3 cover images (race condition test) 8.88s — Error: locator.check: Clicking the checkbox did not change its state
+
+========================================================================
+  RUN SUMMARY  2026-09-09_13-10-56
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 23.2s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-09_13-10-56.log
+========================================================================
+13:11:19.356 [INFO] RUN-END      Status: failed | Duration: 23.2s
+13:11:19.359 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-09_13-10-56.html

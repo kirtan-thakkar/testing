@@ -192,3 +192,148 @@ You may need to escape symbols like "$" or "*" and quote the arguments.
 ========================================================================
 12:55:24.422 [INFO] RUN-END      Status: failed | Duration: 57.0s
 12:55:24.426 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-09_12-54-27.html
+13:11:08.479 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-09_13-10-56.log
+13:11:13.666 [INFO] UP-14-P      start
+13:11:13.669 [INFO] login        navigating to /login
+13:11:14.677 [INFO] login        already authed (via /dashboard)
+13:11:19.330 [FAIL] UF-UP-14-P: Parallel upload of 3 cover images (race condition test) 8.88s — Error: locator.check: Clicking the checkbox did not change its state
+
+========================================================================
+  RUN SUMMARY  2026-09-09_13-10-56
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 23.2s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-09_13-10-56.log
+========================================================================
+13:11:19.356 [INFO] RUN-END      Status: failed | Duration: 23.2s
+13:11:19.359 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-09_13-10-56.html
+13:13:33.293 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-09_13-13-17.log
+13:13:38.295 [INFO] UP-14-P      start
+13:13:38.297 [INFO] login        navigating to /login
+13:13:39.483 [INFO] login        already authed (via /dashboard)
+13:15:28.301 [WARN] WATCHDOG     UF-UP-14-P: Parallel upload of 3 cover images (race condition test) exceeded 45s — closing context
+13:15:31.651 [FAIL] UF-UP-14-P: Parallel upload of 3 cover images (race condition test) 116.54s — Error: locator.fill: Target page, context or browser has been closed
+
+========================================================================
+  RUN SUMMARY  2026-09-09_13-13-17
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 134.3s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-09_13-13-17.log
+========================================================================
+13:15:31.675 [INFO] RUN-END      Status: failed | Duration: 134.3s
+13:15:31.677 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-09_13-13-17.html
+13:45:27.897 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-09_13-45-08.log
+13:45:32.798 [INFO] UP-14-P      start
+13:45:32.801 [INFO] login        navigating to /login
+13:45:33.624 [INFO] login        already authed (via /dashboard)
+13:45:37.134 [INFO] cookies      dismissed
+13:46:08.529 [FAIL] UF-UP-14-P: Parallel upload of 3 cover images (race condition test) 38.80s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+========================================================================
+  RUN SUMMARY  2026-09-09_13-45-08
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 60.2s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-09_13-45-08.log
+========================================================================
+13:46:08.553 [INFO] RUN-END      Status: failed | Duration: 60.2s
+13:46:08.555 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-09_13-45-08.html
+13:50:12.754 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-09_13-49-57.log
+13:50:17.786 [INFO] UP-14-P      start
+13:50:17.789 [INFO] login        navigating to /login
+13:50:18.759 [INFO] login        already authed (via /dashboard)
+13:50:23.137 [INFO] cookies      dismissed
+13:50:56.293 [FAIL] UF-UP-14-P: Parallel upload of 3 cover images (race condition test) 41.72s — TimeoutError: locator.setInputFiles: Timeout 30000ms exceeded.
+
+========================================================================
+  RUN SUMMARY  2026-09-09_13-49-57
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 59.2s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-09_13-49-57.log
+========================================================================
+13:50:56.320 [INFO] RUN-END      Status: failed | Duration: 59.1s
+13:50:56.323 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-09_13-49-57.html
+13:59:21.162 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-09_13-59-00.log
+13:59:26.350 [INFO] UP-14-P      start
+13:59:26.353 [INFO] login        navigating to /login
+13:59:27.234 [INFO] login        already authed (via /dashboard)
+13:59:30.643 [INFO] cookies      dismissed
+13:59:35.199 [INFO] UP-14-P      3 cover images uploaded in parallel, cover count=1
+13:59:35.417 [PASS] UF-UP-14-P: Parallel upload of 3 cover images (race condition test) 12.44s
+
+========================================================================
+  RUN SUMMARY  2026-09-09_13-59-00
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 34.8s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-09_13-59-00.log
+========================================================================
+13:59:35.507 [INFO] RUN-END      Status: passed | Duration: 34.8s
+13:59:35.511 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-09_13-59-00.html
+14:04:23.207 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 7 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-09_14-04-05.log
+14:04:28.634 [INFO] UP-01-P      start
+14:04:28.637 [INFO] login        navigating to /login
+14:04:29.436 [INFO] login        already authed (via /dashboard)
+14:04:34.787 [INFO] cookies      dismissed
+14:04:36.831 [INFO] UP-01-P      cover image rendered
+14:04:36.992 [PASS] UF-UP-01-P: Cover image upload (small JPG) succeeds 11.86s
+14:04:38.150 [INFO] UP-02-P      start
+14:04:38.152 [INFO] login        navigating to /login
+14:04:38.985 [INFO] login        already authed (via /dashboard)
+14:04:55.813 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+14:04:56.460 [FAIL] UF-UP-02-P: Gallery upload of 3 small images succeeds (one at a time) 19.40s — Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.
+14:05:01.534 [INFO] UP-03-P      start
+14:05:01.536 [INFO] login        navigating to /login
+14:05:02.334 [INFO] login        already authed (via /dashboard)
+14:05:19.213 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+14:05:19.870 [FAIL] UF-UP-03-P: Gallery upload of 12 images (the documented max) is accepted (one at a time) 21.54s — Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.
+14:05:24.850 [INFO] UP-04-P      start
+14:05:24.853 [INFO] login        navigating to /login
+14:05:25.612 [INFO] login        already authed (via /dashboard)
+14:05:42.545 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+14:05:43.174 [FAIL] UF-UP-04-P: Small video (<100MB) upload succeeds 21.42s — Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.
+14:05:48.230 [INFO] UP-05-P      start
+14:05:48.232 [INFO] login        navigating to /login
+14:05:49.041 [INFO] login        already authed (via /dashboard)
+14:06:05.903 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+14:06:06.517 [FAIL] UF-UP-05-P: Pitch video URL accepts a YouTube link 21.49s — Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.
+14:06:11.524 [INFO] UP-14-P      start
+14:06:11.526 [INFO] login        navigating to /login
+14:06:12.297 [INFO] login        already authed (via /dashboard)
+14:06:29.110 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+14:06:29.749 [FAIL] UF-UP-14-P: Parallel upload of 3 cover images (race condition test) 21.38s — Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.
+14:06:34.676 [INFO] UP-15-P      start
+14:06:34.679 [INFO] login        navigating to /login
+14:06:35.522 [INFO] login        already authed (via /dashboard)
+14:06:53.831 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+14:06:54.421 [FAIL] UF-UP-15-P: Upload 15 images to gallery (the documented max) succeeds 22.85s — Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.
+
+========================================================================
+  RUN SUMMARY  2026-09-09_14-04-05
+========================================================================
+  Total    : 7
+  Passed   : 1  (14.3%)
+  Failed   : 6
+  Skipped  : 0
+  Duration : 169.1s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-09_14-04-05.log
+========================================================================
+14:06:54.443 [INFO] RUN-END      Status: failed | Duration: 169.1s
+14:06:54.445 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-09_14-04-05.html

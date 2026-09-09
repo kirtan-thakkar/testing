@@ -1,0 +1,19 @@
+13:50:12.754 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-09_13-49-57.log
+13:50:17.786 [INFO] UP-14-P      start
+13:50:17.789 [INFO] login        navigating to /login
+13:50:18.759 [INFO] login        already authed (via /dashboard)
+13:50:23.137 [INFO] cookies      dismissed
+13:50:56.293 [FAIL] UF-UP-14-P: Parallel upload of 3 cover images (race condition test) 41.72s — TimeoutError: locator.setInputFiles: Timeout 30000ms exceeded.
+
+========================================================================
+  RUN SUMMARY  2026-09-09_13-49-57
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 59.2s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-09_13-49-57.log
+========================================================================
+13:50:56.320 [INFO] RUN-END      Status: failed | Duration: 59.1s
+13:50:56.323 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-09_13-49-57.html

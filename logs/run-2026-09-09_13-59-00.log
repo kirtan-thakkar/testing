@@ -1,0 +1,20 @@
+13:59:21.162 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-09_13-59-00.log
+13:59:26.350 [INFO] UP-14-P      start
+13:59:26.353 [INFO] login        navigating to /login
+13:59:27.234 [INFO] login        already authed (via /dashboard)
+13:59:30.643 [INFO] cookies      dismissed
+13:59:35.199 [INFO] UP-14-P      3 cover images uploaded in parallel, cover count=1
+13:59:35.417 [PASS] UF-UP-14-P: Parallel upload of 3 cover images (race condition test) 12.44s
+
+========================================================================
+  RUN SUMMARY  2026-09-09_13-59-00
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 34.8s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-09_13-59-00.log
+========================================================================
+13:59:35.507 [INFO] RUN-END      Status: passed | Duration: 34.8s
+13:59:35.511 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-09_13-59-00.html

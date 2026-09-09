@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>IdeaKicks Test Report</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:980px;margin:24px auto;padding:0 16px;color:#222}
+h1{font-size:20px;border-bottom:1px solid #ddd;padding-bottom:8px}
+h2{font-size:16px;margin-top:24px}
+.pass{color:#1a7f37} .fail{color:#cf222e} .skip{color:#9a6700}
+.summary{background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;padding:12px;font-family:monospace;white-space:pre-wrap}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{border:1px solid #d0d7de;padding:6px 8px;text-align:left;vertical-align:top}
+th{background:#f6f8fa}
+tr.fail td{background:#ffebe9} tr.skip td{background:#fff8c5} tr.pass td{background:#dafbe1}
+</style></head><body>
+<h1>IdeaKicks Test Report — 2026-09-09_14-04-05</h1>
+<div id="summary" class="summary">Run: 2026-09-09_14-04-05
+Total: 7  |  Passed: 1 (14.3%)  |  Failed: 6  |  Skipped: 0
+Duration: 169.1s
+Log: C:\ideakicks\testing\logs\run-2026-09-09_14-04-05.log</div>
+<h2>Results</h2><table><thead><tr><th>#</th><th>Test</th><th>Status</th><th>Duration</th><th>Error</th></tr></thead><tbody id="rows"><tr class="pass"><td>1</td><td>project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-UP-01-P: Cover image upload (small JPG) succeeds</td><td>passed</td><td>11.86s</td><td></td></tr><tr class="fail"><td>2</td><td>project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-UP-02-P: Gallery upload of 3 small images succeeds (one at a time)</td><td>failed</td><td>19.40s</td><td>Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.</td></tr><tr class="fail"><td>3</td><td>project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-UP-03-P: Gallery upload of 12 images (the documented max) is accepted (one at a time)</td><td>failed</td><td>21.54s</td><td>Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.</td></tr><tr class="fail"><td>4</td><td>project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-UP-04-P: Small video (<100MB) upload succeeds</td><td>failed</td><td>21.42s</td><td>Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.</td></tr><tr class="fail"><td>5</td><td>project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-UP-05-P: Pitch video URL accepts a YouTube link</td><td>failed</td><td>21.49s</td><td>Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.</td></tr><tr class="fail"><td>6</td><td>project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-UP-14-P: Parallel upload of 3 cover images (race condition test)</td><td>failed</td><td>21.38s</td><td>Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.</td></tr><tr class="fail"><td>7</td><td>project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-UP-15-P: Upload 15 images to gallery (the documented max) succeeds</td><td>failed</td><td>22.85s</td><td>Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.</td></tr></tbody></table></body></html>

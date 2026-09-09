@@ -12,7 +12,7 @@ module.exports = async config => {
 
     await page.goto('https://187.77.79.40.nip.io/login', { waitUntil: 'domcontentloaded', timeout: 60000 });
     await page.locator('input[name="email"]').fill('dummy@gmail.com');
-    await page.locator('input[name="password"]').fill('Puffyin@69');
+    await page.locator('input[name="password"]').fill('Puffyin@7410');
     await page.getByRole('button', { name: 'Log In' }).click();
 
     await page.waitForURL(u => !u.toString().includes('/login'), { timeout: 20000 });

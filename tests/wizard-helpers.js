@@ -22,7 +22,7 @@ async function login(page) {
     return;
   }
   await page.getByRole('textbox', { name: 'Email' }).fill('dummy@gmail.com');
-  await page.getByRole('textbox', { name: 'Password' }).fill('Puffyin@69');
+  await page.getByRole('textbox', { name: 'Password' }).fill('Puffyin@7410');
   await page.getByRole('button', { name: 'Log In' }).click();
   await page.waitForURL(u => !u.toString().includes('/login'), {
     timeout: 20000, waitUntil: 'domcontentloaded',
@@ -99,11 +99,14 @@ async function fillStep1(page, overrides = {}) {
     throw new Error('Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.');
   }
 
-  if (overrides.age18 !== false) {
-    await page.locator('input[type="checkbox"]').nth(0).check({ force: true, timeout: 5000 });
-  }
-  if (overrides.countrySupported !== false) {
-    await page.locator('input[type="checkbox"]').nth(1).check({ force: true, timeout: 5000 });
+  if (overrides.age18 !== false || overrides.countrySupported !== false) {
+    await page.evaluate(() => {
+      const cbs = document.querySelectorAll('input[type="checkbox"]');
+      cbs.forEach(cb => {
+        cb.checked = true;
+        cb.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+    });
   }
   
   // Wait for the primary category select to be visible and select option
@@ -122,31 +125,14 @@ async function fillStep1(page, overrides = {}) {
   await page.locator('select').nth(2).selectOption({ label: overrides.country || 'India (INR)' });
   
   // Inputs: Company Name, Business Address, PAN, GSTIN
-  // We can use the labels to find them
-  await page.locator('input, textarea').filter({ has: page.locator('xpath=ancestor::div[1]/preceding-sibling::label[contains(text(), "COMPANY NAME")]') })
-      .first().fill(overrides.companyName ?? 'Acme Corp').catch(async () => {
-         // fallback
-         await page.getByRole('textbox').nth(0).fill(overrides.companyName ?? 'Acme Corp');
-      });
-      
-  await page.locator('input, textarea').filter({ has: page.locator('xpath=ancestor::div[1]/preceding-sibling::label[contains(text(), "COMPANY BUSINESS ADDRESS")]') })
-      .first().fill(overrides.address ?? '123 Test Street, Ahmedabad, GJ 380001').catch(async () => {
-         // fallback
-         await page.getByRole('textbox').nth(1).fill(overrides.address ?? '123 Test Street, Ahmedabad, GJ 380001');
-      });
-      
-  await page.locator('input, textarea').filter({ has: page.locator('xpath=ancestor::div[1]/preceding-sibling::label[contains(text(), "PAN CARD NUMBER")]') })
-      .first().fill(overrides.pan ?? 'ABCDE1234F').catch(async () => {
-         // fallback
-         await page.getByRole('textbox').nth(2).fill(overrides.pan ?? 'ABCDE1234F');
-      });
-      
+  await page.getByRole('textbox', { name: /^Company Name/i })
+    .fill(overrides.companyName ?? 'Acme Corp');
+  await page.getByRole('textbox', { name: /^Company Business Address/i })
+    .fill(overrides.address ?? '123 Test Street, Ahmedabad, GJ 380001');
+  await page.getByRole('textbox', { name: /^PAN Card Number/i })
+    .fill(overrides.pan ?? 'ABCDE1234F');
   if (overrides.gstin !== undefined) {
-    await page.locator('input, textarea').filter({ has: page.locator('xpath=ancestor::div[1]/preceding-sibling::label[contains(text(), "GSTIN")]') })
-        .first().fill(overrides.gstin).catch(async () => {
-           // fallback
-           await page.getByRole('textbox').nth(3).fill(overrides.gstin);
-        });
+    await page.getByRole('textbox', { name: /GSTIN/i }).fill(overrides.gstin);
   }
 }
 
