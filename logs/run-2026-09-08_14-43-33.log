@@ -1,0 +1,19 @@
+14:43:52.027 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-08_14-43-33.log
+14:43:57.472 [INFO] UP-14-P      start
+14:43:57.474 [INFO] login        navigating to /login
+14:43:58.555 [INFO] login        already authed (via /dashboard)
+14:46:08.082 [WARN] WATCHDOG     UF-UP-14-P: Parallel upload of 3 cover images (race condition test) exceeded 45s — closing context
+14:46:16.320 [FAIL] UF-UP-14-P: Parallel upload of 3 cover images (race condition test) 142.21s — [31mTest timeout of 120000ms exceeded.[39m
+
+========================================================================
+  RUN SUMMARY  2026-09-08_14-43-33
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 162.5s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-08_14-43-33.log
+========================================================================
+14:46:16.353 [INFO] RUN-END      Status: failed | Duration: 162.5s
+14:46:16.356 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-08_14-43-33.html

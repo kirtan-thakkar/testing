@@ -2,8 +2,8 @@
  * Admin Content (CMS) — POSITIVE flows.
  */
 const { test, expect } = require('@playwright/test');
-const log = require('./logger.js');
-const { ADMIN_URL, loginAdmin } = require('./admin-helpers.js');
+const log = require('../logger.js');
+const { ADMIN_URL, loginAdmin } = require('../admin-helpers.js');
 
 test.setTimeout(120000);
 

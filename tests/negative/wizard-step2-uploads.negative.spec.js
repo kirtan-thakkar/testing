@@ -5,8 +5,8 @@
 const { test, expect } = require('@playwright/test');
 const path = require('node:path');
 const fs = require('node:fs');
-const log = require('./logger.js');
-const { login, dismissCookies, fillStep1 } = require('./wizard-helpers.js');
+const log = require('../logger.js');
+const { login, dismissCookies, fillStep1 } = require('../wizard-helpers.js');
 
 test.setTimeout(50000);
 
@@ -24,7 +24,7 @@ test.afterEach(async ({}, testInfo) => {
   if (testInfo._watchdog) clearTimeout(testInfo._watchdog);
 });
 
-const PUBLIC_DIR = path.join(__dirname, '..', 'public');
+const PUBLIC_DIR = path.join(__dirname, '..', '..', 'public');
 const BIG_VIDEO = path.join(PUBLIC_DIR, '222.mp4');                            // 237MB > 100MB limit
 const MP3_AUDIO = path.join(PUBLIC_DIR, 'rediskasound-bossa-jazz-instrumental-554529.mp3'); // wrong type
 const IMG_9M    = path.join(PUBLIC_DIR, 'karsten-winegeart-jQcbjj-BrdA-unsplash.jpg');     // 9.4M (close to 10M)
@@ -55,10 +55,8 @@ test.describe('Wizard Step 2 — Media uploads (NEGATIVE / EDGE)', () => {
       return;
     }
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -89,10 +87,8 @@ test.describe('Wizard Step 2 — Media uploads (NEGATIVE / EDGE)', () => {
     log.info('UP-07-N', 'start');
     requireFixture(BIG_VIDEO);
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -117,10 +113,8 @@ test.describe('Wizard Step 2 — Media uploads (NEGATIVE / EDGE)', () => {
     log.info('UP-08-N', 'start');
     requireFixture(MP3_AUDIO);
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -140,10 +134,8 @@ test.describe('Wizard Step 2 — Media uploads (NEGATIVE / EDGE)', () => {
   test('UF-UP-09-N: Continue button is disabled with no cover image', async ({ page }) => {
     log.info('UP-09-N', 'start');
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -165,10 +157,8 @@ test.describe('Wizard Step 2 — Media uploads (NEGATIVE / EDGE)', () => {
   test('UF-UP-10-N: Pitch video URL rejects non-URL string', async ({ page }) => {
     log.info('UP-10-N', 'start');
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -187,10 +177,8 @@ test.describe('Wizard Step 2 — Media uploads (NEGATIVE / EDGE)', () => {
   test('UF-UP-11-N: Story field enforces 30-char minimum (boundary)', async ({ page }) => {
     log.info('UP-11-N', 'start');
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -212,10 +200,8 @@ test.describe('Wizard Step 2 — Media uploads (NEGATIVE / EDGE)', () => {
   test('UF-UP-12-N: Funding goal of 0 is accepted (per UI hint)', async ({ page }) => {
     log.info('UP-12-N', 'start');
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -228,10 +214,8 @@ test.describe('Wizard Step 2 — Media uploads (NEGATIVE / EDGE)', () => {
   test('UF-UP-13-N: Funding goal with negative number is rejected by input', async ({ page }) => {
     log.info('UP-13-N', 'start');
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -245,3 +229,4 @@ test.describe('Wizard Step 2 — Media uploads (NEGATIVE / EDGE)', () => {
     // HTML5 number inputs typically reject negative on submit; we just document.
   });
 });
+

@@ -11,8 +11,8 @@ module.exports = async config => {
     const page = await context.newPage();
 
     await page.goto('https://187.77.79.40.nip.io/login', { waitUntil: 'domcontentloaded', timeout: 60000 });
-    await page.locator('input[name="email"]').fill('kirtanthakkar6@gmail.com');
-    await page.locator('input[name="password"]').fill('czBfHbCiMUNpqa4');
+    await page.locator('input[name="email"]').fill('dummy@gmail.com');
+    await page.locator('input[name="password"]').fill('Puffyin@69');
     await page.getByRole('button', { name: 'Log In' }).click();
 
     await page.waitForURL(u => !u.toString().includes('/login'), { timeout: 20000 });

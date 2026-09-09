@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  playwright-tests:
+    image: mcr.microsoft.com/playwright:v1.44.0-jammy
+    container_name: ideakicks-tests
+    working_dir: /e2e
+    volumes:
+      - .:/e2e
+    command: /bin/sh -c "npm install && npx playwright test"
+    environment:
+      - CI=true

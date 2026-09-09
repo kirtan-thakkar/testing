@@ -8,8 +8,8 @@
  * when the server is healthy.
  */
 const { test, expect } = require('@playwright/test');
-const log = require('./logger.js');
-const { login, dismissCookies, fillStep1, wizardAlreadySubmitted } = require('./wizard-helpers.js');
+const log = require('../logger.js');
+const { login, dismissCookies, fillStep1, wizardAlreadySubmitted } = require('../wizard-helpers.js');
 
 log.info('WIZARD-NEG', 'negative & edge-case suite');
 
@@ -330,3 +330,4 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
     });
   });
 });
+

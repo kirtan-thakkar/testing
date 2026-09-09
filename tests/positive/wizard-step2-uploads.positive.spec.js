@@ -8,8 +8,8 @@
 const { test, expect } = require('@playwright/test');
 const path = require('node:path');
 const fs = require('node:fs');
-const log = require('./logger.js');
-const { login, dismissCookies, fillStep1 } = require('./wizard-helpers.js');
+const log = require('../logger.js');
+const { login, dismissCookies, fillStep1 } = require('../wizard-helpers.js');
 
 test.setTimeout(120000);
 
@@ -27,7 +27,7 @@ test.afterEach(async ({}, testInfo) => {
   if (testInfo._watchdog) clearTimeout(testInfo._watchdog);
 });
 
-const PUBLIC_DIR = path.join(__dirname, '..', 'public');
+const PUBLIC_DIR = path.join(__dirname, '..', '..', 'public');
 
 // Pick fixtures
 const SMALL_VIDEO = path.join(PUBLIC_DIR, 'Recording 2026-03-04 235344.mp4'); // 5.3MB
@@ -68,10 +68,8 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
     log.info('UP-01-P', 'start');
     requireFixture(IMG_SMALL);
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -86,10 +84,8 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
   test('UF-UP-02-P: Gallery upload of 3 small images succeeds (one at a time)', async ({ page }) => {
     log.info('UP-02-P', 'start');
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -110,10 +106,8 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
   test('UF-UP-03-P: Gallery upload of 12 images (the documented max) is accepted (one at a time)', async ({ page }) => {
     log.info('UP-03-P', 'start');
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -134,10 +128,8 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
     log.info('UP-04-P', 'start');
     requireFixture(SMALL_VIDEO);
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -154,10 +146,8 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
   test('UF-UP-05-P: Pitch video URL accepts a YouTube link', async ({ page }) => {
     log.info('UP-05-P', 'start');
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
     await page.locator('#wiz-video').fill('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
@@ -169,10 +159,8 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
   test('UF-UP-14-P: Parallel upload of 3 cover images (race condition test)', async ({ page }) => {
     log.info('UP-14-P', 'start');
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -190,10 +178,8 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
   test('UF-UP-15-P: Upload 15 images to gallery (the documented max) succeeds', async ({ page }) => {
     log.info('UP-15-P', 'start');
     if (!(await safeLogin(page))) return;
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
 
@@ -210,3 +196,4 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
     expect(galleryCount).toBeGreaterThanOrEqual(1);
   });
 });
+

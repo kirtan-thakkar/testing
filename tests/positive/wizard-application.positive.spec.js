@@ -3,9 +3,9 @@
  * Sibling file: wizard-application.negative.spec.js
  */
 const { test, expect } = require('@playwright/test');
-const log = require('./logger.js');
+const log = require('../logger.js');
 const LOG_PATH = log.getRollingLogPath();
-const { login, dismissCookies, fillStep1, wizardAlreadySubmitted } = require('./wizard-helpers.js');
+const { login, dismissCookies, fillStep1, wizardAlreadySubmitted } = require('../wizard-helpers.js');
 
 log.info('WIZARD-POS', `Log file: ${LOG_PATH}`);
 
@@ -87,10 +87,8 @@ test.describe('8. Campaign Application Wizard — POSITIVE flows', () => {
   test('UF-WIZ-04-P: Step 1 happy path advances to step 2', async ({ page }) => {
     log.info('WIZ-04-P', 'start');
     try { await login(page); } catch (e) { test.skip(true, 'login timeout'); return; }
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
     log.info('WIZ-04-P', 'advanced to step 2');
@@ -99,10 +97,8 @@ test.describe('8. Campaign Application Wizard — POSITIVE flows', () => {
   test('UF-WIZ-07-P: Step 2 Build Page is reachable and has file inputs', async ({ page }) => {
     log.info('WIZ-07-P', 'start');
     try { await login(page); } catch (e) { test.skip(true, 'login timeout'); return; }
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
     await fillStep1(page);
+    await dismissCookies(page);
     await page.getByRole('button', { name: /^Continue$/ }).click();
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 30000 });
     const fileInputs = page.locator('input[type="file"]');
@@ -173,3 +169,4 @@ test.describe('8. Campaign Application Wizard — POSITIVE flows', () => {
     expect(url.pathname).toBe('/start/application');
   });
 });
+

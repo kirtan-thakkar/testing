@@ -1,12 +1,15 @@
-import log from './logger.js';
+const log = require('./logger.js');
+const { expect } = require('@playwright/test');
 
 async function login(page) {
   log.info('login', 'navigating to /login');
   // Fast path: state.json from global-setup should already have us authed.
   try {
     await page.goto('/dashboard', { waitUntil: 'domcontentloaded', timeout: 10000 });
-    log.info('login', 'already authed (via /dashboard)');
-    return;
+    if (!page.url().includes('/login')) {
+      log.info('login', 'already authed (via /dashboard)');
+      return;
+    }
   } catch {
     // Not authed; fall through to manual login.
   }
@@ -71,8 +74,9 @@ async function fillStep1(page, overrides = {}) {
   // /start -> click [Start Application] -> /start/application
   try {
     await page.goto('/start', { waitUntil: 'domcontentloaded', timeout: 15000 });
-    const startAppBtn = page.getByRole('link', { name: /Start Application/i }).first();
-    if (await startAppBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
+    // Use a very flexible locator for the button
+    const startAppBtn = page.locator('button, a').filter({ hasText: /Start Application/i }).first();
+    if (await startAppBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
       await startAppBtn.click();
       await page.waitForURL(/start\/application/, { timeout: 15000 });
     } else {
@@ -82,6 +86,7 @@ async function fillStep1(page, overrides = {}) {
   } catch (e) {
     await page.goto('/start/application', { timeout: 15000 });
   }
+
   // The page may have just been navigated to /start/application but the
   // wizard UI hasn't rendered yet. Wait for the h1 first (with a short
   // timeout — if it's not there, give up fast and let the test skip).
@@ -89,29 +94,59 @@ async function fillStep1(page, overrides = {}) {
     await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 15000 });
   } catch {
     log.warn('fillStep1', 'wizard h1 not visible within 15s — page may not be on /start/application');
-    return;
+    // If we can't find it, don't silently fail. We MUST throw so the test fails, 
+    // since the user explicitly wants to fix the tests instead of skipping them.
+    throw new Error('Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.');
   }
+
   if (overrides.age18 !== false) {
-    await page.getByRole("checkbox", { name: /18 years of age/i }).check();
+    await page.locator('input[type="checkbox"]').nth(0).check({ force: true, timeout: 5000 });
   }
   if (overrides.countrySupported !== false) {
-    await page.getByRole('checkbox', { name: /country|supported/i }).first().check();
+    await page.locator('input[type="checkbox"]').nth(1).check({ force: true, timeout: 5000 });
   }
-  await page.getByRole('combobox', { name: /^Primary Category/i })
-    .selectOption({ label: overrides.category || 'Technology' });
-  const subcat = page.getByRole('combobox', { name: /^Subcategory/i });
-  await subcat.waitFor();
+  
+  // Wait for the primary category select to be visible and select option
+  const primaryCat = page.locator('select').nth(0);
+  await primaryCat.waitFor({ state: 'visible', timeout: 5000 });
+  await primaryCat.selectOption({ label: overrides.category || 'Technology' });
+  
+  // The subcategory select has id="wiz-subcategory" as seen in the user screenshot
+  const subcat = page.locator('#wiz-subcategory');
+  await subcat.waitFor({ state: 'attached', timeout: 5000 });
+  // Wait until it is no longer disabled
+  await expect(subcat).not.toBeDisabled({ timeout: 5000 });
   await subcat.selectOption({ index: overrides.subcategoryIndex ?? 1 });
-  await page.getByRole('combobox', { name: /^Country/i })
-    .selectOption({ label: overrides.country || 'India (INR)' });
-  await page.getByRole('textbox', { name: /^Company Name/i })
-    .fill(overrides.companyName ?? 'Acme Corp');
-  await page.getByRole('textbox', { name: /^Company Business Address/i })
-    .fill(overrides.address ?? '123 Test Street, Ahmedabad, GJ 380001');
-  await page.getByRole('textbox', { name: /^PAN Card Number/i })
-    .fill(overrides.pan ?? 'ABCDE1234F');
+  
+  // There is another select for Country, we can just use nth(2)
+  await page.locator('select').nth(2).selectOption({ label: overrides.country || 'India (INR)' });
+  
+  // Inputs: Company Name, Business Address, PAN, GSTIN
+  // We can use the labels to find them
+  await page.locator('input, textarea').filter({ has: page.locator('xpath=ancestor::div[1]/preceding-sibling::label[contains(text(), "COMPANY NAME")]') })
+      .first().fill(overrides.companyName ?? 'Acme Corp').catch(async () => {
+         // fallback
+         await page.getByRole('textbox').nth(0).fill(overrides.companyName ?? 'Acme Corp');
+      });
+      
+  await page.locator('input, textarea').filter({ has: page.locator('xpath=ancestor::div[1]/preceding-sibling::label[contains(text(), "COMPANY BUSINESS ADDRESS")]') })
+      .first().fill(overrides.address ?? '123 Test Street, Ahmedabad, GJ 380001').catch(async () => {
+         // fallback
+         await page.getByRole('textbox').nth(1).fill(overrides.address ?? '123 Test Street, Ahmedabad, GJ 380001');
+      });
+      
+  await page.locator('input, textarea').filter({ has: page.locator('xpath=ancestor::div[1]/preceding-sibling::label[contains(text(), "PAN CARD NUMBER")]') })
+      .first().fill(overrides.pan ?? 'ABCDE1234F').catch(async () => {
+         // fallback
+         await page.getByRole('textbox').nth(2).fill(overrides.pan ?? 'ABCDE1234F');
+      });
+      
   if (overrides.gstin !== undefined) {
-    await page.getByRole('textbox', { name: /GSTIN/i }).fill(overrides.gstin);
+    await page.locator('input, textarea').filter({ has: page.locator('xpath=ancestor::div[1]/preceding-sibling::label[contains(text(), "GSTIN")]') })
+        .first().fill(overrides.gstin).catch(async () => {
+           // fallback
+           await page.getByRole('textbox').nth(3).fill(overrides.gstin);
+        });
   }
 }
 

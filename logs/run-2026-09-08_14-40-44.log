@@ -1,0 +1,18 @@
+14:40:57.749 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 0 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-08_14-40-44.log
+14:40:57.752 [ERROR] REPORTER     Error: ENOENT: no such file or directory, scandir 'C:\ideakicks\testing\tests\public'
+14:40:57.753 [ERROR] REPORTER     Error: No tests found.
+Make sure that arguments are regular expressions matching test files.
+You may need to escape symbols like "$" or "*" and quote the arguments.
+
+========================================================================
+  RUN SUMMARY  2026-09-08_14-40-44
+========================================================================
+  Total    : 0
+  Passed   : 0  (0.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 13.7s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-08_14-40-44.log
+========================================================================
+14:40:57.758 [INFO] RUN-END      Status: failed | Duration: 13.7s
+14:40:57.760 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-08_14-40-44.html
