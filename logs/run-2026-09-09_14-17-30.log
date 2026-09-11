@@ -1,0 +1,17 @@
+14:17:44.457 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-09_14-17-30.log
+14:17:49.782 [INFO] login        navigating to /login
+14:17:50.658 [INFO] login        already authed (via /dashboard)
+14:18:17.081 [FAIL] UF-ACCT-02-P: Change Account Password 30.71s — [31mTest timeout of 30000ms exceeded.[39m
+
+========================================================================
+  RUN SUMMARY  2026-09-09_14-17-30
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 47.0s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-09_14-17-30.log
+========================================================================
+14:18:17.104 [INFO] RUN-END      Status: failed | Duration: 47.0s
+14:18:17.106 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-09_14-17-30.html

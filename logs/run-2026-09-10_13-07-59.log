@@ -1,0 +1,23 @@
+13:08:25.702 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 3 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-10_13-07-59.log
+13:08:31.011 [INFO] login        navigating to /login
+13:08:35.105 [INFO] login        already authed (via /dashboard)
+13:08:42.274 [PASS] UF-ACCT-01-P: Update Profile Bio, Links and Address 14.74s
+13:08:43.415 [INFO] login        navigating to /login
+13:08:48.082 [INFO] login        ok
+13:09:00.622 [PASS] UF-ACCT-02-P: Change Account Password 18.34s
+13:09:01.738 [INFO] login        navigating to /login
+13:09:06.406 [INFO] login        ok
+13:09:09.888 [PASS] UF-ACCT-03-P: User can sign out 9.26s
+
+========================================================================
+  RUN SUMMARY  2026-09-10_13-07-59
+========================================================================
+  Total    : 3
+  Passed   : 3  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 70.0s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-10_13-07-59.log
+========================================================================
+13:09:09.978 [INFO] RUN-END      Status: passed | Duration: 70.0s
+13:09:09.981 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-10_13-07-59.html

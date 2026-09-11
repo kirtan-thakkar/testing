@@ -1,0 +1,20 @@
+14:22:22.348 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 3 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-09_14-21-52.log
+14:22:27.096 [INFO] login        navigating to /login
+14:22:52.317 [FAIL] UF-ACCT-01-P: Update Profile Bio, Links and Address 28.20s — TimeoutError: page.waitForURL: Timeout 20000ms exceeded.
+14:22:57.167 [INFO] login        navigating to /login
+14:23:22.289 [FAIL] UF-ACCT-02-P: Change Account Password 28.19s — TimeoutError: page.waitForURL: Timeout 20000ms exceeded.
+14:23:27.168 [INFO] login        navigating to /login
+14:23:52.357 [FAIL] UF-ACCT-03-P: User can sign out 28.26s — TimeoutError: page.waitForURL: Timeout 20000ms exceeded.
+
+========================================================================
+  RUN SUMMARY  2026-09-09_14-21-52
+========================================================================
+  Total    : 3
+  Passed   : 0  (0.0%)
+  Failed   : 3
+  Skipped  : 0
+  Duration : 119.6s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-09_14-21-52.log
+========================================================================
+14:23:52.379 [INFO] RUN-END      Status: failed | Duration: 119.6s
+14:23:52.381 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-09_14-21-52.html

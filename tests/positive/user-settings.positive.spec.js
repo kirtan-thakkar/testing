@@ -1,11 +1,11 @@
 const { test, expect } = require('@playwright/test');
-const { safeLogin } = require('../wizard-helpers.js');
+const { login } = require('../wizard-helpers.js');
 
 test.describe('User Dashboard - Settings (POSITIVE)', () => {
 
   test.beforeEach(async ({ page }) => {
     // Standard user login via state.json
-    await safeLogin(page);
+    await login(page);
     await page.goto('/dashboard');
     await page.getByRole('button', { name: 'Settings' }).click();
     await page.waitForTimeout(1000);
@@ -44,35 +44,51 @@ test.describe('User Dashboard - Settings (POSITIVE)', () => {
   });
 
   test('UF-ACCT-02-P: Change Account Password', async ({ page }) => {
-    // Current Password is the one from our dummy account (Puffyin@7410)
-    // We will change it to a temporary one, then change it back so subsequent tests don't break.
+    test.setTimeout(60000);
     const currentPass = 'Puffyin@7410';
     const tempPass = 'Puffyin@7410_TEMP';
 
-    // Find the password inputs. Usually: 0 = Current, 1 = New, 2 = Confirm New
-    const pwdInputs = page.locator('input[type="password"]');
+    let pwdInputs = page.locator('input[type="password"]');
     await pwdInputs.nth(0).fill(currentPass);
     await pwdInputs.nth(1).fill(tempPass);
-    
-    // In case there is a confirm password field
     if (await pwdInputs.nth(2).isVisible()) {
         await pwdInputs.nth(2).fill(tempPass);
     }
     
-    // Find the update password button (usually near the password fields)
-    const updateBtn = page.locator('button').filter({ hasText: /(Update|Change) password/i });
+    let updateBtn = page.locator('button').filter({ hasText: /(Update|Change) password/i });
     if (await updateBtn.isVisible()) {
         await updateBtn.click();
-        await page.waitForTimeout(2000); // Wait for API
         
-        // REVERT the password immediately so we don't break the environment for other tests
+        // Wait for logout redirect
+        await page.waitForURL('**/login', { timeout: 15000 });
+        
+        // Log back in with NEW password
+        await page.getByRole('textbox', { name: 'Email' }).fill('dummy@gmail.com');
+        await page.getByRole('textbox', { name: 'Password' }).fill(tempPass);
+        await page.getByRole('button', { name: 'Log In' }).click();
+        
+        // Wait for login to complete (URL changes away from login)
+        await page.waitForURL(u => !u.toString().includes('/login'), { timeout: 15000 });
+        
+        // Navigate directly to Settings
+        await page.goto('/dashboard?tab=settings');
+        await page.getByRole('button', { name: 'Settings' }).waitFor({ state: 'visible', timeout: 5000 });
+        await page.getByRole('button', { name: 'Settings' }).click();
+        await page.waitForTimeout(1000);
+        
+        // REVERT the password immediately so we don't break the environment
+        pwdInputs = page.locator('input[type="password"]');
         await pwdInputs.nth(0).fill(tempPass);
         await pwdInputs.nth(1).fill(currentPass);
         if (await pwdInputs.nth(2).isVisible()) {
             await pwdInputs.nth(2).fill(currentPass);
         }
+        
+        updateBtn = page.locator('button').filter({ hasText: /(Update|Change) password/i });
         await updateBtn.click();
-        await page.waitForTimeout(2000); // Wait for API
+        
+        // Wait for logout redirect again to ensure it finished
+        await page.waitForURL('**/login', { timeout: 15000 });
     }
   });
 

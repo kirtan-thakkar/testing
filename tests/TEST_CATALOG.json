@@ -240,19 +240,15 @@
     "count": 2
   },
   {
-    "file": "tests\\other\\performance.spec.js",
-    "describe": "Performance & Stress — IdeaKicks",
+    "file": "tests\\performance.spec.js",
+    "describe": "Performance & Latency SLAs",
     "tests": [
-      "UF-PERF-01: Homepage loads in under 5s (warm)",
-      "UF-PERF-02: /explore (discover) loads in under 8s (warm)",
-      "UF-PERF-03: /login loads in under 5s",
-      "UF-PERF-04: /start/application wizard loads in under 8s",
-      "UF-STRESS-01: 5 parallel page loads all complete within 30s",
-      "UF-STRESS-02: 10 parallel /login navigations do not crash the server",
-      "UF-PERF-05: /explore responds to search query within 5s",
-      "UF-PERF-06: Homepage HTML payload is under 200KB"
+      "UF-PERF-01: 25 parallel /explore page loads all complete within 60s",
+      "UF-PERF-02: Sustained load: 1 req/sec to /login for 60 seconds, no failures",
+      "UF-PERF-03: Burst: 100 requests in 5s, all complete (any 5xx is failure)",
+      "UF-PERF-04: Memory: rapid open/close of 10 pages does not leak browser memory"
     ],
-    "count": 8
+    "count": 4
   },
   {
     "file": "tests\\positive\\admin-campaigns.positive.spec.js",
@@ -315,6 +311,16 @@
     "count": 2
   },
   {
+    "file": "tests\\positive\\user-settings.positive.spec.js",
+    "describe": "User Dashboard - Settings (POSITIVE)",
+    "tests": [
+      "UF-ACCT-01-P: Update Profile Bio, Links and Address",
+      "UF-ACCT-02-P: Change Account Password",
+      "UF-ACCT-03-P: User can sign out"
+    ],
+    "count": 3
+  },
+  {
     "file": "tests\\positive\\wizard-application.positive.spec.js",
     "describe": "8. Campaign Application Wizard — POSITIVE flows",
     "tests": [
@@ -327,9 +333,11 @@
       "UF-WIZ-10-P: Country dropdown lists India",
       "UF-WIZ-11-P: Subcategory populates after category chosen",
       "UF-WIZ-14-P: GSTIN optional field accepts valid value",
-      "UF-WIZ-20-P: Wizard URL is exactly /start/application"
+      "UF-WIZ-20-P: Wizard URL is exactly /start/application",
+      "Wizard session survives page refresh mid-fill (no data loss)",
+      "Wizard handles 10,000-char paste in company name gracefully (no crash, no lag >2s)"
     ],
-    "count": 10
+    "count": 12
   },
   {
     "file": "tests\\positive\\wizard-step2-uploads.positive.spec.js",
@@ -341,8 +349,9 @@
       "UF-UP-04-P: Small video (<100MB) upload succeeds",
       "UF-UP-05-P: Pitch video URL accepts a YouTube link",
       "UF-UP-14-P: Parallel upload of 3 cover images (race condition test)",
-      "UF-UP-15-P: Upload 15 images to gallery (the documented max) succeeds"
+      "UF-UP-15-P: Upload 15 images to gallery (the documented max) succeeds",
+      "UF-UP-16-P: Upload 99MB video (just under limit) succeeds"
     ],
-    "count": 7
+    "count": 8
   }
 ]

@@ -6,10 +6,10 @@ async function login(page) {
   // Fast path: state.json from global-setup should already have us authed.
   try {
     await page.goto('/dashboard', { waitUntil: 'domcontentloaded', timeout: 10000 });
-    if (!page.url().includes('/login')) {
-      log.info('login', 'already authed (via /dashboard)');
-      return;
-    }
+    // Wait for an element that confirms we are actually logged in and on the dashboard
+    await page.getByRole('button', { name: 'Settings' }).waitFor({ state: 'visible', timeout: 3000 });
+    log.info('login', 'already authed (via /dashboard)');
+    return;
   } catch {
     // Not authed; fall through to manual login.
   }

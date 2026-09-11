@@ -183,17 +183,44 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
     await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
     await page.waitForTimeout(2000);
 
-    // Uses the 15 image fixtures in public/
     const galleryInput = page.locator('input[type=file][accept*="video"]');
-    const imgs = ALL_IMAGES.slice(0, 15);
-    for (let i = 0; i < imgs.length; i++) {
-      await galleryInput.setInputFiles(imgs[i]);
-      await page.waitForTimeout(1000);
+    // Upload the same small image 15 times
+    for (let i = 0; i < 15; i++) {
+      await galleryInput.setInputFiles(IMG_SMALL);
+      await page.waitForTimeout(500);
     }
     await page.waitForTimeout(3000);
     const galleryCount = await page.locator('img').count();
-    log.info('UP-15-P', `15 files uploaded sequentially, ${galleryCount} images rendered (incl. cover)`);
-    expect(galleryCount).toBeGreaterThanOrEqual(1);
+    log.info('UP-15-P', `15 files uploaded sequentially, ${galleryCount} images rendered`);
+    expect(galleryCount).toBeGreaterThanOrEqual(15);
+  });
+
+  test('UF-UP-16-P: Upload 99MB video (just under limit) succeeds', async ({ page }) => {
+    const NINETY_NINE_MB = path.join(PUBLIC_DIR, '99mb.mp4');
+    requireFixture(NINETY_NINE_MB);
+    log.info('UP-16-P', 'start');
+    if (!(await safeLogin(page))) return;
+    await fillStep1(page);
+    await dismissCookies(page);
+    
+    // Send cover image first
+    const coverInput = page.locator('input[type=file][accept*="image"]').first();
+    await coverInput.setInputFiles(IMG_SMALL);
+    await page.waitForTimeout(2000);
+    await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
+    await page.waitForTimeout(2000);
+
+    const galleryInput = page.locator('input[type=file][accept*="video"]');
+    await galleryInput.setInputFiles(NINETY_NINE_MB);
+    
+    // Wait for the large upload
+    await page.waitForTimeout(8000);
+    
+    // Try to proceed to next step to prove success
+    await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
+    await expect(page.getByText(/Step 3/i)).toBeVisible({ timeout: 15000 });
+    log.info('UP-16-P', '99MB video uploaded successfully');
   });
 });
+
 

@@ -50,10 +50,6 @@ test.describe('Wizard Step 2 — Media uploads (NEGATIVE / EDGE)', () => {
 
   test('UF-UP-06-N: Gallery upload of 15 images exceeds documented 12-item limit', async ({ page }) => {
     log.info('UP-06-N', 'start');
-    if (ALL_IMAGES.length < 15) {
-      test.skip(true, `Only ${ALL_IMAGES.length} image fixtures available; need 15`);
-      return;
-    }
     if (!(await safeLogin(page))) return;
     await fillStep1(page);
     await dismissCookies(page);
@@ -63,22 +59,19 @@ test.describe('Wizard Step 2 — Media uploads (NEGATIVE / EDGE)', () => {
     // The gallery input is single-file (no `multiple` attribute) so we must
     // upload sequentially. Real users can only add one at a time via the OS picker.
     const galleryInput = page.locator('input[type=file][accept*="video"]');
-    const imgs = ALL_IMAGES.slice(0, 15);
-    for (let i = 0; i < imgs.length; i++) {
+    for (let i = 0; i < 15; i++) {
       try {
-        await galleryInput.setInputFiles(imgs[i], { timeout: 10000 });
+        await galleryInput.setInputFiles(IMG_9M, { timeout: 10000 });
       } catch (e) {
         log.warn('UP-06-N', `upload #${i+1} failed: ${e.message.split('\n')[0]}`);
-        // If the UI refuses, document and stop.
-        break;
       }
-      await page.waitForTimeout(1000);
+      await page.waitForTimeout(800);
     }
     await page.waitForTimeout(3000);
 
-    const galleryCount = await page.locator('img').evaluateAll(
-      els => els.filter(e => e.alt !== 'Campaign cover').length
-    );
+    const galleryCount = await page.locator('img').count();
+    // Assuming UI prevents more than 12 images from being rendered or shows an error.
+    expect(galleryCount).toBeLessThanOrEqual(13); // 12 + cover
     log.info('UP-06-N', `15 files attempted, ${galleryCount} rendered in gallery (limit=12)`);
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible();
   });
