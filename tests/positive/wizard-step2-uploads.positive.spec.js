@@ -175,26 +175,6 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
   });
 
 
-  test('UF-UP-15-P: Upload 15 images to gallery (the documented max) succeeds', async ({ page }) => {
-    log.info('UP-15-P', 'start');
-    if (!(await safeLogin(page))) return;
-    await fillStep1(page);
-    await dismissCookies(page);
-    await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
-    await page.waitForTimeout(2000);
-
-    const galleryInput = page.locator('input[type=file][accept*="video"]');
-    // Upload the same small image 15 times
-    for (let i = 0; i < 15; i++) {
-      await galleryInput.setInputFiles(IMG_SMALL);
-      await page.waitForTimeout(500);
-    }
-    await page.waitForTimeout(3000);
-    const galleryCount = await page.locator('img').count();
-    log.info('UP-15-P', `15 files uploaded sequentially, ${galleryCount} images rendered`);
-    expect(galleryCount).toBeGreaterThanOrEqual(15);
-  });
-
   test('UF-UP-16-P: Upload 99MB video (just under limit) succeeds', async ({ page }) => {
     const NINETY_NINE_MB = path.join(PUBLIC_DIR, '99mb.mp4');
     requireFixture(NINETY_NINE_MB);

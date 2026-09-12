@@ -1,0 +1,19 @@
+07:28:37.209 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-28-24.log
+07:28:39.009 [INFO] admin        launching browser & logging in
+07:28:46.093 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+07:28:46.115 [INFO] ADM-CAT-VAL-004 start
+07:28:46.979 [INFO] ADM-CAT-VAL-004 ok
+07:28:47.017 [PASS] ADM-CAT-VAL-004: Enter an invalid slug format 0.87s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-28-24
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 22.9s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-28-24.log
+========================================================================
+07:28:47.097 [INFO] RUN-END      Status: passed | Duration: 22.9s
+07:28:47.100 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-28-24.html

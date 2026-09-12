@@ -1,0 +1,15 @@
+06:56:23.708 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_06-55-44.log
+06:56:38.458 [FAIL] ADM-AUTH-FUN-001: Login with valid admin credentials 12.95s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+========================================================================
+  RUN SUMMARY  2026-09-12_06-55-44
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 54.2s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_06-55-44.log
+========================================================================
+06:56:38.484 [INFO] RUN-END      Status: failed | Duration: 54.2s
+06:56:38.487 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_06-55-44.html

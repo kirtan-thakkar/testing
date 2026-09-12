@@ -1,0 +1,15 @@
+06:57:34.814 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_06-57-19.log
+06:57:46.884 [PASS] ADM-AUTH-FUN-001: Login with valid admin credentials 10.37s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_06-57-19
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 27.8s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_06-57-19.log
+========================================================================
+06:57:46.955 [INFO] RUN-END      Status: passed | Duration: 27.8s
+06:57:46.958 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_06-57-19.html

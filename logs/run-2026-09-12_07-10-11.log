@@ -1,0 +1,19 @@
+07:10:31.580 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-10-11.log
+07:10:33.292 [INFO] admin        launching browser & logging in
+07:10:40.930 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+07:10:40.952 [INFO] ADM-CAT-FUN-002 start
+07:10:46.090 [INFO] ADM-CAT-FUN-002 ok
+07:10:46.124 [PASS] ADM-CAT-FUN-002: Create category with valid details 5.14s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-10-11
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 34.5s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-10-11.log
+========================================================================
+07:10:46.208 [INFO] RUN-END      Status: passed | Duration: 34.5s
+07:10:46.211 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-10-11.html
