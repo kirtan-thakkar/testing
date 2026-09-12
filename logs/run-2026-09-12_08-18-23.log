@@ -1,0 +1,18 @@
+08:18:53.884 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_08-18-23.log
+08:18:55.675 [INFO] admin        launching browser & logging in
+08:19:02.490 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+08:19:02.503 [INFO] ADM-CAT-FUN-018 start
+08:19:08.217 [FAIL] ADM-CAT-FUN-018: Verify New Category form opens successfully 5.63s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+========================================================================
+  RUN SUMMARY  2026-09-12_08-18-23
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 44.4s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_08-18-23.log
+========================================================================
+08:19:08.238 [INFO] RUN-END      Status: failed | Duration: 44.4s
+08:19:08.240 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_08-18-23.html

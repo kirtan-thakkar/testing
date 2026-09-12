@@ -1,0 +1,22 @@
+08:23:29.583 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 2 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_08-22-59.log
+08:23:31.409 [INFO] admin        launching browser & logging in
+08:23:38.379 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+08:23:38.393 [INFO] ADM-CAM-FUN-001 start
+08:23:42.639 [INFO] ADM-CAM-FUN-001 ok
+08:23:42.645 [PASS] ADM-CAM-FUN-001: Verification of Rows per page Dropdown 4.25s
+08:23:42.648 [INFO] ADM-CAM-FUN-002 start
+08:23:46.785 [INFO] ADM-CAM-FUN-002 ok
+08:23:46.805 [PASS] ADM-CAM-FUN-002: Verification of Previous/Next page Navigation 4.14s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_08-22-59
+========================================================================
+  Total    : 2
+  Passed   : 2  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 47.5s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_08-22-59.log
+========================================================================
+08:23:46.870 [INFO] RUN-END      Status: passed | Duration: 47.5s
+08:23:46.874 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_08-22-59.html

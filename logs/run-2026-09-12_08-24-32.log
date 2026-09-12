@@ -1,0 +1,18 @@
+08:25:02.457 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_08-24-32.log
+08:25:04.288 [INFO] admin        launching browser & logging in
+08:25:13.946 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+08:25:13.968 [INFO] CAT-ACC-005  start
+08:25:14.164 [FAIL] CAT-ACC-005: Verify authorized user can open Categories in a new tab 0.05s — Error: Error reading storage state from state-admin.json:
+
+========================================================================
+  RUN SUMMARY  2026-09-12_08-24-32
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 41.7s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_08-24-32.log
+========================================================================
+08:25:14.191 [INFO] RUN-END      Status: failed | Duration: 41.7s
+08:25:14.194 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_08-24-32.html

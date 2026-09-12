@@ -1,0 +1,24 @@
+08:17:48.137 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 3 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_08-17-18.log
+08:17:49.938 [INFO] admin        launching browser & logging in
+08:17:56.666 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+08:17:56.700 [INFO] ADM-CAT-FUN-016 start
+08:17:58.861 [INFO] ADM-CAT-FUN-016 ok
+08:17:58.873 [PASS] ADM-CAT-FUN-016: Search category by slug 2.17s
+08:17:58.881 [INFO] ADM-CAT-FUN-017 start
+08:18:01.953 [INFO] ADM-CAT-FUN-017 ok
+08:18:01.960 [PASS] ADM-CAT-FUN-017: Clear category search 3.08s
+08:18:01.968 [INFO] ADM-CAT-FUN-018 start
+08:18:07.660 [FAIL] ADM-CAT-FUN-018: Verify New Category form opens successfully 5.62s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+========================================================================
+  RUN SUMMARY  2026-09-12_08-17-18
+========================================================================
+  Total    : 3
+  Passed   : 2  (66.7%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 49.6s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_08-17-18.log
+========================================================================
+08:18:07.683 [INFO] RUN-END      Status: failed | Duration: 49.6s
+08:18:07.685 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_08-17-18.html

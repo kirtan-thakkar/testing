@@ -1,0 +1,16 @@
+09:09:52.748 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_09-09-40.log
+09:09:57.791 [INFO] WIZ-30-P     Starting Step 3 Submit test with standard dummy account
+09:09:57.996 [FAIL] UF-WIZ-30-P: User can successfully submit a campaign for review 3.45s — TypeError: safeLogin is not a function
+
+========================================================================
+  RUN SUMMARY  2026-09-12_09-09-40
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 18.0s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_09-09-40.log
+========================================================================
+09:09:58.020 [INFO] RUN-END      Status: failed | Duration: 18.0s
+09:09:58.022 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_09-09-40.html

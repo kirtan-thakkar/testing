@@ -1,0 +1,18 @@
+08:15:37.461 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_08-15-06.log
+08:15:39.231 [INFO] admin        launching browser & logging in
+08:15:46.199 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+08:15:46.224 [INFO] ADM-CAT-FUN-015 start
+08:15:53.339 [FAIL] ADM-CAT-FUN-015: Verify pagination navigation 7.02s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeDisabled[2m([22m[2m)[22m failed
+
+========================================================================
+  RUN SUMMARY  2026-09-12_08-15-06
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 46.5s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_08-15-06.log
+========================================================================
+08:15:53.364 [INFO] RUN-END      Status: failed | Duration: 46.5s
+08:15:53.367 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_08-15-06.html

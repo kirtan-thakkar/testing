@@ -1,0 +1,19 @@
+08:25:58.716 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_08-25-28.log
+08:26:00.490 [INFO] admin        launching browser & logging in
+08:26:07.974 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+08:26:07.989 [INFO] CAT-ACC-005  start
+08:26:10.548 [INFO] CAT-ACC-005  ok
+08:26:10.571 [PASS] CAT-ACC-005: Verify authorized user can open Categories in a new tab 2.56s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_08-25-28
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 42.4s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_08-25-28.log
+========================================================================
+08:26:10.643 [INFO] RUN-END      Status: passed | Duration: 42.4s
+08:26:10.645 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_08-25-28.html

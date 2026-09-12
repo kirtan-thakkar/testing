@@ -1,0 +1,16 @@
+09:10:37.636 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_09-10-19.log
+09:10:42.660 [INFO] WIZ-30-P     Starting Step 3 Submit test with standard dummy account
+09:12:43.657 [FAIL] UF-WIZ-30-P: User can successfully submit a campaign for review 124.18s — [31mTest timeout of 120000ms exceeded.[39m
+
+========================================================================
+  RUN SUMMARY  2026-09-12_09-10-19
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 143.8s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_09-10-19.log
+========================================================================
+09:12:43.679 [INFO] RUN-END      Status: failed | Duration: 143.8s
+09:12:43.682 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_09-10-19.html

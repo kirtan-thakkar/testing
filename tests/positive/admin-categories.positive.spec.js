@@ -584,6 +584,161 @@ test.describe.serial('Admin Categories - Functional', () => {
     
     log.info('ADM-CAT-FUN-013', 'ok');
   });
+
+  test('ADM-CAT-FUN-014: Verify rows per page selection', async () => {
+    log.info('ADM-CAT-FUN-014', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    
+    // 1. Locate the Rows per page dropdown.
+    const rowsPerPage = page.getByRole('combobox', { name: /Rows per page/i });
+    await expect(rowsPerPage).toBeVisible();
+    
+    // 2. Verify the available options.
+    // In Playwright, we can check options using selectOption or verifying text.
+    // 3. Select 20.
+    await rowsPerPage.selectOption({ label: '20' });
+    await page.waitForTimeout(1000);
+    
+    // 4. Observe the list and pagination count.
+    await expect(page.getByText(/1[–-]\d+ of \d+/)).toBeVisible();
+    
+    // 5. Select 50.
+    await rowsPerPage.selectOption({ label: '50' });
+    await page.waitForTimeout(1000);
+    
+    // 6. Select 100.
+    await rowsPerPage.selectOption({ label: '100' });
+    await page.waitForTimeout(1000);
+    
+    log.info('ADM-CAT-FUN-014', 'ok');
+  });
+
+  test('ADM-CAT-FUN-015: Verify pagination navigation', async () => {
+    log.info('ADM-CAT-FUN-015', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    
+    // 1. Set Rows per page to 10.
+    const rowsPerPage = page.getByRole('combobox', { name: /Rows per page/i });
+    await rowsPerPage.selectOption({ label: '10' });
+    await page.waitForTimeout(1000);
+    
+    // 2. Verify the first page range.
+    await expect(page.getByText(/1[–-]10 of \d+/)).toBeVisible();
+    
+    // 3. Click Next.
+    const nextBtn = page.locator('button', { hasText: 'Next' });
+    const prevBtn = page.locator('button', { hasText: 'Prev' });
+    
+    // Initially prev is disabled (if on page 1)
+    await expect(prevBtn).toBeDisabled();
+    
+    await nextBtn.click();
+    await page.waitForTimeout(1000);
+    
+    // 4. Verify the next page range.
+    await expect(page.getByText(/11[–-]20 of \d+/)).toBeVisible();
+    await expect(prevBtn).toBeEnabled();
+    
+    // 5. Click Next again.
+    await nextBtn.click();
+    await page.waitForTimeout(1000);
+    
+    // 6. Verify the final page (or next page).
+    await expect(page.getByText(/21[–-]\d+ of \d+/)).toBeVisible();
+    
+    // 7. Click Previous.
+    await prevBtn.click();
+    await page.waitForTimeout(1000);
+    
+    // 8. Verify the previous page is displayed.
+    await expect(page.getByText(/11[–-]20 of \d+/)).toBeVisible();
+    
+    log.info('ADM-CAT-FUN-015', 'ok');
+  });
+
+  test('ADM-CAT-FUN-016: Search category by slug', async () => {
+    log.info('ADM-CAT-FUN-016', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    
+    // We know 'art-photography' is the slug for 'Art & Photography'
+    const searchInput = page.getByPlaceholder(/Search name or slug/i);
+    await searchInput.fill('art-photography');
+    await searchInput.press('Enter');
+    await page.waitForTimeout(1000);
+    
+    // Expected: The category associated with the entered slug is displayed
+    const row = page.getByRole('row', { name: 'Art & Photography' }).first();
+    await expect(row).toBeVisible();
+    
+    log.info('ADM-CAT-FUN-016', 'ok');
+  });
+
+  test('ADM-CAT-FUN-017: Clear category search', async () => {
+    log.info('ADM-CAT-FUN-017', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    
+    const searchInput = page.getByPlaceholder(/Search name or slug/i);
+    await searchInput.fill('art-photography');
+    await searchInput.press('Enter');
+    await page.waitForTimeout(1000);
+    
+    await expect(page.getByRole('row', { name: 'Art & Photography' }).first()).toBeVisible();
+    
+    // 3. Clear the Search box.
+    // In many UIs there's an 'x' button or just clearing text. Let's just clear the text and press enter.
+    await searchInput.fill('');
+    await searchInput.press('Enter');
+    await page.waitForTimeout(1000);
+    
+    // Expected: The default category listing is restored. 
+    // We should see a different count (e.g. 1-10 of >1) instead of 1-1 of 1
+    // The Art & Photography should not be the only row.
+    const allRowsCount = await page.getByRole('row').count();
+    expect(allRowsCount).toBeGreaterThan(2); // header + at least 2 categories
+    
+    log.info('ADM-CAT-FUN-017', 'ok');
+  });
+
+  test('ADM-CAT-FUN-018: Verify New Category form opens successfully', async () => {
+    log.info('ADM-CAT-FUN-018', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    
+    // 2. Click New category.
+    await page.getByRole('button', { name: /New category/i }).click();
+    
+    // Expected: The New Category form opens successfully and all expected category input controls are displayed.
+    await expect(page.getByRole('heading', { name: 'New category' })).toBeVisible();
+    await expect(page.getByLabel(/^Name/i)).toBeVisible();
+    await expect(page.getByLabel(/^Slug/i)).toBeVisible();
+    await expect(page.getByLabel(/^Parent Category/i)).toBeVisible();
+    await expect(page.getByRole('button', { name: /Create category/i })).toBeVisible();
+    
+    log.info('ADM-CAT-FUN-018', 'ok');
+  });
+
+  test('CAT-ACC-005: Verify authorized user can open Categories in a new tab', async ({ browser }) => {
+    log.info('CAT-ACC-005', 'start');
+    
+    // We already have a logged in context from beforeAll.
+    const newPage = await page.context().newPage();
+    
+    // 1. Open the Categories URL in a new browser tab.
+    await newPage.goto(`${ADMIN_URL}/categories`);
+    await newPage.waitForTimeout(1000);
+    
+    // 3. Observe the new tab.
+    // Expected: Categories page opens successfully in the new tab.
+    await expect(newPage.getByRole('heading', { level: 1, name: /Categories/i })).toBeVisible();
+    
+    await newPage.close();
+    
+    log.info('CAT-ACC-005', 'ok');
+  });
 });
 
 

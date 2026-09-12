@@ -1,0 +1,18 @@
+09:18:43.564 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_09-18-24.log
+09:18:48.647 [INFO] login        navigating to /login
+09:18:51.379 [INFO] login        already authed (via /dashboard)
+09:18:51.806 [INFO] cookies      dismissed
+09:18:55.296 [PASS] Debug Step 3 9.96s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_09-18-24
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 30.8s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_09-18-24.log
+========================================================================
+09:18:55.371 [INFO] RUN-END      Status: passed | Duration: 30.8s
+09:18:55.374 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_09-18-24.html
