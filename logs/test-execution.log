@@ -784,3 +784,107 @@ You may need to escape symbols like "$" or "*" and quote the arguments.
 ========================================================================
 07:30:42.432 [INFO] RUN-END      Status: passed | Duration: 23.9s
 07:30:42.435 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-30-18.html
+07:40:28.639 [INFO] admin        launching browser & logging in
+07:40:43.964 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+07:41:36.202 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-41-08.log
+07:41:38.011 [INFO] admin        launching browser & logging in
+07:41:45.732 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+07:41:45.747 [INFO] ADM-CAT-FUN-008 start
+07:41:48.347 [FAIL] ADM-CAT-FUN-008: Edit an existing category with valid details 2.50s — Error: locator.click: Error: strict mode violation: getByRole('row', { name: 'EditCat 1789198907039' }).first().getByRole('button', { name: /Edit/i }) resolved to 2 elements:
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-41-08
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 40.0s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-41-08.log
+========================================================================
+07:41:48.370 [INFO] RUN-END      Status: failed | Duration: 39.9s
+07:41:48.372 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-41-08.html
+07:42:26.628 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-42-04.log
+07:42:28.405 [INFO] admin        launching browser & logging in
+07:42:35.921 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+07:42:35.935 [INFO] ADM-CAT-FUN-008 start
+07:42:39.559 [INFO] ADM-CAT-FUN-008 ok
+07:42:39.581 [PASS] ADM-CAT-FUN-008: Edit an existing category with valid details 3.63s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-42-04
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 35.0s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-42-04.log
+========================================================================
+07:42:39.648 [INFO] RUN-END      Status: passed | Duration: 35.0s
+07:42:39.650 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-42-04.html
+07:44:54.490 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 3 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-44-35.log
+07:44:56.295 [INFO] admin        launching browser & logging in
+07:45:04.038 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+07:45:04.052 [INFO] ADM-CAT-FUN-003 start
+07:45:06.463 [INFO] ADM-CAT-FUN-003 ok
+07:45:06.473 [PASS] ADM-CAT-FUN-003: Create a category with a parent category 2.41s
+07:45:06.477 [INFO] ADM-CAT-FUN-004 start
+07:45:09.571 [INFO] ADM-CAT-FUN-004 ok
+07:45:09.575 [PASS] ADM-CAT-FUN-004: Verify category ordering based on sort order 3.10s
+07:45:09.583 [INFO] ADM-CAT-FUN-005 start
+07:45:13.513 [INFO] ADM-CAT-FUN-005 ok
+07:45:13.560 [PASS] ADM-CAT-FUN-005: Upload a valid category icon 3.93s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-44-35
+========================================================================
+  Total    : 3
+  Passed   : 3  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 37.7s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-44-35.log
+========================================================================
+07:45:13.627 [INFO] RUN-END      Status: passed | Duration: 37.7s
+07:45:13.629 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-44-35.html
+07:46:05.578 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-45-46.log
+07:46:07.287 [INFO] admin        launching browser & logging in
+07:46:14.555 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+07:46:14.569 [INFO] ADM-CAT-FUN-009 start
+07:46:16.988 [INFO] ADM-CAT-FUN-009 ok
+07:46:17.009 [PASS] ADM-CAT-FUN-009: Cancel category editing without saving 2.42s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-45-46
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 30.6s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-45-46.log
+========================================================================
+07:46:17.074 [INFO] RUN-END      Status: passed | Duration: 30.6s
+07:46:17.076 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-45-46.html
+07:46:39.394 [INFO] admin        launching browser & logging in
+07:46:46.813 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+07:47:32.909 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 2 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-47-15.log
+07:47:34.593 [INFO] admin        launching browser & logging in
+07:47:42.105 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+07:47:42.119 [INFO] ADM-CAT-FUN-010 start
+07:47:49.824 [FAIL] ADM-CAT-FUN-010: Hide an active category 7.63s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+07:47:49.827 [SKIP] ADM-CAT-FUN-011: Cancel hiding an active category skipped
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-47-15
+========================================================================
+  Total    : 2
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 1
+  Duration : 34.6s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-47-15.log
+========================================================================
+07:47:49.847 [INFO] RUN-END      Status: failed | Duration: 34.6s
+07:47:49.849 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-47-15.html

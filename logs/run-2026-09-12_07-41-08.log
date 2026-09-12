@@ -1,0 +1,18 @@
+07:41:36.202 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-41-08.log
+07:41:38.011 [INFO] admin        launching browser & logging in
+07:41:45.732 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+07:41:45.747 [INFO] ADM-CAT-FUN-008 start
+07:41:48.347 [FAIL] ADM-CAT-FUN-008: Edit an existing category with valid details 2.50s — Error: locator.click: Error: strict mode violation: getByRole('row', { name: 'EditCat 1789198907039' }).first().getByRole('button', { name: /Edit/i }) resolved to 2 elements:
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-41-08
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 40.0s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-41-08.log
+========================================================================
+07:41:48.370 [INFO] RUN-END      Status: failed | Duration: 39.9s
+07:41:48.372 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-41-08.html

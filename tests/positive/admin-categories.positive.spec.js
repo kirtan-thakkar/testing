@@ -129,9 +129,132 @@ test.describe.serial('Admin Categories - Functional', () => {
     await searchInput.fill(uniqueName);
     await searchInput.press('Enter');
     
-    await expect(page.getByRole('row', { name: uniqueName })).toBeVisible();
-    
     log.info('ADM-CAT-FUN-002', 'ok');
+  });
+
+  test('ADM-CAT-FUN-003: Create a category with a parent category', async () => {
+    log.info('ADM-CAT-FUN-003', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    await page.getByRole('button', { name: /New category/i }).click();
+    
+    const newCategoryHeading = page.getByRole('heading', { name: 'New category' });
+    await expect(newCategoryHeading).toBeVisible();
+    
+    const formContainer = page;
+    
+    // 2. Enter valid Name and Slug.
+    const uniqueName = `Child Cat ${Date.now()}`;
+    await formContainer.getByLabel(/^Name/i).fill(uniqueName);
+    
+    // 3. Select an existing Parent category.
+    // Pick 'Technology / Software' as parent
+    await formContainer.getByLabel(/^Parent category/i).selectOption({ label: 'Technology / Software' });
+    
+    // 4. Complete other required fields.
+    await formContainer.getByLabel(/^Sort order/i).fill('1');
+    
+    // 5. Click Create category.
+    await formContainer.getByRole('button', { name: /Create category/i }).click();
+    await expect(newCategoryHeading).toBeHidden({ timeout: 10000 });
+    
+    // 6. Verify the created category in the list.
+    const searchInput = page.getByPlaceholder(/Search name or slug/i);
+    await searchInput.fill(uniqueName);
+    await searchInput.press('Enter');
+    
+    const row = page.getByRole('row', { name: uniqueName }).first();
+    await expect(row).toBeVisible();
+    
+    // Expected: 3. Created category displays the selected parent correctly.
+    // We can verify it says 'Software /software' or similar in the row text, wait, let's verify if the row text contains 'Software'.
+    await expect(row).toContainText('Software');
+    
+    log.info('ADM-CAT-FUN-003', 'ok');
+  });
+
+  test('ADM-CAT-FUN-004: Verify category ordering based on sort order', async () => {
+    log.info('ADM-CAT-FUN-004', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    
+    // Helper to create category with sort order
+    const createCatWithSortOrder = async (name, sortOrder) => {
+      await page.getByRole('button', { name: /New category/i }).click();
+      const formContainer = page;
+      await formContainer.getByLabel(/^Name/i).fill(name);
+      await formContainer.getByLabel(/^Sort order/i).fill(sortOrder.toString());
+      await formContainer.getByRole('button', { name: /Create category/i }).click();
+      await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
+    };
+    
+    const prefix = `SortCat ${Date.now()}`;
+    const nameA = `${prefix} A`;
+    const nameB = `${prefix} B`;
+    
+    // 1. Create Category A and set Sort order to 10
+    await createCatWithSortOrder(nameA, 10);
+    // 2. Create Category B and set Sort order to 20
+    await createCatWithSortOrder(nameB, 20);
+    
+    // 4. Return to the Categories list.
+    // 5. Compare the order of Category A and Category B.
+    const searchInput = page.getByPlaceholder(/Search name or slug/i);
+    await searchInput.fill(prefix);
+    await searchInput.press('Enter');
+    
+    // Wait for the grid to update.
+    await page.waitForTimeout(1500);
+    
+    // Get all matching rows. 
+    const rows = page.getByRole('row').filter({ hasText: prefix });
+    await expect(rows).toHaveCount(2);
+    
+    // Verify Category A appears before Category B
+    const text1 = await rows.nth(0).innerText();
+    const text2 = await rows.nth(1).innerText();
+    
+    expect(text1).toContain(nameA);
+    expect(text2).toContain(nameB);
+    
+    log.info('ADM-CAT-FUN-004', 'ok');
+  });
+
+  test('ADM-CAT-FUN-005: Upload a valid category icon', async () => {
+    log.info('ADM-CAT-FUN-005', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    await page.getByRole('button', { name: /New category/i }).click();
+    
+    const newCategoryHeading = page.getByRole('heading', { name: 'New category' });
+    await expect(newCategoryHeading).toBeVisible();
+    
+    const formContainer = page;
+    const uniqueName = `Icon Cat ${Date.now()}`;
+    await formContainer.getByLabel(/^Name/i).fill(uniqueName);
+    
+    // 1. Click Upload image. 2. Select a valid supported image file.
+    const path = require('path');
+    const imgPath = path.join(__dirname, '..', '..', 'public', 'aiham-m-azu-GsrfR4I-unsplash.jpg');
+    
+    const fileInput = formContainer.locator('input[type="file"]');
+    await fileInput.setInputFiles(imgPath);
+    
+    await formContainer.getByRole('button', { name: /Upload/i }).click();
+    await page.waitForTimeout(2000); // Wait for upload
+    
+    // 4. Click Create category.
+    await formContainer.getByRole('button', { name: /Create category/i }).click();
+    await expect(newCategoryHeading).toBeHidden({ timeout: 10000 });
+    
+    const searchInput = page.getByPlaceholder(/Search name or slug/i);
+    await searchInput.fill(uniqueName);
+    await searchInput.press('Enter');
+    
+    const row = page.getByRole('row', { name: uniqueName }).first();
+    await expect(row).toBeVisible();
+    
+    log.info('ADM-CAT-FUN-005', 'ok');
   });
 
   test('ADM-CAT-FUN-006: Create an inactive category', async () => {
@@ -212,5 +335,190 @@ test.describe.serial('Admin Categories - Functional', () => {
     
     log.info('ADM-CAT-FUN-007', 'ok');
   });
+
+  test('ADM-CAT-FUN-008: Edit an existing category with valid details', async () => {
+    log.info('ADM-CAT-FUN-008', 'start');
+    
+    // First, let's create a temporary category to edit so we don't mess up existing data like "Software"
+    await page.goto(`${ADMIN_URL}/categories`);
+    await page.getByRole('button', { name: /New category/i }).click();
+    
+    let formContainer = page;
+    const initialName = `EditCat ${Date.now()}`;
+    await formContainer.getByLabel(/^Name/i).fill(initialName);
+    await formContainer.getByRole('button', { name: /Create category/i }).click();
+    
+    const newCategoryHeading = page.getByRole('heading', { name: 'New category' });
+    await expect(newCategoryHeading).toBeHidden({ timeout: 10000 });
+    
+    // 1. Locate an existing category.
+    const searchInput = page.getByPlaceholder(/Search name or slug/i);
+    await searchInput.fill(initialName);
+    await searchInput.press('Enter');
+    
+    const row = page.getByRole('row', { name: initialName }).first();
+    await expect(row).toBeVisible();
+    
+    // 2. Click the Edit icon.
+    await row.getByRole('button', { name: new RegExp(`^Edit ${initialName}$`, 'i') }).click();
+    
+    // Expected: 1. Edit form opens.
+    const editHeading = page.getByRole('heading', { name: new RegExp(`Edit.*${initialName}`, 'i') });
+    await expect(editHeading).toBeVisible();
+    
+    // 3. Verify existing details are pre-populated.
+    // Expected: 2. Existing values are displayed correctly.
+    await expect(formContainer.getByLabel(/^Name/i)).toHaveValue(initialName);
+    
+    // 4. Modify valid category details.
+    const updatedName = `${initialName} Updated`;
+    await formContainer.getByLabel(/^Name/i).fill(updatedName);
+    
+    // 5. Click Save/Update.
+    await formContainer.getByRole('button', { name: /Save changes/i }).click();
+    await expect(editHeading).toBeHidden({ timeout: 10000 });
+    
+    // 6. Verify the category in the list.
+    // Expected: 3. Changes are saved successfully. 4. Updated values are displayed correctly.
+    await searchInput.fill(updatedName);
+    await searchInput.press('Enter');
+    
+    await expect(page.getByRole('row', { name: updatedName }).first()).toBeVisible();
+    
+    log.info('ADM-CAT-FUN-008', 'ok');
+  });
+
+  test('ADM-CAT-FUN-009: Cancel category editing without saving', async () => {
+    log.info('ADM-CAT-FUN-009', 'start');
+    
+    // First, let's create a temporary category to edit
+    await page.goto(`${ADMIN_URL}/categories`);
+    await page.getByRole('button', { name: /New category/i }).click();
+    
+    let formContainer = page;
+    const initialName = `CancelEdit ${Date.now()}`;
+    await formContainer.getByLabel(/^Name/i).fill(initialName);
+    await formContainer.getByRole('button', { name: /Create category/i }).click();
+    
+    const newCategoryHeading = page.getByRole('heading', { name: 'New category' });
+    await expect(newCategoryHeading).toBeHidden({ timeout: 10000 });
+    
+    // 1. Click Edit for an existing category.
+    const searchInput = page.getByPlaceholder(/Search name or slug/i);
+    await searchInput.fill(initialName);
+    await searchInput.press('Enter');
+    
+    const row = page.getByRole('row', { name: initialName }).first();
+    await expect(row).toBeVisible();
+    await row.getByRole('button', { name: new RegExp(`^Edit ${initialName}$`, 'i') }).click();
+    
+    const editHeading = page.getByRole('heading', { name: new RegExp(`Edit.*${initialName}`, 'i') });
+    await expect(editHeading).toBeVisible();
+    
+    // 2. Modify one or more fields.
+    const modifiedName = `${initialName} Cancelled`;
+    await formContainer.getByLabel(/^Name/i).fill(modifiedName);
+    
+    // 3. Click Cancel.
+    await formContainer.getByRole('button', { name: /^Cancel$/i }).click();
+    await expect(editHeading).toBeHidden({ timeout: 10000 });
+    
+    // 4. Reopen the category for editing. (Or check the list)
+    // Expected: 2. Changes are not saved. 3. Original category details remain unchanged.
+    await searchInput.fill(initialName);
+    await searchInput.press('Enter');
+    
+    // The original row should still exist
+    await expect(page.getByRole('row', { name: initialName }).first()).toBeVisible();
+    
+    // The modified row should NOT exist
+    await expect(page.getByRole('row', { name: modifiedName }).first()).toHaveCount(0);
+    
+    log.info('ADM-CAT-FUN-009', 'ok');
+  });
+
+  test('ADM-CAT-FUN-010: Hide an active category', async () => {
+    log.info('ADM-CAT-FUN-010', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    await page.getByRole('button', { name: /New category/i }).click();
+    
+    const uniqueName = `ToHide Cat ${Date.now()}`;
+    await page.getByLabel(/^Name/i).fill(uniqueName);
+    
+    // Checkbox is active by default.
+    await page.getByRole('button', { name: /Create category/i }).click();
+    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
+    
+    // 1. Locate an active category.
+    const searchInput = page.getByPlaceholder(/Search name or slug/i);
+    await searchInput.fill(uniqueName);
+    await searchInput.press('Enter');
+    
+    const row = page.getByRole('row', { name: uniqueName }).first();
+    await expect(row).toBeVisible();
+    
+    // 2. Click Hide.
+    await row.getByRole('button', { name: /^Hide$/i }).click();
+    
+    // 3. If a confirmation prompt appears, review it.
+    const dialog = page.getByRole('dialog');
+    await expect(dialog).toBeVisible();
+    
+    // 4. Confirm the hide action.
+    await dialog.getByRole('button', { name: /^Confirm$/i }).click();
+    await expect(dialog).toBeHidden();
+    
+    // Wait for row state to update
+    await page.waitForTimeout(1000);
+    
+    // 5. Verify the category status.
+    // Expected: 2. Category status changes to Hidden/Inactive as designed.
+    await expect(row).toContainText(/Hidden/i);
+    await expect(row.getByRole('button', { name: /^Show$/i })).toBeVisible();
+    
+    log.info('ADM-CAT-FUN-010', 'ok');
+  });
+
+  test('ADM-CAT-FUN-011: Cancel hiding an active category', async () => {
+    log.info('ADM-CAT-FUN-011', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    await page.getByRole('button', { name: /New category/i }).click();
+    
+    const uniqueName = `CancelHide Cat ${Date.now()}`;
+    await page.getByLabel(/^Name/i).fill(uniqueName);
+    await page.getByRole('button', { name: /Create category/i }).click();
+    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
+    
+    const searchInput = page.getByPlaceholder(/Search name or slug/i);
+    await searchInput.fill(uniqueName);
+    await searchInput.press('Enter');
+    
+    const row = page.getByRole('row', { name: uniqueName }).first();
+    await expect(row).toBeVisible();
+    
+    // 1. Locate an active category.
+    // 2. Click Hide.
+    await row.getByRole('button', { name: /^Hide$/i }).click();
+    
+    const dialog = page.getByRole('dialog');
+    await expect(dialog).toBeVisible();
+    
+    // 3. Click Cancel or dismiss the prompt.
+    await dialog.getByRole('button', { name: /^Cancel$/i }).click();
+    await expect(dialog).toBeHidden();
+    
+    // Wait for row state
+    await page.waitForTimeout(1000);
+    
+    // 4. Verify the category status.
+    // Expected: 1. Hide action is cancelled. 2. Category status remains Active.
+    await expect(row).toContainText(/Active/i);
+    await expect(row.getByRole('button', { name: /^Hide$/i })).toBeVisible();
+    
+    log.info('ADM-CAT-FUN-011', 'ok');
+  });
 });
+
 

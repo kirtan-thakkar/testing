@@ -1,0 +1,25 @@
+07:44:54.490 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 3 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-44-35.log
+07:44:56.295 [INFO] admin        launching browser & logging in
+07:45:04.038 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+07:45:04.052 [INFO] ADM-CAT-FUN-003 start
+07:45:06.463 [INFO] ADM-CAT-FUN-003 ok
+07:45:06.473 [PASS] ADM-CAT-FUN-003: Create a category with a parent category 2.41s
+07:45:06.477 [INFO] ADM-CAT-FUN-004 start
+07:45:09.571 [INFO] ADM-CAT-FUN-004 ok
+07:45:09.575 [PASS] ADM-CAT-FUN-004: Verify category ordering based on sort order 3.10s
+07:45:09.583 [INFO] ADM-CAT-FUN-005 start
+07:45:13.513 [INFO] ADM-CAT-FUN-005 ok
+07:45:13.560 [PASS] ADM-CAT-FUN-005: Upload a valid category icon 3.93s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-44-35
+========================================================================
+  Total    : 3
+  Passed   : 3  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 37.7s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-44-35.log
+========================================================================
+07:45:13.627 [INFO] RUN-END      Status: passed | Duration: 37.7s
+07:45:13.629 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-44-35.html

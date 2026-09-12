@@ -1,0 +1,19 @@
+07:46:05.578 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-45-46.log
+07:46:07.287 [INFO] admin        launching browser & logging in
+07:46:14.555 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+07:46:14.569 [INFO] ADM-CAT-FUN-009 start
+07:46:16.988 [INFO] ADM-CAT-FUN-009 ok
+07:46:17.009 [PASS] ADM-CAT-FUN-009: Cancel category editing without saving 2.42s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-45-46
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 30.6s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-45-46.log
+========================================================================
+07:46:17.074 [INFO] RUN-END      Status: passed | Duration: 30.6s
+07:46:17.076 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-45-46.html
