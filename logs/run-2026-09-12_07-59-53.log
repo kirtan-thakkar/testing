@@ -1,0 +1,22 @@
+08:00:26.600 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 2 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-59-53.log
+08:00:28.364 [INFO] admin        launching browser & logging in
+08:00:36.096 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+08:00:36.111 [INFO] ADM-CAT-FUN-012 start
+08:00:39.731 [INFO] ADM-CAT-FUN-012 ok
+08:00:39.740 [PASS] ADM-CAT-FUN-012: Delete an existing category 3.62s
+08:00:39.743 [INFO] ADM-CAT-FUN-013 start
+08:00:41.229 [INFO] ADM-CAT-FUN-013 ok
+08:00:41.245 [PASS] ADM-CAT-FUN-013: Cancel category deletion 1.49s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-59-53
+========================================================================
+  Total    : 2
+  Passed   : 2  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 47.4s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-59-53.log
+========================================================================
+08:00:41.312 [INFO] RUN-END      Status: passed | Duration: 47.4s
+08:00:41.314 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-59-53.html

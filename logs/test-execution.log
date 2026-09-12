@@ -888,3 +888,96 @@ You may need to escape symbols like "$" or "*" and quote the arguments.
 ========================================================================
 07:47:49.847 [INFO] RUN-END      Status: failed | Duration: 34.6s
 07:47:49.849 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-47-15.html
+07:54:44.912 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 2 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-54-06.log
+07:54:46.764 [INFO] admin        launching browser & logging in
+07:54:54.055 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+07:54:54.071 [INFO] ADM-CAT-FUN-010 start
+07:54:58.184 [INFO] ADM-CAT-FUN-010 ok
+07:54:58.193 [PASS] ADM-CAT-FUN-010: Hide an active category 4.12s
+07:54:58.196 [INFO] ADM-CAT-FUN-011 start
+07:55:28.353 [FAIL] ADM-CAT-FUN-011: Cancel hiding an active category 30.04s — [31mTest timeout of 30000ms exceeded.[39m
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-54-06
+========================================================================
+  Total    : 2
+  Passed   : 1  (50.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 81.9s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-54-06.log
+========================================================================
+07:55:28.383 [INFO] RUN-END      Status: failed | Duration: 81.9s
+07:55:28.386 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-54-06.html
+07:56:40.481 [INFO] admin        launching browser & logging in
+07:56:47.875 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+07:57:48.903 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-57-17.log
+07:57:50.724 [INFO] admin        launching browser & logging in
+07:57:58.196 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+07:57:58.218 [INFO] ADM-CAT-FUN-011 start
+07:58:03.319 [INFO] ADM-CAT-FUN-011 ok
+07:58:03.351 [PASS] ADM-CAT-FUN-011: Cancel hiding an active category 5.11s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-57-17
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 46.0s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-57-17.log
+========================================================================
+07:58:03.428 [INFO] RUN-END      Status: passed | Duration: 46.0s
+07:58:03.431 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-57-17.html
+07:58:38.523 [INFO] admin        launching browser & logging in
+07:58:47.335 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+07:59:14.353 [INFO] admin        launching browser & logging in
+07:59:22.874 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+08:00:26.600 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 2 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-59-53.log
+08:00:28.364 [INFO] admin        launching browser & logging in
+08:00:36.096 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+08:00:36.111 [INFO] ADM-CAT-FUN-012 start
+08:00:39.731 [INFO] ADM-CAT-FUN-012 ok
+08:00:39.740 [PASS] ADM-CAT-FUN-012: Delete an existing category 3.62s
+08:00:39.743 [INFO] ADM-CAT-FUN-013 start
+08:00:41.229 [INFO] ADM-CAT-FUN-013 ok
+08:00:41.245 [PASS] ADM-CAT-FUN-013: Cancel category deletion 1.49s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-59-53
+========================================================================
+  Total    : 2
+  Passed   : 2  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 47.4s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-59-53.log
+========================================================================
+08:00:41.312 [INFO] RUN-END      Status: passed | Duration: 47.4s
+08:00:41.314 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-59-53.html
+08:01:07.600 [INFO] admin        launching browser & logging in
+08:01:15.010 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+08:01:36.232 [INFO] admin        launching browser & logging in
+08:01:44.179 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+08:02:03.678 [INFO] admin        launching browser & logging in
+08:02:13.900 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+08:03:47.720 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_08-03-15.log
+08:03:49.473 [INFO] admin        launching browser & logging in
+08:03:56.746 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/dashboard
+08:03:56.770 [INFO] ADM-CAT-NEG-001 start
+08:03:59.572 [INFO] ADM-CAT-NEG-001 ok
+08:03:59.604 [PASS] ADM-CAT-NEG-001: Attempt to delete a category that is in use 2.81s
+
+========================================================================
+  RUN SUMMARY  2026-09-12_08-03-15
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 43.8s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_08-03-15.log
+========================================================================
+08:03:59.685 [INFO] RUN-END      Status: passed | Duration: 43.8s
+08:03:59.688 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_08-03-15.html

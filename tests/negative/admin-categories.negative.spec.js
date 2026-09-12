@@ -150,4 +150,31 @@ test.describe.serial('Admin Categories - Validation', () => {
     
     log.info('ADM-CAT-VAL-004', 'ok');
   });
+
+  test('ADM-CAT-NEG-001: Attempt to delete a category that is in use', async () => {
+    log.info('ADM-CAT-NEG-001', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    
+    // 1. Locate a category showing usage such as campaigns.
+    // 'Art & Photography' is known to have 1 campaign.
+    const searchInput = page.getByPlaceholder(/Search name or slug/i);
+    await searchInput.fill('Art & Photography');
+    await searchInput.press('Enter');
+    
+    const row = page.getByRole('row', { name: 'Art & Photography' }).first();
+    await expect(row).toBeVisible();
+    
+    // Ensure it shows usage
+    await expect(row).toContainText(/campaign/i);
+    
+    // 2. Click Delete.
+    await row.getByRole('button', { name: /Delete/i }).click();
+    
+    // Expected: System should prevent unsafe deletion with a clear message.
+    const toast = page.locator('[role="status"], [role="alert"], .toast, ol').filter({ hasText: /Campaigns still use this category/i });
+    await expect(toast).toBeVisible();
+    
+    log.info('ADM-CAT-NEG-001', 'ok');
+  });
 });

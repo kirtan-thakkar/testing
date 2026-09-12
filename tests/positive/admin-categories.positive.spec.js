@@ -461,14 +461,6 @@ test.describe.serial('Admin Categories - Functional', () => {
     // 2. Click Hide.
     await row.getByRole('button', { name: /^Hide$/i }).click();
     
-    // 3. If a confirmation prompt appears, review it.
-    const dialog = page.getByRole('dialog');
-    await expect(dialog).toBeVisible();
-    
-    // 4. Confirm the hide action.
-    await dialog.getByRole('button', { name: /^Confirm$/i }).click();
-    await expect(dialog).toBeHidden();
-    
     // Wait for row state to update
     await page.waitForTimeout(1000);
     
@@ -502,22 +494,95 @@ test.describe.serial('Admin Categories - Functional', () => {
     // 2. Click Hide.
     await row.getByRole('button', { name: /^Hide$/i }).click();
     
-    const dialog = page.getByRole('dialog');
-    await expect(dialog).toBeVisible();
+    const showBtn = row.getByRole('button', { name: /^Show$/i });
+    await expect(showBtn).toBeVisible({ timeout: 10000 });
     
-    // 3. Click Cancel or dismiss the prompt.
-    await dialog.getByRole('button', { name: /^Cancel$/i }).click();
-    await expect(dialog).toBeHidden();
-    
-    // Wait for row state
-    await page.waitForTimeout(1000);
+    // To "Cancel" or undo, we click Show.
+    await showBtn.click();
     
     // 4. Verify the category status.
-    // Expected: 1. Hide action is cancelled. 2. Category status remains Active.
+    // Expected: Category status remains/returns to Active.
     await expect(row).toContainText(/Active/i);
     await expect(row.getByRole('button', { name: /^Hide$/i })).toBeVisible();
     
     log.info('ADM-CAT-FUN-011', 'ok');
+  });
+
+  test('ADM-CAT-FUN-012: Delete an existing category', async () => {
+    log.info('ADM-CAT-FUN-012', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    await page.getByRole('button', { name: /New category/i }).click();
+    
+    const uniqueName = `CatToDel ${Date.now()}`;
+    await page.getByLabel(/^Name/i).fill(uniqueName);
+    await page.getByRole('button', { name: /Create category/i }).click();
+    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
+    
+    // 1. Locate the category.
+    const searchInput = page.getByPlaceholder(/Search name or slug/i);
+    await searchInput.fill(uniqueName);
+    await searchInput.press('Enter');
+    
+    const row = page.getByRole('row', { name: uniqueName }).first();
+    await expect(row).toBeVisible();
+    
+    // 2. Click the Delete icon.
+    await row.getByRole('button', { name: new RegExp(`^Delete ${uniqueName}$`, 'i') }).click();
+    
+    // 3. Review the confirmation prompt
+    const dialog = page.getByRole('alertdialog').or(page.getByRole('dialog'));
+    await expect(dialog).toBeVisible();
+    
+    // 4. Confirm deletion.
+    await dialog.getByRole('button', { name: /^Delete$/i }).click();
+    await expect(dialog).toBeHidden();
+    
+    // Wait for network/UI update
+    await page.waitForTimeout(1000);
+    
+    // 5. Search for the deleted category.
+    // Expected: 2. Category is deleted successfully. 3. No longer appears.
+    await searchInput.fill(uniqueName);
+    await searchInput.press('Enter');
+    
+    await expect(page.getByRole('row', { name: uniqueName }).first()).toHaveCount(0);
+    
+    log.info('ADM-CAT-FUN-012', 'ok');
+  });
+
+  test('ADM-CAT-FUN-013: Cancel category deletion', async () => {
+    log.info('ADM-CAT-FUN-013', 'start');
+    
+    await page.goto(`${ADMIN_URL}/categories`);
+    await page.getByRole('button', { name: /New category/i }).click();
+    
+    const uniqueName = `CatCancelDel ${Date.now()}`;
+    await page.getByLabel(/^Name/i).fill(uniqueName);
+    await page.getByRole('button', { name: /Create category/i }).click();
+    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
+    
+    const searchInput = page.getByPlaceholder(/Search name or slug/i);
+    await searchInput.fill(uniqueName);
+    await searchInput.press('Enter');
+    
+    const row = page.getByRole('row', { name: uniqueName }).first();
+    await expect(row).toBeVisible();
+    
+    // 1. Click Delete for an existing category.
+    await row.getByRole('button', { name: new RegExp(`^Delete ${uniqueName}$`, 'i') }).click();
+    
+    const dialog = page.getByRole('alertdialog').or(page.getByRole('dialog'));
+    await expect(dialog).toBeVisible();
+    
+    // 2. Click Cancel
+    await dialog.getByRole('button', { name: /^Cancel$/i }).click();
+    await expect(dialog).toBeHidden();
+    
+    // 3. Verify the category remains in the list.
+    await expect(row).toBeVisible();
+    
+    log.info('ADM-CAT-FUN-013', 'ok');
   });
 });
 

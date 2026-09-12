@@ -1,0 +1,21 @@
+07:54:44.912 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 2 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-12_07-54-06.log
+07:54:46.764 [INFO] admin        launching browser & logging in
+07:54:54.055 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+07:54:54.071 [INFO] ADM-CAT-FUN-010 start
+07:54:58.184 [INFO] ADM-CAT-FUN-010 ok
+07:54:58.193 [PASS] ADM-CAT-FUN-010: Hide an active category 4.12s
+07:54:58.196 [INFO] ADM-CAT-FUN-011 start
+07:55:28.353 [FAIL] ADM-CAT-FUN-011: Cancel hiding an active category 30.04s — [31mTest timeout of 30000ms exceeded.[39m
+
+========================================================================
+  RUN SUMMARY  2026-09-12_07-54-06
+========================================================================
+  Total    : 2
+  Passed   : 1  (50.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 81.9s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-12_07-54-06.log
+========================================================================
+07:55:28.383 [INFO] RUN-END      Status: failed | Duration: 81.9s
+07:55:28.386 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-12_07-54-06.html
