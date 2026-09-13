@@ -7,7 +7,7 @@ test.describe('User Dashboard - Settings (POSITIVE)', () => {
     // Standard user login via state.json
     await login(page);
     await page.goto('/dashboard');
-    await page.getByRole('button', { name: 'Settings' }).click();
+    await page.getByRole('link', { name: /Settings/i }).click();
     await page.waitForTimeout(1000);
   });
 
@@ -38,7 +38,7 @@ test.describe('User Dashboard - Settings (POSITIVE)', () => {
     
     // Verify bio persists by reloading the page
     await page.reload();
-    await page.getByRole('button', { name: 'Settings' }).click();
+    await page.getByRole('link', { name: /Settings/i }).click();
     await page.waitForTimeout(1000);
     await expect(page.locator('textarea').first()).toHaveValue(bioText);
   });
@@ -72,8 +72,8 @@ test.describe('User Dashboard - Settings (POSITIVE)', () => {
         
         // Navigate directly to Settings
         await page.goto('/dashboard?tab=settings');
-        await page.getByRole('button', { name: 'Settings' }).waitFor({ state: 'visible', timeout: 5000 });
-        await page.getByRole('button', { name: 'Settings' }).click();
+        await page.getByRole('link', { name: /Settings/i }).waitFor({ state: 'visible', timeout: 5000 });
+        await page.getByRole('link', { name: /Settings/i }).click();
         await page.waitForTimeout(1000);
         
         // REVERT the password immediately so we don't break the environment
