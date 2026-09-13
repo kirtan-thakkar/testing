@@ -20,7 +20,7 @@ test.describe.serial('Admin People — NEGATIVE / EDGE', () => {
     await page.goto(`${ADMIN_URL}/users`, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1000);
     const search = page.getByPlaceholder(/Search/i).first();
-    if (await search.count() === 0) { test.skip(true, 'No search on /users'); return; }
+    try { await search.waitFor({ state: 'visible', timeout: 5000 }); } catch { test.skip(true, 'No search on /users'); return; }
     await search.fill('zzznousersuchxyz');
     await page.waitForTimeout(1500);
     const bodyText = (await page.locator('body').textContent()).toLowerCase();
@@ -34,7 +34,7 @@ test.describe.serial('Admin People — NEGATIVE / EDGE', () => {
     let alertFired = false;
     page.on('dialog', d => { alertFired = true; d.dismiss(); });
     const search = page.getByPlaceholder(/Search/i).first();
-    if (await search.count() === 0) { test.skip(true, 'No search'); return; }
+    try { await search.waitFor({ state: 'visible', timeout: 5000 }); } catch { test.skip(true, 'No search'); return; }
     await search.fill(`<script>alert(1)</script>`);
     await page.waitForTimeout(1500);
     expect(alertFired).toBe(false);
@@ -45,7 +45,7 @@ test.describe.serial('Admin People — NEGATIVE / EDGE', () => {
     await page.goto(`${ADMIN_URL}/users`, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1000);
     const search = page.getByPlaceholder(/Search/i).first();
-    if (await search.count() === 0) { test.skip(true, 'No search'); return; }
+    try { await search.waitFor({ state: 'visible', timeout: 5000 }); } catch { test.skip(true, 'No search'); return; }
     await search.fill('A'.repeat(5000));
     await page.waitForTimeout(1500);
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();

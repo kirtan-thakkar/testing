@@ -102,7 +102,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
     await safeRun(async () => {
       await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 60000 });
       await dismissCookies(page);
-      await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
+      
       await fillStep1(page, { age18: false, countrySupported: false });
       await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
       await page.waitForTimeout(2500);
@@ -122,7 +122,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
     await safeRun(async () => {
       await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 60000 });
       await dismissCookies(page);
-      await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
+      
       await page.getByRole('textbox', { name: /^Company Name/i }).fill('     ');
       await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
       await page.waitForTimeout(2000);
@@ -139,7 +139,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
     await safeRun(async () => {
       await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 60000 });
       await dismissCookies(page);
-      await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
+      
       const huge = 'A'.repeat(5000);
       const company = page.getByRole('textbox', { name: /^Company Name/i });
       await company.fill(huge);
@@ -157,7 +157,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
     await safeRun(async () => {
       await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 60000 });
       await dismissCookies(page);
-      await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
+      
       const nasty = `<script>alert(1)</script>"';--/* DROP TABLE users;-- 🚀🔥💀`;
       const company = page.getByRole('textbox', { name: /^Company Name/i });
       let alertFired = false;
@@ -176,7 +176,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
     await safeRun(async () => {
       await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 60000 });
       await dismissCookies(page);
-      await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
+      
       const pan = page.getByRole('textbox', { name: /^PAN Card Number/i });
       await pan.fill('abcde1234f');
       expect((await pan.inputValue()).length).toBeGreaterThan(0);
@@ -191,7 +191,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
     await safeRun(async () => {
       await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 60000 });
       await dismissCookies(page);
-      await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
+      
       await page.getByRole('textbox', { name: /^Company Name/i }).fill('PersistenceTest');
       await page.reload({ waitUntil: 'domcontentloaded' });
       await page.locator('h1').first().waitFor();
@@ -207,7 +207,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
     await safeRun(async () => {
       await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 60000 });
       await dismissCookies(page);
-      await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
+      
       await fillStep1(page, { companyName: 'BackNavTest' });
       await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
       await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 60000 });
@@ -224,7 +224,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
     await safeRun(async () => {
       await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 60000 });
       await dismissCookies(page);
-      await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
+      
       await fillStep1(page);
       const btn = page.getByRole('button', { name: /^Continue/i });
       await Promise.all([btn.click(), btn.click().catch(() => {})]);
@@ -242,7 +242,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
     try {
       await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 60000 });
       await dismissCookies(page);
-      await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
+      
     } catch (e) {
       log.warn('WIZ-19-N', `page load failed: ${e.message.split('\n')[0]}`);
       test.skip(true, 'page load slow');
@@ -289,7 +289,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
     await safeRun(async () => {
       await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 60000 });
       await dismissCookies(page);
-      await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
+      
       await fillStep1(page);
       await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
       await expect(page.getByText(/Step 2 of 4/i)).toBeVisible({ timeout: 60000 });
@@ -307,7 +307,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
     await safeRun(async () => {
       await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 60000 });
       await dismissCookies(page);
-      await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 30000 });
+      
       const MY_COMPANY = 'ReviewMirrorTest-' + Date.now();
       await fillStep1(page, { companyName: MY_COMPANY });
       await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });

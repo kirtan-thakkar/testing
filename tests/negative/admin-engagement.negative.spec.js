@@ -20,7 +20,7 @@ test.describe.serial('Admin Engagement — NEGATIVE / EDGE', () => {
     await page.goto(`${ADMIN_URL}/inbox`, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1000);
     const search = page.getByPlaceholder(/Search/i).first();
-    if (await search.count() === 0) { test.skip(true, 'No search on inbox'); return; }
+    try { await search.waitFor({ state: 'visible', timeout: 5000 }); } catch { test.skip(true, 'No search on inbox'); return; }
     await search.fill('zzznomessagexyz');
     await page.waitForTimeout(1500);
     const bodyText = (await page.locator('body').textContent()).toLowerCase();
@@ -32,7 +32,7 @@ test.describe.serial('Admin Engagement — NEGATIVE / EDGE', () => {
     await page.goto(`${ADMIN_URL}/subscribers`, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1000);
     const search = page.getByPlaceholder(/Search/i).first();
-    if (await search.count() === 0) { test.skip(true, 'No search on subscribers'); return; }
+    try { await search.waitFor({ state: 'visible', timeout: 5000 }); } catch { test.skip(true, 'No search on subscribers'); return; }
     await search.fill('A'.repeat(5000));
     await page.waitForTimeout(1500);
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
@@ -45,7 +45,7 @@ test.describe.serial('Admin Engagement — NEGATIVE / EDGE', () => {
     let alertFired = false;
     page.on('dialog', d => { alertFired = true; d.dismiss(); });
     const replyBox = page.locator('textarea').first();
-    if (await replyBox.count() === 0) { test.skip(true, 'No reply textarea'); return; }
+    try { await replyBox.waitFor({ state: 'visible', timeout: 5000 }); } catch { test.skip(true, 'No reply textarea'); return; }
     await replyBox.fill('<script>alert(1)</script>');
     await page.waitForTimeout(1000);
     expect(alertFired).toBe(false);

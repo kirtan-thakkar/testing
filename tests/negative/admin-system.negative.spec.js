@@ -31,7 +31,7 @@ test.describe.serial('Admin System — NEGATIVE / EDGE', () => {
     await page.goto(`${ADMIN_URL}/activity`, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1000);
     const dateInput = page.locator('input[type="date"]').first();
-    if (await dateInput.count() === 0) { test.skip(true, 'No date filter'); return; }
+    try { await dateInput.waitFor({ state: 'visible', timeout: 5000 }); } catch { test.skip(true, 'No date filter'); return; }
     await dateInput.fill('not-a-date');
     await page.waitForTimeout(800);
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
@@ -42,7 +42,7 @@ test.describe.serial('Admin System — NEGATIVE / EDGE', () => {
     await page.goto(`${ADMIN_URL}/activity`, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1000);
     const search = page.getByPlaceholder(/Search/i).first();
-    if (await search.count() === 0) { test.skip(true, 'No search'); return; }
+    try { await search.waitFor({ state: 'visible', timeout: 5000 }); } catch { test.skip(true, 'No search'); return; }
     await search.fill('A'.repeat(5000));
     await page.waitForTimeout(1500);
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
