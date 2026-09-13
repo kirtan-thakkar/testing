@@ -197,10 +197,10 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
     await dismissCookies(page);
     
     // Send cover image first
+    await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
+    await page.waitForTimeout(2000);
     const coverInput = page.locator('input[type=file][accept*="image"]').first();
     await coverInput.setInputFiles(IMG_SMALL);
-    await page.waitForTimeout(2000);
-    await page.locator('button').filter({ hasText: /^Continue/i }).first().click({ force: true });
     await page.waitForTimeout(2000);
 
     const galleryInput = page.locator('input[type=file][accept*="video"]');

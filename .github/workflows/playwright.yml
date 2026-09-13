@@ -1,11 +1,5 @@
 name: Playwright Tests
 
-# These tests target a private deployed server (https://187.77.79.40.nip.io/)
-# that is NOT reachable from GitHub-hosted runners. They are intended to run
-# locally (on a developer machine or a self-hosted runner that has network
-# access to the deployed app).
-#
-# Trigger: only manual dispatch, never on push/PR.
 on:
   workflow_dispatch:
     inputs:
@@ -14,7 +8,6 @@ on:
         required: false
         default: ''
   schedule:
-    # 7 PM IST (1:30 PM UTC) daily — only works if a self-hosted runner is attached
     - cron: '30 13 * * *'
 
 jobs:
