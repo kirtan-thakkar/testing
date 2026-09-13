@@ -19,7 +19,7 @@ test.describe.serial('Admin Engagement — NEGATIVE / EDGE', () => {
     log.info('ENG-N1', 'start');
     await page.goto(`${ADMIN_URL}/inbox`, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1000);
-    const search = page.getByRole('textbox', { name: /search/i }).first();
+    const search = page.getByPlaceholder(/Search/i).first();
     if (await search.count() === 0) { test.skip(true, 'No search on inbox'); return; }
     await search.fill('zzznomessagexyz');
     await page.waitForTimeout(1500);
@@ -31,7 +31,7 @@ test.describe.serial('Admin Engagement — NEGATIVE / EDGE', () => {
     log.info('ENG-N2', 'start');
     await page.goto(`${ADMIN_URL}/subscribers`, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1000);
-    const search = page.getByRole('textbox', { name: /search/i }).first();
+    const search = page.getByPlaceholder(/Search/i).first();
     if (await search.count() === 0) { test.skip(true, 'No search on subscribers'); return; }
     await search.fill('A'.repeat(5000));
     await page.waitForTimeout(1500);

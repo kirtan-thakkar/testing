@@ -41,7 +41,7 @@ test.describe.serial('Admin System — NEGATIVE / EDGE', () => {
     log.info('SYS-N3', 'start');
     await page.goto(`${ADMIN_URL}/activity`, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1000);
-    const search = page.getByRole('textbox', { name: /search/i }).first();
+    const search = page.getByPlaceholder(/Search/i).first();
     if (await search.count() === 0) { test.skip(true, 'No search'); return; }
     await search.fill('A'.repeat(5000));
     await page.waitForTimeout(1500);

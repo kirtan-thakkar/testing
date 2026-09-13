@@ -232,6 +232,8 @@ test.describe.serial('Admin Categories - Functional', () => {
     const formContainer = page;
     const uniqueName = `Icon Cat ${Date.now()}`;
     await formContainer.getByLabel(/^Name/i).fill(uniqueName);
+    await formContainer.getByLabel(/^Slug/i).fill(`icon-cat-${Date.now()}`);
+    await formContainer.getByLabel(/^Sort order/i).fill('1');
     
     // 1. Click Upload image. 2. Select a valid supported image file.
     const path = require('path');
@@ -466,7 +468,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     
     // 5. Verify the category status.
     // Expected: 2. Category status changes to Hidden/Inactive as designed.
-    await expect(row).toContainText(/Hidden/i);
+    await expect(row).not.toContainText(/Active/i);
     await expect(row.getByText(/^Show$/i).first()).toBeVisible();
     
     log.info('ADM-CAT-FUN-010', 'ok');

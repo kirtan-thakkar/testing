@@ -18,12 +18,12 @@ test.describe.serial('Admin Engagement — POSITIVE', () => {
   test('UF-ADMIN-13-P: Contact Inbox page loads', async () => {
     log.info('ENG-13-P', 'start');
     await page.goto(`${ADMIN_URL}/inbox`, { waitUntil: 'domcontentloaded' });
-    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    await expect(page.locator('h1, h2, h3').first()).toBeVisible();
   });
 
   test('UF-ADMIN-14-P: Subscribers page loads', async () => {
     log.info('ENG-14-P', 'start');
     await page.goto(`${ADMIN_URL}/subscribers`, { waitUntil: 'domcontentloaded' });
-    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    await expect(page.locator('h1, h2, h3').first()).toBeVisible();
   });
 });

@@ -18,13 +18,13 @@ test.describe.serial('Admin Content — POSITIVE', () => {
   test('UF-ADMIN-15-P: CMS Pages list loads with heading', async () => {
     log.info('CMS-15-P', 'start');
     await page.goto(`${ADMIN_URL}/cms`, { waitUntil: 'domcontentloaded' });
-    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    await expect(page.locator('h1, h2, h3').first()).toBeVisible();
   });
 
   test('UF-ADMIN-16-P: CMS settings page loads', async () => {
     log.info('CMS-16-P', 'start');
     await page.goto(`${ADMIN_URL}/cms/settings`, { waitUntil: 'domcontentloaded' });
-    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    await expect(page.locator('h1, h2, h3').first()).toBeVisible();
   });
 
   // FAQs

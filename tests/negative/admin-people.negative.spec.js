@@ -19,7 +19,7 @@ test.describe.serial('Admin People — NEGATIVE / EDGE', () => {
     log.info('PPL-N1', 'start');
     await page.goto(`${ADMIN_URL}/users`, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1000);
-    const search = page.getByRole('textbox', { name: /search/i }).first();
+    const search = page.getByPlaceholder(/Search/i).first();
     if (await search.count() === 0) { test.skip(true, 'No search on /users'); return; }
     await search.fill('zzznousersuchxyz');
     await page.waitForTimeout(1500);
@@ -33,7 +33,7 @@ test.describe.serial('Admin People — NEGATIVE / EDGE', () => {
     await page.waitForTimeout(1000);
     let alertFired = false;
     page.on('dialog', d => { alertFired = true; d.dismiss(); });
-    const search = page.getByRole('textbox', { name: /search/i }).first();
+    const search = page.getByPlaceholder(/Search/i).first();
     if (await search.count() === 0) { test.skip(true, 'No search'); return; }
     await search.fill(`<script>alert(1)</script>`);
     await page.waitForTimeout(1500);
@@ -44,7 +44,7 @@ test.describe.serial('Admin People — NEGATIVE / EDGE', () => {
     log.info('PPL-N3', 'start');
     await page.goto(`${ADMIN_URL}/users`, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1000);
-    const search = page.getByRole('textbox', { name: /search/i }).first();
+    const search = page.getByPlaceholder(/Search/i).first();
     if (await search.count() === 0) { test.skip(true, 'No search'); return; }
     await search.fill('A'.repeat(5000));
     await page.waitForTimeout(1500);
