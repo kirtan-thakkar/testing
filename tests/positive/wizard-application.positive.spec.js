@@ -177,6 +177,7 @@ test.describe('8. Campaign Application Wizard — POSITIVE flows', () => {
     await page.goto('/start/application', { waitUntil: 'domcontentloaded' });
     await dismissCookies(page);
     await page.getByRole('textbox', { name: /^Company Name/i }).fill('Refresh Corp');
+    await page.waitForTimeout(2000); // Wait for auto-save
     await page.reload({ waitUntil: 'domcontentloaded' });
     await expect(page.getByRole('textbox', { name: /^Company Name/i })).toHaveValue('Refresh Corp');
   });

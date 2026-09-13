@@ -18,7 +18,7 @@ async function login(page) {
   try {
     await page.goto('/dashboard', { waitUntil: 'domcontentloaded', timeout: 10000 });
     // Wait for an element that confirms we are actually logged in and on the dashboard
-    await page.getByRole('link', { name: /Settings/i }).waitFor({ state: 'visible', timeout: 3000 });
+    await page.getByText('Settings', { exact: true }).waitFor({ state: 'visible', timeout: 3000 });
     log.info('login', 'already authed (via /dashboard)');
     return;
   } catch {

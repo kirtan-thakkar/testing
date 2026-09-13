@@ -113,7 +113,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     await page.waitForTimeout(2000); // Wait for upload to complete
     
     // 8. Keep Active enabled.
-    const activeCheckbox = formContainer.getByLabel(/Active/i);
+    const activeCheckbox = formContainer.getByRole('checkbox', { name: /Active/i });
     await expect(activeCheckbox).toBeChecked();
     
     // 9. Click Create category.
@@ -278,7 +278,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     // Slug will auto-fill, we'll leave it.
     
     // 3. Disable the Active checkbox.
-    const activeCheckbox = formContainer.getByLabel(/Active/i);
+    const activeCheckbox = formContainer.getByRole('checkbox', { name: /Active/i });
     await activeCheckbox.uncheck();
     await expect(activeCheckbox).not.toBeChecked();
     
