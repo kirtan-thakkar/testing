@@ -45,7 +45,7 @@ async function main() {
 
   const res = await sheets.spreadsheets.values.get({
     spreadsheetId: SPREADSHEET_ID,
-    range: \`\${sheetName}!A1:Z\`
+    range: `${sheetName}!A1:Z`
   });
 
   const rows = res.data.values || [];
@@ -58,7 +58,7 @@ async function main() {
     colIndex = headers.length;
     await sheets.spreadsheets.values.update({
       spreadsheetId: SPREADSHEET_ID,
-      range: \`\${sheetName}!\${getColumnLetter(colIndex)}1\`,
+      range: `${sheetName}!${getColumnLetter(colIndex)}1`,
       valueInputOption: 'USER_ENTERED',
       resource: { values: [[todayStr]] }
     });
@@ -69,7 +69,7 @@ async function main() {
     const rowId = rows[i][0];
     if (rowId && results[rowId]) {
       data.push({
-        range: \`\${sheetName}!\${getColumnLetter(colIndex)}\${i + 1}\`,
+        range: `${sheetName}!${getColumnLetter(colIndex)}${i + 1}`,
         values: [[results[rowId]]]
       });
     }

@@ -12,7 +12,7 @@ const dummyJpgBuffer = Buffer.from(dummyJpgBase64, 'base64');
 
 // Create 12 dummy images
 for (let i = 1; i <= 12; i++) {
-  fs.writeFileSync(path.join(publicDir, \`dummy_img_\${i}.jpg\`), dummyJpgBuffer);
+  fs.writeFileSync(path.join(publicDir, `dummy_img_${i}.jpg`), dummyJpgBuffer);
 }
 // Specific images used explicitly by name
 fs.writeFileSync(path.join(publicDir, 'brayden-law-Io9wt6UKv28-unsplash.jpg'), dummyJpgBuffer);
@@ -26,7 +26,7 @@ function createDummyFile(filename, size) {
     fs.writeSync(fd, Buffer.from([0]), 0, 1, size - 1);
   }
   fs.closeSync(fd);
-  console.log(\`Created \${filename} (\${size} bytes)\`);
+  console.log(`Created ${filename} (${size} bytes)`);
 }
 
 createDummyFile('Recording 2026-03-04 235344.mp4', 5538125);

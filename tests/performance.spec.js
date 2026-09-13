@@ -1,5 +1,5 @@
 import {test, expect } from '@playwright/test';
-const log = require('../logger.js');
+const log = require('./logger.js');
 
 test.describe('Performance & Latency SLAs', () => {
 

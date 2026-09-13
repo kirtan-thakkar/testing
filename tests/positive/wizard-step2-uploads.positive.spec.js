@@ -37,7 +37,7 @@ const MP3_AUDIO   = path.join(PUBLIC_DIR, 'rediskasound-bossa-jazz-instrumental-
 
 const IMG_SMALL   = path.join(PUBLIC_DIR, 'brayden-law-Io9wt6UKv28-unsplash.jpg'); // 544K
 const IMG_MEDIUM  = path.join(PUBLIC_DIR, 'karsten-winegeart-jQcbjj-BrdA-unsplash.jpg'); // 9.4M
-const ALL_IMAGES  = fs.readdirSync(PUBLIC_DIR)
+const ALL_IMAGES  = (fs.existsSync(PUBLIC_DIR) ? fs.readdirSync(PUBLIC_DIR) : [])
   .filter(f => f.toLowerCase().endsWith('.jpg') || f.toLowerCase().endsWith('.jpeg'))
   .map(f => path.join(PUBLIC_DIR, f));
 
