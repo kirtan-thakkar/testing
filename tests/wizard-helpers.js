@@ -16,14 +16,14 @@ async function login(page) {
   // Slow path: actually log in.
   await page.goto('/login', { waitUntil: 'domcontentloaded', timeout: 15000 });
   try {
-    await page.locator('input[name="email"]').waitFor({ timeout: 15000 });
+    await page.getByRole('textbox', { name: /Email/i }).waitFor({ timeout: 15000 });
   } catch {
     log.info('login', 'already authed (form not shown)');
     return;
   }
-  await page.getByRole('textbox', { name: 'Email' }).fill('dummy@gmail.com');
-  await page.getByRole('textbox', { name: 'Password' }).fill('Puffyin@7410');
-  await page.getByRole('button', { name: 'Log In' }).click();
+  await page.getByRole('textbox', { name: /Email/i }).fill(process.env.USER_EMAIL || 'dummy@gmail.com');
+  await page.getByRole('textbox', { name: /Password/i }).fill(process.env.USER_PASSWORD || 'Puffyin@7410');
+  await page.getByRole('button', { name: /Log In/i }).click();
   await page.waitForURL(u => !u.toString().includes('/login'), {
     timeout: 20000, waitUntil: 'domcontentloaded',
   });

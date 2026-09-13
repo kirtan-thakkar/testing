@@ -1,0 +1,19 @@
+08:49:53.947 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-13_08-48-49.log
+08:49:59.862 [INFO] UP-16-P      start
+08:49:59.864 [INFO] login        navigating to /login
+08:50:21.785 [INFO] login        already authed (form not shown)
+08:50:42.943 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+08:50:44.121 [FAIL] UF-UP-16-P: Upload 99MB video (just under limit) succeeds 47.87s — Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.
+
+========================================================================
+  RUN SUMMARY  2026-09-13_08-48-49
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 114.4s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-13_08-48-49.log
+========================================================================
+08:50:44.167 [INFO] RUN-END      Status: failed | Duration: 114.4s
+08:50:44.183 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-13_08-48-49.html

@@ -131,3 +131,231 @@
 08:35:41.428 [INFO] ADM-CAT-FUN-001 Categories link is visible
 08:35:41.445 [PASS] ADM-CAT-FUN-001: Verify Categories is visible in the Campaigns section 1.23s
 08:35:41.457 [INFO] ADM-CAT-FUN-001 (Search) start
+08:35:43.573 [INFO] ADM-CAT-FUN-001 (Search) ok
+08:35:43.585 [PASS] ADM-CAT-FUN-001: Search for an existing category 2.12s
+08:35:43.610 [INFO] ADM-CAT-FUN-002 start
+08:35:45.184 [FAIL] ADM-CAT-FUN-019: Verify a hidden category can be shown 30.07s — [31mTest timeout of 30000ms exceeded.[39m
+08:35:45.191 [SKIP] ADM-CAT-FUN-020: Verify Show action can be undone skipped
+08:35:45.195 [SKIP] ADM-CAT-FUN-024: Verify Categories displays the default listing state skipped
+
+========================================================================
+  RUN SUMMARY  2026-09-13_08-34-44
+========================================================================
+  Total    : 3
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 2
+  Duration : 60.7s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-13_08-34-44.log
+========================================================================
+08:35:45.234 [INFO] RUN-END      Status: failed | Duration: 60.7s
+08:35:45.239 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-13_08-34-44.html
+08:35:51.086 [INFO] ADM-CAT-FUN-002 ok
+08:35:51.094 [PASS] ADM-CAT-FUN-002: Create category with valid details 7.48s
+08:35:51.100 [INFO] ADM-CAT-FUN-003 start
+08:35:53.447 [INFO] ADM-CAT-FUN-003 ok
+08:35:53.457 [PASS] ADM-CAT-FUN-003: Create a category with a parent category 2.35s
+08:35:53.466 [INFO] ADM-CAT-FUN-004 start
+08:35:57.135 [INFO] ADM-CAT-FUN-004 ok
+08:35:57.146 [PASS] ADM-CAT-FUN-004: Verify category ordering based on sort order 3.67s
+08:35:57.156 [INFO] ADM-CAT-FUN-005 start
+08:36:00.960 [INFO] ADM-CAT-FUN-005 ok
+08:36:00.970 [PASS] ADM-CAT-FUN-005: Upload a valid category icon 3.81s
+08:36:00.976 [INFO] ADM-CAT-FUN-006 start
+08:36:03.190 [INFO] ADM-CAT-FUN-006 ok
+08:36:03.198 [PASS] ADM-CAT-FUN-006: Create an inactive category 2.22s
+08:36:03.204 [INFO] ADM-CAT-FUN-007 start
+08:36:04.924 [INFO] ADM-CAT-FUN-007 ok
+08:36:04.933 [PASS] ADM-CAT-FUN-007: Cancel category creation 1.72s
+08:36:04.939 [INFO] ADM-CAT-FUN-008 start
+08:36:08.739 [INFO] ADM-CAT-FUN-008 ok
+08:36:08.748 [PASS] ADM-CAT-FUN-008: Edit an existing category with valid details 3.80s
+08:36:08.758 [INFO] ADM-CAT-FUN-009 start
+08:36:10.700 [INFO] ADM-CAT-FUN-009 ok
+08:36:10.708 [PASS] ADM-CAT-FUN-009: Cancel category editing without saving 1.95s
+08:36:10.713 [INFO] ADM-CAT-FUN-010 start
+08:36:14.342 [INFO] ADM-CAT-FUN-010 ok
+08:36:14.351 [PASS] ADM-CAT-FUN-010: Hide an active category 3.63s
+08:36:14.356 [INFO] ADM-CAT-FUN-011 start
+08:36:20.189 [INFO] ADM-CAT-FUN-011 ok
+08:36:20.212 [PASS] ADM-CAT-FUN-011: Cancel hiding an active category 5.84s
+08:36:20.220 [INFO] ADM-CAT-FUN-012 start
+08:36:24.059 [INFO] ADM-CAT-FUN-012 ok
+08:36:24.076 [PASS] ADM-CAT-FUN-012: Delete an existing category 3.85s
+08:36:24.085 [INFO] ADM-CAT-FUN-013 start
+08:36:25.946 [INFO] ADM-CAT-FUN-013 ok
+08:36:25.957 [PASS] ADM-CAT-FUN-013: Cancel category deletion 1.87s
+08:36:25.975 [INFO] ADM-CAT-FUN-014 start
+08:36:31.226 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-13_08-35-59.log
+08:36:31.258 [INFO] ADM-CAT-FUN-014 ok
+08:36:31.266 [PASS] ADM-CAT-FUN-014: Verify rows per page selection 5.29s
+08:36:31.273 [INFO] ADM-CAT-FUN-015 start
+08:36:41.630 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 3 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-13_08-36-04.log
+08:36:41.900 [PASS] ADM-AUTH-FUN-001: Login with valid admin credentials 8.61s
+
+========================================================================
+  RUN SUMMARY  2026-09-13_08-35-59
+========================================================================
+  Total    : 1
+  Passed   : 1  (100.0%)
+  Failed   : 0
+  Skipped  : 0
+  Duration : 42.3s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-13_08-35-59.log
+========================================================================
+08:36:42.046 [INFO] RUN-END      Status: passed | Duration: 42.3s
+08:36:42.049 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-13_08-35-59.html
+08:36:43.800 [INFO] admin        launching browser & logging in
+08:36:56.224 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+08:36:56.281 [INFO] ADM-CAT-FUN-019 start
+08:37:01.567 [FAIL] ADM-CAT-FUN-015: Verify pagination navigation 30.09s — [31mTest timeout of 30000ms exceeded.[39m
+08:37:01.571 [SKIP] ADM-CAT-FUN-016: Search category by slug skipped
+08:37:01.574 [SKIP] ADM-CAT-FUN-017: Clear category search skipped
+08:37:01.577 [SKIP] ADM-CAT-FUN-018: Verify New Category form opens successfully skipped
+08:37:01.580 [SKIP] CAT-ACC-005: Verify authorized user can open Categories in a new tab skipped
+08:37:01.583 [SKIP] FUNC: Verify user can return to Categories using browser navigation skipped
+08:37:01.585 [SKIP] ADM-CAT-FUN-019: Verify a hidden category can be shown skipped
+08:37:01.595 [SKIP] ADM-CAT-FUN-020: Verify Show action can be undone skipped
+08:37:01.604 [SKIP] ADM-CAT-FUN-024: Verify Categories displays the default listing state skipped
+
+========================================================================
+  RUN SUMMARY  2026-09-13_08-35-10
+========================================================================
+  Total    : 24
+  Passed   : 15  (62.5%)
+  Failed   : 1
+  Skipped  : 8
+  Duration : 111.5s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-13_08-35-10.log
+========================================================================
+08:37:01.644 [INFO] RUN-END      Status: failed | Duration: 111.5s
+08:37:01.649 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-13_08-35-10.html
+08:37:26.499 [FAIL] ADM-CAT-FUN-019: Verify a hidden category can be shown 30.05s — [31mTest timeout of 30000ms exceeded.[39m
+08:37:26.503 [SKIP] ADM-CAT-FUN-020: Verify Show action can be undone skipped
+08:37:26.506 [SKIP] ADM-CAT-FUN-024: Verify Categories displays the default listing state skipped
+
+========================================================================
+  RUN SUMMARY  2026-09-13_08-36-04
+========================================================================
+  Total    : 3
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 2
+  Duration : 81.9s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-13_08-36-04.log
+========================================================================
+08:37:26.531 [INFO] RUN-END      Status: failed | Duration: 81.9s
+08:37:26.534 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-13_08-36-04.html
+08:38:06.921 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-13_08-36-50.log
+08:38:08.994 [INFO] admin        launching browser & logging in
+08:38:25.347 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+08:38:26.896 [INFO] ADM-CAT-FUN-021 start
+08:38:57.528 [FAIL] ADM-CAT-FUN-021: Verify Next button navigates to the next category page 31.98s — [31mTest timeout of 30000ms exceeded.[39m
+
+========================================================================
+  RUN SUMMARY  2026-09-13_08-36-50
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 127.4s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-13_08-36-50.log
+========================================================================
+08:38:57.555 [INFO] RUN-END      Status: failed | Duration: 127.4s
+08:38:57.558 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-13_08-36-50.html
+08:39:57.958 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-13_08-38-37.log
+08:40:04.118 [INFO] UP-16-P      start
+08:40:04.121 [INFO] login        navigating to /login
+08:40:23.943 [INFO] login        already authed (form not shown)
+08:40:36.306 [FAIL] UF-UP-16-P: Upload 99MB video (just under limit) succeeds 35.87s — TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+
+========================================================================
+  RUN SUMMARY  2026-09-13_08-38-37
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 119.1s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-13_08-38-37.log
+========================================================================
+08:40:36.379 [INFO] RUN-END      Status: failed | Duration: 119.1s
+08:40:36.382 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-13_08-38-37.html
+08:42:15.130 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 3 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-13_08-40-53.log
+08:42:17.297 [INFO] admin        launching browser & logging in
+08:42:28.341 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+08:42:28.392 [INFO] ADM-CAT-FUN-019 start
+08:42:58.721 [FAIL] ADM-CAT-FUN-019: Verify a hidden category can be shown 30.12s — [31mTest timeout of 30000ms exceeded.[39m
+08:42:58.724 [SKIP] ADM-CAT-FUN-020: Verify Show action can be undone skipped
+08:42:58.726 [SKIP] ADM-CAT-FUN-024: Verify Categories displays the default listing state skipped
+
+========================================================================
+  RUN SUMMARY  2026-09-13_08-40-53
+========================================================================
+  Total    : 3
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 2
+  Duration : 125.6s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-13_08-40-53.log
+========================================================================
+08:42:58.752 [INFO] RUN-END      Status: failed | Duration: 125.6s
+08:42:58.756 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-13_08-40-53.html
+08:44:57.874 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 3 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-13_08-44-07.log
+08:44:59.910 [INFO] admin        launching browser & logging in
+08:45:22.108 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+08:45:22.160 [INFO] ADM-CAT-FUN-019 start
+08:45:33.858 [FAIL] ADM-CAT-FUN-019: Verify a hidden category can be shown 11.53s — Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+08:45:33.863 [SKIP] ADM-CAT-FUN-020: Verify Show action can be undone skipped
+08:45:33.867 [SKIP] ADM-CAT-FUN-024: Verify Categories displays the default listing state skipped
+
+========================================================================
+  RUN SUMMARY  2026-09-13_08-44-07
+========================================================================
+  Total    : 3
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 2
+  Duration : 86.1s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-13_08-44-07.log
+========================================================================
+08:45:33.898 [INFO] RUN-END      Status: failed | Duration: 86.1s
+08:45:33.901 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-13_08-44-07.html
+08:49:53.947 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-13_08-48-49.log
+08:49:59.862 [INFO] UP-16-P      start
+08:49:59.864 [INFO] login        navigating to /login
+08:50:21.785 [INFO] login        already authed (form not shown)
+08:50:42.943 [WARN] fillStep1    wizard h1 not visible within 15s — page may not be on /start/application
+08:50:44.121 [FAIL] UF-UP-16-P: Upload 99MB video (just under limit) succeeds 47.87s — Error: Wizard h1 not visible. Account might be locked in Under Review state, or page failed to load.
+
+========================================================================
+  RUN SUMMARY  2026-09-13_08-48-49
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 0
+  Duration : 114.4s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-13_08-48-49.log
+========================================================================
+08:50:44.167 [INFO] RUN-END      Status: failed | Duration: 114.4s
+08:50:44.183 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-13_08-48-49.html
+08:53:23.014 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 1 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-13_08-52-32.log
+08:53:29.072 [INFO] UP-16-P      start
+08:53:29.076 [INFO] login        navigating to /login
+08:54:00.131 [WARN] safeLogin    login timeout: page.waitForURL: Timeout 20000ms exceeded.
+08:54:00.395 [SKIP] UF-UP-16-P: Upload 99MB video (just under limit) succeeds skipped
+
+========================================================================
+  RUN SUMMARY  2026-09-13_08-52-32
+========================================================================
+  Total    : 1
+  Passed   : 0  (0.0%)
+  Failed   : 0
+  Skipped  : 1
+  Duration : 88.0s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-13_08-52-32.log
+========================================================================
+08:54:00.513 [INFO] RUN-END      Status: passed | Duration: 88.0s
+08:54:00.517 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-13_08-52-32.html

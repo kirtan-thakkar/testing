@@ -11,8 +11,8 @@ module.exports = async config => {
     const page = await context.newPage();
 
     await page.goto('https://187.77.79.40.nip.io/login', { waitUntil: 'domcontentloaded', timeout: 60000 });
-    await page.locator('input[name="email"]').fill('dummy@gmail.com');
-    await page.locator('input[name="password"]').fill('Puffyin@7410');
+    await page.locator('input[name="email"]').fill(process.env.USER_EMAIL || 'dummy@gmail.com');
+    await page.locator('input[name="password"]').fill(process.env.USER_PASSWORD || 'Puffyin@7410');
     await page.getByRole('button', { name: 'Log In' }).click();
 
     await page.waitForURL(u => !u.toString().includes('/login'), { timeout: 20000 });
@@ -42,8 +42,8 @@ module.exports = async config => {
     const adminContext = await browser.newContext();
     const adminPage = await adminContext.newPage();
     await adminPage.goto('https://admin.187.77.79.40.nip.io/login', { waitUntil: 'domcontentloaded', timeout: 60000 });
-    await adminPage.getByRole('textbox', { name: 'Email' }).fill('hello@ideakicks.com');
-    await adminPage.getByRole('textbox', { name: 'Password' }).fill(`r9Ff{A0Z'kY:{V1W`);
+    await adminPage.getByRole('textbox', { name: 'Email' }).fill(process.env.ADMIN_EMAIL || 'hello@ideakicks.com');
+    await adminPage.getByRole('textbox', { name: 'Password' }).fill(process.env.ADMIN_PASSWORD || `r9Ff{A0Z'kY:{V1W`);
     await adminPage.getByRole('button', { name: 'Sign in' }).click({ force: true });
     await adminPage.waitForLoadState('domcontentloaded', { timeout: 30000 });
     await adminPage.goto('https://admin.187.77.79.40.nip.io/', { waitUntil: 'domcontentloaded', timeout: 60000 });

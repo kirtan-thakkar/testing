@@ -2,3 +2,19 @@
 08:35:05.795 [INFO] admin        launching browser & logging in
 08:35:14.870 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
 08:35:14.889 [INFO] ADM-CAT-FUN-019 start
+08:35:45.184 [FAIL] ADM-CAT-FUN-019: Verify a hidden category can be shown 30.07s — [31mTest timeout of 30000ms exceeded.[39m
+08:35:45.191 [SKIP] ADM-CAT-FUN-020: Verify Show action can be undone skipped
+08:35:45.195 [SKIP] ADM-CAT-FUN-024: Verify Categories displays the default listing state skipped
+
+========================================================================
+  RUN SUMMARY  2026-09-13_08-34-44
+========================================================================
+  Total    : 3
+  Passed   : 0  (0.0%)
+  Failed   : 1
+  Skipped  : 2
+  Duration : 60.7s
+  Log      : C:\ideakicks\testing\logs\run-2026-09-13_08-34-44.log
+========================================================================
+08:35:45.234 [INFO] RUN-END      Status: failed | Duration: 60.7s
+08:35:45.239 [INFO] REPORTER     HTML report: C:\ideakicks\testing\logs\run-2026-09-13_08-34-44.html

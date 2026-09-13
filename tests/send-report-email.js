@@ -54,11 +54,29 @@ async function main() {
   const dur = durMatch ? durMatch[1] : '?';
   const passRate = total > 0 ? ((passed / total) * 100).toFixed(1) : '0.0';
 
-  const subject = `[IdeaKicks Tests] ${passed}/${total} pass (${passRate}%) — ${failed} failed — ${runId}`;
-  const textBody = `IdeaKicks test run: ${runId}\n` +
-    `Total: ${total}  Passed: ${passed}  Failed: ${failed}  Skipped: ${skipped}  Duration: ${dur}s\n\n` +
-    `Full log: ${latestLogPath}\n` +
-    (fs.existsSync(htmlPath) ? `HTML report: ${htmlPath}\n` : '');
+  // Extract failed tests from HTML if available
+  let failedTestsList = '';
+  if (fs.existsSync(htmlPath)) {
+    const htmlContent = fs.readFileSync(htmlPath, 'utf8');
+    const rowRegex = /<tr class="fail"><td>\d+<\/td><td>([^<]+)<\/td><td>fail<\/td><td>[^<]*<\/td><td>([^<]*)<\/td><\/tr>/g;
+    let match;
+    while ((match = rowRegex.exec(htmlContent)) !== null) {
+      failedTestsList += `- ${match[1]} (Error: ${match[2]})\n`;
+    }
+  }
+
+  const githubLink = process.env.GITHUB_RUN_ID 
+    ? `\nGitHub Actions Run: ${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}\n`
+    : '';
+
+  const subject = `[IdeaKicks Tests] ${passed}/${total} pass (${passRate}%) — ${failed} failed — ${new Date().toISOString().split('T')[0]}`;
+  const textBody = `IdeaKicks Daily Automation Report: ${runId}\n\n` +
+    `Date: ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' })}\n` +
+    `Total Tests: ${total}\nPassed: ${passed}\nFailed: ${failed}\nSkipped: ${skipped}\nPass Rate: ${passRate}%\nDuration: ${dur}s\n` +
+    githubLink +
+    (failedTestsList ? `\nFailed Tests:\n${failedTestsList}\n` : '\nAll tests passed successfully!\n') +
+    `\nFull log: ${latestLogPath}\n` +
+    (fs.existsSync(htmlPath) ? `HTML report attached: ${htmlPath}\n` : '');
 
   // Send via nodemailer if available
   let nodemailer;

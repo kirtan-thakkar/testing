@@ -176,7 +176,7 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
 
 
   test('UF-UP-16-P: Upload 99MB video (just under limit) succeeds', async ({ page }) => {
-    const NINETY_NINE_MB = path.join(PUBLIC_DIR, '99mb.mp4');
+    const NINETY_NINE_MB = path.join(PUBLIC_DIR, 'dummy_99.mp4');
     requireFixture(NINETY_NINE_MB);
     log.info('UP-16-P', 'start');
     if (!(await safeLogin(page))) return;

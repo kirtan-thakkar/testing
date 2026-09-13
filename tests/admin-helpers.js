@@ -8,8 +8,8 @@
 const log = require('./logger.js');
 
 const ADMIN_URL = 'https://admin.187.77.79.40.nip.io';
-const ADMIN_EMAIL = 'hello@ideakicks.com';
-const ADMIN_PASSWORD = `r9Ff{A0Z'kY:{V1W`;
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'hello@ideakicks.com';
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || `r9Ff{A0Z'kY:{V1W`;
 
 async function loginAdmin(browser) {
   log.info('admin', 'launching browser & logging in');

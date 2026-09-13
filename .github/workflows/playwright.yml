@@ -32,7 +32,14 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
+      - name: Generate fixtures
+        run: node scripts/generate-fixtures.js
       - name: Run tests
+        env:
+          USER_EMAIL: ${{ secrets.USER_EMAIL }}
+          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+          ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
         run: |
           if [ -n "${{ inputs.target }}" ]; then
             npx playwright test --project=chromium --workers=1 "${{ inputs.target }}"
@@ -49,3 +56,13 @@ jobs:
             logs/run-*.html
             logs/run-*.log
           retention-days: 30
+      - name: Send Daily Report Email
+        if: ${{ always() }}
+        env:
+          SMTP_HOST: smtp.gmail.com
+          SMTP_PORT: 587
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_FROM: ${{ secrets.SMTP_USER }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: node tests/send-report-email.js
