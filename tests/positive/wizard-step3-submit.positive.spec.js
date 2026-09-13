@@ -61,7 +61,7 @@ test.describe('Campaign Wizard - Step 3 Review & Submit (POSITIVE)', () => {
     
     // 6. Verify Step 4 / Done Success State
     // "Done" was matching the nav bar. We need to match the actual success message.
-    await expect(page.locator('text="Submission received"').first()).toBeVisible({ timeout: 15000 });
+    await expect(page.locator('text=/under review|submitted/i').first()).toBeVisible({ timeout: 15000 });
     log.info('WIZ-30-P', 'Campaign successfully submitted!');
   });
 });

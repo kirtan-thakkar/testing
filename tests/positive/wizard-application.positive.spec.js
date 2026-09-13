@@ -5,7 +5,7 @@
 const { test, expect } = require('@playwright/test');
 const log = require('../logger.js');
 const LOG_PATH = log.getRollingLogPath();
-const { login, dismissCookies, fillStep1, wizardAlreadySubmitted } = require('../wizard-helpers.js');
+const { login, dismissCookies, fillStep1, wizardAlreadySubmitted, safeLogin } = require('../wizard-helpers.js');
 
 log.info('WIZARD-POS', `Log file: ${LOG_PATH}`);
 
