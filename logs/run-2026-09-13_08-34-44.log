@@ -1,0 +1,4 @@
+08:35:03.361 [INFO] RUN-BEGIN    Suite: unnamed | Tests: 3 | Workers: 1 | Run log: C:\ideakicks\testing\logs\run-2026-09-13_08-34-44.log
+08:35:05.795 [INFO] admin        launching browser & logging in
+08:35:14.870 [INFO] admin        logged in, landed on https://admin.187.77.79.40.nip.io/login
+08:35:14.889 [INFO] ADM-CAT-FUN-019 start

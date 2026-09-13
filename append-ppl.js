@@ -1,44 +1,10 @@
-/**
- * Admin People (Users / Roles / Deletion Requests) — POSITIVE.
- */
-const { test, expect } = require('@playwright/test');
-const log = require('../logger.js');
-const { ADMIN_URL, loginAdmin } = require('../admin-helpers.js');
+const fs = require('fs');
 
-test.setTimeout(120000);
-
-test.describe.serial('Admin People — POSITIVE', () => {
-  let page;
-  test.beforeAll(async ({ browser }) => {
-    const r = await loginAdmin(browser);
-    page = r.page;
-  });
-  test.afterAll(async () => { if (page) await page.close(); });
-
-  test('UF-ADMIN-10-P: User Management page loads with "New user" CTA', async () => {
-    log.info('PPL-10-P', 'start');
-    await page.goto(`${ADMIN_URL}/users`, { waitUntil: 'domcontentloaded' });
-    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-    const newUser = page.getByRole('link', { name: 'New user' });
-    if (await newUser.count() > 0) await expect(newUser).toBeVisible();
-  });
-
-  test('UF-ADMIN-11-P: Roles page loads with "New role" CTA', async () => {
-    log.info('PPL-11-P', 'start');
-    await page.goto(`${ADMIN_URL}/roles`, { waitUntil: 'domcontentloaded' });
-    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-  });
-
-  test('UF-ADMIN-12-P: Deletion Requests page loads', async () => {
-    log.info('PPL-12-P', 'start');
-    await page.goto(`${ADMIN_URL}/deletion-requests`, { waitUntil: 'domcontentloaded' });
-    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-  });
-
+const tests = `
   // USER MANAGEMENT
   test('ADM-USR-FUN-001: Verify New User creation with valid data', async () => {
     log.info('ADM-USR-FUN-001', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
     await page.getByRole('link', { name: /New user/i }).click();
     await page.waitForTimeout(1000);
     
@@ -48,7 +14,7 @@ test.describe.serial('Admin People — POSITIVE', () => {
 
   test('ADM-USR-FUN-002: Verify user search by name/email', async () => {
     log.info('ADM-USR-FUN-002', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
     
     const searchInput = page.getByPlaceholder(/Search name or email/i);
     await searchInput.fill('kirtan');
@@ -61,7 +27,7 @@ test.describe.serial('Admin People — POSITIVE', () => {
 
   test('ADM-USR-FUN-003: Verify user search with invalid data', async () => {
     log.info('ADM-USR-FUN-003', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
     
     const searchInput = page.getByPlaceholder(/Search name or email/i);
     await searchInput.fill('NONEXISTENTUSERXYZ123');
@@ -73,7 +39,7 @@ test.describe.serial('Admin People — POSITIVE', () => {
 
   test('ADM-USR-FUN-004: Verify user filtering by status', async () => {
     log.info('ADM-USR-FUN-004', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
     
     const statusDropdown = page.getByRole('combobox', { name: /^Status$/i }).or(page.getByRole('combobox').filter({ hasText: 'All statuses' }));
     if (await statusDropdown.count() > 0) {
@@ -85,7 +51,7 @@ test.describe.serial('Admin People — POSITIVE', () => {
 
   test('ADM-USR-FUN-005: Verify user filtering by role', async () => {
     log.info('ADM-USR-FUN-005', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
     
     const roleDropdown = page.getByRole('combobox', { name: /^Role$/i }).or(page.getByRole('combobox').filter({ hasText: 'All roles' }));
     if (await roleDropdown.count() > 0) {
@@ -96,19 +62,19 @@ test.describe.serial('Admin People — POSITIVE', () => {
 
   test('ADM-USR-FUN-006: Verify Rows Per Page functionality', async () => {
     log.info('ADM-USR-FUN-006', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
     
     const rowsDropdown = page.getByRole('combobox', { name: /Rows per page/i });
     if (await rowsDropdown.count() > 0) {
       await rowsDropdown.selectOption({ label: '20' });
       await page.waitForTimeout(1000);
-      await expect(page.getByText(/1[\u2012\u2013\u2014\u2015\-]?\d+ of \d+/)).toBeVisible();
+      await expect(page.getByText(/1[\\u2012\\u2013\\u2014\\u2015\\-]?\\d+ of \\d+/)).toBeVisible();
     }
   });
 
   test('ADM-USR-FUN-007: Verify Next page navigation', async () => {
     log.info('ADM-USR-FUN-007', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
     
     const nextBtn = page.locator('button', { hasText: 'Next' });
     if (await nextBtn.isVisible() && await nextBtn.isEnabled()) {
@@ -119,7 +85,7 @@ test.describe.serial('Admin People — POSITIVE', () => {
 
   test('ADM-USR-FUN-008: Verify Previous page navigation', async () => {
     log.info('ADM-USR-FUN-008', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
     
     const prevBtn = page.locator('button', { hasText: 'Prev' });
     if (await prevBtn.isVisible() && await prevBtn.isEnabled()) {
@@ -130,7 +96,7 @@ test.describe.serial('Admin People — POSITIVE', () => {
 
   test('ADM-USR-FUN-009: Verify user selection and selected count', async () => {
     log.info('ADM-USR-FUN-009', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
     
     const checkboxes = page.getByRole('checkbox');
     if (await checkboxes.count() > 1) {
@@ -142,7 +108,7 @@ test.describe.serial('Admin People — POSITIVE', () => {
 
   test('ADM-USR-FUN-010: Verify bulk user activation', async () => {
     log.info('ADM-USR-FUN-010', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
     
     const checkboxes = page.getByRole('checkbox');
     if (await checkboxes.count() > 1) {
@@ -159,17 +125,17 @@ test.describe.serial('Admin People — POSITIVE', () => {
 
   test('ADM-USR-FUN-011: Verify bulk user deactivation', async () => {
     log.info('ADM-USR-FUN-011', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
   });
 
   test('ADM-USR-FUN-012: Verify bulk user deletion', async () => {
     log.info('ADM-USR-FUN-012', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
   });
 
   test('ADM-USR-FUN-013: Verify View User functionality', async () => {
     log.info('ADM-USR-FUN-013', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
     const viewBtn = page.getByRole('link', { name: /^View$/i }).first();
     if (await viewBtn.isVisible()) {
       await viewBtn.click();
@@ -180,7 +146,7 @@ test.describe.serial('Admin People — POSITIVE', () => {
 
   test('ADM-USR-FUN-014: Verify Edit User functionality', async () => {
     log.info('ADM-USR-FUN-014', 'start');
-    await page.goto(`${ADMIN_URL}/users`);
+    await page.goto(\`\${ADMIN_URL}/users\`);
     const editBtn = page.getByRole('link', { name: /^Edit/i }).first();
     if (await editBtn.isVisible()) {
       await editBtn.click();
@@ -216,5 +182,9 @@ test.describe.serial('Admin People — POSITIVE', () => {
   test('ADM-USR-FUN-021: Verify cancellation of direct user deletion', async () => {
     log.info('ADM-USR-FUN-021', 'start');
   });
+`;
 
-});
+let content = fs.readFileSync('tests/positive/admin-people.positive.spec.js', 'utf8');
+content = content.replace(/}\);\s*$/, tests + '\n});');
+fs.writeFileSync('tests/positive/admin-people.positive.spec.js', content);
+console.log('Appended tests to admin-people.');
