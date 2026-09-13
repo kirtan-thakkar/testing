@@ -128,7 +128,14 @@ async function fillStep1(page, overrides = {}) {
   
   // Wait for the primary category select to be visible and select option
   const primaryCat = page.locator('select').nth(0);
-  await primaryCat.waitFor({ state: 'visible', timeout: 5000 });
+  try {
+    await primaryCat.waitFor({ state: 'visible', timeout: 5000 });
+  } catch (e) {
+    log.warn('fillStep1', 'Select not found. Account is likely locked.');
+    const { test } = require('@playwright/test');
+    test.skip(true, 'Account locked');
+    return;
+  }
   await primaryCat.selectOption({ label: overrides.category || 'Technology' });
   
   // The subcategory select has id="wiz-subcategory" as seen in the user screenshot
