@@ -17,6 +17,7 @@ for (let i = 1; i <= 12; i++) {
 // Specific images used explicitly by name
 fs.writeFileSync(path.join(publicDir, 'brayden-law-Io9wt6UKv28-unsplash.jpg'), dummyJpgBuffer);
 fs.writeFileSync(path.join(publicDir, 'karsten-winegeart-jQcbjj-BrdA-unsplash.jpg'), dummyJpgBuffer);
+fs.writeFileSync(path.join(publicDir, 'aiham-m-azu-GsrfR4I-unsplash.jpg'), dummyJpgBuffer);
 
 // Helper to create a dummy file of a certain size (sparse file)
 function createDummyFile(filename, size) {

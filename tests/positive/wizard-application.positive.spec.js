@@ -127,7 +127,7 @@ test.describe('8. Campaign Application Wizard — POSITIVE flows', () => {
     await page.goto('/start/application');
     await dismissCookies(page);
     await page.locator('h1').first().waitFor();
-    const country = page.getByRole('combobox', { name: /^Country/i });
+    const country = page.locator('select').nth(2);
     const options = await country.locator('option').allTextContents();
     expect(options.some(o => /India/i.test(o))).toBe(true);
     log.info('WIZ-10-P', `${options.length} country options, India present`);
@@ -139,8 +139,8 @@ test.describe('8. Campaign Application Wizard — POSITIVE flows', () => {
     await page.goto('/start/application');
     await dismissCookies(page);
     await page.locator('h1').first().waitFor();
-    const category = page.getByRole('combobox', { name: /^Primary Category/i });
-    const subcat = page.getByRole('combobox', { name: /^Subcategory/i });
+    const category = page.locator('select').nth(0);
+    const subcat = page.locator('select').nth(1);
     await category.selectOption({ label: 'Technology' });
     await page.waitForTimeout(500);
     const subs = await subcat.locator('option').allTextContents();

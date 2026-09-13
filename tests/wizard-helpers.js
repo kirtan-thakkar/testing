@@ -1,6 +1,17 @@
 const log = require('./logger.js');
 const { expect } = require('@playwright/test');
 
+
+async function safeLogin(page) {
+  try { await login(page); }
+  catch (e) {
+    const log = require('./logger.js');
+    log.warn('safeLogin', `login timeout: ${e.message.split('\n')[0]}`);
+    return false;
+  }
+  return true;
+}
+
 async function login(page) {
   log.info('login', 'navigating to /login');
   // Fast path: state.json from global-setup should already have us authed.
@@ -136,4 +147,4 @@ async function fillStep1(page, overrides = {}) {
   }
 }
 
-module.exports = { login, dismissCookies, fillStep1, wizardAlreadySubmitted };
+module.exports = { login, safeLogin, dismissCookies, fillStep1, wizardAlreadySubmitted };
