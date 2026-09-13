@@ -21,7 +21,7 @@ async function safeRun(fn) {
 }
 
 
-test.setTimeout(120000);
+test.setTimeout(50000);
 
 // Per-test watchdog: close the browser context after 45s so any pending
 // upload wait throws fast and gets caught by the safeRun wrapper.
