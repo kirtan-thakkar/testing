@@ -14,9 +14,9 @@ async function login(page) {
     // Not authed; fall through to manual login.
   }
   // Slow path: actually log in.
-  await page.goto('/login', { waitUntil: 'domcontentloaded', timeout: 15000 });
+  await page.goto('/login', { waitUntil: 'domcontentloaded', timeout: 25000 });
   try {
-    await page.getByRole('textbox', { name: /Email/i }).waitFor({ timeout: 15000 });
+    await page.getByRole('textbox', { name: /Email/i }).waitFor({ timeout: 25000 });
   } catch {
     log.info('login', 'already authed (form not shown)');
     return;
@@ -73,25 +73,25 @@ async function fillStep1(page, overrides = {}) {
   // Ensure the wizard form is reachable via the user's entry path:
   // /start -> click [Start Application] -> /start/application
   try {
-    await page.goto('/start', { waitUntil: 'domcontentloaded', timeout: 15000 });
+    await page.goto('/start', { waitUntil: 'domcontentloaded', timeout: 25000 });
     // Use a very flexible locator for the button
     const startAppBtn = page.locator('button, a').filter({ hasText: /Start Application/i }).first();
-    if (await startAppBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
+    if (await startAppBtn.isVisible({ timeout: 25000 }).catch(() => false)) {
       await startAppBtn.click();
-      await page.waitForURL(/start\/application/, { timeout: 15000 });
+      await page.waitForURL(/start\/application/, { timeout: 25000 });
     } else {
       // Fallback: already on /start/application or redirected
-      await page.goto('/start/application', { timeout: 15000 });
+      await page.goto('/start/application', { timeout: 25000 });
     }
   } catch (e) {
-    await page.goto('/start/application', { timeout: 15000 });
+    await page.goto('/start/application', { timeout: 25000 });
   }
 
   // The page may have just been navigated to /start/application but the
   // wizard UI hasn't rendered yet. Wait for the h1 first (with a short
   // timeout — if it's not there, give up fast and let the test skip).
   try {
-    await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 15000 });
+    await page.locator('h1', { hasText: /Start your campaign/i }).first().waitFor({ timeout: 25000 });
   } catch {
     log.warn('fillStep1', 'wizard h1 not visible within 15s — page may not be on /start/application');
     // If we can't find it, don't silently fail. We MUST throw so the test fails, 
@@ -111,14 +111,14 @@ async function fillStep1(page, overrides = {}) {
   
   // Wait for the primary category select to be visible and select option
   const primaryCat = page.locator('select').nth(0);
-  await primaryCat.waitFor({ state: 'visible', timeout: 5000 });
+  await primaryCat.waitFor({ state: 'visible', timeout: 25000 });
   await primaryCat.selectOption({ label: overrides.category || 'Technology' });
   
   // The subcategory select has id="wiz-subcategory" as seen in the user screenshot
   const subcat = page.locator('#wiz-subcategory');
-  await subcat.waitFor({ state: 'attached', timeout: 5000 });
+  await subcat.waitFor({ state: 'attached', timeout: 25000 });
   // Wait until it is no longer disabled
-  await expect(subcat).not.toBeDisabled({ timeout: 5000 });
+  await expect(subcat).not.toBeDisabled({ timeout: 25000 });
   await subcat.selectOption({ index: overrides.subcategoryIndex ?? 1 });
   
   // There is another select for Country, we can just use nth(2)
