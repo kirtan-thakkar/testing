@@ -22,19 +22,10 @@ async function safeRun(fn) {
 
 
 test.setTimeout(50000);
-
-// Per-test watchdog: close the browser context after 45s so any pending
-// upload wait throws fast and gets caught by the safeRun wrapper.
-test.beforeEach(async ({ page }, testInfo) => {
-  const watchdog = setTimeout(() => {
-    log.warn('WATCHDOG', `${testInfo.title} exceeded 45s — closing context`);
-    try { page.context().close().catch(() => {}); } catch {}
-  }, 45000);
-  testInfo._watchdog = watchdog;
 });
 
 test.afterEach(async ({}, testInfo) => {
-  if (testInfo._watchdog) clearTimeout(testInfo._watchdog);
+  
 });
 
 const PUBLIC_DIR = path.join(__dirname, '..', '..', 'public');

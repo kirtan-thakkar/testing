@@ -79,18 +79,10 @@ async function safeRun(fn) {
 test.setTimeout(60000);
 
 test.beforeEach(async ({ page }, testInfo) => {
-  // Watchdog fires 5s BEFORE the hard test timeout and forcibly closes the
-  // browser context. This makes any pending Playwright waits throw fast
-  // (Target page closed), which safeRun() catches and converts to a skip.
-  const watchdog = setTimeout(() => {
-    log.warn('WATCHDOG', `${testInfo.title} exceeded 55s — closing context`);
-    try { page.context().close().catch(() => {}); } catch {}
-  }, 35000);
-  testInfo._watchdog = watchdog;
 });
 
 test.afterEach(async ({}, testInfo) => {
-  if (testInfo._watchdog) clearTimeout(testInfo._watchdog);
+  
 });
 
 test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => {
