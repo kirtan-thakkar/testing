@@ -112,13 +112,11 @@ async function fillStep1(page, overrides = {}) {
   }
 
   if (overrides.age18 !== false || overrides.countrySupported !== false) {
-    await page.evaluate(() => {
-      const cbs = document.querySelectorAll('input[type="checkbox"]');
-      cbs.forEach(cb => {
-        cb.checked = true;
-        cb.dispatchEvent(new Event('change', { bubbles: true }));
-      });
-    });
+    const cbs = page.locator('input[type="checkbox"]');
+    const count = await cbs.count();
+    for (let i = 0; i < count; i++) {
+      await cbs.nth(i).check({ force: true });
+    };
   }
   
   // Wait for the primary category select to be visible and select option
