@@ -25,7 +25,7 @@ async function loginAdmin(browser) {
   await page.getByRole('textbox', { name: 'Email' }).fill(ADMIN_EMAIL);
   await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN_PASSWORD);
   await page.getByRole('button', { name: 'Sign in' }).click({ force: true });
-  await page.waitForLoadState('domcontentloaded', { timeout: 90000 });
+  await page.waitForURL(url => !url.toString().includes('/login'), { timeout: 90000, waitUntil: 'domcontentloaded' }).catch(e => log.warn('admin', 'waitForURL timeout or not navigating'));
   await page.waitForTimeout(2000);
   log.info('admin', `logged in, landed on ${page.url()}`);
   return { context, page };

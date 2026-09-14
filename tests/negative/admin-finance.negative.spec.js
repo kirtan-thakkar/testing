@@ -9,12 +9,14 @@ test.setTimeout(120000);
 
 test.describe.serial('Admin Finance — NEGATIVE / EDGE', () => {
   let page;
+  let adminContext;
   test.beforeAll(async ({ browser }) => {
     test.setTimeout(90000); // hook timeout
     const r = await loginAdmin(browser);
     page = r.page;
+    adminContext = r.context;
   });
-  test.afterAll(async () => { if (page) await page.close(); });
+  test.afterAll(async () => { if (page) await page.close(); if (adminContext) await adminContext.close(); });
 
   test('UF-FIN-N1: Payouts with non-existent ID shows error, not crash', async () => {
     log.info('FIN-N1', 'start');

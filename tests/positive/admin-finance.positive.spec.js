@@ -9,12 +9,14 @@ test.setTimeout(120000);
 
 test.describe.serial('Admin Finance — POSITIVE', () => {
   let page;
+  let adminContext;
   test.beforeAll(async ({ browser }) => {
     test.setTimeout(90000); // hook timeout
     const r = await loginAdmin(browser);
     page = r.page;
+    adminContext = r.context;
   });
-  test.afterAll(async () => { if (page) await page.close(); });
+  test.afterAll(async () => { if (page) await page.close(); if (adminContext) await adminContext.close(); });
 
   test('UF-ADMIN-07-P: Payouts page loads', async () => {
     log.info('FIN-07-P', 'start');

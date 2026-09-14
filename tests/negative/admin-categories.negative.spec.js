@@ -5,11 +5,13 @@ const log = require('../logger.js');
 test.describe.serial('Admin Categories - Validation', () => {
   test.setTimeout(90000);
   let page;
+  let adminContext;
 
   test.beforeAll(async ({ browser }) => {
     test.setTimeout(90000); // hook timeout
     const r = await loginAdmin(browser);
     page = r.page;
+    adminContext = r.context;
   });
 
   test.afterAll(async () => {

@@ -9,12 +9,14 @@ test.setTimeout(120000);
 
 test.describe.serial('Admin Engagement — NEGATIVE / EDGE', () => {
   let page;
+  let adminContext;
   test.beforeAll(async ({ browser }) => {
     test.setTimeout(90000); // hook timeout
     const r = await loginAdmin(browser);
     page = r.page;
+    adminContext = r.context;
   });
-  test.afterAll(async () => { if (page) await page.close(); });
+  test.afterAll(async () => { if (page) await page.close(); if (adminContext) await adminContext.close(); });
 
   test('UF-ENG-N1: Inbox empty search returns empty state', async () => {
     log.info('ENG-N1', 'start');
