@@ -4,6 +4,16 @@ const fs = require('fs');
 module.exports = async config => {
   const browser = await chromium.launch();
 
+  
+  // 3. Generate dummy_99.mp4 if it doesn't exist
+  const path = require('path');
+  const dummy99Path = path.join(__dirname, '..', 'public', 'dummy_99.mp4');
+  if (!fs.existsSync(dummy99Path)) {
+    console.log('Generating dummy_99.mp4 (99MB) for uploads test...');
+    const buffer = Buffer.alloc(99 * 1024 * 1024); // 99 MB of zeros
+    fs.writeFileSync(dummy99Path, buffer);
+  }
+
   // 1. Authenticate standard backer user.
   try {
     console.log('Authenticating standard user via global setup...');
@@ -11,7 +21,7 @@ module.exports = async config => {
     const page = await context.newPage();
 
     await page.goto('https://187.77.79.40.nip.io/login', { waitUntil: 'domcontentloaded', timeout: 60000 });
-    await page.locator('input[name="email"]').fill(process.env.USER_EMAIL || 'dummy@gmail.com');
+    await page.locator('input[name="email"]').fill(process.env.USER_EMAIL || 'dummy1@gmail.com');
     await page.locator('input[name="password"]').fill(process.env.USER_PASSWORD || 'Puffyin@7410');
     await page.getByRole('button', { name: 'Log In' }).click();
 

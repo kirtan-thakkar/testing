@@ -3,12 +3,7 @@ const { expect } = require('@playwright/test');
 
 
 async function safeLogin(page) {
-  try { await login(page); }
-  catch (e) {
-    const log = require('./logger.js');
-    log.warn('safeLogin', `login timeout: ${e.message.split('\n')[0]}`);
-    return false;
-  }
+  await login(page);
   return true;
 }
 
@@ -32,7 +27,7 @@ async function login(page) {
     log.info('login', 'already authed (form not shown)');
     return;
   }
-  await page.getByRole('textbox', { name: /Email/i }).fill(process.env.USER_EMAIL || 'dummy@gmail.com');
+  await page.getByRole('textbox', { name: /Email/i }).fill(process.env.USER_EMAIL || 'dummy1@gmail.com');
   await page.getByRole('textbox', { name: /Password/i }).fill(process.env.USER_PASSWORD || 'Puffyin@7410');
   await page.getByRole('button', { name: /Log In/i }).click();
   await page.waitForURL(u => !u.toString().includes('/login'), {

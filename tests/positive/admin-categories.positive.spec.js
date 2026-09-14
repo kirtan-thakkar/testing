@@ -447,6 +447,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     
     const uniqueName = `ToHide Cat ${Date.now()}`;
     await page.getByLabel(/^Name/i).fill(uniqueName);
+    await page.getByLabel(/^Slug/i).fill(uniqueName.toLowerCase().replace(/ /g, '-'));
     
     // Checkbox is active by default.
     await page.getByRole('button', { name: /Create category/i }).click();
@@ -482,6 +483,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     
     const uniqueName = `CancelHide Cat ${Date.now()}`;
     await page.getByLabel(/^Name/i).fill(uniqueName);
+    await page.getByLabel(/^Slug/i).fill(uniqueName.toLowerCase().replace(/ /g, '-'));
     await page.getByRole('button', { name: /Create category/i }).click();
     await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
     
@@ -518,6 +520,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     
     const uniqueName = `CatToDel ${Date.now()}`;
     await page.getByLabel(/^Name/i).fill(uniqueName);
+    await page.getByLabel(/^Slug/i).fill(uniqueName.toLowerCase().replace(/ /g, '-'));
     await page.getByRole('button', { name: /Create category/i }).click();
     await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
     
@@ -561,6 +564,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     
     const uniqueName = `CatCancelDel ${Date.now()}`;
     await page.getByLabel(/^Name/i).fill(uniqueName);
+    await page.getByLabel(/^Slug/i).fill(uniqueName.toLowerCase().replace(/ /g, '-'));
     await page.getByRole('button', { name: /Create category/i }).click();
     await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
     
@@ -821,4 +825,46 @@ test.describe.serial('Admin Categories - Functional', () => {
     log.info('ADM-CAT-FUN-023', 'ok');
   });
 
+
+  test.afterAll(async () => {
+    log.info('ADM-CAT-CLEANUP', 'Starting cleanup of test categories...');
+    try {
+      await page.goto(`${ADMIN_URL}/categories`, { waitUntil: 'domcontentloaded' });
+      // Set to 50 rows per page to make it faster
+      const rowsDropdown = page.getByRole('combobox').filter({ hasText: /Rows per page/i }).first();
+      if (await rowsDropdown.isVisible()) {
+         await rowsDropdown.selectOption({ label: '50' }).catch(() => {});
+         await page.waitForTimeout(1500);
+      }
+      
+      let hasMore = true;
+      while (hasMore) {
+        let deletedOne = false;
+        // Find any delete button for a category containing '178' or '179' (Date.now() prefix)
+        const deleteBtns = page.locator('button[aria-label^="Delete "][aria-label*="17"]');
+        const count = await deleteBtns.count();
+        if (count > 0) {
+           await deleteBtns.first().click();
+           const modal = page.locator('div[role="dialog"]').filter({ hasText: /^Delete/ });
+           await expect(modal).toBeVisible();
+           await modal.getByRole('button', { name: 'Delete' }).click();
+           await page.waitForTimeout(1000); // wait for API and re-render
+           deletedOne = true;
+        }
+        
+        if (!deletedOne) {
+          const nextBtn = page.getByRole('button', { name: /^Next/i });
+          if (await nextBtn.isVisible() && await nextBtn.isEnabled() && !(await nextBtn.getAttribute('disabled'))) {
+             await nextBtn.click();
+             await page.waitForTimeout(1000);
+          } else {
+             hasMore = false;
+          }
+        }
+      }
+      log.info('ADM-CAT-CLEANUP', 'Cleanup complete.');
+    } catch (e) {
+      log.warn('ADM-CAT-CLEANUP', 'Cleanup failed: ' + e.message);
+    }
+  });
 });
