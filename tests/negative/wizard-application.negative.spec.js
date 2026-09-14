@@ -78,12 +78,7 @@ async function safeRun(fn) {
 // rather than letting Playwright mark it as a hard timeout failure.
 test.setTimeout(60000);
 
-test.beforeEach(async ({ page }, testInfo) => {
-});
 
-test.afterEach(async ({}, testInfo) => {
-  
-});
 
 test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => {
 

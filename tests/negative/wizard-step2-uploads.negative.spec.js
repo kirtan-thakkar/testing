@@ -22,11 +22,7 @@ async function safeRun(fn) {
 
 
 test.setTimeout(50000);
-});
 
-test.afterEach(async ({}, testInfo) => {
-  
-});
 
 const PUBLIC_DIR = path.join(__dirname, '..', '..', 'public');
 const BIG_VIDEO = path.join(PUBLIC_DIR, '222.mp4');                            // 237MB > 100MB limit
