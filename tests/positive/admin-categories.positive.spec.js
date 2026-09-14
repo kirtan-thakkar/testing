@@ -10,10 +10,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     page = r.page;
   });
 
-  test.afterAll(async () => {
-    if (page) await page.close();
-  });
-
+  
   test('ADM-CAT-FUN-001: Verify Categories is visible in the Campaigns section', async () => {
     log.info('ADM-CAT-FUN-001', 'start');
     
@@ -183,6 +180,7 @@ test.describe.serial('Admin Categories - Functional', () => {
       await page.getByRole('button', { name: /New category/i }).click();
       const formContainer = page;
       await formContainer.getByLabel(/^Name/i).fill(name);
+      await formContainer.getByLabel(/^Slug/i).fill(name.toLowerCase().replace(/ /g, '-'));
       await formContainer.getByLabel(/^Sort order/i).fill(sortOrder.toString());
       await formContainer.getByRole('button', { name: /Create category/i }).click();
       await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
@@ -274,8 +272,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     // 2. Enter valid category details.
     const uniqueName = `Test Inactive Cat ${Date.now()}`;
     await formContainer.getByLabel(/^Name/i).fill(uniqueName);
-    
-    // Slug will auto-fill, we'll leave it.
+    await formContainer.getByLabel(/^Slug/i).fill(uniqueName.toLowerCase().replace(/ /g, '-'));
     
     // 3. Disable the Active checkbox.
     const activeCheckbox = formContainer.getByRole('checkbox', { name: /Active/i });
@@ -348,6 +345,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     let formContainer = page;
     const initialName = `EditCat ${Date.now()}`;
     await formContainer.getByLabel(/^Name/i).fill(initialName);
+    await formContainer.getByLabel(/^Slug/i).fill(initialName.toLowerCase().replace(/ /g, '-'));
     await formContainer.getByRole('button', { name: /Create category/i }).click();
     
     const newCategoryHeading = page.getByRole('heading', { name: 'New category' });
@@ -400,6 +398,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     let formContainer = page;
     const initialName = `CancelEdit ${Date.now()}`;
     await formContainer.getByLabel(/^Name/i).fill(initialName);
+    await formContainer.getByLabel(/^Slug/i).fill(initialName.toLowerCase().replace(/ /g, '-'));
     await formContainer.getByRole('button', { name: /Create category/i }).click();
     
     const newCategoryHeading = page.getByRole('heading', { name: 'New category' });
