@@ -103,6 +103,11 @@ async function main() {
   if (fs.existsSync(htmlPath)) {
     attachments.push({ filename: path.basename(htmlPath), path: htmlPath });
   }
+  
+  const csvPath = path.join(logsDir, 'daily-report.csv');
+  if (fs.existsSync(csvPath)) {
+    attachments.push({ filename: 'daily-report.csv', path: csvPath });
+  }
 
   await transporter.sendMail({
     from: MAIL_FROM || SMTP_USER,
