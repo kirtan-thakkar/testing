@@ -150,7 +150,7 @@ test.describe('Wizard Step 2 — Media uploads (POSITIVE)', () => {
     // Send image + video separately since input is single-file
     await galleryInput.setInputFiles(IMG_SMALL);
     await page.waitForTimeout(1500);
-    await galleryInput.setInputFiles(SMALL_VIDEO);
+    await videoInput.setInputFiles(SMALL_VIDEO);
     await page.waitForTimeout(4000);
     await expect(page.getByText(/Step 2 of 4/i)).toBeVisible();
     log.info('UP-04-P', 'video + image upload did not crash');
