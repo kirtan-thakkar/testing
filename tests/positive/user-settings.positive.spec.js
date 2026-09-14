@@ -1,4 +1,3 @@
-const fs = require('fs');
 const { test, expect } = require('@playwright/test');
 const { login } = require('../wizard-helpers.js');
 
@@ -65,7 +64,7 @@ test.describe('User Dashboard - Settings (POSITIVE)', () => {
         await page.waitForURL('**/login', { timeout: 15000 });
         
         // Log back in with NEW password
-        await page.getByRole('textbox', { name: 'Email' }).fill(process.env.USER_EMAIL || (fs.existsSync('dummy_email.txt') ? fs.readFileSync('dummy_email.txt', 'utf8').trim() : 'dummy1@gmail.com'));
+        await page.getByRole('textbox', { name: 'Email' }).fill(process.env.USER_EMAIL || 'dummy1@gmail.com');
         await page.getByRole('textbox', { name: 'Password' }).fill(tempPass);
         await page.getByRole('button', { name: 'Log In' }).click();
         
