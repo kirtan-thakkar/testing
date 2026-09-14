@@ -205,11 +205,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
   });
 
   // ────────────────────────── Rapid / concurrent actions ──────────────────────────
-  test.fixme('UF-WIZ-22-N: Double-click Continue does not skip a step', async ({ page }) => {
-    log.info('WIZ-22-N', 'start');
-    if (!(await safeLogin(page))) return;
-    await safeRun(async () => {
-      await page.goto('/start/application', { waitUntil: 'domcontentloaded', timeout: 60000 });
+
       await dismissCookies(page);
       
       await fillStep1(page);
