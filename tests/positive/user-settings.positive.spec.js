@@ -44,7 +44,9 @@ test.describe('User Dashboard - Settings (POSITIVE)', () => {
     await expect(page.locator('textarea').first()).toHaveValue(bioText);
   });
 
-  test('UF-ACCT-02-P: Change Account Password', async ({ page }) => {
+  test.fixme('UF-ACCT-02-P: Change Account Password', async ({ page }) => {
+    // FIXME: Changing password invalidates the session cookie in state.json,
+    // which causes cascading authentication failures for all subsequent tests.
     test.setTimeout(60000);
     const currentPass = 'Puffyin@7410';
     const tempPass = 'Puffyin@7410_TEMP';

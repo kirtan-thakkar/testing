@@ -163,6 +163,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     const searchInput = page.getByPlaceholder(/Search name or slug/i);
     await searchInput.fill(uniqueName);
     await searchInput.press('Enter');
+    await page.waitForTimeout(1000);
     
     const row = page.getByRole('row', { name: uniqueName }).first();
     await expect(row).toBeVisible();
