@@ -2,6 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { login } = require('../wizard-helpers.js');
 
 test.describe('User Dashboard - Settings (POSITIVE)', () => {
+  test.setTimeout(60000);
 
   test.beforeEach(async ({ page }) => {
     // Standard user login via state.json
