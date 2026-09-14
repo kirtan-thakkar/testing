@@ -144,12 +144,17 @@ async function fillStep1(page, overrides = {}) {
   await page.locator('select').nth(2).selectOption({ label: overrides.country || 'India (INR)' });
   
   // Inputs: Company Name, Business Address, PAN, GSTIN
-  await page.getByRole('textbox', { name: /^Company Name/i })
-    .fill(overrides.companyName ?? 'Acme Corp');
-  await page.getByRole('textbox', { name: /^Company Business Address/i })
-    .fill(overrides.address ?? '123 Test Street, Ahmedabad, GJ 380001');
-  await page.getByRole('textbox', { name: /^PAN Card Number/i })
-    .fill(overrides.pan ?? 'ABCDE1234F');
+  const companyName = page.getByRole('textbox', { name: /^Company Name/i });
+  await companyName.fill(overrides.companyName ?? 'Acme Corp');
+  await companyName.blur();
+  const companyAddr = page.getByRole('textbox', { name: /^Company Business Address/i });
+  await companyAddr.fill(overrides.address ?? '123 Test Street, Ahmedabad, GJ 380001');
+  await companyAddr.blur();
+  const panInput = page.getByRole('textbox', { name: /^PAN Card Number/i });
+  await panInput.fill(overrides.pan ?? 'ABCDE1234F');
+  await panInput.blur();
+  // Give auto-save a moment to finish so "Continue" button is fully active
+  await page.waitForTimeout(2000);
   if (overrides.gstin !== undefined) {
     await page.getByRole('textbox', { name: /GSTIN/i }).fill(overrides.gstin);
   }
