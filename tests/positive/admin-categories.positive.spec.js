@@ -187,7 +187,12 @@ test.describe.serial('Admin Categories - Functional', () => {
       await formContainer.getByLabel(/^Slug/i).fill(name.toLowerCase().replace(/ /g, '-'));
       await formContainer.getByLabel(/^Sort order/i).fill(sortOrder.toString());
       await formContainer.getByRole('button', { name: /Create category/i }).click();
-      await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
+      try {
+    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 2000 });
+  } catch(e) {
+    await page.screenshot({ path: 'scratch/modal-error.png' });
+    throw e;
+  }
     };
     
     const prefix = `SortCat ${Date.now()}`;
@@ -454,7 +459,12 @@ test.describe.serial('Admin Categories - Functional', () => {
     
     // Checkbox is active by default.
     await page.getByRole('button', { name: /Create category/i }).click();
-    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
+    try {
+    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 2000 });
+  } catch(e) {
+    await page.screenshot({ path: 'scratch/modal-error.png' });
+    throw e;
+  }
     
     // 1. Locate an active category.
     const searchInput = page.getByPlaceholder(/Search name or slug/i);
@@ -488,7 +498,12 @@ test.describe.serial('Admin Categories - Functional', () => {
     await page.getByLabel(/^Name/i).fill(uniqueName);
     await page.getByLabel(/^Slug/i).fill(uniqueName.toLowerCase().replace(/ /g, '-'));
     await page.getByRole('button', { name: /Create category/i }).click();
-    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
+    try {
+    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 2000 });
+  } catch(e) {
+    await page.screenshot({ path: 'scratch/modal-error.png' });
+    throw e;
+  }
     
     const searchInput = page.getByPlaceholder(/Search name or slug/i);
     await searchInput.fill(uniqueName);
@@ -525,7 +540,12 @@ test.describe.serial('Admin Categories - Functional', () => {
     await page.getByLabel(/^Name/i).fill(uniqueName);
     await page.getByLabel(/^Slug/i).fill(uniqueName.toLowerCase().replace(/ /g, '-'));
     await page.getByRole('button', { name: /Create category/i }).click();
-    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
+    try {
+    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 2000 });
+  } catch(e) {
+    await page.screenshot({ path: 'scratch/modal-error.png' });
+    throw e;
+  }
     
     // 1. Locate the category.
     const searchInput = page.getByPlaceholder(/Search name or slug/i);
@@ -569,7 +589,12 @@ test.describe.serial('Admin Categories - Functional', () => {
     await page.getByLabel(/^Name/i).fill(uniqueName);
     await page.getByLabel(/^Slug/i).fill(uniqueName.toLowerCase().replace(/ /g, '-'));
     await page.getByRole('button', { name: /Create category/i }).click();
-    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 10000 });
+    try {
+    await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 2000 });
+  } catch(e) {
+    await page.screenshot({ path: 'scratch/modal-error.png' });
+    throw e;
+  }
     
     const searchInput = page.getByPlaceholder(/Search name or slug/i);
     await searchInput.fill(uniqueName);
