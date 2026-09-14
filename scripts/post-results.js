@@ -23,9 +23,7 @@ async function main() {
   const latestHtmlFile = runLogs[0].f;
   const htmlContent = fs.readFileSync(path.join(logsDir, latestHtmlFile), 'utf8');
   
-  // Regex to extract from the HTML table
-  // <tr><td>1</td><td>UF-WIZ-01-P: Title</td><td>pass</td><td>12.3s</td><td></td></tr>
-  const rowRegex = /<tr class="(pass|fail|skip)"><td>\d+<\/td><td>([^<]+)<\/td><td>(pass|fail|skip)<\/td><td>([^<]*)<\/td><td>([^<]*)<\/td><\/tr>/g;
+  const rowRegex = /<tr class="(pass|fail|skip)"><td>\d+<\/td><td>([^<]+)<\/td><td>([^<]+)<\/td><td>([^<]*)<\/td><td>([^<]*)<\/td><\/tr>/g;
   
   let match;
   const payloadData = [];
