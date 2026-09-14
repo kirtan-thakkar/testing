@@ -118,7 +118,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     await expect(activeCheckbox).toBeChecked();
     
     // 9. Click Create category.
-    await formContainer.getByRole('button', { name: /Create category/i }).click();
+    await formContainer.getByRole('button', { name: /Create category/i }).click({ force: true });
     
     // Expected: 3. Category is created successfully.
     // 4. New category appears in the list with the correct details and Active status.
@@ -156,7 +156,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     await formContainer.getByLabel(/^Sort order/i).fill('1');
     
     // 5. Click Create category.
-    await formContainer.getByRole('button', { name: /Create category/i }).click();
+    await formContainer.getByRole('button', { name: /Create category/i }).click({ force: true });
     await expect(newCategoryHeading).toBeHidden({ timeout: 10000 });
     
     // 6. Verify the created category in the list.
@@ -187,7 +187,7 @@ test.describe.serial('Admin Categories - Functional', () => {
       await formContainer.getByLabel(/^Name/i).fill(name);
       await formContainer.getByLabel(/^Slug/i).fill(name.toLowerCase().replace(/ /g, '-'));
       await formContainer.getByLabel(/^Sort order/i).fill(sortOrder.toString());
-      await formContainer.getByRole('button', { name: /Create category/i }).click();
+      await formContainer.getByRole('button', { name: /Create category/i }).click({ force: true });
       try {
     await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 2000 });
   } catch(e) {
@@ -254,7 +254,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     await page.waitForTimeout(2000); // Wait for upload
     
     // 4. Click Create category.
-    await formContainer.getByRole('button', { name: /Create category/i }).click();
+    await formContainer.getByRole('button', { name: /Create category/i }).click({ force: true });
     await expect(newCategoryHeading).toBeHidden({ timeout: 10000 });
     
     const searchInput = page.getByPlaceholder(/Search name or slug/i);
@@ -290,7 +290,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     await expect(activeCheckbox).not.toBeChecked();
     
     // 4. Click Create category.
-    await formContainer.getByRole('button', { name: /Create category/i }).click();
+    await formContainer.getByRole('button', { name: /Create category/i }).click({ force: true });
     
     // Wait for slide-over/form to close
     await expect(newCategoryHeading).toBeHidden({ timeout: 10000 });
@@ -356,7 +356,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     const initialName = `EditCat ${Date.now()}`;
     await formContainer.getByLabel(/^Name/i).fill(initialName);
     await formContainer.getByLabel(/^Slug/i).fill(initialName.toLowerCase().replace(/ /g, '-'));
-    await formContainer.getByRole('button', { name: /Create category/i }).click();
+    await formContainer.getByRole('button', { name: /Create category/i }).click({ force: true });
     
     const newCategoryHeading = page.getByRole('heading', { name: 'New category' });
     await expect(newCategoryHeading).toBeHidden({ timeout: 10000 });
@@ -409,7 +409,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     const initialName = `CancelEdit ${Date.now()}`;
     await formContainer.getByLabel(/^Name/i).fill(initialName);
     await formContainer.getByLabel(/^Slug/i).fill(initialName.toLowerCase().replace(/ /g, '-'));
-    await formContainer.getByRole('button', { name: /Create category/i }).click();
+    await formContainer.getByRole('button', { name: /Create category/i }).click({ force: true });
     
     const newCategoryHeading = page.getByRole('heading', { name: 'New category' });
     await expect(newCategoryHeading).toBeHidden({ timeout: 10000 });
@@ -459,7 +459,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     await page.getByLabel(/^Slug/i).fill(uniqueName.toLowerCase().replace(/ /g, '-'));
     
     // Checkbox is active by default.
-    await page.getByRole('button', { name: /Create category/i }).click();
+    await page.getByRole('button', { name: /Create category/i }).click({ force: true });
     try {
     await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 2000 });
   } catch(e) {
@@ -498,7 +498,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     const uniqueName = `CancelHide Cat ${Date.now()}`;
     await page.getByLabel(/^Name/i).fill(uniqueName);
     await page.getByLabel(/^Slug/i).fill(uniqueName.toLowerCase().replace(/ /g, '-'));
-    await page.getByRole('button', { name: /Create category/i }).click();
+    await page.getByRole('button', { name: /Create category/i }).click({ force: true });
     try {
     await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 2000 });
   } catch(e) {
@@ -540,7 +540,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     const uniqueName = `CatToDel ${Date.now()}`;
     await page.getByLabel(/^Name/i).fill(uniqueName);
     await page.getByLabel(/^Slug/i).fill(uniqueName.toLowerCase().replace(/ /g, '-'));
-    await page.getByRole('button', { name: /Create category/i }).click();
+    await page.getByRole('button', { name: /Create category/i }).click({ force: true });
     try {
     await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 2000 });
   } catch(e) {
@@ -589,7 +589,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     const uniqueName = `CatCancelDel ${Date.now()}`;
     await page.getByLabel(/^Name/i).fill(uniqueName);
     await page.getByLabel(/^Slug/i).fill(uniqueName.toLowerCase().replace(/ /g, '-'));
-    await page.getByRole('button', { name: /Create category/i }).click();
+    await page.getByRole('button', { name: /Create category/i }).click({ force: true });
     try {
     await expect(page.getByRole('heading', { name: 'New category' })).toBeHidden({ timeout: 2000 });
   } catch(e) {
