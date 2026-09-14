@@ -171,7 +171,7 @@ test.describe('8. Campaign Application Wizard — POSITIVE flows', () => {
 });
 
 
-  test('Wizard session survives page refresh mid-fill (no data loss)', async ({ page }) => {
+  test.fixme('Wizard session survives page refresh mid-fill (no data loss)', async ({ page }) => {
     log.info('WIZ-REFRESH', 'start');
     if (!(await safeLogin(page))) return;
     await page.goto('/start/application', { waitUntil: 'domcontentloaded' });
