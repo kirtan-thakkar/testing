@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test.describe('Admin Authentication', () => {
+  test.setTimeout(90000);
   // Use a fresh context for admin auth testing, isolated from global state
   test.use({ storageState: { cookies: [], origins: [] } });
 

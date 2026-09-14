@@ -10,6 +10,7 @@ test.setTimeout(120000);
 test.describe.serial('Admin System — NEGATIVE / EDGE', () => {
   let page;
   test.beforeAll(async ({ browser }) => {
+    test.setTimeout(90000); // hook timeout
     const r = await loginAdmin(browser);
     page = r.page;
   });

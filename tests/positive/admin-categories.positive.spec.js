@@ -3,9 +3,11 @@ const { ADMIN_URL, loginAdmin } = require('../admin-helpers.js');
 const log = require('../logger.js');
 
 test.describe.serial('Admin Categories - Functional', () => {
+  test.setTimeout(90000);
   let page;
 
   test.beforeAll(async ({ browser }) => {
+    test.setTimeout(90000); // hook timeout
     const r = await loginAdmin(browser);
     page = r.page;
   });

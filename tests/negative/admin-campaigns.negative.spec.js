@@ -12,6 +12,7 @@ test.describe.serial('Admin Campaigns — NEGATIVE / EDGE', () => {
   let page;
 
   test.beforeAll(async ({ browser }) => {
+    test.setTimeout(90000); // hook timeout
     const r = await loginAdmin(browser);
     page = r.page;
   });

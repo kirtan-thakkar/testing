@@ -10,6 +10,7 @@ test.setTimeout(120000);
 test.describe.serial('Admin Content — POSITIVE', () => {
   let page;
   test.beforeAll(async ({ browser }) => {
+    test.setTimeout(90000); // hook timeout
     const r = await loginAdmin(browser);
     page = r.page;
   });
