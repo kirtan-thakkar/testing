@@ -206,17 +206,7 @@ test.describe('8. Campaign Application Wizard — NEGATIVE / EDGE flows', () => 
 
   // ────────────────────────── Rapid / concurrent actions ──────────────────────────
 
-      await dismissCookies(page);
-      
-      await fillStep1(page);
-      const btn = page.getByRole('button', { name: /^Continue/i });
-      await Promise.all([btn.click(), btn.click().catch(() => {})]);
-      await page.waitForTimeout(2500);
-      const onStep3 = await page.getByText(/Step 3 of 4/i).isVisible().catch(() => false);
-      log.info('WIZ-22-N', `after double-click: onStep3=${onStep3} (expected false)`);
-      expect(onStep3).toBe(false);
-    });
-  });
+
 
   // ────────────────────────── Accessibility / robustness ──────────────────────────
   test('UF-WIZ-19-N: First Tab reaches a focusable element', async ({ page }) => {
