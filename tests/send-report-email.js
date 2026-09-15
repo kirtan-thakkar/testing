@@ -109,6 +109,11 @@ async function main() {
     attachments.push({ filename: 'daily-report.csv', path: csvPath });
   }
 
+  const globalCsvPath = path.join(process.cwd(), 'reports', 'global-report.csv');
+  if (fs.existsSync(globalCsvPath)) {
+    attachments.push({ filename: 'global-report.csv', path: globalCsvPath });
+  }
+
   await transporter.sendMail({
     from: MAIL_FROM || SMTP_USER,
     to: MAIL_TO,
