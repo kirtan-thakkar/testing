@@ -72,62 +72,10 @@ async function main() {
 
   console.log(`[PostResults] Parsed ${payloadData.length} test results.`);
 
-  // 1A. Generate the Daily CSV
+  // 1. Generate the Daily CSV
   const dailyCsvPath = path.join(logsDir, `daily-report.csv`);
   fs.writeFileSync(dailyCsvPath, csvRows.join('\n'), 'utf8');
   console.log(`[PostResults] Saved Daily CSV to ${dailyCsvPath}`);
-
-  // 1B. Maintain the Global CSV
-  const reportsDir = path.join(process.cwd(), 'reports');
-  if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir);
-  const globalCsvPath = path.join(reportsDir, 'global-report.csv');
-  
-  let globalHeaders = ['Test ID'];
-  let globalData = {}; // { 'UF-WIZ-01': ['PASS', 'FAIL'] }
-  
-  if (fs.existsSync(globalCsvPath)) {
-    const lines = fs.readFileSync(globalCsvPath, 'utf8').trim().split('\n');
-    if (lines.length > 0) {
-      // Use a basic regex to split by comma, ignoring commas inside quotes if any exist
-      globalHeaders = lines[0].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(h => h.replace(/^"|"$/g, ''));
-      for (let i = 1; i < lines.length; i++) {
-        const row = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(v => v.replace(/^"|"$/g, ''));
-        if (row.length > 0) {
-          globalData[row[0]] = row.slice(1);
-        }
-      }
-    }
-  }
-
-  // Add today's column if it doesn't exist
-  if (!globalHeaders.includes(todayStr)) {
-    globalHeaders.push(todayStr);
-  }
-  const todayColIndex = globalHeaders.indexOf(todayStr) - 1; // -1 because Test ID is index 0
-
-  // Update data with today's results
-  payloadData.forEach(res => {
-    if (!globalData[res.id]) {
-      // New test case, fill previous columns with '-'
-      globalData[res.id] = new Array(globalHeaders.length - 1).fill('-');
-    }
-    // Ensure array is long enough
-    while (globalData[res.id].length <= todayColIndex) {
-      globalData[res.id].push('-');
-    }
-    globalData[res.id][todayColIndex] = res.status;
-  });
-
-  // Rebuild Global CSV
-  const globalCsvRows = [globalHeaders.map(h => `"${h}"`).join(',')];
-  for (const [testId, statuses] of Object.entries(globalData)) {
-    // Ensure array is padded if some tests didn't run today
-    while (statuses.length < globalHeaders.length - 1) statuses.push('-');
-    globalCsvRows.push([`"${testId}"`, ...statuses.map(s => `"${s}"`)].join(','));
-  }
-  
-  fs.writeFileSync(globalCsvPath, globalCsvRows.join('\n'), 'utf8');
-  console.log(`[PostResults] Updated Global CSV at ${globalCsvPath}`);
 
   // 2. Post to Google Webhook
   if (WEBHOOK_URL) {
