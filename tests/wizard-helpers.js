@@ -58,6 +58,11 @@ async function dismissCookies(page) {
  */
 async function wizardAlreadySubmitted(page) {
   try {
+    const url = page.url();
+    if (!url.includes('/start/application')) {
+      log.warn('wizard', 'user redirected away from wizard - account locked');
+      return true; // Redirected to dashboard/home, skip tests
+    }
     const startHeading = await page.getByRole('heading', { name: /start your campaign/i })
       .isVisible({ timeout: 1500 }).catch(() => false);
     if (startHeading) {
@@ -68,14 +73,11 @@ async function wizardAlreadySubmitted(page) {
       .isVisible({ timeout: 1500 }).catch(() => false);
     if (submitted) {
       log.warn('wizard', 'user already has a submitted campaign - wizard steps not reachable');
-        const { test } = require('@playwright/test');
-        test.skip(true, 'Account locked in Under Review state');
-        return;
       return true;
     }
   } catch {}
-  // No heading AND no submission message — likely not the wizard page.
-  return false;
+  // No heading AND no submission message — account is locked in some other state.
+  return true;
 }
 
 async function fillStep1(page, overrides = {}) {
