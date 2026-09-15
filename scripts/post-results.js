@@ -38,7 +38,7 @@ async function main() {
     const rawClass = match[1];
     const testName = match[2];
     const dur = match[4].replace('s', '');
-    const errMsg = match[5] || '';
+    let errMsg = match[5] || '';
     
     let status = 'FAIL';
     if (rawClass === 'pass') status = 'PASS';
