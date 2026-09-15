@@ -45,9 +45,13 @@ async function main() {
     else if (rawClass === 'skip') status = 'SKIPPED';
 
     let testId = testName;
-    const idMatch = testName.match(/([A-Z]+-[A-Z]+-[A-Z0-9]+-\d+|FUNC|CAT-ACC-\d+|UF-[A-Z]+-\d+-[PN])/);
+    // Attempt to extract the formal ID (e.g. UF-WIZ-01-P, ADM-CAT-FUN-001) if present
+    const idMatch = testName.match(/((?:UF|ADM|CAT)(?:-[A-Z0-9]+){2,3})/);
     if (idMatch) {
       testId = idMatch[1];
+    } else {
+      // If no formal ID, just use the first 50 chars of the name to keep the CSV clean
+      testId = testName.split(':')[0].substring(0, 50).trim();
     }
     
     // Custom Error Reasons for skips/timeouts

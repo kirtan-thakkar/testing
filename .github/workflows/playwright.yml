@@ -54,13 +54,7 @@ jobs:
         if: ${{ always() }}
         env:
           GOOGLE_WEBHOOK_URL: ${{ secrets.GOOGLE_WEBHOOK_URL }}
-        run: |
-          node scripts/post-results.js
-          git config --global user.name "Kirtan Thakkar"
-          git config --global user.email "kirtanthakkar30@gmail.com"
-          git add reports/global-report.csv
-          # Only commit if there are changes
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update global report [skip ci]" && git push)
+        run: node scripts/post-results.js
       - name: Send Daily Report Email
         if: ${{ always() }}
         env:
