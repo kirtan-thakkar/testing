@@ -1,0 +1,192 @@
+"Test ID","15 Sept 2026"
+"UF-ADMIN-01-N","PASS"
+"UF-ADMIN-03-N","PASS"
+"UF-ADMIN-99-N","PASS"
+"ADM-CAT-VAL-001","PASS"
+"ADM-CAT-VAL-002","PASS"
+"ADM-CAT-VAL-003","PASS"
+"ADM-CAT-VAL-004","PASS"
+"ADM-CAT-NEG-001","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-CMS-N1: Visit a non-existent CMS page returns 404 or friendly error","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-CMS-N2: 5000-char input in any visible CMS field does not crash","SKIPPED"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-ENG-N1: Inbox empty search returns empty state","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-ENG-N2: Subscribers 5000-char search does not crash","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-ENG-N3: Inbox reply with XSS payload does not execute","SKIPPED"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-FIN-N1: Payouts with non-existent ID shows error, not crash","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-FIN-N2: 5000-char filter on pledges does not crash","SKIPPED"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-FIN-N3: Refunds date filter with junk value does not crash","SKIPPED"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-PPL-N1: User search with no matches shows empty state","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-PPL-N2: User search with XSS does not execute","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-PPL-N3: 5000-char user search does not crash","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-SYS-N1: Notifications page with no JS errors on load","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-SYS-N2: Activity log filter with junk date does not crash","SKIPPED"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-SYS-N3: 5000-char search on activity log does not crash","SKIPPED"
+"UF-WIZ-09-N","SKIPPED"
+"UF-WIZ-13-N","PASS"
+"UF-WIZ-05-N","PASS"
+"UF-WIZ-06-N","PASS"
+"UF-WIZ-12-N","PASS"
+"UF-WIZ-15-N","PASS"
+"UF-WIZ-16-N","SKIPPED"
+"UF-WIZ-19-N","PASS"
+"UF-WIZ-21-N","PASS"
+"UF-WIZ-17-N","PASS"
+"UF-WIZ-18-N","PASS"
+"UF-UP-06-N","PASS"
+"UF-UP-07-N","PASS"
+"UF-UP-08-N","PASS"
+"UF-UP-09-N","PASS"
+"UF-UP-10-N","PASS"
+"UF-UP-11-N","PASS"
+"UF-UP-12-N","PASS"
+"UF-UP-13-N","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-PERF-01: 25 parallel /explore page loads all complete within 60s","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-PERF-02: Sustained load: 1 req/sec to /login for 60 seconds, no failures","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-PERF-03: Burst: 100 requests in 5s, all complete (any 5xx is failure)","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > UF-PERF-04: Memory: rapid open/close of 10 pages does not leak browser memory","PASS"
+"ADM-AUTH-FUN-001","PASS"
+"UF-ADMIN-01-P","PASS"
+"UF-ADMIN-02-P","PASS"
+"UF-ADMIN-03-P","PASS"
+"UF-ADMIN-04-P","PASS"
+"UF-ADMIN-05-P","PASS"
+"UF-ADMIN-06-P","PASS"
+"ADM-CAM-FUN-001","PASS"
+"ADM-CAM-FUN-002","PASS"
+"ADM-CAM-FUN-003","PASS"
+"ADM-CAM-FUN-004","PASS"
+"ADM-CAM-FUN-005","PASS"
+"ADM-CAM-FUN-007","PASS"
+"ADM-CAM-FUN-008","PASS"
+"ADM-CAT-FUN-001","PASS"
+"ADM-CAT-FUN-002","PASS"
+"ADM-CAT-FUN-003","FAIL"
+"ADM-CAT-FUN-004","SKIPPED"
+"ADM-CAT-FUN-005","SKIPPED"
+"ADM-CAT-FUN-006","SKIPPED"
+"ADM-CAT-FUN-007","SKIPPED"
+"ADM-CAT-FUN-008","SKIPPED"
+"ADM-CAT-FUN-009","SKIPPED"
+"ADM-CAT-FUN-010","SKIPPED"
+"ADM-CAT-FUN-011","SKIPPED"
+"ADM-CAT-FUN-012","SKIPPED"
+"ADM-CAT-FUN-013","SKIPPED"
+"ADM-CAT-FUN-014","SKIPPED"
+"ADM-CAT-FUN-015","SKIPPED"
+"ADM-CAT-FUN-016","SKIPPED"
+"ADM-CAT-FUN-017","SKIPPED"
+"ADM-CAT-FUN-018","SKIPPED"
+"CAT-ACC-005","SKIPPED"
+"FUNC","SKIPPED"
+"ADM-CAT-FUN-019","SKIPPED"
+"ADM-CAT-FUN-020","SKIPPED"
+"ADM-CAT-FUN-024","SKIPPED"
+"ADM-CAT-FUN-021","SKIPPED"
+"ADM-CAT-FUN-022","SKIPPED"
+"ADM-CAT-FUN-023","SKIPPED"
+"UF-ADMIN-15-P","PASS"
+"UF-ADMIN-16-P","PASS"
+"ADM-FAQ-FUN-001","PASS"
+"ADM-FAQ-FUN-002","PASS"
+"ADM-FAQ-FUN-003","PASS"
+"ADM-FAQ-FUN-004","PASS"
+"ADM-FAQ-FUN-005","PASS"
+"ADM-FAQ-FUN-006","PASS"
+"ADM-FAQ-FUN-007","PASS"
+"ADM-FAQ-FUN-008","PASS"
+"UF-ADMIN-13-P","PASS"
+"UF-ADMIN-14-P","PASS"
+"UF-ADMIN-07-P","PASS"
+"UF-ADMIN-08-P","PASS"
+"UF-ADMIN-09-P","PASS"
+"UF-ADMIN-10-P","PASS"
+"UF-ADMIN-11-P","PASS"
+"UF-ADMIN-12-P","PASS"
+"ADM-USR-FUN-001","PASS"
+"ADM-USR-FUN-002","PASS"
+"ADM-USR-FUN-003","PASS"
+"ADM-USR-FUN-004","PASS"
+"ADM-USR-FUN-005","PASS"
+"ADM-USR-FUN-006","PASS"
+"ADM-USR-FUN-007","PASS"
+"ADM-USR-FUN-008","PASS"
+"ADM-USR-FUN-009","PASS"
+"ADM-USR-FUN-010","PASS"
+"ADM-USR-FUN-011","PASS"
+"ADM-USR-FUN-012","PASS"
+"ADM-USR-FUN-013","PASS"
+"ADM-USR-FUN-014","PASS"
+"ADM-USR-FUN-015","PASS"
+"ADM-USR-FUN-016","PASS"
+"ADM-USR-FUN-017","PASS"
+"ADM-USR-FUN-018","PASS"
+"ADM-USR-FUN-019","PASS"
+"ADM-USR-FUN-020","PASS"
+"ADM-USR-FUN-021","PASS"
+"UF-ADMIN-17-P","PASS"
+"UF-ADMIN-18-P","PASS"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > Debug step 1 continue","PASS"
+"UF-ACCT-01-P","PASS"
+"UF-ACCT-02-P","FAIL"
+"UF-ACCT-03-P","FAIL"
+"UF-WIZ-01-P","SKIPPED"
+"UF-WIZ-02-P","SKIPPED"
+"UF-WIZ-03-P","FAIL"
+"UF-WIZ-04-P","SKIPPED"
+"UF-WIZ-07-P","SKIPPED"
+"UF-WIZ-08-P","SKIPPED"
+"UF-WIZ-10-P","SKIPPED"
+"UF-WIZ-11-P","SKIPPED"
+"UF-WIZ-14-P","SKIPPED"
+"UF-WIZ-20-P","SKIPPED"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > Wizard session survives page refresh mid-fill (no data loss)","SKIPPED"
+"project() {
+    return this._fullProject?.project || this.parent?.project();
+  } > Wizard handles 10,000-char paste in company name gracefully (no crash, no lag >2s)","FAIL"
+"UF-UP-01-P","SKIPPED"
+"UF-UP-02-P","SKIPPED"
+"UF-UP-03-P","SKIPPED"
+"UF-UP-05-P","SKIPPED"
+"UF-UP-14-P","SKIPPED"
+"UF-UP-16-P","SKIPPED"
+"UF-WIZ-30-P","FAIL"
