@@ -8,7 +8,8 @@ on:
         required: false
         default: ''
   schedule:
-    - cron: '17 14 * * *'
+  # 7:47 PM IST every day
+    - cron: '17 14 * * *'  
 
 jobs:
   test:
@@ -55,8 +56,8 @@ jobs:
           GOOGLE_WEBHOOK_URL: ${{ secrets.GOOGLE_WEBHOOK_URL }}
         run: |
           node scripts/post-results.js
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "Kirtan Thakkar"
+          git config --global user.email "kirtanthakkar30@gmail.com"
           git add reports/global-report.csv
           # Only commit if there are changes
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update global report [skip ci]" && git push)
