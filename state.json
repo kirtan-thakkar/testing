@@ -5,17 +5,17 @@
       "value": "1",
       "domain": ".187.77.79.40.nip.io",
       "path": "/",
-      "expires": 1792069173.015417,
+      "expires": 1792070385.711536,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "ik_refresh",
-      "value": "WLhBbwlqPhSeGLlvJKxTcfGi8MITxreNlvgVk8b5sMox-tYRCRk9um1NdGO-3rmq",
+      "value": "4m1Z9pXHGSCfwdr9LrvVkj7l2bxghRnp7_hnmEuKBEZFfSytkTL_dUsFGe21y_FX",
       "domain": ".187.77.79.40.nip.io",
       "path": "/",
-      "expires": 1792069173.015351,
+      "expires": 1792070385.711371,
       "httpOnly": true,
       "secure": false,
       "sameSite": "Lax"

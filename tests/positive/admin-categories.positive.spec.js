@@ -168,7 +168,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     const row = page.getByRole('row', { name: 'Software' }).first();
     await expect(row).toBeVisible();
     await row.getByRole('button', { name: /Edit/i }).click();
-    const editHeading = page.getByRole('heading', { name: /Edit category/i });
+    const editHeading = page.getByRole('heading', { name: /^Edit/i });
     await expect(editHeading).toBeVisible({ timeout: 10000 });
     await page.getByLabel(/^Name/i).fill('Software Edited');
     await page.getByRole('button', { name: /^Cancel$/i }).click();
@@ -186,7 +186,7 @@ test.describe.serial('Admin Categories - Functional', () => {
     const row = page.getByRole('row', { name: 'Software' }).first();
     await expect(row).toBeVisible();
     await row.getByRole('button', { name: /Edit/i }).click();
-    const editHeading = page.getByRole('heading', { name: /Edit category/i });
+    const editHeading = page.getByRole('heading', { name: /^Edit/i });
     await expect(editHeading).toBeVisible({ timeout: 10000 });
     await page.getByRole('button', { name: /^Cancel$/i }).click();
     await expect(editHeading).toBeHidden({ timeout: 10000 });
