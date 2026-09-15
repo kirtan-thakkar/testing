@@ -46,10 +46,11 @@ test.describe.serial('Admin Categories - Functional', () => {
     
     // 1. Navigate to Categories.
     await page.goto(`${ADMIN_URL}/categories`);
+    await page.waitForURL('**/categories', { timeout: 10000 });
     
     // 2. Locate the Search box.
     const searchInput = page.getByPlaceholder(/Search name or slug/i);
-    await expect(searchInput).toBeVisible();
+    await expect(searchInput).toBeVisible({ timeout: 15000 });
     
     // 3. Enter the name of an existing category. (Using 'Software')
     await searchInput.fill('Software');
@@ -351,12 +352,12 @@ test.describe.serial('Admin Categories - Functional', () => {
     // First, let's create a temporary category to edit so we don't mess up existing data like "Software"
     await page.goto(`${ADMIN_URL}/categories`);
     await page.getByRole('button', { name: /New category/i }).click();
-    
-    let formContainer = page;
-    const initialName = `EditCat ${Date.now()}`;
-    await formContainer.getByLabel(/^Name/i).fill(initialName);
-    await formContainer.getByLabel(/^Slug/i).fill(initialName.toLowerCase().replace(/ /g, '-'));
-    await formContainer.getByRole('button', { name: /Create category/i }).click({ force: true });
+        let formContainer = page;
+      const initialName = `EditCat ${Date.now()}`;
+      await formContainer.getByLabel(/^Name/i).fill(initialName);
+      await formContainer.getByLabel(/^Slug/i).fill(initialName.toLowerCase().replace(/ /g, '-'));
+      await formContainer.getByLabel(/^Sort order/i).fill('1');
+      await formContainer.getByRole('button', { name: /Create category/i }).click({ force: true });
     
     const newCategoryHeading = page.getByRole('heading', { name: 'New category' });
     await expect(newCategoryHeading).toBeHidden({ timeout: 10000 });
@@ -404,12 +405,12 @@ test.describe.serial('Admin Categories - Functional', () => {
     // First, let's create a temporary category to edit
     await page.goto(`${ADMIN_URL}/categories`);
     await page.getByRole('button', { name: /New category/i }).click();
-    
-    let formContainer = page;
-    const initialName = `CancelEdit ${Date.now()}`;
-    await formContainer.getByLabel(/^Name/i).fill(initialName);
-    await formContainer.getByLabel(/^Slug/i).fill(initialName.toLowerCase().replace(/ /g, '-'));
-    await formContainer.getByRole('button', { name: /Create category/i }).click({ force: true });
+        let formContainer = page;
+      const initialName = `CancelEdit ${Date.now()}`;
+      await formContainer.getByLabel(/^Name/i).fill(initialName);
+      await formContainer.getByLabel(/^Slug/i).fill(initialName.toLowerCase().replace(/ /g, '-'));
+      await formContainer.getByLabel(/^Sort order/i).fill('1');
+      await formContainer.getByRole('button', { name: /Create category/i }).click({ force: true });
     
     const newCategoryHeading = page.getByRole('heading', { name: 'New category' });
     await expect(newCategoryHeading).toBeHidden({ timeout: 10000 });

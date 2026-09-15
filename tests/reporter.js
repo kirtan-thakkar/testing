@@ -46,12 +46,10 @@ class IdeakicksReporter {
   onTestEnd(test, result) {
     const status = result.status; // 'passed' | 'failed' | 'skipped' | 'timedOut' | 'interrupted'
     const dur = ((result.duration || 0) / 1000).toFixed(2);
-    const projectName = typeof test.parent?.project === 'function' ? test.parent.project()?.name : '';
-    const prefix = projectName ? `${projectName} > ` : '';
-    const name = `${prefix}${test.title}`;
+    const name = test.title;
     let errMsg = (result.error && result.error.message) ? result.error.message.split('\n')[0] : '';
     // Strip ANSI codes
-    errMsg = errMsg.replace(/\x1B\[[0-9;]*[a-zA-Z]/g, '');
+    errMsg = errMsg.replace(/\x1B\[[0-9;]*[a-zA-Z]/g, '').replace(/\[2m|\[22m|\[31m|\[39m/g, '');
 
     if (status === 'passed') log.pass(test.title, `${dur}s`);
     else if (status === 'failed' || status === 'timedOut') log.fail(test.title, `${dur}s — ${errMsg}`);
