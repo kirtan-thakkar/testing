@@ -871,13 +871,13 @@ test.describe.serial('Admin Categories - Functional', () => {
       while (hasMore) {
         let deletedOne = false;
         // Find any delete button for a category containing '178' or '179' (Date.now() prefix)
-        const deleteBtns = page.locator('button[aria-label^="Delete "][aria-label*="17"]');
+        const deleteBtns = page.getByRole('button', { name: /Delete .*17[89]/i });
         const count = await deleteBtns.count();
         if (count > 0) {
-           await deleteBtns.first().click();
-           const modal = page.locator('div[role="dialog"]').filter({ hasText: /^Delete/ });
-           await expect(modal).toBeVisible();
-           await modal.getByRole('button', { name: 'Delete' }).click();
+           await deleteBtns.first().click({ force: true });
+           const modal = page.locator('div[role="dialog"], dialog').filter({ hasText: /Delete/i });
+           await expect(modal).toBeVisible({ timeout: 5000 });
+           await modal.getByRole('button', { name: 'Delete' }).click({ force: true });
            await page.waitForTimeout(1000); // wait for API and re-render
            deletedOne = true;
         }
