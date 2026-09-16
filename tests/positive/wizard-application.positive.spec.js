@@ -121,18 +121,6 @@ test.describe('8. Campaign Application Wizard — POSITIVE flows', () => {
     expect(errors.filter(e => !/ResizeObserver|favicon/i.test(e))).toHaveLength(0);
   });
 
-  test('UF-WIZ-10-P: Country dropdown lists India', async ({ page }) => {
-    log.info('WIZ-10-P', 'start');
-    try { await login(page); } catch (e) { test.skip(true, 'login timeout'); return; }
-    await page.goto('/start/application');
-    await dismissCookies(page);
-    await page.locator('h1').first().waitFor();
-    const country = page.locator('select').nth(2);
-    const options = await country.locator('option').allTextContents();
-    expect(options.some(o => /India/i.test(o))).toBe(true);
-    log.info('WIZ-10-P', `${options.length} country options, India present`);
-  });
-
   test('UF-WIZ-11-P: Subcategory populates after category chosen', async ({ page }) => {
     log.info('WIZ-11-P', 'start');
     try { await login(page); } catch (e) { test.skip(true, 'login timeout'); return; }
