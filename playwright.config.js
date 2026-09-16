@@ -49,7 +49,40 @@ module.exports = defineConfig({
   },
 
   projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+    {
+      name: 'Core',
+      testIgnore: [/wizard/i],
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'Wiz-1-Pos',
+      testMatch: /wizard-application\.positive\.spec\.js/,
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'Wiz-2-Pos',
+      testMatch: /wizard-step2-uploads\.positive\.spec\.js/,
+      use: { ...devices['Desktop Chrome'] },
+      dependencies: ['Wiz-1-Pos'],
+    },
+    {
+      name: 'Wiz-3-Neg',
+      testMatch: /wizard-application\.negative\.spec\.js/,
+      use: { ...devices['Desktop Chrome'] },
+      dependencies: ['Wiz-2-Pos'],
+    },
+    {
+      name: 'Wiz-4-Neg',
+      testMatch: /wizard-step2-uploads\.negative\.spec\.js/,
+      use: { ...devices['Desktop Chrome'] },
+      dependencies: ['Wiz-3-Neg'],
+    },
+    {
+      name: 'Wiz-5-Submit',
+      testMatch: /wizard-step3-submit\.positive\.spec\.js/,
+      use: { ...devices['Desktop Chrome'] },
+      dependencies: ['Wiz-4-Neg'],
+    }
   ],
 
   // Skip the .SKIPPED files (e.g. wizard-step3-4.sequential.spec.js.SKIPPED).
