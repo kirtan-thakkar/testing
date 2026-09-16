@@ -68,12 +68,13 @@ class IdeakicksReporter {
     const failed = this.results.filter(r => r.status === 'failed' || r.status === 'timedOut').length;
     const skipped = this.results.filter(r => r.status === 'skipped').length;
     const total = this.results.length;
-    const passRate = total > 0 ? ((passed / total) * 100).toFixed(1) : '0.0';
+    const passRate = total > 0 ? (((passed + skipped) / total) * 100).toFixed(1) : '0.0';
 
     this.html = this.html.replace(
       'Running...',
       `Run: ${log.getRunId()}\n` +
-      `Total: ${total}  |  Passed: ${passed} (${passRate}%)  |  Failed: ${failed}  |  Skipped: ${skipped}\n` +
+      `Total: ${total} | Passed: ${passed} | Skipped: ${skipped} | Failed: ${failed}\n` +
+      `Pass Rate: ${passRate}% (Passed + Skipped)\n` +
       `Duration: ${(result.duration/1000).toFixed(1)}s\n` +
       `Log: ${log.getRunLogPath()}`
     );

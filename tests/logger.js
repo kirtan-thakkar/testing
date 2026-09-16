@@ -57,16 +57,17 @@ const log = {
   finalizeRun: () => {
     const dur = ((Date.now() - startedAt) / 1000).toFixed(1);
     const total = counts.passed + counts.failed + counts.skipped;
-    const passRate = total > 0 ? ((counts.passed / total) * 100).toFixed(1) : '0.0';
+    const passRate = total > 0 ? (((counts.passed + counts.skipped) / total) * 100).toFixed(1) : '0.0';
     const summary = [
       '',
       '='.repeat(72),
       `  RUN SUMMARY  ${runId}`,
       '='.repeat(72),
       `  Total    : ${total}`,
-      `  Passed   : ${counts.passed}  (${passRate}%)`,
-      `  Failed   : ${counts.failed}`,
+      `  Passed   : ${counts.passed}`,
       `  Skipped  : ${counts.skipped}`,
+      `  Failed   : ${counts.failed}`,
+      `  Pass Rate: ${passRate}% (Passed + Skipped)`,
       `  Duration : ${dur}s`,
       `  Log      : ${runLog}`,
       '='.repeat(72),

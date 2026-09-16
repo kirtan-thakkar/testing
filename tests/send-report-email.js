@@ -52,7 +52,7 @@ async function main() {
   const total = totalMatch ? +totalMatch[1] : 0;
   const skipped = skippedMatch ? +skippedMatch[1] : 0;
   const dur = durMatch ? durMatch[1] : '?';
-  const passRate = total > 0 ? ((passed / total) * 100).toFixed(1) : '0.0';
+  const passRate = total > 0 ? (((passed + skipped) / total) * 100).toFixed(1) : '0.0';
 
   // Extract failed tests from HTML if available
   let failedTestsList = '';
