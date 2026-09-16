@@ -24,9 +24,8 @@ module.exports = defineConfig({
   // Retry once on CI, never locally (avoid masking real failures).
   retries: process.env.CI ? 1 : 0,
 
-  // Unleash workers: Playwright will automatically scale to CPU cores.
-  // (Admin rate limiting is now handled via a cross-process lock in admin-helpers).
-  workers: process.env.CI ? 4 : undefined,
+  // One worker = sequential, no rate-limit issues on admin login, and no race conditions on dummy accounts.
+  workers: 1,
 
   // Two reporters:
   //   1. list — Playwright's built-in console reporter
@@ -49,40 +48,7 @@ module.exports = defineConfig({
   },
 
   projects: [
-    {
-      name: 'Core',
-      testIgnore: [/wizard/i],
-      use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'Wiz-1-Pos',
-      testMatch: /wizard-application\.positive\.spec\.js/,
-      use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'Wiz-2-Pos',
-      testMatch: /wizard-step2-uploads\.positive\.spec\.js/,
-      use: { ...devices['Desktop Chrome'] },
-      dependencies: ['Wiz-1-Pos'],
-    },
-    {
-      name: 'Wiz-3-Neg',
-      testMatch: /wizard-application\.negative\.spec\.js/,
-      use: { ...devices['Desktop Chrome'] },
-      dependencies: ['Wiz-2-Pos'],
-    },
-    {
-      name: 'Wiz-4-Neg',
-      testMatch: /wizard-step2-uploads\.negative\.spec\.js/,
-      use: { ...devices['Desktop Chrome'] },
-      dependencies: ['Wiz-3-Neg'],
-    },
-    {
-      name: 'Wiz-5-Submit',
-      testMatch: /wizard-step3-submit\.positive\.spec\.js/,
-      use: { ...devices['Desktop Chrome'] },
-      dependencies: ['Wiz-4-Neg'],
-    }
+    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
   ],
 
   // Skip the .SKIPPED files (e.g. wizard-step3-4.sequential.spec.js.SKIPPED).

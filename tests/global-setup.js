@@ -2,9 +2,6 @@ const { chromium } = require('@playwright/test');
 const fs = require('fs');
 
 module.exports = async config => {
-  // Clean up any stale admin login locks from crashed runs
-  try { fs.rmdirSync(require('path').join(process.cwd(), 'logs', 'admin-login.lock')); } catch {}
-
   const browser = await chromium.launch();
 
   
