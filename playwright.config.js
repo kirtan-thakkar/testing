@@ -24,8 +24,9 @@ module.exports = defineConfig({
   // Retry once on CI, never locally (avoid masking real failures).
   retries: process.env.CI ? 1 : 0,
 
-  // One worker = sequential, no rate-limit issues on admin login.
-  workers: 1,
+  // Unleash workers: Playwright will automatically scale to CPU cores.
+  // (Admin rate limiting is now handled via a cross-process lock in admin-helpers).
+  workers: process.env.CI ? 4 : undefined,
 
   // Two reporters:
   //   1. list — Playwright's built-in console reporter
