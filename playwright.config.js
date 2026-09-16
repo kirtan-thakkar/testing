@@ -13,6 +13,7 @@ if (!process.env.PLAYWRIGHT_RUN_ID) {
 module.exports = defineConfig({
   testDir: './tests',
   globalSetup: require.resolve('./tests/global-setup.js'),
+  globalTeardown: require.resolve('./scripts/cleanup-dummy-campaigns.js'),
 
   // Run tests sequentially to avoid DDOSing the auth endpoints.
   fullyParallel: false,

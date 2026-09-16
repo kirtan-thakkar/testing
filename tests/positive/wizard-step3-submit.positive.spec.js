@@ -55,9 +55,13 @@ test.describe('Campaign Wizard - Step 3 Review & Submit (POSITIVE)', () => {
     const submitBtn = page.locator('button', { hasText: 'Submit for Review' });
     await submitBtn.waitFor({ state: 'visible' });
     
-    // We intentionally DO NOT click Submit for Review here, 
-    // because submitting it will permanently alter dummy1's account state 
-    // and block them from running the Wizard tests ever again!
-    log.info('WIZ-30-P', 'Campaign successfully reached Step 3 Review (but deliberately not submitted to protect dummy account state)!');
+    // We will wait for the navigation or the exact success text
+    await submitBtn.click({ force: true });
+    await page.waitForTimeout(3000);
+    
+    // 6. Verify Step 4 / Done Success State
+    // "Done" was matching the nav bar. We need to match the actual success message.
+    await expect(page.locator('text=/under review|submitted/i').first()).toBeVisible({ timeout: 15000 });
+    log.info('WIZ-30-P', 'Campaign successfully submitted!');
   });
 });
