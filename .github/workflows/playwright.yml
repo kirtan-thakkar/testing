@@ -7,9 +7,7 @@ on:
         description: 'Spec file or pattern to run (empty = full suite)'
         required: false
         default: ''
-  schedule:
-  # 7:47 PM IST every day
-    - cron: '17 14 * * *'  
+
 
 jobs:
   test:
