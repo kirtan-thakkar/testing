@@ -8,4 +8,7 @@ node_modules/
 /playwright/.auth/
 public
 logs/
+
+
+
 *.html
